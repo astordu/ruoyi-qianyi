@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 场景与证据调研"
+  short_description: "针对已选择的若依模块读取 Vue 源码、还原操作场景和验收条件，并提供逐项文件证据。用于迁移前需求调研与确认。"
+  default_prompt: "使用 $ruoyi-migration-research，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 范围访谈"
+  short_description: "用逐步访谈收集若依 Vue 到 React 迁移的模块边界。当用户选择模块、定义纳入或排除功能、想先打磨迁移需求时使用。"
+  default_prompt: "使用 $ruoyi-migration-scope，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

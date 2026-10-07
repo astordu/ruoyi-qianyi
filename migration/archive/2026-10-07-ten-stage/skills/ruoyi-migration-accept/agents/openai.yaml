@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 人工验收"
+  short_description: "汇总若依模块迁移证据，准备可操作的人工验收，并记录真实用户反馈。用于行为与视觉检查完成后的最终确认。"
+  default_prompt: "使用 $ruoyi-migration-accept，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

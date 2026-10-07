@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 截图对比验证"
+  short_description: "对比若依原 Vue 页面与迁移后 React 页面的真实截图，检查场景状态、布局和视觉差异。用于行为验证之外的独立视觉验"
+  default_prompt: "使用 $ruoyi-migration-visual，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

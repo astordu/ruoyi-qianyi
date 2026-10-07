@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · React 公共基础"
+  short_description: "为若依 Vue 到 React 迁移建立 react-front 公共基础，处理架构、认证、动态菜单、权限和请求兼容。用"
+  default_prompt: "使用 $ruoyi-migration-foundation，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

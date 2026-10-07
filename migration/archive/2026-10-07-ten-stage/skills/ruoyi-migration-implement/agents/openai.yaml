@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 单任务迁移"
+  short_description: "根据已确认需求和任务计划，将一个若依 Vue 模块任务实现到 react-front。用于逐任务迁移与处理评审指出的缺陷"
+  default_prompt: "使用 $ruoyi-migration-implement，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"

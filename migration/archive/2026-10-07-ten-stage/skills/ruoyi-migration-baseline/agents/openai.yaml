@@ -1,0 +1,4 @@
+interface:
+  display_name: "若依迁移 · 原版验证基线"
+  short_description: "为已确认的若依迁移场景建立原 Vue 系统的行为、API 和截图基线。用于实现前固定测试数据与验收依据，避免改代码后反推"
+  default_prompt: "使用 $ruoyi-migration-baseline，按项目 migration/ 的已确认资料推进当前模块的对应阶段。"
