@@ -1,0 +1,4 @@
+interface:
+  display_name: "迁移验证"
+  short_description: "验证本组函数、组件或页面行为，记录真实证据并完成全项目收尾检查"
+  default_prompt: "使用 $migration-validate，检查本轮小组的旧新行为并登记真实证据，全部组完成后执行集成和收尾验证。"

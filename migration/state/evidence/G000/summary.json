@@ -1,0 +1,151 @@
+{
+  "group": "G000",
+  "verification_kind": "same-agent-self-check",
+  "status": "passed",
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.178,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-1.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build:prod",
+        "--",
+        "--outDir",
+        "../migration/state/evidence/G000/builds/production",
+        "--emptyOutDir"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.267,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-2.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build:stage",
+        "--",
+        "--outDir",
+        "../migration/state/evidence/G000/builds/staging",
+        "--emptyOutDir"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.268,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-3.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build:docker",
+        "--",
+        "--outDir",
+        "../migration/state/evidence/G000/builds/docker",
+        "--emptyOutDir"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.274,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-4.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:foundation"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.348,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-5.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:foundation:browser"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 1,
+      "seconds": 0.395,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-6.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.18,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-2-command-1.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:foundation:browser"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 4.554,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-2-command-2.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "test:foundation"
+      ],
+      "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+      "exit_code": 0,
+      "seconds": 0.365,
+      "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-3-config.log"
+    }
+  ],
+  "node_tests": {
+    "passed": 7,
+    "failed": 0,
+    "evidence": "attempt-3-config.log"
+  },
+  "browser_tests": {
+    "startTime": "2026-10-09T09:37:12.135Z",
+    "duration": 4182.104,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "loading_comparison": {
+    "comparison": "exact PNG bytes",
+    "equal": true,
+    "animationHandling": "disabled on both original and React",
+    "scope": "pre-mount HTML only"
+  },
+  "source_snapshot_digest": "b4256433a58a115267b363b2ddb63433eb79384c6826fdc2c901ed72e05b6bea",
+  "scope": "engineering bootstrap only",
+  "unverified": [
+    "Vue business runtime equivalence",
+    "login/pages/permissions",
+    "real backend integration",
+    "gzip/brotli/SVG/Monaco worker registration",
+    "production hosting history fallback"
+  ],
+  "issues_resolved": [
+    "Initial baseline used wrong IE file location and copy cwd; corrected without modifying source",
+    "TS7 removed baseUrl; replaced with relative paths",
+    "Original fixture port12581 was occupied; used13581, left existing service running"
+  ]
+}

@@ -1,0 +1,187 @@
+# G174 src/components/HeaderSearch/index.vue：完整能力
+
+依赖：G000, G187, G227, G228, G250, G256
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I01498 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 80-80 ImportDeclaration: 
+  - 基线：源语句 sha256=d64009f7bbd7fef3c53c55e3bef9fd1cf055a933a91b2c3ccaf7913101affd89；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01499 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 81-81 ImportDeclaration: 
+  - 基线：源语句 sha256=8a7cf6589682c7c62a14023574b67d2639dd45e581c104ac2ed99db272c6d63e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01500 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 82-82 ImportDeclaration: 
+  - 基线：源语句 sha256=453c099bdd3e4e4183e7854482e7cbba5941d26dee45c4e0ad469e4d3df55f02；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01501 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 83-83 ImportDeclaration: 
+  - 基线：源语句 sha256=88996687f5ac2ffe958aa6952515839565c6f908d46ea4106fe92135e3f788d7；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01502 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 84-84 ImportDeclaration: 
+  - 基线：源语句 sha256=efbb342d84aefbc6dc4b206f290d81fe87a23b34796df1ad0da69cd6a90b7ea3；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01503 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 86-86 VariableDeclaration: search
+  - 基线：源语句 sha256=e96d64978aee94190b6e5cde7496c5a8a8883eee8e35f3cc1d742d3f4f7633c6；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01504 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 87-87 VariableDeclaration: options
+  - 基线：源语句 sha256=574cab262f07856f2c2eed0d8a0538666ea4a7237a390d0a70d2e11d1152e233；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01505 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 88-88 VariableDeclaration: searchPool
+  - 基线：源语句 sha256=26b929d0d700d781ac46d1492ded7da72ce7139cea2989291974a435dc549a39；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01506 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 89-89 VariableDeclaration: activeIndex
+  - 基线：源语句 sha256=a1ce1fe47dc1083ba41ac84bfb1ba8a4a39e7491afd75e79bf5bbdb01cbac988；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01507 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 90-90 VariableDeclaration: show
+  - 基线：源语句 sha256=fd03761d6148b9a8c62ba4da7ec4b7ce9db5c132dde14bc566caa5ddf188528d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01508 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 91-91 VariableDeclaration: fuse
+  - 基线：源语句 sha256=8af35ac81c26f2d4096c3d0c3a5b39b920a4c120da9802d8b7e41bca2b4f32b7；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01509 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 92-92 VariableDeclaration: headerSearchSelectRef
+  - 基线：源语句 sha256=7d8163c8fc4f10c034e3a49af97c1d84da1eced785218eec4c109a36555475f9；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01510 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 93-93 VariableDeclaration: router
+  - 基线：源语句 sha256=4493bc84540aad888c32c80251d8de79e93d311f4a9a11bb353ecaee4838a473；保留返回、异常及 0 个分支，调用=useRouter。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01511 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 94-94 VariableDeclaration: theme
+  - 基线：源语句 sha256=d9e8099d78639b05b4a561c0db51301f1281d8dadfedaa71c083f3b44e0cd5eb；保留返回、异常及 0 个分支，调用=computed, useSettingsStore。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01512 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 95-95 VariableDeclaration: routes
+  - 基线：源语句 sha256=3279a9792af970d3e481c88a6f5836b2e46d5e6937cb8520e3201a851a783121；保留返回、异常及 0 个分支，调用=computed, usePermissionStore。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01513 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 97-102 FunctionDeclaration: click
+  - 基线：源语句 sha256=1d7b1bc305e18b20075e4a9899f973490553d396f806d6ae7a24592db0cf5866；保留返回、异常及 1 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01514 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 104-108 FunctionDeclaration: onDialogOpened
+  - 基线：源语句 sha256=5620fd41d5e60c02277022134e6bdf9f90f938cf18ac5be29ef091ca24ecefd3；保留返回、异常及 1 个分支，调用=nextTick, headerSearchSelectRef.value.focus。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01515 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 110-116 FunctionDeclaration: close
+  - 基线：源语句 sha256=62a263b27a265755c7f1ba68c190d35d7a86a9e4099e2a5aa8e84483b515a66b；保留返回、异常及 1 个分支，调用=headerSearchSelectRef.value.blur。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01516 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 118-137 FunctionDeclaration: change
+  - 基线：源语句 sha256=4cf33d8fd3991b06a40f233c71dbb9142b53b97d3145dd887cab21267b6d4a3e；保留返回、异常及 2 个分支，调用=isHttp, p.indexOf, window.open, p.substr, router.push, JSON.parse, nextTick。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01517 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 139-153 FunctionDeclaration: initFuse
+  - 基线：源语句 sha256=c70c591a32115350a572526bc380e3109da3e076f2a830217a90fbac5d223709；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01518 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 155-183 FunctionDeclaration: generateRoutes
+  - 基线：源语句 sha256=843257ac77cbe8f0ea4d8c6d22f5991f776fa655f5905f82e9967a7b645a4edd；保留返回、异常及 11 个分支，调用=isHttp, getNormalPath, res.push, generateRoutes。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01519 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 185-203 FunctionDeclaration: querySearch
+  - 基线：源语句 sha256=254a99d2000fdd291e889b4e3b25a5ad9b8b470f9ada60e4b0b41eea3b4d7659；保留返回、异常及 2 个分支，调用=query.toLowerCase, searchPool.value.filter, CallExpression.includes, item.path.toLowerCase, CallExpression.map, fuse.value.search, fuseMatches.forEach, merged.find, merged.push。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01520 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 205-211 FunctionDeclaration: activeStyle
+  - 基线：源语句 sha256=b3fa7602efd9481b7780b155321ac0e49fea53d2966c56854700526415f6d2c0；保留返回、异常及 3 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01521 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 213-219 FunctionDeclaration: navigateResult
+  - 基线：源语句 sha256=862050b354c05ea94b01feb3c40c8b82649aa3efab97de4b03b57608097ea713；保留返回、异常及 4 个分支，调用=。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01522 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 221-225 FunctionDeclaration: selectActiveResult
+  - 基线：源语句 sha256=51d94b59d665adac78d8e5c754928a660097955590b9ef21aab9a813dba2b926；保留返回、异常及 2 个分支，调用=change。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01523 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 227-233 FunctionDeclaration: highlightText
+  - 基线：源语句 sha256=2d22712001e2a6ca099b95d0ab29cbe8b62828bfb5977ea013618577512abd3c；保留返回、异常及 5 个分支，调用=escapeRegExp, text.replace。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01524 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 235-237 FunctionDeclaration: escapeRegExp
+  - 基线：源语句 sha256=559977d2564aaf98a2464ee2ebdf8385c102b2587f40864b887ed5127a5423a7；保留返回、异常及 1 个分支，调用=str.replace。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01525 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 239-241 ExpressionStatement: 
+  - 基线：源语句 sha256=9958cc500c083b23af1509d920ea512051e15523b68702ac9721fcf0d2a40d2e；保留返回、异常及 0 个分支，调用=onMounted, generateRoutes。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01526 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` lines 243-245 ExpressionStatement: 
+  - 基线：源语句 sha256=5135ac779394c47ad3295a33804faff827c2383f39d55d5789c87e0b0383cea9；保留返回、异常及 0 个分支，调用=watch, initFuse。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01527 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template lines 1-77（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01528 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 3: v-on:click
+  - 基线：原表达式：click；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01529 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 5: v-model:
+  - 基线：原表达式：show；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01530 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 7: v-on:close
+  - 基线：原表达式：close；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01531 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 8: v-on:opened
+  - 基线：原表达式：onDialogOpened；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01532 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 9: v-bind:show-close
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01533 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 13: v-model:
+  - 基线：原表达式：search；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01534 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 16: v-on:input
+  - 基线：原表达式：querySearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01535 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 20: v-on:keyup
+  - 基线：原表达式：selectActiveResult；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01536 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 21: v-on:keydown
+  - 基线：原表达式：navigateResult('up')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01537 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 22: v-on:keydown
+  - 基线：原表达式：navigateResult('down')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01538 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 26: v-if:
+  - 基线：原表达式：search && options.length > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01539 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 33: v-if:
+  - 基线：原表达式：options.length > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01540 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 37: v-for:
+  - 基线：原表达式：(item, index) in options；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01541 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 38: v-bind:key
+  - 基线：原表达式：item.path；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01542 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 39: v-bind:class
+  - 基线：原表达式：{ 'is-active': index === activeIndex }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01543 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 40: v-bind:style
+  - 基线：原表达式：activeStyle(index)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01544 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 41: v-on:mouseenter
+  - 基线：原表达式：activeIndex = index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01545 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 42: v-on:mouseleave
+  - 基线：原表达式：activeIndex = -1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01546 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 45: v-bind:icon-class
+  - 基线：原表达式：item.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01547 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 47: v-on:click
+  - 基线：原表达式：change(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01548 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 48: v-html:
+  - 基线：原表达式：highlightText(item.title.join(' / '))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01549 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 49: v-html:
+  - 基线：原表达式：highlightText(item.path)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01550 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 51: v-show:
+  - 基线：原表达式：index === activeIndex；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01551 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template line 55: v-else-if:
+  - 基线：原表达式：search && options.length === 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01552 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template interpolation line 27
+  - 基线：原显示表达式：options.length
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01553 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` template interpolation line 57
+  - 基线：原显示表达式：search
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+- I01554 `ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue` style[0] lines 248-397
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/components/HeaderSearch/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,31 @@
+# G243 src/utils/job.js：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I02716 `ruoyi-fastapi-frontend/src/utils/job.js` lines 2-21 ExportNamedDeclaration: parseJobParameter
+  - 基线：源语句 sha256=3c4a0ffbd5714488b52eef66a5fb892f6c825416671467c52494481cb6cdc9f8；保留返回、异常及 13 个分支，调用=JSON.parse, Array.isArray, JSON.stringify, Number.isFinite。
+  - 去向：react-front/src/utils/job.ts
+- I02717 `ruoyi-fastapi-frontend/src/utils/job.js` lines 24-30 ExportNamedDeclaration: buildJobPayload
+  - 基线：源语句 sha256=5fbf7ec3da89b6d8c7ac93902404433b62a68c0ca96ffa17e0fc7b2d5e650e0f；保留返回、异常及 1 个分支，调用=parseJobParameter。
+  - 去向：react-front/src/utils/job.ts
+- I02718 `ruoyi-fastapi-frontend/src/utils/job.js` lines 33-37 ExportNamedDeclaration: syncStates
+  - 基线：源语句 sha256=080b2c93c07a70f0ca9fa65080ba09d314ff7f504dd86d7a29df87b7a9b2cdf7；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/utils/job.ts
+- I02719 `ruoyi-fastapi-frontend/src/utils/job.js` lines 40-50 ExportNamedDeclaration: executionStates
+  - 基线：源语句 sha256=166340e8ef391cbf5aa696cfa3a4877501324f3bcb1e761b0f44cd892426f4ff；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/utils/job.ts
+- I02720 `ruoyi-fastapi-frontend/src/utils/job.js` lines 53-61 ExportNamedDeclaration: notifyJobMutation
+  - 基线：源语句 sha256=22c11f37fb33ba54f291760b1dc6744d9b28b81885885b8d67d884abac006230；保留返回、异常及 2 个分支，调用=modal.msgWarning, modal.msg, modal.msgSuccess。
+  - 去向：react-front/src/utils/job.ts
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

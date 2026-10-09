@@ -1,0 +1,331 @@
+# G278 src/views/system/config/index.vue：完整能力
+
+依赖：G000, G035, G169, G180, G182, G232, G250, G253F025
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04351 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 174-174 ImportDeclaration: 
+  - 基线：源语句 sha256=5ded6eea1b8b6b5a422c9929d852248cb6a5f6bab74a1bf6350e8bf942cda7ae；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04352 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 175-175 ImportDeclaration: 
+  - 基线：源语句 sha256=ecebbb40750b9b04f2c9a2e620b9b7057c20d239d2c1e3d66ab4624510c9f220；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04353 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 177-177 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04354 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 178-178 VariableDeclaration: 
+  - 基线：源语句 sha256=261efe9ddf90999aceed6f59fb5847dbb096106811cba54c4f457add74dd12ff；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04355 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 180-180 VariableDeclaration: configList
+  - 基线：源语句 sha256=a1c9fb84d9d03820dca986b39c54bffd1a824183c5f538393e34eebd85601686；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04356 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 181-181 VariableDeclaration: open
+  - 基线：源语句 sha256=a542e4df0517d4fd7db7dda3114abbaf21c848158a19f33261b636975b69e307；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04357 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 182-182 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04358 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 183-183 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04359 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 184-184 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04360 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 185-185 VariableDeclaration: single
+  - 基线：源语句 sha256=d8b92433028a1ee7912903c3a8cf52435102e8d5f5c98809c169ecda5a0c1d2a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04361 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 186-186 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04362 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 187-187 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04363 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 188-188 VariableDeclaration: title
+  - 基线：源语句 sha256=6452e9e4e944a2ca0aaab11c2229fadd77c42d71c76662caecb1fe68378567dd；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04364 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 189-189 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04365 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 191-205 VariableDeclaration: data
+  - 基线：源语句 sha256=694efa3dd2ee2dd12773019725c6f655bef4800898f2c11691f11779c023605c；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04366 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 207-207 VariableDeclaration: 
+  - 基线：源语句 sha256=1302c7f6c9f01c8414a694cd88e708a5a66cf40450bbd6957204a754bd0d4050；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04367 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 210-217 FunctionDeclaration: getList
+  - 基线：源语句 sha256=a2d23f8aa6457ac0044a62663f2989c587d6c607409582225f24bacb5d091dae；保留返回、异常及 0 个分支，调用=CallExpression.then, listConfig, proxy.addDateRange。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04368 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 219-222 FunctionDeclaration: cancel
+  - 基线：源语句 sha256=a9c4f77cfb3a8cf1a4deea6e000db67ae81d2fa4cf813b620a2074563e5c304a；保留返回、异常及 0 个分支，调用=reset。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04369 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 224-234 FunctionDeclaration: reset
+  - 基线：源语句 sha256=e1b2719e40e2e5b97cac3e75aca75c8e0be2e6e0bc1cbd0d97cf59b102f2e2f4；保留返回、异常及 0 个分支，调用=proxy.resetForm。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04370 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 236-239 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=71d9364cef95db7495918f6fbda87103b5332e631eb6cac8bd039c5558ee3065；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04371 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 241-245 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=9b12e7bcce3e9874baec61cc44dbc25eba4cf58578f5232f5206376e3b16e484；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04372 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 247-251 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=11c5167167e94687e0431e88f0e3bc636c874106a3472a79b9e38f5cddd1fc4a；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04373 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 253-257 FunctionDeclaration: handleAdd
+  - 基线：源语句 sha256=5cbdea1721b163bb602b33edcfb720fc57f93181290081edb49bf8b8225fd0a5；保留返回、异常及 0 个分支，调用=reset。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04374 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 259-267 FunctionDeclaration: handleUpdate
+  - 基线：源语句 sha256=9a8c5305a7318fe2e3d08a4228f3dd2fb13a82c790368d5abfe5fcfd813e324f；保留返回、异常及 1 个分支，调用=reset, CallExpression.then, getConfig。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04375 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 269-287 FunctionDeclaration: submitForm
+  - 基线：源语句 sha256=3a59fe8ebc177a75d290441ef721281a0990ecc37755fc8cd06309b368468dd5；保留返回、异常及 2 个分支，调用=proxy.$refs.configRef.validate, CallExpression.then, updateConfig, proxy.$modal.msgSuccess, getList, addConfig。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04376 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 289-297 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=1ead587778cb19d97c7710d8dca65adeb02d75e30b7528f41052c76ca06ad2e2；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delConfig, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04377 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 299-303 FunctionDeclaration: handleExport
+  - 基线：源语句 sha256=43fa5268fe7ab32702845bf9359cd49edd5e6ce63f83ac3aa42ab463798b0859；保留返回、异常及 0 个分支，调用=proxy.download, NewExpression.getTime。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04378 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 305-309 FunctionDeclaration: handleRefreshCache
+  - 基线：源语句 sha256=1450d356f12a300826ebd534ee262d8869c0faf50cfa692c1aec649f13837efc；保留返回、异常及 0 个分支，调用=CallExpression.then, refreshCache, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04379 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 311-311 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04380 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` lines 313-317 ExpressionStatement: 
+  - 基线：源语句 sha256=17ffa6410b29708eb725aa6841db9de40066edef1ed09032f679fbd2d0c31972；保留返回、异常及 1 个分支，调用=watch, handleQuery。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04381 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template lines 1-171（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04382 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04383 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04384 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04385 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.configName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04386 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04387 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 15: v-model:
+  - 基线：原表达式：queryParams.configKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04388 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 19: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04389 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.configType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04390 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 30: v-for:
+  - 基线：原表达式：dict in sys_yes_no；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04391 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 31: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04392 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 32: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04393 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 33: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04394 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 39: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04395 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 42: v-bind:aria-label
+  - 基线：原表达式：`日期范围（${getDisplayTimezone()}）`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04396 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 49: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04397 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 50: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04398 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 54: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04399 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 55: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04400 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 60: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04401 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 61: v-hasPermi:
+  - 基线：原表达式：['system:config:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04402 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 64: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04403 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 69: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04404 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 70: v-on:click
+  - 基线：原表达式：handleUpdate；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04405 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 71: v-hasPermi:
+  - 基线：原表达式：['system:config:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04406 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 74: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04407 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 79: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04408 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 80: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04409 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 81: v-hasPermi:
+  - 基线：原表达式：['system:config:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04410 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 84: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04411 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 89: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04412 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 90: v-hasPermi:
+  - 基线：原表达式：['system:config:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04413 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 93: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04414 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 98: v-on:click
+  - 基线：原表达式：handleRefreshCache；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04415 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 99: v-hasPermi:
+  - 基线：原表达式：['system:config:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04416 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 102: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04417 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 102: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04418 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 105: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04419 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 105: v-bind:data
+  - 基线：原表达式：configList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04420 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 105: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04421 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 108: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04422 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 109: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04423 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 110: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04424 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 112: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04425 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 113: v-bind:options
+  - 基线：原表达式：sys_yes_no；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04426 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 113: v-bind:value
+  - 基线：原表达式：scope.row.configType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04427 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 116: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04428 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 118: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04429 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 123: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04430 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 124: v-on:click
+  - 基线：原表达式：handleUpdate(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04431 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 124: v-hasPermi:
+  - 基线：原表达式：['system:config:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04432 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 125: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04433 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 125: v-hasPermi:
+  - 基线：原表达式：['system:config:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04434 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 131: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04435 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 132: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04436 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 133: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04437 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 134: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04438 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 135: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04439 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 139: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04440 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 139: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04441 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 140: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04442 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 140: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04443 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 142: v-model:
+  - 基线：原表达式：form.configName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04444 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 145: v-model:
+  - 基线：原表达式：form.configKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04445 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 148: v-model:
+  - 基线：原表达式：form.configValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04446 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 151: v-model:
+  - 基线：原表达式：form.configType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04447 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 153: v-for:
+  - 基线：原表达式：dict in sys_yes_no；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04448 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 154: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04449 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 155: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04450 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 160: v-model:
+  - 基线：原表达式：form.remark；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04451 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 163: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04452 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 165: v-on:click
+  - 基线：原表达式：submitForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04453 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template line 166: v-on:click
+  - 基线：原表达式：cancel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04454 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template interpolation line 119
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/config/index.tsx
+- I04455 `ruoyi-fastapi-frontend/src/views/system/config/index.vue` template interpolation line 156
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/system/config/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

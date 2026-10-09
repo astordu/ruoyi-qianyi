@@ -1,0 +1,313 @@
+# G273 src/views/monitor/operlog/index.vue：完整能力
+
+依赖：G000, G032, G169, G180, G182, G232, G250, G253F025, G272
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I03939 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 156-156 ImportDeclaration: 
+  - 基线：源语句 sha256=5ded6eea1b8b6b5a422c9929d852248cb6a5f6bab74a1bf6350e8bf942cda7ae；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03940 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 157-157 ImportDeclaration: 
+  - 基线：源语句 sha256=1c39a463e3f7e5468b34e6b8dc2926aa1a8015c3f15f74045f74a4094916363b；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03941 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 158-158 ImportDeclaration: 
+  - 基线：源语句 sha256=de79fd497f9a24e3b506c282a5332365fe7c5a9f96406e23a050f6cd9d7a5079；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03942 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 160-160 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03943 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 161-161 VariableDeclaration: 
+  - 基线：源语句 sha256=713308aa3dc647e5d63309cd04033930c5f4b49bf3cc3f867f995ce10fb30cfb；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03944 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 163-163 VariableDeclaration: operlogList
+  - 基线：源语句 sha256=e8a6316d523998b8c3f5180bd77bc7708281c56f0df55f4b69e0bc1968858bae；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03945 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 164-164 VariableDeclaration: detailVisible
+  - 基线：源语句 sha256=90a8bac296b36d2c18f9cf7202ccbe8d31c21770c814f8f66221e38f212f1548；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03946 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 165-165 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03947 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 166-166 VariableDeclaration: detailRow
+  - 基线：源语句 sha256=4d184d539ebf4ae24ef7e2a3bc5ecffd58a6048153b8ac236f2f7430486a106f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03948 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 167-167 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03949 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 168-168 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03950 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 169-169 VariableDeclaration: single
+  - 基线：源语句 sha256=d8b92433028a1ee7912903c3a8cf52435102e8d5f5c98809c169ecda5a0c1d2a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03951 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 170-170 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03952 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 171-171 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03953 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 172-172 VariableDeclaration: title
+  - 基线：源语句 sha256=6452e9e4e944a2ca0aaab11c2229fadd77c42d71c76662caecb1fe68378567dd；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03954 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 173-173 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03955 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 174-174 VariableDeclaration: defaultSort
+  - 基线：源语句 sha256=e362f112a6aafe007792c37aaeede47383d0188de8bc797f07be792feecda5e1；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03956 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 176-187 VariableDeclaration: data
+  - 基线：源语句 sha256=e6fb7b9c4f2e87ad0cb060b608a79a5b82975aaebb500f2372103eec0fd2d2fc；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03957 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 189-189 VariableDeclaration: 
+  - 基线：源语句 sha256=60fc27104c61c559349e2d076dacffe3d810f4768c8dc3b4d5f43f777c2bfbe3；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03958 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 192-199 FunctionDeclaration: getList
+  - 基线：源语句 sha256=f0549352391daf3fc022b5e349a735ba13ab4ec1fe7035ffb49060916e5355fb；保留返回、异常及 0 个分支，调用=CallExpression.then, list, proxy.addDateRange。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03959 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 201-204 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=71d9364cef95db7495918f6fbda87103b5332e631eb6cac8bd039c5558ee3065；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03960 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 206-211 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=5074924c81328aa7b6befeb759c5b0265122f866b0a0441afbad0ed0266d9756；保留返回、异常及 0 个分支，调用=proxy.resetForm, proxy.$refs.operlogRef.sort。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03961 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 213-216 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=94db6e3c37de062c815a241602900b9e12b7bd6502611434c90c4e49fd23abc7；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03962 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 218-222 FunctionDeclaration: handleSortChange
+  - 基线：源语句 sha256=614e2bb3c621ea45df4ae95f359cffd5b291ab7fa552da3bb3e464cdf90b99bf；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03963 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 224-227 FunctionDeclaration: handleDetail
+  - 基线：源语句 sha256=865413331d8bd157b512fb1c508cbcd7fdf5c9f1bcd7fe5f8f43be7e07fadc48；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03964 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 229-237 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=2ff8a05b1b132268a3bf516857eb1207f170e50401f0e239608183fd50960f67；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delOperlog, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03965 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 239-246 FunctionDeclaration: handleClean
+  - 基线：源语句 sha256=49779a232cafa92c698ca37a09fbd1649f2066793ad7f021866605188d543e5f；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, cleanOperlog, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03966 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 248-252 FunctionDeclaration: handleExport
+  - 基线：源语句 sha256=e5fb8e46e993ee4509b4917e9b9dac295e47317ad653d15249cef68f09ff59d9；保留返回、异常及 0 个分支，调用=proxy.download, NewExpression.getTime。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03967 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 254-254 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03968 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` lines 256-260 ExpressionStatement: 
+  - 基线：源语句 sha256=17ffa6410b29708eb725aa6841db9de40066edef1ed09032f679fbd2d0c31972；保留返回、异常及 1 个分支，调用=watch, handleQuery。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03969 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template lines 1-153（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03970 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03971 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03972 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03973 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.operIp；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03974 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03975 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 15: v-model:
+  - 基线：原表达式：queryParams.title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03976 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 19: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03977 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.operName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03978 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 28: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03979 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 33: v-model:
+  - 基线：原表达式：queryParams.businessType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03980 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 39: v-for:
+  - 基线：原表达式：dict in sys_oper_type；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03981 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 40: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03982 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 41: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03983 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 42: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03984 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 48: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03985 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 54: v-for:
+  - 基线：原表达式：dict in sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03986 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 55: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03987 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 56: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03988 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 57: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03989 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 63: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03990 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 66: v-bind:aria-label
+  - 基线：原表达式：`日期范围（${getDisplayTimezone()}）`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03991 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 73: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03992 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 74: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03993 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 78: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03994 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 79: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03995 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 84: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03996 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 85: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03997 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 86: v-hasPermi:
+  - 基线：原表达式：['monitor:operlog:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03998 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 89: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I03999 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 94: v-on:click
+  - 基线：原表达式：handleClean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04000 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 95: v-hasPermi:
+  - 基线：原表达式：['monitor:operlog:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04001 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 98: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04002 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 103: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04003 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 104: v-hasPermi:
+  - 基线：原表达式：['monitor:operlog:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04004 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 107: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04005 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 107: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04006 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 110: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04007 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 110: v-bind:data
+  - 基线：原表达式：operlogList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04008 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 110: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04009 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 110: v-bind:default-sort
+  - 基线：原表达式：defaultSort；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04010 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 110: v-on:sort-change
+  - 基线：原表达式：handleSortChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04011 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 113: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04012 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 115: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04013 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 116: v-bind:options
+  - 基线：原表达式：sys_oper_type；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04014 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 116: v-bind:value
+  - 基线：原表达式：scope.row.businessType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04015 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 119: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04016 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 119: v-bind:sort-orders
+  - 基线：原表达式：['descending', 'ascending']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04017 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 120: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04018 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 122: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04019 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 123: v-bind:options
+  - 基线：原表达式：sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04020 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 123: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04021 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 126: v-bind:sort-orders
+  - 基线：原表达式：['descending', 'ascending']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04022 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 127: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04023 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 131: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04024 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 131: v-bind:sort-orders
+  - 基线：原表达式：['descending', 'ascending']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04025 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 132: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04026 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 137: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04027 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 138: v-on:click
+  - 基线：原表达式：handleDetail(scope.row, scope.index)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04028 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 138: v-hasPermi:
+  - 基线：原表达式：['monitor:operlog:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04029 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 144: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04030 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 145: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04031 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 146: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04032 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 147: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04033 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 148: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04034 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 151: v-model:visible
+  - 基线：原表达式：detailVisible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04035 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template line 151: v-bind:row
+  - 基线：原表达式：detailRow；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04036 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template interpolation line 128
+  - 基线：原显示表达式：parseTime(scope.row.operTime)
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+- I04037 `ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue` template interpolation line 133
+  - 基线：原显示表达式：scope.row.costTime
+  - 去向：react-front/src/views/monitor/operlog/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

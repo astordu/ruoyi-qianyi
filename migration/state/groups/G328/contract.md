@@ -1,0 +1,349 @@
+# G328 src/views/tool/gen/index.vue：完整能力
+
+依赖：G000, G046, G180, G182, G221, G250, G324, G327
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I08594 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 181-181 ImportDeclaration: 
+  - 基线：源语句 sha256=c69dde49a2dd12dcaf4a6043384f662960705c8301e4d620e35cff1a76a117de；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08595 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 182-182 ImportDeclaration: 
+  - 基线：源语句 sha256=257e51cb2ee253e6fe3f8183f590a4ff21b5c80957695574861e4088c2d72308；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08596 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 183-183 ImportDeclaration: 
+  - 基线：源语句 sha256=92adfac8243a9e0f6e3f442183ca10d63c1cd0775aec0d7aff0dd8a6cb1fa8c1；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08597 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 184-184 ImportDeclaration: 
+  - 基线：源语句 sha256=8d8114425533450c4386afa8817d277cdb48b5c20e33a9ca256d332ade5d6562；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08598 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 186-186 VariableDeclaration: route
+  - 基线：源语句 sha256=19ffaf888604ba2654aa25f29ba0210e96226ea7089e9e15dc5c05cf276b3a9f；保留返回、异常及 0 个分支，调用=useRoute。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08599 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 187-187 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08600 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 189-189 VariableDeclaration: tableList
+  - 基线：源语句 sha256=41590863343c9903cd14886f62750cc4c58e2822e59937247721c02ecffe433c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08601 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 190-190 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08602 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 191-191 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08603 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 192-192 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08604 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 193-193 VariableDeclaration: single
+  - 基线：源语句 sha256=d8b92433028a1ee7912903c3a8cf52435102e8d5f5c98809c169ecda5a0c1d2a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08605 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 194-194 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08606 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 195-195 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08607 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 196-196 VariableDeclaration: tableNames
+  - 基线：源语句 sha256=3c985f8223bfa7904dda1a55bbd0350562401436b791d28cc73f86146c2da599；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08608 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 197-197 VariableDeclaration: selectedSourceNames
+  - 基线：源语句 sha256=3f2b5a9691ae280f40a08f82493e1f7708777e36d6c6d3e2836a29125b0d64e5；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08609 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 198-198 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08610 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 199-199 VariableDeclaration: uniqueId
+  - 基线：源语句 sha256=0916a9560b6dc7309c61cdd41412b7e117f5a18e803da0a825cf7a4d007e6aca；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08611 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 200-200 VariableDeclaration: dataSources
+  - 基线：源语句 sha256=599ea92a480ea8629b9d3f08a1a1ae61378d2bba54efaadae3a2f68bea681768；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08612 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 202-216 VariableDeclaration: data
+  - 基线：源语句 sha256=3bb958888892d0bcdc46a1a63c5e6aa94b42f88393122be2e0f9e4415eedb22a；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08613 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 218-218 VariableDeclaration: 
+  - 基线：源语句 sha256=2f3d167d6855c501dbb59569dcc0ae6f8fefd75efddaaffbe6cafd6d5da19025；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08614 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 220-229 ExpressionStatement: 
+  - 基线：源语句 sha256=aeb933a5f3f9d3a3b433691f8e5b5cd06fa355536f40a5b913d401933f0c0595；保留返回、异常及 2 个分支，调用=onActivated, Number, proxy.resetForm, getList。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08615 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 232-239 FunctionDeclaration: getList
+  - 基线：源语句 sha256=1dacee8ff5f466048c68968721f8548cf301f618f487c730c6d6d02f553fc6fd；保留返回、异常及 0 个分支，调用=CallExpression.then, listTable, proxy.addDateRange。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08616 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 242-246 FunctionDeclaration: getDataSources
+  - 基线：源语句 sha256=6dde49e02813fe6f4f4879abef1acc7e1788716f25244263b279f5bca2002f8e；保留返回、异常及 1 个分支，调用=CallExpression.then, listDataSources。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08617 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 249-252 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=38cc4d84b6bbb299a910fac3c6a54cf2c476b19e76a1a9d2bae86e6d3840a28f；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08618 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 255-280 FunctionDeclaration: handleGenTable
+  - 基线：源语句 sha256=b44a91fd613dd6a0799d6d6f13d0bbbb4953b1af5ec1dc0a4107b950ec9c6e9b；保留返回、异常及 9 个分支，调用=proxy.$modal.msgError, sourceNames.filter, CallExpression.then, genCode, proxy.$modal.msgSuccess, Array.isArray, encodeURIComponent, tbNames.join, proxy.$download.zip。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08619 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 283-290 FunctionDeclaration: handleSynchDb
+  - 基线：源语句 sha256=b304a162b60d43a713df5a1891c4927a68df8b26fe8a53d7aa834fd8dbddb5c6；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, synchDb, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08620 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 293-295 FunctionDeclaration: openImportTable
+  - 基线：源语句 sha256=b29c8164630d3b0f55d4a3996d36e47f1cfbb25272511d49e128b79e62210c1c；保留返回、异常及 0 个分支，调用=proxy.$refs.importRef.show。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08621 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 298-300 FunctionDeclaration: openCreateTable
+  - 基线：源语句 sha256=8d4f2a7ced42ec8d7a828686f87e00a6d814a017293c51e18fb413a416f86927；保留返回、异常及 0 个分支，调用=proxy.$refs.createRef.show。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08622 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 303-307 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=d4e94267bf4fb54cbf1b37f2236dae2b00f0f9ff085c5a39d88e9854bded282c；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08623 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 310-316 FunctionDeclaration: handlePreview
+  - 基线：源语句 sha256=759ba564cd0d24c2dc89e4f7e1fbacb443bc4bd6f4b54acabe7abe41e874f5a1；保留返回、异常及 0 个分支，调用=CallExpression.then, previewTable。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08624 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 319-321 FunctionDeclaration: copyTextSuccess
+  - 基线：源语句 sha256=b8bcd9d8d230227c00f686276bc055162b97d1ab503a7e37630b1bdb76d1f448；保留返回、异常及 0 个分支，调用=proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08625 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 324-330 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=b8b0bceeb4f4471f2ba29c6c6f8bc7986a800e540002b5e695a075ff3b756bb9；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08626 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 333-338 FunctionDeclaration: handleEditTable
+  - 基线：源语句 sha256=8c6c75ca9ff27e838bc2a464ae486761a5dbd5b790ca0a02f323463a03597f6e；保留返回、异常及 2 个分支，调用=proxy.$tab.openPage。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08627 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 341-349 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=22dbf2d6db64f780542766c870b598b7814ad2fba10306d25d5d0e18dde54575；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delTable, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08628 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 351-351 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08629 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` lines 352-352 ExpressionStatement: 
+  - 基线：源语句 sha256=763ec0527c44f40a22084de166af29d802081e593fc057254743afe967025e73；保留返回、异常及 0 个分支，调用=getDataSources。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08630 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template lines 1-178（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08631 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08632 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08633 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08634 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.tableName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08635 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08636 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 15: v-model:
+  - 基线：原表达式：queryParams.tableComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08637 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 19: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08638 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.dataSourceName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08639 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 31: v-for:
+  - 基线：原表达式：source in dataSources；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08640 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 32: v-bind:key
+  - 基线：原表达式：source.name；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08641 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 33: v-bind:label
+  - 基线：原表达式：source.name + '（' + source.dbType + '）'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08642 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 34: v-bind:value
+  - 基线：原表达式：source.name；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08643 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 40: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08644 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 49: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08645 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 50: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08646 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 54: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08647 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 55: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08648 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 60: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08649 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 61: v-on:click
+  - 基线：原表达式：handleGenTable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08650 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 62: v-hasPermi:
+  - 基线：原表达式：['tool:gen:code']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08651 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 65: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08652 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 70: v-on:click
+  - 基线：原表达式：openCreateTable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08653 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 71: v-hasRole:
+  - 基线：原表达式：['admin']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08654 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 74: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08655 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 79: v-on:click
+  - 基线：原表达式：openImportTable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08656 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 80: v-hasPermi:
+  - 基线：原表达式：['tool:gen:import']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08657 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 83: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08658 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 88: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08659 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 89: v-on:click
+  - 基线：原表达式：handleEditTable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08660 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 90: v-hasPermi:
+  - 基线：原表达式：['tool:gen:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08661 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 93: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08662 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 98: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08663 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 99: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08664 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 100: v-hasPermi:
+  - 基线：原表达式：['tool:gen:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08665 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 103: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08666 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 103: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08667 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 106: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08668 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 106: v-bind:data
+  - 基线：原表达式：tableList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08669 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 106: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08670 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 109: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08671 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 117: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08672 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 123: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08673 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 129: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08674 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 135: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08675 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 137: v-on:click
+  - 基线：原表达式：handlePreview(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08676 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 137: v-hasPermi:
+  - 基线：原表达式：['tool:gen:preview']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08677 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 140: v-on:click
+  - 基线：原表达式：handleEditTable(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08678 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 140: v-hasPermi:
+  - 基线：原表达式：['tool:gen:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08679 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 143: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08680 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 143: v-hasPermi:
+  - 基线：原表达式：['tool:gen:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08681 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 146: v-on:click
+  - 基线：原表达式：handleSynchDb(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08682 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 146: v-hasPermi:
+  - 基线：原表达式：['tool:gen:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08683 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 149: v-on:click
+  - 基线：原表达式：handleGenTable(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08684 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 149: v-hasPermi:
+  - 基线：原表达式：['tool:gen:code']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08685 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 155: v-show:
+  - 基线：原表达式：total>0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08686 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 156: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08687 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 157: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08688 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 158: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08689 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 159: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08690 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 162: v-bind:title
+  - 基线：原表达式：preview.title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08691 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 162: v-model:
+  - 基线：原表达式：preview.open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08692 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 163: v-model:
+  - 基线：原表达式：preview.activeName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08693 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 165: v-for:
+  - 基线：原表达式：(value, key) in preview.data；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08694 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 166: v-bind:label
+  - 基线：原表达式：key.substring(key.lastIndexOf('/')+1,key.indexOf('.jinja2'))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08695 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 167: v-bind:name
+  - 基线：原表达式：key.substring(key.lastIndexOf('/')+1,key.indexOf('.jinja2'))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08696 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 168: v-bind:key
+  - 基线：原表达式：value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08697 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 170: v-copyText:
+  - 基线：原表达式：value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08698 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 170: v-copyText:callback
+  - 基线：原表达式：copyTextSuccess；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08699 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 175: v-bind:data-sources
+  - 基线：原表达式：dataSources；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08700 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 175: v-on:ok
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08701 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 176: v-bind:data-sources
+  - 基线：原表达式：dataSources；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08702 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template line 176: v-on:ok
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08703 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template interpolation line 110
+  - 基线：原显示表达式：(queryParams.pageNum - 1) * queryParams.pageSize + scope.$index + 1
+  - 去向：react-front/src/views/tool/gen/index.tsx
+- I08704 `ruoyi-fastapi-frontend/src/views/tool/gen/index.vue` template interpolation line 171
+  - 基线：原显示表达式：value
+  - 去向：react-front/src/views/tool/gen/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

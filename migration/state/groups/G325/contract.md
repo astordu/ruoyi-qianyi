@@ -1,0 +1,193 @@
+# G325 src/views/tool/gen/editTable.vue：完整能力
+
+依赖：G000, G038, G046, G323, G326
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I08387 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 135-135 ImportDeclaration: 
+  - 基线：源语句 sha256=b477a3e9b3fe178c99de79c4a4a0868d46fa067c3f13a29ef7a9c02525677cd8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08388 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 136-136 ImportDeclaration: 
+  - 基线：源语句 sha256=f856473a5f395ea774e8227a33b0c8603a999171644fc664cfc1d93831b9d7bd；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08389 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 137-137 ImportDeclaration: 
+  - 基线：源语句 sha256=ba3a68d6d32694f22c1dc4f9d03e5912174c13de5b223c997d1406119cdcc452；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08390 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 138-138 ImportDeclaration: 
+  - 基线：源语句 sha256=48fd3981e5ab711b61656b08877b1730d24a6794f4ec02bea6595f6949df141f；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08391 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 139-139 ImportDeclaration: 
+  - 基线：源语句 sha256=eb3320dea953a5a6b2e7f9de85b27606a1cd7f7092a26edc607dbd7d32032f8c；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08392 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 141-141 VariableDeclaration: route
+  - 基线：源语句 sha256=19ffaf888604ba2654aa25f29ba0210e96226ea7089e9e15dc5c05cf276b3a9f；保留返回、异常及 0 个分支，调用=useRoute。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08393 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 142-142 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08394 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 144-144 VariableDeclaration: activeName
+  - 基线：源语句 sha256=1cb8ba10582dcee4bc2bd0250cd1a2304a6f70aaf139fcdbfb80431ce26082e8；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08395 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 145-145 VariableDeclaration: tableHeight
+  - 基线：源语句 sha256=4293cfa8b7bac2ade5cb4a5841ba44417c5363e371f8e82551d47bbb92c33f26；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08396 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 146-146 VariableDeclaration: tables
+  - 基线：源语句 sha256=e6939c2633c49695a508a300940fa4c5a8e293c24e8b00612a65c7b938da65e0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08397 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 147-147 VariableDeclaration: columns
+  - 基线：源语句 sha256=91b466a88982884f01ebdec2314b0dd60b1e608ee2fcf76a862112c534b4b3aa；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08398 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 148-148 VariableDeclaration: dictOptions
+  - 基线：源语句 sha256=3bca0c7405784f6d8d0885baf751ed8fca527823b0b8725e5f0e460be9a0ef4c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08399 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 149-149 VariableDeclaration: info
+  - 基线：源语句 sha256=023d60cfbee4d99302b4c6e9e34fe2a7d587b367ba8cc4980bf9ec5e3a91427d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08400 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 152-177 FunctionDeclaration: submitForm
+  - 基线：源语句 sha256=a91b7c9f7c05bcf476b4499def57aeec3dcaa03f3f0a2cf7c58a6df28b99a919；保留返回、异常及 3 个分支，调用=CallExpression.then, Promise.all, ArrayExpression.map, res.every, Object.assign, updateGenTable, proxy.$modal.msgSuccess, close, proxy.$modal.msgError。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08401 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 179-185 FunctionDeclaration: getFormPromise
+  - 基线：源语句 sha256=6c8a5226cd5bc5c89621fda0ae8c4e73c8b35600994bc67caf96dd5a75aa08a6；保留返回、异常及 1 个分支，调用=form.validate, resolve。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08402 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 187-190 FunctionDeclaration: close
+  - 基线：源语句 sha256=05df84e3ee567fb0a547fa64d696c2acff704e5d24f49934aafb28fd11509aef；保留返回、异常及 0 个分支，调用=Date.now, proxy.$tab.closeOpenPage。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08403 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 192-206 ExpressionStatement: 
+  - 基线：源语句 sha256=edf2332fb3b1e1987c3bda3125bc5f1c18f47b3fb53fb61424fd3b6a787365a6；保留返回、异常及 2 个分支，调用=ArrowFunctionExpression, CallExpression.then, getGenTable, getDictOptionselect。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08404 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` lines 210-222 ExpressionStatement: 
+  - 基线：源语句 sha256=4985922b7f2052a5288b743747b664015416bacab4fe515bdb1f258fec8e4c46；保留返回、异常及 0 个分支，调用=onMounted, document.querySelector, Sortable.create, columns.value.splice, parseInt。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08405 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template lines 1-132（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08406 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 3: v-model:
+  - 基线：原表达式：activeName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08407 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 5: v-bind:info
+  - 基线：原表达式：info；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08408 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 8: v-bind:data
+  - 基线：原表达式：columns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08409 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 8: v-bind:max-height
+  - 基线：原表达式：tableHeight；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08410 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 10: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08411 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 12: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08412 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 13: v-model:
+  - 基线：原表达式：scope.row.columnComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08413 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 20: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08414 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 23: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08415 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 24: v-model:
+  - 基线：原表达式：scope.row.pythonType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08416 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 39: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08417 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 40: v-model:
+  - 基线：原表达式：scope.row.pythonField；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08418 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 45: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08419 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 46: v-model:
+  - 基线：原表达式：scope.row.isInsert；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08420 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 50: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08421 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 51: v-model:
+  - 基线：原表达式：scope.row.isEdit；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08422 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 55: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08423 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 56: v-model:
+  - 基线：原表达式：scope.row.isList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08424 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 60: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08425 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 61: v-model:
+  - 基线：原表达式：scope.row.isQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08426 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 65: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08427 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 66: v-model:
+  - 基线：原表达式：scope.row.queryType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08428 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 79: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08429 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 80: v-model:
+  - 基线：原表达式：scope.row.isRequired；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08430 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 84: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08431 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 85: v-model:
+  - 基线：原表达式：scope.row.isUnique；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08432 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 89: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08433 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 90: v-model:
+  - 基线：原表达式：scope.row.htmlType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08434 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 106: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08435 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 107: v-model:
+  - 基线：原表达式：scope.row.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08436 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 109: v-for:
+  - 基线：原表达式：dict in dictOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08437 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 110: v-bind:key
+  - 基线：原表达式：dict.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08438 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 111: v-bind:label
+  - 基线：原表达式：dict.dictName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08439 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 112: v-bind:value
+  - 基线：原表达式：dict.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08440 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 122: v-bind:info
+  - 基线：原表达式：info；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08441 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 122: v-bind:tables
+  - 基线：原表达式：tables；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08442 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 127: v-on:click
+  - 基线：原表达式：submitForm()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08443 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template line 128: v-on:click
+  - 基线：原表达式：close()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08444 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template interpolation line 113
+  - 基线：原显示表达式：dict.dictName
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+- I08445 `ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue` template interpolation line 114
+  - 基线：原显示表达式：dict.dictType
+  - 去向：react-front/src/views/tool/gen/editTable.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

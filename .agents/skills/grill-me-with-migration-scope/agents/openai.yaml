@@ -1,4 +1,0 @@
-interface:
-  display_name: "迁移范围访谈"
-  short_description: "通过逐步访谈确认 Vue 到 React 的迁移范围。当用户选择模块、定义迁移边界或希望先把需求问清楚时使用。"
-  default_prompt: "使用 $grill-me-with-migration-scope，根据当前模块的范围和 PRD 完成对应迁移阶段。"

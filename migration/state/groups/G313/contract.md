@@ -1,0 +1,163 @@
+# G313 src/views/system/user/profile/timezoneSettings.vue：完整能力
+
+依赖：G000, G045, G230, G253F020, G253F024, G253F025, G253F027, G253F033
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07626 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 45-45 ImportDeclaration: 
+  - 基线：源语句 sha256=deb21c43517d112d3c13533e831fb551b9f403957403b7fff653799a171cd9a8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07627 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 46-46 ImportDeclaration: 
+  - 基线：源语句 sha256=c351978f324903ca33541ef37b2b07118aae76a82edaab040cb71996f923341f；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07628 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 47-53 ImportDeclaration: 
+  - 基线：源语句 sha256=fc1ef07d21f3d152b924c55904982e334b3020b05f131ea0a6b6fac2bcfb0340；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07629 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 55-55 VariableDeclaration: props
+  - 基线：源语句 sha256=4bcd1b06dce825a54b352bb89ad75ddc8590ffb7df2d4a120574b8e737eadfc7；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07630 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 56-56 VariableDeclaration: emit
+  - 基线：源语句 sha256=958cd8bf6ea3d5558176d434e78deb57b70b37f2946e507298a4a84add9e4927；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07631 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 57-57 VariableDeclaration: 
+  - 基线：源语句 sha256=d3917068104e0f2158733e5e758c09ff6781b09fc4b90611c9a30e2625c695d6；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07632 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 58-58 VariableDeclaration: userStore
+  - 基线：源语句 sha256=1251336d9bdee09ff9fca3bb6abee75e79e3848e2049264fdca9e1b18043734d；保留返回、异常及 0 个分支，调用=useUserStore。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07633 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 59-59 VariableDeclaration: mode
+  - 基线：源语句 sha256=08427e79d4ce4a68e92a3597a6c668f73b7bddb7bc18a568b45dfb11ab305b76；保留返回、异常及 1 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07634 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 60-60 VariableDeclaration: selectedZone
+  - 基线：源语句 sha256=d6327c180389fb9669fd5aaeed24eefcd72cf9cc7e696c9ddc617552193af862；保留返回、异常及 0 个分支，调用=ref, getDisplayTimezone。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07635 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 61-61 VariableDeclaration: timezones
+  - 基线：源语句 sha256=5b5e35f13616e45471459782dc5aba81340eae46d3e4c88c2baeb00ff645f299；保留返回、异常及 0 个分支，调用=ref, getSupportedTimezones。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07636 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 62-62 VariableDeclaration: loading
+  - 基线：源语句 sha256=360133162609dea18ceb29cc60a4fd9166a9ed26b0d8544941212d26502f30ef；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07637 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 63-63 VariableDeclaration: loadError
+  - 基线：源语句 sha256=77911b94e7b9309f840658d3deae4394653150e0f35c47a3c934b3909dcea901；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07638 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 64-64 VariableDeclaration: saving
+  - 基线：源语句 sha256=abbba68173972ab56ab195a9b6b0573845d7764eaad774585bc2af820e62622a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07639 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 65-65 VariableDeclaration: saveError
+  - 基线：源语句 sha256=8e658328bd39aff292c44e62b94e60e772b0d3f963a1939c22fdf16fc1a268ae；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07640 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 66-66 VariableDeclaration: fieldError
+  - 基线：源语句 sha256=c2f911683c1adbda6365d43699a8e1db573d3129438f44d29e9911824b867f10；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07641 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 67-67 VariableDeclaration: now
+  - 基线：源语句 sha256=9ace4779e17660429007a876a93dcca0e62e9b5d94d0f9a014074f9ca1a6dd6a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07642 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 68-68 VariableDeclaration: deviceZone
+  - 基线：源语句 sha256=5a5dbe029183871269b11fe72a3b0bf35fd41d494721a3c0a07eb1d97e840265；保留返回、异常及 0 个分支，调用=computed。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07643 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 69-71 VariableDeclaration: previewZone
+  - 基线：源语句 sha256=5169ed7546905447f8956dd26d58f2cd86839e265d7a000d97a63120581d8de1；保留返回、异常及 2 个分支，调用=computed, getBusinessTimezone。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07644 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 72-72 VariableDeclaration: previewTime
+  - 基线：源语句 sha256=a9a3b9f05659c0acca6544177d1210a530b15f3e9cfb644ca0594a70d74acfff；保留返回、异常及 0 个分支，调用=computed, formatBusinessTime。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07645 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 74-83 ExpressionStatement: 
+  - 基线：源语句 sha256=f5b6cbe9b77455dd0d98e56691e087d2574bb01d026a572aa2c12bea83d40266；保留返回、异常及 4 个分支，调用=watch, getDisplayTimezone。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07646 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 86-97 FunctionDeclaration: loadOptions
+  - 基线：源语句 sha256=33a7cdd18a1dac3a005024a4a8c523722b2b8af7da2a0cd2267365ba1c2fdcbf；保留返回、异常及 1 个分支，调用=getTimezoneOptions, getSupportedTimezones。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07647 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 100-122 FunctionDeclaration: save
+  - 基线：源语句 sha256=bb06d9dd2c938c9ffe8ee3103bba5674170e1ee42212158f974b13873e997ed9；保留返回、异常及 8 个分支，调用=updateUserTimezone, userStore.applyTimezone, emit, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07648 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` lines 124-124 ExpressionStatement: 
+  - 基线：源语句 sha256=9d98328f2324346d7f92b1c0fc64a7ae1413fb085cb8da416b59294ed56d261c；保留返回、异常及 0 个分支，调用=onMounted。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07649 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template lines 1-42（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07650 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 2: v-on:submit
+  - 基线：原表达式：save；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07651 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 4: v-model:
+  - 基线：原表达式：mode；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07652 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 4: v-bind:disabled
+  - 基线：原表达式：saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07653 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 9: v-if:
+  - 基线：原表达式：mode === 'custom'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07654 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 9: v-bind:error
+  - 基线：原表达式：fieldError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07655 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 11: v-model:
+  - 基线：原表达式：selectedZone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07656 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 13: v-bind:disabled
+  - 基线：原表达式：saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07657 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 14: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07658 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 18: v-on:change
+  - 基线：原表达式：fieldError = ''；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07659 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 20: v-for:
+  - 基线：原表达式：zone in timezones；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07660 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 20: v-bind:key
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07661 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 20: v-bind:label
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07662 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 20: v-bind:value
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07663 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 23: v-if:
+  - 基线：原表达式：loadError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07664 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 23: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07665 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 24: v-slot:title
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07666 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 26: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07667 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 26: v-on:click
+  - 基线：原表达式：loadOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07668 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 34: v-if:
+  - 基线：原表达式：mode === 'auto' && !deviceZone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07669 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 39: v-if:
+  - 基线：原表达式：saveError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07670 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template line 40: v-bind:loading
+  - 基线：原表达式：saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07671 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template interpolation line 31
+  - 基线：原显示表达式：previewZone
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07672 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template interpolation line 33
+  - 基线：原显示表达式：previewTime
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07673 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` template interpolation line 39
+  - 基线：原显示表达式：saveError
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+- I07674 `ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue` style[0] lines 127-154
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/user/profile/timezoneSettings.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

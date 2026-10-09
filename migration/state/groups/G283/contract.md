@@ -1,0 +1,280 @@
+# G283 src/views/system/file/components/FileAclDrawer.vue：完整能力
+
+依赖：G000, G039, G158, G253F040, G253F046
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04835 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 173-179 ImportDeclaration: 
+  - 基线：源语句 sha256=7760311291ec68cd6eaf70a72c665b1970f2ac055dfc2c3036291a7ca8af1f03；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04836 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 180-180 ImportDeclaration: 
+  - 基线：源语句 sha256=f31e17e00698a8553611101cd4718d9dee0ddeb083d4819d0b995cc405c19dcd；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04837 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 181-181 ImportDeclaration: 
+  - 基线：源语句 sha256=43c18c9dd358c16b77c25456394a957803835e7380ef5cfa199370b907c127e2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04838 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 183-183 VariableDeclaration: emit
+  - 基线：源语句 sha256=000f8803e150d60c6d770de50ab5bdb69c7c7599de94c475abb3a63c89abf22c；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04839 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 184-184 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04840 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 185-185 VariableDeclaration: visible
+  - 基线：源语句 sha256=1e5831fe2e56f6cc177d5ecfd848b4a6a30d10008c0fed3fc9f2ab7bcf3c3453；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04841 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 186-186 VariableDeclaration: loading
+  - 基线：源语句 sha256=0f2d86fe0699597a69087a478d5543264e008a02dbd9826dd2138c7409858393；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04842 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 187-187 VariableDeclaration: saving
+  - 基线：源语句 sha256=0ed4610a63d84622d45fa05fda6df512f5264acc5b946a32df9ca21ed419ed5a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04843 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 188-188 VariableDeclaration: fileId
+  - 基线：源语句 sha256=8ef95f1aa02843b4237f20852f2498fe27f22fc19215b9e1d5f4bfa884027157；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04844 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 189-189 VariableDeclaration: fileName
+  - 基线：源语句 sha256=002d68d0f126e088bacfdbc8f608f68deeccca37344c0fcc0fa31a91662553f3；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04845 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 190-190 VariableDeclaration: fileIds
+  - 基线：源语句 sha256=d0da7d5b148a01f41c8681538e7a0f2bf222e00843e8432e4e39e5a161bc1f43；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04846 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 191-191 VariableDeclaration: batchMode
+  - 基线：源语句 sha256=175d35cb0b45752e6807c39ca027094adcedd0d11d58c3fa7b35ce1b263ffebb；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04847 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 192-192 VariableDeclaration: batchCount
+  - 基线：源语句 sha256=e68d3b5572d814f2fd41311b59df0b1785029cbea46df47b9c1c2f712bfd418b；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04848 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 193-193 VariableDeclaration: aclVersion
+  - 基线：源语句 sha256=d502a4023b5fef6ee1875a237710fe0395ad11c7131921e6c329c754a1b30ab9；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04849 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 194-194 VariableDeclaration: builtinPermissions
+  - 基线：源语句 sha256=c224fce9bcbad2499e491b5cd8dabf8d67da331b2181a16b485e34cfd006a0c0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04850 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 195-195 VariableDeclaration: entries
+  - 基线：源语句 sha256=b5ad1b0d7d826c0bd0cf9475d22360b7268f5e03668355548a73d66864b2f179；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04851 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 196-196 VariableDeclaration: deptOptions
+  - 基线：源语句 sha256=236d0e7c904cd13eca18f821c6ce9044c96c113c5ffc8c000b9d24335913858e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04852 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 197-201 VariableDeclaration: drawerTitle
+  - 基线：源语句 sha256=b0dd5919433584504bb8a72590186cf7735666c5322f42498a210be55a77091e；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04853 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 203-255 FunctionDeclaration: open
+  - 基线：源语句 sha256=a12fc95368cdc14648d9e8846996cc3259a59ec2f5903ac9a9499bfd1984aa73；保留返回、异常及 12 个分支，调用=proxy.$modal.msgWarning, selectedPrivateIds.join, CallExpression.finally, CallExpression.then, getFileAclDeptTree, Promise.all, listFileAcl, aclResponse.data.entries.map, prepareTimeFields。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04854 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 257-265 FunctionDeclaration: builtinSourceLabel
+  - 基线：源语句 sha256=7e5b0a58a8b1a313178a59a924dc7bb7378abd2c341a7766d2d54627f52b4035；保留返回、异常及 2 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04855 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 267-275 FunctionDeclaration: builtinSourceType
+  - 基线：源语句 sha256=bccccdd4aeac435fd3666d968ffadc231ec2df6e1edaecfa482cf4c32d624069；保留返回、异常及 2 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04856 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 277-287 FunctionDeclaration: addEntry
+  - 基线：源语句 sha256=3dbe2e7debddb6e8f655e74df01f2ea67896b6f65b90774c87aae4295af76d2d；保留返回、异常及 0 个分支，调用=entries.value.push。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04857 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 289-291 FunctionDeclaration: removeEntry
+  - 基线：源语句 sha256=2da9ddf785d7623c0b3704f350d80db26ae971beda03ad79ec8da3c9558fd6b7；保留返回、异常及 0 个分支，调用=entries.value.splice。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04858 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 293-297 FunctionDeclaration: handleSubjectTypeChange
+  - 基线：源语句 sha256=2d5b49dd82c25a93ed0c9989ef13da9dee238bd0328c51e8c31a14efaa1f9836；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04859 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 299-303 FunctionDeclaration: handleSubjectVisible
+  - 基线：源语句 sha256=6816530bf29d924a2b6f993ed3130598f378a4443e2836de110f412e365ad15a；保留返回、异常及 2 个分支，调用=searchSubjectOptions。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04860 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 305-318 FunctionDeclaration: searchSubjectOptions
+  - 基线：源语句 sha256=ef8aca0325079a7ff3286910a2b20388457df9846a7ee17e754dd363bdb7d656；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, searchFileAclSubjects。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04861 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 320-366 FunctionDeclaration: submit
+  - 基线：源语句 sha256=47e41b9e307cacd663a8b3c7127e7666d10db859b2d5e2b090bec53f10a69ce6；保留返回、异常及 8 个分支，调用=entries.value.some, proxy.$modal.msgError, serializeTimeFieldsForSubmit, convertedEntries.push, convertedEntries.map, batchSaveFileAcl, saveFileAcl, CallExpression.finally, saveRequest.then, proxy.$modal.msgSuccess, emit, CallExpression.catch, CallExpression.then, proxy.$modal.confirm, saveAcl。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04862 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` lines 368-368 ExpressionStatement: 
+  - 基线：源语句 sha256=2e56640d2586072b42b8ea1f2cbd05f1d669da4f3e9e5617eb50a334cf1e3d67；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04863 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template lines 1-170（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04864 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 3: v-bind:title
+  - 基线：原表达式：drawerTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04865 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 4: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04866 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 7: v-bind:close-on-click-modal
+  - 基线：原表达式：!saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04867 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 10: v-bind:title
+  - 基线：原表达式：
+        batchMode
+          ? '批量操作仅覆盖所选文件的显式授权；内置权限仍按各文件规则生效。'
+          : '内置权限只读展示；管理员和所有者不可被拒绝，启用的上传人权限可被匹配的显式拒绝覆盖。'
+      ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04868 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 16: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04869 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 20: v-if:
+  - 基线：原表达式：!batchMode；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04870 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 22: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04871 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 22: v-bind:data
+  - 基线：原表达式：builtinPermissions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04872 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 24: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04873 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 25: v-bind:type
+  - 基线：原表达式：builtinSourceType(scope.row.source)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04874 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 31: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04875 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 36: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04876 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 38: v-bind:type
+  - 基线：原表达式：scope.row.enabled ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04877 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 46: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04878 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 48: v-if:
+  - 基线：原表达式：scope.row.enabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04879 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 49: v-bind:type
+  - 基线：原表达式：scope.row.denyOverridable ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04880 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 54: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04881 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 68: v-on:click
+  - 基线：原表达式：addEntry；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04882 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 72: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04883 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 72: v-bind:data
+  - 基线：原表达式：entries；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04884 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 74: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04885 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 76: v-model:
+  - 基线：原表达式：scope.row.subjectType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04886 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 77: v-on:change
+  - 基线：原表达式：handleSubjectTypeChange(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04887 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 86: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04888 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 88: v-if:
+  - 基线：原表达式：scope.row.subjectType === 'dept'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04889 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 89: v-model:
+  - 基线：原表达式：scope.row.subjectId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04890 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 90: v-bind:data
+  - 基线：原表达式：deptOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04891 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 91: v-bind:props
+  - 基线：原表达式：{ value: 'id', label: 'label', children: 'children' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04892 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 97: v-bind:render-after-expand
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04893 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 101: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04894 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 102: v-model:
+  - 基线：原表达式：scope.row.subjectId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04895 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 106: v-bind:loading
+  - 基线：原表达式：scope.row.subjectLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04896 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 107: v-bind:remote-method
+  - 基线：原表达式：keyword => searchSubjectOptions(scope.row, keyword)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04897 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 108: v-on:visible-change
+  - 基线：原表达式：
+              visible => handleSubjectVisible(scope.row, visible)
+            ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04898 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 115: v-for:
+  - 基线：原表达式：item in scope.row.subjectOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04899 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 116: v-bind:key
+  - 基线：原表达式：item.subjectId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04900 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 117: v-bind:label
+  - 基线：原表达式：item.subjectName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04901 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 118: v-bind:value
+  - 基线：原表达式：item.subjectId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04902 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 124: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04903 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 125: v-model:
+  - 基线：原表达式：scope.row.effect；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04904 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 132: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04905 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 134: v-if:
+  - 基线：原表达式：scope.row.subjectType === 'dept'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04906 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 135: v-model:
+  - 基线：原表达式：scope.row.includeChildren；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04907 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 137: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04908 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 141: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04909 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 143: v-model:
+  - 基线：原表达式：scope.row.expireTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04910 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 149: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04911 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 155: v-on:click
+  - 基线：原表达式：removeEntry(scope.$index)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04912 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 161: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04913 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 163: v-bind:loading
+  - 基线：原表达式：saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04914 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 163: v-on:click
+  - 基线：原表达式：submit；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04915 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template line 166: v-on:click
+  - 基线：原表达式：visible = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04916 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template interpolation line 26
+  - 基线：原显示表达式：builtinSourceLabel(scope.row.source)
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04917 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template interpolation line 32
+  - 基线：原显示表达式：scope.row.subjectName || scope.row.subjectId || "-"
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04918 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template interpolation line 41
+  - 基线：原显示表达式：scope.row.enabled ? "允许下载" : "已移除"
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04919 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` template interpolation line 52
+  - 基线：原显示表达式：scope.row.denyOverridable ? "可以覆盖" : "不可覆盖"
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+- I04920 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue` style[0] lines 371-388
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/file/components/FileAclDrawer.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

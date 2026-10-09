@@ -1,0 +1,15 @@
+{
+  "conditions": {
+    "node": "v22.23.2",
+    "hostTimezone": "Asia/Shanghai",
+    "intlPolyfilled": false
+  },
+  "baselineConditions": {
+    "node": "v22.23.2",
+    "hostTimezone": "Asia/Shanghai",
+    "intlPolyfilled": false
+  },
+  "comparisons": 13,
+  "diffs": [],
+  "passed": true
+}

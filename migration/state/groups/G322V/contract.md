@@ -1,0 +1,201 @@
+# G322V src/views/tool/build/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G148, G187, G217, G235, G236, G237, G238, G240, G242, G317, G318, G320, G322, G322F030, G322F031, G322F032, G322F033, G322F034, G322F035, G322F036, G322F037, G322F038, G322F039, G322F040, G322F041, G322F042, G322F043, G322F044, G322F045, G322F046
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I08288 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template lines 1-96（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08289 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 6: v-bind:src
+  - 基线：原表达式：logo；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08290 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 14: v-bind:list
+  - 基线：原表达式：inputComponents；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08291 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 15: v-bind:group
+  - 基线：原表达式：{ name: 'componentsGroup', pull: 'clone', put: false }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08292 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 15: v-bind:clone
+  - 基线：原表达式：cloneComponent；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08293 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 16: v-bind:sort
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08294 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 16: v-on:end
+  - 基线：原表达式：onEnd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08295 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 17: v-slot:item
+  - 基线：原表达式：{ element, index }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08296 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 18: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08297 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 18: v-on:click
+  - 基线：原表达式：addComponent(element)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08298 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 20: v-bind:icon-class
+  - 基线：原表达式：element.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08299 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 29: v-bind:list
+  - 基线：原表达式：selectComponents；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08300 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 30: v-bind:group
+  - 基线：原表达式：{ name: 'componentsGroup', pull: 'clone', put: false }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08301 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 30: v-bind:clone
+  - 基线：原表达式：cloneComponent；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08302 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 31: v-bind:sort
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08303 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 31: v-on:end
+  - 基线：原表达式：onEnd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08304 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 32: v-slot:item
+  - 基线：原表达式：{ element, index }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08305 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 33: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08306 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 33: v-on:click
+  - 基线：原表达式：addComponent(element)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08307 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 35: v-bind:icon-class
+  - 基线：原表达式：element.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08308 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 44: v-bind:list
+  - 基线：原表达式：layoutComponents；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08309 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 45: v-bind:group
+  - 基线：原表达式：{ name: 'componentsGroup', pull: 'clone', put: false }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08310 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 45: v-bind:clone
+  - 基线：原表达式：cloneComponent；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08311 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 46: v-bind:sort
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08312 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 46: v-on:end
+  - 基线：原表达式：onEnd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08313 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 47: v-slot:item
+  - 基线：原表达式：{ element, index }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08314 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 48: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08315 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 48: v-on:click
+  - 基线：原表达式：addComponent(element)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08316 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 50: v-bind:icon-class
+  - 基线：原表达式：element.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08317 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 61: v-on:click
+  - 基线：原表达式：download；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08318 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 64: v-on:click
+  - 基线：原表达式：copy；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08319 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 67: v-on:click
+  - 基线：原表达式：empty；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08320 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 72: v-bind:gutter
+  - 基线：原表达式：formConf.gutter；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08321 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 73: v-bind:size
+  - 基线：原表达式：formConf.size；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08322 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 73: v-bind:label-position
+  - 基线：原表达式：formConf.labelPosition；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08323 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 73: v-bind:disabled
+  - 基线：原表达式：formConf.disabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08324 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 74: v-bind:label-width
+  - 基线：原表达式：formConf.labelWidth + 'px'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08325 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 75: v-bind:list
+  - 基线：原表达式：drawingList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08326 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 75: v-bind:animation
+  - 基线：原表达式：340；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08327 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 77: v-slot:item
+  - 基线：原表达式：{ element, index }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08328 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 78: v-bind:key
+  - 基线：原表达式：element.renderKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08329 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 78: v-bind:drawing-list
+  - 基线：原表达式：drawingList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08330 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 78: v-bind:element
+  - 基线：原表达式：element；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08331 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 78: v-bind:index
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08332 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 79: v-bind:active-id
+  - 基线：原表达式：activeId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08333 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 79: v-bind:form-conf
+  - 基线：原表达式：formConf；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08334 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 79: v-on:activeItem
+  - 基线：原表达式：activeFormItem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08335 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 79: v-on:copyItem
+  - 基线：原表达式：drawingItemCopy；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08336 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 80: v-on:deleteItem
+  - 基线：原表达式：drawingItemDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08337 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 83: v-show:
+  - 基线：原表达式：!drawingList.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08338 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 90: v-bind:active-data
+  - 基线：原表达式：activeData；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08339 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 90: v-bind:form-conf
+  - 基线：原表达式：formConf；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08340 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 90: v-bind:show-field
+  - 基线：原表达式：!!drawingList.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08341 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 91: v-on:tag-change
+  - 基线：原表达式：tagChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08342 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 93: v-model:
+  - 基线：原表达式：dialogVisible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08343 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 93: v-bind:showFileName
+  - 基线：原表达式：showFileName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08344 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template line 93: v-on:confirm
+  - 基线：原表达式：generate；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08345 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template interpolation line 21
+  - 基线：原显示表达式：element.label
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08346 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template interpolation line 36
+  - 基线：原显示表达式：element.label
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08347 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` template interpolation line 51
+  - 基线：原显示表达式：element.label
+  - 去向：react-front/src/views/tool/build/index.tsx
+- I08348 `ruoyi-fastapi-frontend/src/views/tool/build/index.vue` style[0] lines 316-660
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=False；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/tool/build/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。
+
+依赖复核：default 导入 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` 对应完整渲染/导出装配 G320V，不能只依赖其状态接口组。

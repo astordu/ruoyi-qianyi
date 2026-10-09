@@ -1,0 +1,247 @@
+# G299 src/views/system/plugin/components/PluginConfigDialog.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05998 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 86-86 ImportDeclaration: 
+  - 基线：源语句 sha256=1a926c7057048fa9a40925f50c39b1b50d364b5cc885996b4d95b813e26079d5；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I05999 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 87-87 ImportDeclaration: 
+  - 基线：源语句 sha256=d46a5214bf499175e748e954be54324d6066ab7d53e4eeed603e4285b4bb9e94；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06000 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 89-114 VariableDeclaration: props
+  - 基线：源语句 sha256=6124250905395b99382c40ed1b082f66dc973cfa0f2ce56e1559479c85e59580；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06001 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 116-116 VariableDeclaration: emit
+  - 基线：源语句 sha256=b5c3c46d7d8710713c633c81567f80a95877ef6f94b4e22cc2f3a6e8163766c6；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06002 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 117-117 VariableDeclaration: configRef
+  - 基线：源语句 sha256=cb243fd9e899bc5e68890fc0239bdfdcd0bbf838a0ab4141fc5e5a110d412375；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06003 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 118-120 VariableDeclaration: configForm
+  - 基线：源语句 sha256=b4898539d7f42b96bd245b408717891fb2dc1d587ae086024504bbd54811a04b；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06004 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 122-145 VariableDeclaration: configGroups
+  - 基线：源语句 sha256=3554a18a8ae9bff444e34b99d752bff8d5aacf5a151605c1949c6f610187eb69；保留返回、异常及 14 个分支，调用=computed, ArrayExpression.sort, leftGroup.localeCompare, Number, CallExpression.localeCompare, String, sortedItems.forEach, groups.has, groups.set, CallExpression.push, groups.get, Array.from。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06005 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 147-156 ExpressionStatement: 
+  - 基线：源语句 sha256=93c56bd576ead73286f8f7799b6688946ce74bc584d7e156f21fb1b612029f6c；保留返回、异常及 0 个分支，调用=watch, items.forEach, normalizeConfigValueForForm。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06006 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 158-172 FunctionDeclaration: submit
+  - 基线：源语句 sha256=7dc0d2e30d36ed487c68a104b0001708cacde27a54e84398ae7b843518e7391a；保留返回、异常及 5 个分支，调用=configRef.value.validate, buildConfigSubmitValues, ElMessage.error, emit。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06007 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 174-185 FunctionDeclaration: normalizeConfigValueForForm
+  - 基线：源语句 sha256=3269f2a40ae5565151a1fad076c1543f24bcbb7d780e20a45ab8ed3036924f44；保留返回、异常及 9 个分支，调用=JSON.stringify。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06008 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 187-201 FunctionDeclaration: buildConfigSubmitValues
+  - 基线：源语句 sha256=4eddaa73f3dff6af16c2f5caef7f47e986f6cafd83faa35fcfe08f4ef676fcb3；保留返回、异常及 9 个分支，调用=props.items.reduce, value.trim, JSON.parse。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06009 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 203-218 FunctionDeclaration: getConfigItemRules
+  - 基线：源语句 sha256=936e6930053d4bf113941403ac4ed749fe1c5e55ae3fe9efb9a119e0819cfbfa；保留返回、异常及 7 个分支，调用=rules.push, buildNumberConfigValidator, ArrayExpression.includes, buildPatternConfigValidator。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06010 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 220-222 FunctionDeclaration: isSecretConfigItem
+  - 基线：源语句 sha256=4e14fff194cd4c05adf0ae08a719f13ff6a256e4a9fd272243f6ed4dc59348db；保留返回、异常及 2 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06011 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 224-245 FunctionDeclaration: buildNumberConfigValidator
+  - 基线：源语句 sha256=3bfd992cb1c9b86352e6af8b6e46134de0c53952b80dc69504eb7e7190ed15b3；保留返回、异常及 15 个分支，调用=callback, Number, Number.isNaN。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06012 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 247-264 FunctionDeclaration: buildPatternConfigValidator
+  - 基线：源语句 sha256=1685b4dc7bcaa919348476a2c23a739c6b81c0e75c33c587e182a9a67495c881；保留返回、异常及 9 个分支，调用=callback, NewExpression.test, String。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06013 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 266-277 FunctionDeclaration: validateJsonConfig
+  - 基线：源语句 sha256=3dd6bc68755f393b627b2d8799d920a52f75f0afda37817dc02c7daedac8171c；保留返回、异常及 5 个分支，调用=callback, JSON.parse。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06014 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 279-289 FunctionDeclaration: formatConfigJsonValue
+  - 基线：源语句 sha256=4402ce664112cefd7e7387c205f0f6c3783646b3f2dcf4442f5348819667f7c7；保留返回、异常及 7 个分支，调用=JSON.stringify, JSON.parse, ElMessage.error。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06015 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 291-293 FunctionDeclaration: getConfigInputPlaceholder
+  - 基线：源语句 sha256=cbcb94e08d1f19daa393f299ade4e61202b9fa70f02b8fd80fa6676ff7e0aad7；保留返回、异常及 3 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06016 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 295-303 FunctionDeclaration: hasConfigMeta
+  - 基线：源语句 sha256=15a7856e4a90f37f1567a38bfbc5e856e34259586330b2c4214156bea10274b3；保留返回、异常及 5 个分支，调用=Boolean, props.formatConfigDefaultValue, props.formatConfigConstraint。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06017 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` lines 305-313 FunctionDeclaration: formatConfigGroupLabel
+  - 基线：源语句 sha256=1c24470a56663e811a87de501a6817c0d7a09b4258e3cb0d167756f6a7e8bd2e；保留返回、异常及 2 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06018 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template lines 1-83（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06019 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 2: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06020 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 2: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06021 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 2: v-on:update:model-value
+  - 基线：原表达式：emit('update:modelValue', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06022 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 3: v-bind:model
+  - 基线：原表达式：configForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06023 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 4: v-if:
+  - 基线：原表达式：!items.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06024 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 5: v-for:
+  - 基线：原表达式：group in configGroups；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06025 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 5: v-bind:key
+  - 基线：原表达式：group.name；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06026 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 6: v-if:
+  - 基线：原表达式：configGroups.length > 1 || group.name !== 'default'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06027 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 8: v-for:
+  - 基线：原表达式：item in group.items；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06028 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 9: v-bind:key
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06029 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 10: v-bind:label
+  - 基线：原表达式：item.label || item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06030 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 11: v-bind:prop
+  - 基线：原表达式：'values.' + item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06031 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 12: v-bind:rules
+  - 基线：原表达式：getConfigItemRules(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06032 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 15: v-if:
+  - 基线：原表达式：item.type === 'boolean'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06033 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 15: v-model:
+  - 基线：原表达式：configForm.values[item.key]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06034 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 17: v-else-if:
+  - 基线：原表达式：item.type === 'number'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06035 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 18: v-model:
+  - 基线：原表达式：configForm.values[item.key]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06036 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 19: v-bind:min
+  - 基线：原表达式：item.min ?? undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06037 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 20: v-bind:max
+  - 基线：原表达式：item.max ?? undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06038 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 21: v-bind:placeholder
+  - 基线：原表达式：getConfigInputPlaceholder(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06039 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 25: v-else-if:
+  - 基线：原表达式：item.type === 'select'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06040 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 26: v-model:
+  - 基线：原表达式：configForm.values[item.key]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06041 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 27: v-bind:placeholder
+  - 基线：原表达式：getConfigInputPlaceholder(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06042 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 31: v-for:
+  - 基线：原表达式：option in item.options || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06043 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 32: v-bind:key
+  - 基线：原表达式：String(option.value)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06044 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 33: v-bind:label
+  - 基线：原表达式：option.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06045 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 34: v-bind:value
+  - 基线：原表达式：option.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06046 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 37: v-else-if:
+  - 基线：原表达式：item.type === 'textarea' || item.type === 'json'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06047 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 39: v-model:
+  - 基线：原表达式：configForm.values[item.key]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06048 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 41: v-bind:rows
+  - 基线：原表达式：4；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06049 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 42: v-bind:placeholder
+  - 基线：原表达式：getConfigInputPlaceholder(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06050 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 45: v-if:
+  - 基线：原表达式：item.type === 'json'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06051 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 46: v-on:click
+  - 基线：原表达式：formatConfigJsonValue(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06052 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 50: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06053 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 51: v-model:
+  - 基线：原表达式：configForm.values[item.key]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06054 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 52: v-bind:type
+  - 基线：原表达式：isSecretConfigItem(item) ? 'password' : 'text'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06055 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 53: v-bind:show-password
+  - 基线：原表达式：isSecretConfigItem(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06056 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 54: v-bind:placeholder
+  - 基线：原表达式：getConfigInputPlaceholder(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06057 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 58: v-if:
+  - 基线：原表达式：item.description；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06058 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 59: v-if:
+  - 基线：原表达式：hasConfigMeta(item)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06059 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 61: v-if:
+  - 基线：原表达式：item.required；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06060 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 62: v-if:
+  - 基线：原表达式：item.secret；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06061 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 63: v-if:
+  - 基线：原表达式：formatConfigDefaultValue(item) !== '-'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06062 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 64: v-if:
+  - 基线：原表达式：formatConfigConstraint(item) !== '-'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06063 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 70: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06064 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 74: v-bind:disabled
+  - 基线：原表达式：!items.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06065 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 75: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06066 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 76: v-on:click
+  - 基线：原表达式：submit；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06067 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 77: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06068 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template line 79: v-on:click
+  - 基线：原表达式：emit('update:modelValue', false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06069 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template interpolation line 6
+  - 基线：原显示表达式：formatConfigGroupLabel(group.name)
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06070 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template interpolation line 58
+  - 基线：原显示表达式：item.description
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06071 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template interpolation line 60
+  - 基线：原显示表达式：item.key
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06072 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template interpolation line 63
+  - 基线：原显示表达式：formatConfigDefaultValue(item)
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06073 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` template interpolation line 64
+  - 基线：原显示表达式：formatConfigConstraint(item)
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+- I06074 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue` style[0] lines 316-366
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/components/PluginConfigDialog.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

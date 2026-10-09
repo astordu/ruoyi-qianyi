@@ -1,0 +1,388 @@
+# G280 src/views/system/dict/data.vue：完整能力
+
+依赖：G000, G037, G038, G169, G180, G182, G225, G232, G250
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04557 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 179-179 ImportDeclaration: 
+  - 基线：源语句 sha256=e07831dc8d92c1f7d0b929ef3bc6c1797286345f1ef4349ccf3daf1a91e8ae47；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04558 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 180-180 ImportDeclaration: 
+  - 基线：源语句 sha256=38e8fe1af3e05b3a9c7c803d06b7bc621a4a47c4f4c03f5af14913915de65d5e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04559 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 181-181 ImportDeclaration: 
+  - 基线：源语句 sha256=7a699b3316b894e7d948ff5bdb7c0a626a19aa0b0e708634fa1ca95388727c32；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04560 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 183-183 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04561 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 184-184 VariableDeclaration: 
+  - 基线：源语句 sha256=e39eef28f5bbe01b170f2bfb21463bd64109f87928694efa0dd8eb360768e609；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04562 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 186-186 VariableDeclaration: dataList
+  - 基线：源语句 sha256=8051de33d97340e10118ffcc69839ba8cfa0efb87bbe06a2b7c69055f8d8615a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04563 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 187-187 VariableDeclaration: open
+  - 基线：源语句 sha256=a542e4df0517d4fd7db7dda3114abbaf21c848158a19f33261b636975b69e307；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04564 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 188-188 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04565 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 189-189 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04566 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 190-190 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04567 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 191-191 VariableDeclaration: single
+  - 基线：源语句 sha256=d8b92433028a1ee7912903c3a8cf52435102e8d5f5c98809c169ecda5a0c1d2a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04568 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 192-192 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04569 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 193-193 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04570 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 194-194 VariableDeclaration: title
+  - 基线：源语句 sha256=6452e9e4e944a2ca0aaab11c2229fadd77c42d71c76662caecb1fe68378567dd；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04571 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 195-195 VariableDeclaration: defaultDictType
+  - 基线：源语句 sha256=cc5140b1847e6d16c0c17d7a16fcc8e29c6afeb3fa519670c25d55bd9bd7c120；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04572 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 196-196 VariableDeclaration: typeOptions
+  - 基线：源语句 sha256=1dd875238894b9304d2488336910ac10865ac8871f36ae5b80fd3e06a7a85bcc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04573 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 197-197 VariableDeclaration: route
+  - 基线：源语句 sha256=19ffaf888604ba2654aa25f29ba0210e96226ea7089e9e15dc5c05cf276b3a9f；保留返回、异常及 0 个分支，调用=useRoute。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04574 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 199-206 VariableDeclaration: listClassOptions
+  - 基线：源语句 sha256=3491026e35cc3d29e2f0fd97c5b3444be1ac38f2fb0c1b1dc8c84c167e0a5658；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04575 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 208-222 VariableDeclaration: data
+  - 基线：源语句 sha256=35cc54ef0c0f8541d5f6f6b78f94af6c648d018d6fac79092bc24ed707bcd774；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04576 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 224-224 VariableDeclaration: 
+  - 基线：源语句 sha256=1302c7f6c9f01c8414a694cd88e708a5a66cf40450bbd6957204a754bd0d4050；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04577 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 227-233 FunctionDeclaration: getTypes
+  - 基线：源语句 sha256=610c789c2bb109a6f9dbdb8d2407fd4c3071b58e6a0fa4bbd496f9b164959103；保留返回、异常及 0 个分支，调用=CallExpression.then, getType, getList。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04578 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 236-240 FunctionDeclaration: getTypeList
+  - 基线：源语句 sha256=5e6f07f16b25f87ebc3f549336202efb1449b71c756131841cb25b05ccf61bb8；保留返回、异常及 0 个分支，调用=CallExpression.then, getDictOptionselect。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04579 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 242-249 FunctionDeclaration: getList
+  - 基线：源语句 sha256=b8324c074fb936ccbb7abceaa768f3c672350ffc4539cbd1899baf835f2c86a8；保留返回、异常及 0 个分支，调用=CallExpression.then, listData。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04580 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 251-254 FunctionDeclaration: cancel
+  - 基线：源语句 sha256=a9c4f77cfb3a8cf1a4deea6e000db67ae81d2fa4cf813b620a2074563e5c304a；保留返回、异常及 0 个分支，调用=reset。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04581 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 256-268 FunctionDeclaration: reset
+  - 基线：源语句 sha256=5ed3d4a5d52c99a69a7695c427184736f737770fcb7aa70420b8003c17d665e9；保留返回、异常及 0 个分支，调用=proxy.resetForm。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04582 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 270-273 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=71d9364cef95db7495918f6fbda87103b5332e631eb6cac8bd039c5558ee3065；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04583 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 275-278 FunctionDeclaration: handleClose
+  - 基线：源语句 sha256=7a7900fd0cec786b0e34a7aa0364e21bbd2ed453e772a31b0de007278439fc7c；保留返回、异常及 0 个分支，调用=proxy.$tab.closeOpenPage。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04584 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 280-284 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=b9d2bd0264ba46109edea4730881734ddaad4915a7619958e657b2e20c8e87f5；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04585 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 286-291 FunctionDeclaration: handleAdd
+  - 基线：源语句 sha256=84647d717c09ccb9d05c6102179abf4fa0c0bc8c313640224651bc4dbe66d997；保留返回、异常及 0 个分支，调用=reset。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04586 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 293-297 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=74ab2c843f31fe3b5e34efa66f6d2ee165963f1dabf02aff8640164e0ac30f2f；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04587 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 299-307 FunctionDeclaration: handleUpdate
+  - 基线：源语句 sha256=9b345863233c3b66b7e7e9cc174101b097a8dd3b6ff7bbb132c5ef82032c19a5；保留返回、异常及 1 个分支，调用=reset, CallExpression.then, getData。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04588 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 309-329 FunctionDeclaration: submitForm
+  - 基线：源语句 sha256=25f241a87791dd42e65b55c44c6c79a99de5f40dbe3173a4639603b7fe10bced；保留返回、异常及 2 个分支，调用=proxy.$refs.dataRef.validate, CallExpression.then, updateData, CallExpression.removeDict, useDictStore, proxy.$modal.msgSuccess, getList, addData。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04589 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 331-340 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=263d57d8ec5a9359f3257d2767137c3e4b8353b37ebe6b75f66349e14db41130；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delData, getList, proxy.$modal.msgSuccess, CallExpression.removeDict, useDictStore。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04590 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 342-346 FunctionDeclaration: handleExport
+  - 基线：源语句 sha256=4061f1634fdd4716af665355584f8d25c91e3d16a91a3f34269a75284cc8dbe9；保留返回、异常及 0 个分支，调用=proxy.download, NewExpression.getTime。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04591 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 348-348 ExpressionStatement: 
+  - 基线：源语句 sha256=32873d209c8b6e5b2ff776d2abc82063d03480de2267342b4137d39271214793；保留返回、异常及 1 个分支，调用=getTypes。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04592 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` lines 349-349 ExpressionStatement: 
+  - 基线：源语句 sha256=b07d50c83cdc3691675fde03e4062fe069c2329a17cd69cdad0892e0d896b88b；保留返回、异常及 0 个分支，调用=getTypeList。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04593 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template lines 1-176（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04594 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04595 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04596 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04597 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 5: v-model:
+  - 基线：原表达式：queryParams.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04598 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 7: v-for:
+  - 基线：原表达式：item in typeOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04599 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 8: v-bind:key
+  - 基线：原表达式：item.dictId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04600 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 9: v-bind:label
+  - 基线：原表达式：item.dictName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04601 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 10: v-bind:value
+  - 基线：原表达式：item.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04602 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 16: v-model:
+  - 基线：原表达式：queryParams.dictLabel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04603 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 20: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04604 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04605 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 26: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04606 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 27: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04607 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 28: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04608 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 29: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04609 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 34: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04610 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 35: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04611 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 39: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04612 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 40: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04613 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 45: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04614 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 46: v-hasPermi:
+  - 基线：原表达式：['system:dict:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04615 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 49: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04616 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 54: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04617 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 55: v-on:click
+  - 基线：原表达式：handleUpdate；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04618 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 56: v-hasPermi:
+  - 基线：原表达式：['system:dict:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04619 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 59: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04620 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 64: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04621 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 65: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04622 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 66: v-hasPermi:
+  - 基线：原表达式：['system:dict:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04623 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 69: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04624 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 74: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04625 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 75: v-hasPermi:
+  - 基线：原表达式：['system:dict:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04626 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 78: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04627 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 83: v-on:click
+  - 基线：原表达式：handleClose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04628 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 86: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04629 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 86: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04630 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 89: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04631 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 89: v-bind:data
+  - 基线：原表达式：dataList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04632 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 89: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04633 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 93: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04634 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 94: v-if:
+  - 基线：原表达式：(scope.row.listClass == '' || scope.row.listClass == 'default') && (scope.row.cssClass == '' || scope.row.cssClass == null)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04635 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 95: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04636 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 95: v-bind:type
+  - 基线：原表达式：scope.row.listClass == 'primary' ? '' : scope.row.listClass；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04637 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 95: v-bind:class
+  - 基线：原表达式：scope.row.cssClass；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04638 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 101: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04639 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 102: v-bind:options
+  - 基线：原表达式：sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04640 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 102: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04641 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 105: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04642 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 107: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04643 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 112: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04644 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 113: v-on:click
+  - 基线：原表达式：handleUpdate(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04645 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 113: v-hasPermi:
+  - 基线：原表达式：['system:dict:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04646 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 114: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04647 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 114: v-hasPermi:
+  - 基线：原表达式：['system:dict:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04648 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 120: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04649 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 121: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04650 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 122: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04651 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 123: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04652 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 124: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04653 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 128: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04654 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 128: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04655 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 129: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04656 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 129: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04657 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 131: v-model:
+  - 基线：原表达式：form.dictType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04658 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 131: v-bind:disabled
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04659 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 134: v-model:
+  - 基线：原表达式：form.dictLabel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04660 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 137: v-model:
+  - 基线：原表达式：form.dictValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04661 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 140: v-model:
+  - 基线：原表达式：form.cssClass；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04662 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 143: v-model:
+  - 基线：原表达式：form.dictSort；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04663 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 143: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04664 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 146: v-model:
+  - 基线：原表达式：form.listClass；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04665 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 148: v-for:
+  - 基线：原表达式：item in listClassOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04666 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 149: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04667 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 150: v-bind:label
+  - 基线：原表达式：item.label + '(' + item.value + ')'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04668 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 151: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04669 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 156: v-model:
+  - 基线：原表达式：form.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04670 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 158: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04671 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 159: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04672 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 160: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04673 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 165: v-model:
+  - 基线：原表达式：form.remark；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04674 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 168: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04675 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 170: v-on:click
+  - 基线：原表达式：submitForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04676 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template line 171: v-on:click
+  - 基线：原表达式：cancel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04677 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template interpolation line 94
+  - 基线：原显示表达式：scope.row.dictLabel
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04678 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template interpolation line 95
+  - 基线：原显示表达式：scope.row.dictLabel
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04679 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template interpolation line 108
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/dict/data.tsx
+- I04680 `ruoyi-fastapi-frontend/src/views/system/dict/data.vue` template interpolation line 161
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/system/dict/data.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,6 @@
+{
+  "comparison": "exact PNG bytes",
+  "equal": true,
+  "animationHandling": "disabled on both original and React",
+  "scope": "pre-mount HTML only"
+}

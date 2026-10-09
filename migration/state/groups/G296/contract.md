@@ -1,0 +1,511 @@
+# G296 src/views/system/menu/index.vue：完整能力
+
+依赖：G000, G040, G169, G175, G182, G187, G232, G250
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05683 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 309-309 ImportDeclaration: 
+  - 基线：源语句 sha256=b81ec7d115472a5240c2fbd7df357b1c921496a57a3c991ce1a78e406f6b047a；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05684 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 310-310 ImportDeclaration: 
+  - 基线：源语句 sha256=9b147b8f49d95b008cf865a2fc3b5f2636c109896d52e688e1981b3c24a25605；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05685 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 311-311 ImportDeclaration: 
+  - 基线：源语句 sha256=4ed8c95c915ae1b6b1d7dfdd73b1e88e40a62f1399cb2909b90e7d7c3fb288d8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05686 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 313-313 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05687 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 314-314 VariableDeclaration: 
+  - 基线：源语句 sha256=bc69bd04f43969b9f7799883c5a8d2c0330508c54ed7ec21ddff1b4649241d5d；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05688 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 316-316 VariableDeclaration: menuList
+  - 基线：源语句 sha256=78f210aec9112f66911139bff3a2adedc3e785b5c4dfc5626be04685b790ad0b；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05689 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 317-317 VariableDeclaration: open
+  - 基线：源语句 sha256=a542e4df0517d4fd7db7dda3114abbaf21c848158a19f33261b636975b69e307；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05690 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 318-318 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05691 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 319-319 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05692 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 320-320 VariableDeclaration: title
+  - 基线：源语句 sha256=6452e9e4e944a2ca0aaab11c2229fadd77c42d71c76662caecb1fe68378567dd；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05693 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 321-321 VariableDeclaration: menuOptions
+  - 基线：源语句 sha256=aa6f219d637ba0a755a162a075eb4a9213231a429125b79e42f9e187d9d55645；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05694 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 322-322 VariableDeclaration: isExpandAll
+  - 基线：源语句 sha256=48292bbe79b59756bd9befd19317057e90a33d9bb4ad642b7d09e3a7314d48c6；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05695 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 323-323 VariableDeclaration: refreshTable
+  - 基线：源语句 sha256=b98e54eadee1f149cf9db565e9de12b186cf7244649ed49fc59fed575a5e1584；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05696 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 324-324 VariableDeclaration: iconSelectRef
+  - 基线：源语句 sha256=8ef3747bcae965b3c9e8950f5f928acfd58fa05ebd5c59ac6f6cc1904c857aa4；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05697 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 325-325 VariableDeclaration: originalOrders
+  - 基线：源语句 sha256=8bf8257201465e264baac60d912777aca14f8ce7225621abc322ce6bbbc29a46；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05698 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 327-338 VariableDeclaration: data
+  - 基线：源语句 sha256=9c0ecf47b19c17df11417997baf8841630391931fb959899edff3fbd381bfa8b；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05699 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 340-340 VariableDeclaration: 
+  - 基线：源语句 sha256=1302c7f6c9f01c8414a694cd88e708a5a66cf40450bbd6957204a754bd0d4050；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05700 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 343-350 FunctionDeclaration: getList
+  - 基线：源语句 sha256=5f4d40091abc60cc461f5f41f2853fe7ca50a1d17dca632e5d26c3c41921e851；保留返回、异常及 0 个分支，调用=CallExpression.then, listMenu, proxy.handleTree, recordOriginalOrders。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05701 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 352-359 FunctionDeclaration: getTreeselect
+  - 基线：源语句 sha256=11d74f48c0e532357882cc07316e09367af69888ca2b48b525be00f5fd570b91；保留返回、异常及 0 个分支，调用=CallExpression.then, listMenu, proxy.handleTree, menuOptions.value.push。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05702 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 361-364 FunctionDeclaration: cancel
+  - 基线：源语句 sha256=a9c4f77cfb3a8cf1a4deea6e000db67ae81d2fa4cf813b620a2074563e5c304a；保留返回、异常及 0 个分支，调用=reset。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05703 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 366-381 FunctionDeclaration: reset
+  - 基线：源语句 sha256=1d84fb01c9f232d6a8f251a6f86dec64e4313940b30cbe17d06e71c1938552bd；保留返回、异常及 0 个分支，调用=proxy.resetForm。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05704 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 383-385 FunctionDeclaration: showSelectIcon
+  - 基线：源语句 sha256=78e63065db9e59aab7ce26c150bc890a40f2eb487d0b73f266316589875b2c2f；保留返回、异常及 0 个分支，调用=iconSelectRef.value.reset。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05705 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 387-389 FunctionDeclaration: selected
+  - 基线：源语句 sha256=fe04b8ffa298b69c8b33456059c4b042dc8c51bfbfe22fd3d0b535bffe2ad33b；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05706 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 391-393 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=ec577c035554cea414a4fc1e13ebaa0f40f079580c5a785d1fb6ac6ce70e8c81；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05707 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 395-398 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=92181fa4359ab7a75cdb4811fb23d7927c816d7cf603e5534064a28e122424e0；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05708 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 400-410 FunctionDeclaration: handleAdd
+  - 基线：源语句 sha256=bbc4f09503e139248d612fd8ce3a89b1bc35571771b7c7533f1ecea765c5cc94；保留返回、异常及 2 个分支，调用=reset, getTreeselect。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05709 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 412-418 FunctionDeclaration: toggleExpandAll
+  - 基线：源语句 sha256=5722d83f036783d207e014960a0168552363dde3b5fb512445ac48a67e6fa3ec；保留返回、异常及 0 个分支，调用=nextTick。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05710 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 420-428 FunctionDeclaration: handleUpdate
+  - 基线：源语句 sha256=0db319a920ca5bdb163f98d4850dce9b134b79b471071c874ee1e31ff3a8960f；保留返回、异常及 0 个分支，调用=reset, getTreeselect, CallExpression.then, getMenu。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05711 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 430-448 FunctionDeclaration: submitForm
+  - 基线：源语句 sha256=8e054cc1f157b6014128cfc6ad6c5b3b9b6654133f9c9e54e1b32b2bb3329b4d；保留返回、异常及 2 个分支，调用=proxy.$refs.menuRef.validate, CallExpression.then, updateMenu, proxy.$modal.msgSuccess, getList, addMenu。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05712 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 451-458 FunctionDeclaration: recordOriginalOrders
+  - 基线：源语句 sha256=cafced5e22248a8121ec23df38f1957e4c6ebc99d0669b01deb3f0cdd4642847；保留返回、异常及 2 个分支，调用=list.forEach, recordOriginalOrders。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05713 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 461-484 FunctionDeclaration: handleSaveSort
+  - 基线：源语句 sha256=3f68295283e4d2e08877537f05ce4385923008ad15b84972c8e212c862b611f7；保留返回、异常及 5 个分支，调用=list.forEach, String, changedMenuIds.push, changedOrderNums.push, collectChanged, proxy.$modal.msgWarning, CallExpression.then, updateMenuSort, changedMenuIds.join, changedOrderNums.join, proxy.$modal.msgSuccess, recordOriginalOrders。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05714 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 487-494 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=9cd2ae294b258237a98aae7ad4a69e51676a424bb27197de99901f917899a3f2；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delMenu, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05715 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` lines 496-496 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05716 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template lines 1-306（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05717 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05718 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05719 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05720 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.menuName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05721 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05722 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 14: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05723 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 16: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05724 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 17: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05725 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 18: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05726 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 19: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05727 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 24: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05728 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 25: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05729 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 29: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05730 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 30: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05731 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 35: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05732 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 36: v-hasPermi:
+  - 基线：原表达式：['system:menu:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05733 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 39: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05734 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 44: v-on:click
+  - 基线：原表达式：handleSaveSort；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05735 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 45: v-hasPermi:
+  - 基线：原表达式：['system:menu:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05736 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 48: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05737 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 53: v-on:click
+  - 基线：原表达式：toggleExpandAll；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05738 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 56: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05739 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 56: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05740 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 60: v-if:
+  - 基线：原表达式：refreshTable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05741 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 61: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05742 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 62: v-bind:data
+  - 基线：原表达式：menuList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05743 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 64: v-bind:default-expand-all
+  - 基线：原表达式：isExpandAll；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05744 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 65: v-bind:tree-props
+  - 基线：原表达式：{ children: 'children', hasChildren: 'hasChildren' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05745 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 67: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05746 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 68: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05747 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 69: v-bind:icon-class
+  - 基线：原表达式：scope.row.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05748 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 73: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05749 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 74: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05750 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 75: v-if:
+  - 基线：原表达式：scope.row.menuType === 'M' && scope.row.isFrame === 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05751 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 76: v-else-if:
+  - 基线：原表达式：scope.row.menuType === 'M'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05752 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 77: v-else-if:
+  - 基线：原表达式：scope.row.menuType === 'C' && scope.row.isFrame === 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05753 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 78: v-else-if:
+  - 基线：原表达式：scope.row.menuType === 'C'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05754 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 79: v-else-if:
+  - 基线：原表达式：scope.row.menuType === 'F'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05755 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 83: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05756 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 84: v-model:
+  - 基线：原表达式：scope.row.orderNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05757 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 84: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05758 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 87: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05759 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 88: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05760 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 90: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05761 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 91: v-bind:options
+  - 基线：原表达式：sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05762 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 91: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05763 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 95: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05764 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 96: v-on:click
+  - 基线：原表达式：handleUpdate(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05765 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 96: v-hasPermi:
+  - 基线：原表达式：['system:menu:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05766 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 97: v-on:click
+  - 基线：原表达式：handleAdd(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05767 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 97: v-hasPermi:
+  - 基线：原表达式：['system:menu:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05768 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 98: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05769 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 98: v-hasPermi:
+  - 基线：原表达式：['system:menu:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05770 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 104: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05771 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 104: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05772 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 105: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05773 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 105: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05774 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 107: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05775 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 110: v-model:
+  - 基线：原表达式：form.parentId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05776 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 111: v-bind:data
+  - 基线：原表达式：menuOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05777 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 112: v-bind:props
+  - 基线：原表达式：{ value: 'menuId', label: 'menuName', children: 'children' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05778 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 119: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05779 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 121: v-model:
+  - 基线：原表达式：form.menuType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05780 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 128: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05781 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 128: v-if:
+  - 基线：原表达式：form.menuType != 'F'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05782 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 132: v-bind:width
+  - 基线：原表达式：540；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05783 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 135: v-slot:reference
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05784 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 136: v-model:
+  - 基线：原表达式：form.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05785 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 136: v-on:blur
+  - 基线：原表达式：showSelectIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05786 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 137: v-slot:prefix
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05787 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 139: v-if:
+  - 基线：原表达式：form.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05788 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 140: v-bind:icon-class
+  - 基线：原表达式：form.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05789 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 144: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05790 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 148: v-on:selected
+  - 基线：原表达式：selected；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05791 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 148: v-bind:active-icon
+  - 基线：原表达式：form.icon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05792 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 152: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05793 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 154: v-model:
+  - 基线：原表达式：form.orderNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05794 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 154: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05795 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 157: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05796 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 159: v-model:
+  - 基线：原表达式：form.menuName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05797 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 162: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05798 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 162: v-if:
+  - 基线：原表达式：form.menuType == 'C'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05799 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 164: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05800 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 172: v-model:
+  - 基线：原表达式：form.routeName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05801 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 175: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05802 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 175: v-if:
+  - 基线：原表达式：form.menuType != 'F'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05803 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 177: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05804 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 184: v-model:
+  - 基线：原表达式：form.isFrame；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05805 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 185: v-bind:value
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05806 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 186: v-bind:value
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05807 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 190: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05808 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 190: v-if:
+  - 基线：原表达式：form.menuType != 'F'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05809 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 192: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05810 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 200: v-model:
+  - 基线：原表达式：form.path；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05811 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 203: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05812 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 203: v-if:
+  - 基线：原表达式：form.menuType == 'C'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05813 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 205: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05814 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 213: v-model:
+  - 基线：原表达式：form.component；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05815 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 216: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05816 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 216: v-if:
+  - 基线：原表达式：form.menuType != 'M'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05817 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 218: v-model:
+  - 基线：原表达式：form.perms；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05818 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 219: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05819 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 229: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05820 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 229: v-if:
+  - 基线：原表达式：form.menuType == 'C'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05821 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 231: v-model:
+  - 基线：原表达式：form.query；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05822 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 232: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05823 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 242: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05824 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 242: v-if:
+  - 基线：原表达式：form.menuType == 'C'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05825 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 244: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05826 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 252: v-model:
+  - 基线：原表达式：form.isCache；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05827 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 253: v-bind:value
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05828 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 254: v-bind:value
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05829 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 258: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05830 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 258: v-if:
+  - 基线：原表达式：form.menuType != 'F'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05831 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 260: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05832 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 268: v-model:
+  - 基线：原表达式：form.visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05833 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 270: v-for:
+  - 基线：原表达式：dict in sys_show_hide；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05834 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 271: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05835 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 272: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05836 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 277: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05837 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 279: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05838 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 287: v-model:
+  - 基线：原表达式：form.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05839 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 289: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05840 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 290: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05841 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 291: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05842 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 298: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05843 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 300: v-on:click
+  - 基线：原表达式：submitForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05844 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template line 301: v-on:click
+  - 基线：原表达式：cancel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05845 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template interpolation line 70
+  - 基线：原显示表达式：scope.row.menuName
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05846 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template interpolation line 273
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/system/menu/index.tsx
+- I05847 `ruoyi-fastapi-frontend/src/views/system/menu/index.vue` template interpolation line 292
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/system/menu/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

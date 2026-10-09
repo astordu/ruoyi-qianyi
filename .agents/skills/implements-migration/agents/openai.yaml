@@ -1,4 +1,0 @@
-interface:
-  display_name: "Vue → React 迁移实施"
-  short_description: "按已确认的迁移 PRD，将 Vue 模块实现为指定目录中的 React 代码，并记录进度与自检。用于整模块迁移或一次实施"
-  default_prompt: "使用 $implements-migration，根据当前模块的范围和 PRD 完成对应迁移阶段。"

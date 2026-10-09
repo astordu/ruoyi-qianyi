@@ -1,0 +1,463 @@
+# G301 src/views/system/plugin/components/PluginDetailDialog.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06169 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 229-229 ImportDeclaration: 
+  - 基线：源语句 sha256=3227c0d87d8b6ba62cf7963bbbc427a54421c82bef587eec504cdc798552959e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06170 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 231-264 VariableDeclaration: props
+  - 基线：源语句 sha256=ff7fa3cef6517ece65e7bd1d6b7721ca51c3bede1147427e669332ec04011e9c；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06171 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 266-266 VariableDeclaration: emit
+  - 基线：源语句 sha256=3288784ed09a4a19c9d106c7648abeb2568d1554b81466479e56f3863098965b；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06172 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 268-290 VariableDeclaration: detailDependencyRows
+  - 基线：源语句 sha256=c4dae48b916e6ac010107fafb4c88fa805711b3899b265d4900eae2f13bae5cd；保留返回、异常及 2 个分支，调用=computed, normalizeDetailItems。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06173 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 292-306 VariableDeclaration: detailScriptRows
+  - 基线：源语句 sha256=21c143d181772a10805628c7f6fbd19e5c86861d53c96d7e8f70f962b5e3f32e；保留返回、异常及 2 个分支，调用=computed, normalizeDetailItems。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06174 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 308-313 FunctionDeclaration: formatYesNo
+  - 基线：源语句 sha256=85f6f1cf8b9264a93fd181b63ac0b165e50cd1bac14ccb6c927c052b44045ec2；保留返回、异常及 5 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06175 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 315-317 FunctionDeclaration: formatDetailTags
+  - 基线：源语句 sha256=fb28b58b475572dd0faa665cbd99d2e38026f3eb6956f6ae442cde720b12d3b7；保留返回、异常及 3 个分支，调用=Array.isArray, tags.join。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06176 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 319-328 FunctionDeclaration: getFrontendDeliveryLabel
+  - 基线：源语句 sha256=b9bd2a6686b7ff0610b23c69f9ca3805bb3b8e1dcdc8b3ee9cdf831874a0cac2；保留返回、异常及 5 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06177 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 330-332 FunctionDeclaration: normalizeDetailItems
+  - 基线：源语句 sha256=1e6f17e5fde4aca11e32d82e063410bb478559e1907f6041aa6af09ab3246e71；保留返回、异常及 2 个分支，调用=Array.isArray, items.filter。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06178 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 334-342 FunctionDeclaration: getMigrationStatusLabel
+  - 基线：源语句 sha256=45714341200739d02371033d067bd672e798799cdfa62a5ddefc18baee99d8e3；保留返回、异常及 3 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06179 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 344-352 FunctionDeclaration: getMigrationStatusTagType
+  - 基线：源语句 sha256=877dced0d7e72522907be3c757d8bdacb85683e42eb18139b4361151a9ca8131；保留返回、异常及 2 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06180 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 354-356 FunctionDeclaration: canMarkMigrationSuccess
+  - 基线：源语句 sha256=6fa604cf8490b9a97b1e935ff58039a7e4440a9b45a3e9a741d9a14447fe9699；保留返回、异常及 1 个分支，调用=ArrayExpression.includes。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06181 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` lines 358-360 FunctionDeclaration: canMarkMigrationFailed
+  - 基线：源语句 sha256=e32e9240a6572c1d10b5fdf28c700329e5e01f3b07518442573b6ac0360eb531；保留返回、异常及 1 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06182 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template lines 1-226（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06183 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 2: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06184 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 2: v-on:update:model-value
+  - 基线：原表达式：emit('update:modelValue', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06185 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 6: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06186 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 19: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06187 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 20: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06188 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 24: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06189 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 25: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06190 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 26: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06191 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 32: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06192 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 33: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06193 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 43: v-bind:data
+  - 基线：原表达式：detail.frontend?.menus || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06194 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 44: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06195 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 45: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06196 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 46: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06197 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 47: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06198 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 48: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06199 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 55: v-bind:data
+  - 基线：原表达式：detail.permissions || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06200 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 56: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06201 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 57: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06202 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 58: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06203 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 60: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06204 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 61: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06205 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 66: v-bind:data
+  - 基线：原表达式：detail.config || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06206 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 67: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06207 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 68: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06208 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 69: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06209 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 73: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06210 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 74: v-bind:type
+  - 基线：原表达式：scope.row.required ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06211 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 78: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06212 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 79: v-bind:type
+  - 基线：原表达式：scope.row.secret ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06213 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 82: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06214 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 83: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06215 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 85: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06216 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 86: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06217 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 88: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06218 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 93: v-bind:data
+  - 基线：原表达式：detailDependencyRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06219 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 96: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06220 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 99: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06221 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 102: v-for:
+  - 基线：原表达式：item in scope.row.items；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06222 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 103: v-bind:key
+  - 基线：原表达式：scope.row.kind + item；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06223 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 104: v-bind:type
+  - 基线：原表达式：scope.row.tagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06224 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 107: v-if:
+  - 基线：原表达式：!scope.row.items.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06225 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 114: v-bind:data
+  - 基线：原表达式：detailScriptRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06226 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 117: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06227 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 120: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06228 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 123: v-for:
+  - 基线：原表达式：item in scope.row.items；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06229 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 124: v-bind:key
+  - 基线：原表达式：scope.row.kind + item；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06230 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 128: v-if:
+  - 基线：原表达式：!scope.row.items.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06231 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 135: v-loading:
+  - 基线：原表达式：migrationLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06232 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 135: v-bind:data
+  - 基线：原表达式：migrationHistory；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06233 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 136: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06234 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 138: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06235 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 141: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06236 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 142: v-bind:type
+  - 基线：原表达式：getMigrationStatusTagType(scope.row.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06237 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 148: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06238 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 151: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06239 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 154: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06240 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 157: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06241 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 159: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06242 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 160: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06243 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 163: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06244 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 165: v-if:
+  - 基线：原表达式：canMarkMigrationSuccess(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06245 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 170: v-on:click
+  - 基线：原表达式：emit('mark-migration-success', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06246 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 171: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06247 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 174: v-if:
+  - 基线：原表达式：canMarkMigrationFailed(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06248 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 179: v-on:click
+  - 基线：原表达式：emit('mark-migration-failed', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06249 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 180: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06250 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 183: v-if:
+  - 基线：原表达式：!canMarkMigrationSuccess(scope.row) && !canMarkMigrationFailed(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06251 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 190: v-bind:data
+  - 基线：原表达式：detail.pluginDependencies || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06252 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 191: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06253 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 192: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06254 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 193: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06255 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 195: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06256 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 198: v-bind:data
+  - 基线：原表达式：detail.backend?.jobs || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06257 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 199: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06258 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 200: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06259 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 201: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06260 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 203: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06261 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 204: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06262 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 206: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06263 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 207: v-bind:type
+  - 基线：原表达式：scope.row.enabled ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06264 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 210: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06265 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 214: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06266 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 217: v-if:
+  - 基线：原表达式：detail.status === 'error'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06267 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 219: v-on:click
+  - 基线：原表达式：emit('repair')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06268 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 220: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06269 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template line 222: v-on:click
+  - 基线：原表达式：emit('update:modelValue', false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06270 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 7
+  - 基线：原显示表达式：detail.pluginId
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06271 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 8
+  - 基线：原显示表达式：detail.pluginName
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06272 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 9
+  - 基线：原显示表达式：detail.version
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06273 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 10
+  - 基线：原显示表达式：detail.installedVersion || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06274 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 11
+  - 基线：原显示表达式：detail.enabled === "0" ? "启用" : "停用"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06275 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 12
+  - 基线：原显示表达式：getStatusLabel(detail.status)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06276 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 13
+  - 基线：原显示表达式：detail.source || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06277 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 14
+  - 基线：原显示表达式：formatPluginTime(detail.updateTime)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06278 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 15
+  - 基线：原显示表达式：detail.metadata?.category || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06279 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 16
+  - 基线：原显示表达式：formatDetailTags(detail.metadata?.tags)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06280 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 17
+  - 基线：原显示表达式：detail.metadata?.author || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06281 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 18
+  - 基线：原显示表达式：detail.metadata?.license || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06282 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 19
+  - 基线：原显示表达式：detail.lastError || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06283 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 20
+  - 基线：原显示表达式：detail.description || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06284 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 25
+  - 基线：原显示表达式：detail.backendPath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06285 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 26
+  - 基线：原显示表达式：detail.backend?.module || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06286 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 27
+  - 基线：原显示表达式：formatYesNo(detail.backend?.autoScanRouters)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06287 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 28
+  - 基线：原显示表达式：detail.backend?.jobs?.length || 0
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06288 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 33
+  - 基线：原显示表达式：detail.frontendPath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06289 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 34
+  - 基线：原显示表达式：detail.frontend?.pluginId || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06290 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 35
+  - 基线：原显示表达式：detail.frontend?.basePath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06291 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 36
+  - 基线：原显示表达式：detail.frontend?.viewsPath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06292 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 37
+  - 基线：原显示表达式：detail.frontend?.apiPath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06293 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 38
+  - 基线：原显示表达式：getFrontendDeliveryLabel(detail.frontend?.delivery)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06294 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 39
+  - 基线：原显示表达式：detail.frontend?.menus?.length || 0
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06295 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 48
+  - 基线：原显示表达式：scope.row.perms || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06296 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 58
+  - 基线：原显示表达式：scope.row.name || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06297 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 61
+  - 基线：原显示表达式：scope.row.description || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06298 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 69
+  - 基线：原显示表达式：scope.row.label || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06299 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 74
+  - 基线：原显示表达式：scope.row.required ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06300 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 79
+  - 基线：原显示表达式：scope.row.secret ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06301 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 83
+  - 基线：原显示表达式：formatConfigDefaultValue(scope.row)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06302 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 86
+  - 基线：原显示表达式：formatConfigConstraint(scope.row)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06303 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 96
+  - 基线：原显示表达式：scope.row.items.length
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06304 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 106
+  - 基线：原显示表达式：item
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06305 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 117
+  - 基线：原显示表达式：scope.row.items.length
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06306 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 127
+  - 基线：原显示表达式：item
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06307 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 138
+  - 基线：原显示表达式：scope.row.version || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06308 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 143
+  - 基线：原显示表达式：getMigrationStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06309 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 148
+  - 基线：原显示表达式：scope.row.attemptCount ?? 0
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06310 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 151
+  - 基线：原显示表达式：scope.row.statementCount ?? 0
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06311 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 154
+  - 基线：原显示表达式：formatPluginTime(scope.row.startedTime || scope.row.createTime)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06312 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 157
+  - 基线：原显示表达式：formatPluginTime(scope.row.finishedTime)
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06313 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 160
+  - 基线：原显示表达式：scope.row.errorMessage || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06314 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 193
+  - 基线：原显示表达式：scope.row.version || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06315 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 201
+  - 基线：原显示表达式：scope.row.name || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06316 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` template interpolation line 207
+  - 基线：原显示表达式：scope.row.enabled ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+- I06317 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue` style[0] lines 363-396
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/components/PluginDetailDialog.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

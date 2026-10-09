@@ -1,0 +1,347 @@
+# G286V src/views/system/file/components/FileReconcileDrawer.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G039, G180, G286, G286F028, G286F029, G286F030, G286F031, G286F032, G286F033, G286F034, G286F035, G286F036, G286F037, G286F038, G286F039, G286F040, G286F041, G286F042, G286F043, G286F044, G286F045, G286F046, G286F047, G286F048, G286F049, G286F050, G294
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05097 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template lines 1-358（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05098 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 4: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05099 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 7: v-on:closed
+  - 基线：原表达式：handleClosed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05100 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 12: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05101 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 41: v-bind:type
+  - 基线：原表达式：runStatusType(stats.latestRun?.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05102 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 57: v-model:
+  - 基线：原表达式：checkHash；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05103 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 62: v-bind:loading
+  - 基线：原表达式：scanning；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05104 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 63: v-bind:disabled
+  - 基线：原表达式：stats.latestRun?.status === 'running'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05105 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 64: v-on:click
+  - 基线：原表达式：handleStart；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05106 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 71: v-model:
+  - 基线：原表达式：activeTab；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05107 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 71: v-on:tab-change
+  - 基线：原表达式：handleTabChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05108 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 75: v-bind:model
+  - 基线：原表达式：issueQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05109 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 76: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05110 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 81: v-model:
+  - 基线：原表达式：issueQuery.keyword；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05111 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 85: v-on:keyup
+  - 基线：原表达式：handleIssueQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05112 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 90: v-model:
+  - 基线：原表达式：issueQuery.issueType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05113 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 96: v-for:
+  - 基线：原表达式：item in issueTypeOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05114 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 97: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05115 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 98: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05116 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 99: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05117 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 105: v-model:
+  - 基线：原表达式：issueQuery.severity；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05118 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 117: v-model:
+  - 基线：原表达式：issueQuery.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05119 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 129: v-on:click
+  - 基线：原表达式：handleIssueQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05120 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 132: v-on:click
+  - 基线：原表达式：resetIssueQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05121 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 136: v-loading:
+  - 基线：原表达式：issueLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05122 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 136: v-bind:data
+  - 基线：原表达式：issueList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05123 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 138: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05124 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 139: v-bind:type
+  - 基线：原表达式：severityTagType(scope.row.severity)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05125 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 150: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05126 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 159: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05127 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 161: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05128 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 167: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05129 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 168: v-bind:title
+  - 基线：原表达式：formatLocation(scope.row.expectedRoot, scope.row.expectedKey)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05130 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 173: v-bind:title
+  - 基线：原表达式：formatLocation(scope.row.actualRoot, scope.row.actualKey)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05131 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 180: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05132 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 188: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05133 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 189: v-bind:type
+  - 基线：原表达式：issueStatusType(scope.row.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05134 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 199: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05135 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 202: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05136 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 207: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05137 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 209: v-if:
+  - 基线：原表达式：scope.row.availableActions?.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05138 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 210: v-bind:content
+  - 基线：原表达式：
+                  stats.latestRun?.status === 'running'
+                    ? '对账任务运行中，请等待扫描完成'
+                    : '处理异常'
+                ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05139 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 220: v-bind:disabled
+  - 基线：原表达式：stats.latestRun?.status === 'running'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05140 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 221: v-on:command
+  - 基线：原表达式：handleCommand($event, scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05141 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 227: v-bind:disabled
+  - 基线：原表达式：stats.latestRun?.status === 'running'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05142 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 229: v-slot:dropdown
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05143 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 232: v-for:
+  - 基线：原表达式：action in scope.row.availableActions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05144 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 233: v-bind:key
+  - 基线：原表达式：action；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05145 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 234: v-bind:command
+  - 基线：原表达式：action；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05146 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 243: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05147 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 248: v-show:
+  - 基线：原表达式：issueTotal > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05148 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 249: v-bind:total
+  - 基线：原表达式：issueTotal；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05149 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 250: v-model:page
+  - 基线：原表达式：issueQuery.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05150 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 251: v-model:limit
+  - 基线：原表达式：issueQuery.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05151 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 252: v-on:pagination
+  - 基线：原表达式：getIssueList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05152 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 257: v-loading:
+  - 基线：原表达式：runLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05153 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 257: v-bind:data
+  - 基线：原表达式：runList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05154 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 259: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05155 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 260: v-bind:type
+  - 基线：原表达式：runStatusType(scope.row.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05156 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 266: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05157 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 271: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05158 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 283: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05159 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 286: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05160 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 289: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05161 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 298: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05162 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 302: v-show:
+  - 基线：原表达式：runTotal > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05163 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 303: v-bind:total
+  - 基线：原表达式：runTotal；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05164 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 304: v-model:page
+  - 基线：原表达式：runQuery.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05165 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 305: v-model:limit
+  - 基线：原表达式：runQuery.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05166 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 306: v-on:pagination
+  - 基线：原表达式：getRunList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05167 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 313: v-bind:title
+  - 基线：原表达式：actionLabel(handleForm.action)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05168 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 314: v-model:
+  - 基线：原表达式：handleOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05169 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 319: v-if:
+  - 基线：原表达式：actionDescriptions[handleForm.action]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05170 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 320: v-bind:title
+  - 基线：原表达式：actionDescriptions[handleForm.action]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05171 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 321: v-bind:type
+  - 基线：原表达式：dangerousActions.includes(handleForm.action) ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05172 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 322: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05173 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 326: v-bind:model
+  - 基线：原表达式：handleForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05174 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 326: v-bind:rules
+  - 基线：原表达式：handleRules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05175 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 328: v-if:
+  - 基线：原表达式：handleForm.action === 'register_orphan'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05176 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 333: v-model:
+  - 基线：原表达式：handleForm.originalName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05177 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 340: v-model:
+  - 基线：原表达式：handleForm.reason；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05178 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 342: v-bind:rows
+  - 基线：原表达式：4；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05179 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 349: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05180 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 351: v-on:click
+  - 基线：原表达式：handleOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05181 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 352: v-bind:loading
+  - 基线：原表达式：handling；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05182 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template line 352: v-on:click
+  - 基线：原表达式：submitHandle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05183 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 20
+  - 基线：原显示表达式：stats.openCount
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05184 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 25
+  - 基线：原显示表达式：stats.criticalCount
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05185 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 30
+  - 基线：原显示表达式：stats.warningCount
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05186 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 35
+  - 基线：原显示表达式：stats.quarantinedCount
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05187 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 42
+  - 基线：原显示表达式：runStatusLabel(stats.latestRun?.status)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05188 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 46
+  - 基线：原显示表达式：stats.latestRun ? parseTime(stats.latestRun.startedTime) : "尚未执行"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05189 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 140
+  - 基线：原显示表达式：severityLabel(scope.row.severity)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05190 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 151
+  - 基线：原显示表达式：issueTypeLabel(scope.row.issueType)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05191 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 162
+  - 基线：原显示表达式：scope.row.originalName || "未登记文件"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05192 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 163
+  - 基线：原显示表达式：scope.row.fileId || "-"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05193 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 169
+  - 基线：原显示表达式：formatLocation(scope.row.expectedRoot, scope.row.expectedKey)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05194 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 175
+  - 基线：原显示表达式：formatLocation(scope.row.actualRoot, scope.row.actualKey)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05195 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 181
+  - 基线：原显示表达式：formatOptionalSize(scope.row.expectedSize)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05196 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 183
+  - 基线：原显示表达式：formatOptionalSize(scope.row.actualSize)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05197 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 190
+  - 基线：原显示表达式：issueStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05198 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 203
+  - 基线：原显示表达式：parseTime(scope.row.lastSeenTime)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05199 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 236
+  - 基线：原显示表达式：actionLabel(action)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05200 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 261
+  - 基线：原显示表达式：runStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05201 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 267
+  - 基线：原显示表达式：scope.row.triggerType === "scheduled" ? "定时任务" : "手动"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05202 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 271
+  - 基线：原显示表达式：scope.row.checkHash ? "是" : "否"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05203 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 286
+  - 基线：原显示表达式：parseTime(scope.row.startedTime)
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05204 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` template interpolation line 290
+  - 基线：原显示表达式：scope.row.finishedTime ? parseTime(scope.row.finishedTime) : "-"
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+- I05205 `ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue` style[0] lines 655-770
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/file/components/FileReconcileDrawer.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

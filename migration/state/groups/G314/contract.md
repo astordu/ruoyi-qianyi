@@ -1,0 +1,211 @@
+# G314 src/views/system/user/profile/userAvatar.vue：完整能力
+
+依赖：G000, G045, G230
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07675 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 62-62 ImportDeclaration: 
+  - 基线：源语句 sha256=5de007de65c616a232150034662273d636bde10d30a2997d90cccd22dbe1c201；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07676 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 63-63 ImportDeclaration: 
+  - 基线：源语句 sha256=cee430cd4d0c5fd06d46f278bd4e7793f95f960ab3cf4b1c10417fcf9fdfa555；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07677 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 64-64 ImportDeclaration: 
+  - 基线：源语句 sha256=c054993b9b07758847813902ff7a26fa05a73c5430092a72f8df37ce558d7b8d；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07678 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 65-65 ImportDeclaration: 
+  - 基线：源语句 sha256=ab2a0c7684f8a2a76b82c2ca51ffe60e1c3e97cc213c3b5e8e3bca267da05523；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07679 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 67-67 VariableDeclaration: userStore
+  - 基线：源语句 sha256=21eb42d5aa135e6ffd33998f9b7f8924e85e1259d2572f4a34415ca53d396344；保留返回、异常及 0 个分支，调用=useUserStore。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07680 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 68-68 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07681 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 70-70 VariableDeclaration: open
+  - 基线：源语句 sha256=a542e4df0517d4fd7db7dda3114abbaf21c848158a19f33261b636975b69e307；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07682 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 71-71 VariableDeclaration: visible
+  - 基线：源语句 sha256=1e5831fe2e56f6cc177d5ecfd848b4a6a30d10008c0fed3fc9f2ab7bcf3c3453；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07683 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 72-72 VariableDeclaration: title
+  - 基线：源语句 sha256=ada5058f1d4575add71f978b696109d61b0aac82d1e410174a323e24e224005d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07684 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 75-84 VariableDeclaration: options
+  - 基线：源语句 sha256=c139a305eb23b5d986b00d34cae299f5ed3092e73effc0948200e7194528b023；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07685 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 87-89 FunctionDeclaration: editCropper
+  - 基线：源语句 sha256=357b78a773b6009208d791c334b1147c29d3e85d3c6f8b4bc43e8cbb02455bd3；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07686 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 91-93 FunctionDeclaration: modalOpened
+  - 基线：源语句 sha256=69e63b5ebd96fe6b736e2f37964c0e700e6f6c43b77eec9dccb8399e2f842a3d；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07687 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 95-95 FunctionDeclaration: requestUpload
+  - 基线：源语句 sha256=c6a9c90c50057fbadc267934310b27aed1e36c84b51ed7a0d1aa32444f9b1f46；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07688 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 97-99 FunctionDeclaration: rotateLeft
+  - 基线：源语句 sha256=6aad575fd75ce72571a0e863cb7ba6432efd65a30ba0b11929c72b478e34b061；保留返回、异常及 0 个分支，调用=proxy.$refs.cropper.rotateLeft。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07689 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 101-103 FunctionDeclaration: rotateRight
+  - 基线：源语句 sha256=1d4fe15a9411a64b30847ec7f13306414e99c2de7f2c0518248fa74b944fa681；保留返回、异常及 0 个分支，调用=proxy.$refs.cropper.rotateRight。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07690 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 105-108 FunctionDeclaration: changeScale
+  - 基线：源语句 sha256=0dbf771cb993f1d4ec304c87c74fa273824a8ed874abcbcda4c7f6e14e1b9633；保留返回、异常及 1 个分支，调用=proxy.$refs.cropper.changeScale。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07691 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 110-121 FunctionDeclaration: beforeUpload
+  - 基线：源语句 sha256=ef1a526cdc852e70b8987326470bfef0aacfe38b57ed849e6fcab721834930aa；保留返回、异常及 1 个分支，调用=file.type.indexOf, proxy.$modal.msgError, reader.readAsDataURL。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07692 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 123-135 FunctionDeclaration: uploadImg
+  - 基线：源语句 sha256=dd923fdd363232cfc0d1bef5e31a2535dbaa2812631e0bd729f232d893c7c3b4；保留返回、异常及 0 个分支，调用=proxy.$refs.cropper.getCropBlob, formData.append, CallExpression.then, uploadAvatar, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07693 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 137-139 FunctionDeclaration: realTime
+  - 基线：源语句 sha256=fed470163af0000a93a588dd85e39cda387903775e9f57585aa1459afaca2aef；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07694 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` lines 141-144 FunctionDeclaration: closeDialog
+  - 基线：源语句 sha256=c9dbfabd444d9df7fe0256527628d98d29d0e3070c46eb89b7591fd86446113e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07695 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template lines 1-59（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07696 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 2: v-on:click
+  - 基线：原表达式：editCropper()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07697 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 3: v-bind:src
+  - 基线：原表达式：options.img；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07698 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 4: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07699 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 4: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07700 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 4: v-on:opened
+  - 基线：原表达式：modalOpened；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07701 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 4: v-on:close
+  - 基线：原表达式：closeDialog；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07702 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 6: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07703 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 6: v-bind:md
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07704 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 6: v-bind:style
+  - 基线：原表达式：{ height: '350px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07705 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 9: v-bind:img
+  - 基线：原表达式：options.img；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07706 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 10: v-bind:info
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07707 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 11: v-bind:autoCrop
+  - 基线：原表达式：options.autoCrop；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07708 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 12: v-bind:autoCropWidth
+  - 基线：原表达式：options.autoCropWidth；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07709 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 13: v-bind:autoCropHeight
+  - 基线：原表达式：options.autoCropHeight；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07710 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 14: v-bind:fixedBox
+  - 基线：原表达式：options.fixedBox；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07711 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 15: v-bind:outputType
+  - 基线：原表达式：options.outputType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07712 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 16: v-on:realTime
+  - 基线：原表达式：realTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07713 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 17: v-if:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07714 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 20: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07715 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 20: v-bind:md
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07716 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 20: v-bind:style
+  - 基线：原表达式：{ height: '350px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07717 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 22: v-bind:src
+  - 基线：原表达式：options.previews.url；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07718 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 22: v-bind:style
+  - 基线：原表达式：options.previews.img；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07719 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 28: v-bind:lg
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07720 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 28: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07721 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 31: v-bind:http-request
+  - 基线：原表达式：requestUpload；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07722 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 32: v-bind:show-file-list
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07723 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 33: v-bind:before-upload
+  - 基线：原表达式：beforeUpload；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07724 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 41: v-bind:lg
+  - 基线：原表达式：{ span: 1, offset: 2 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07725 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 41: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07726 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 42: v-on:click
+  - 基线：原表达式：changeScale(1)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07727 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 44: v-bind:lg
+  - 基线：原表达式：{ span: 1, offset: 1 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07728 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 44: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07729 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 45: v-on:click
+  - 基线：原表达式：changeScale(-1)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07730 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 47: v-bind:lg
+  - 基线：原表达式：{ span: 1, offset: 1 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07731 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 47: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07732 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 48: v-on:click
+  - 基线：原表达式：rotateLeft()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07733 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 50: v-bind:lg
+  - 基线：原表达式：{ span: 1, offset: 1 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07734 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 50: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07735 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 51: v-on:click
+  - 基线：原表达式：rotateRight()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07736 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 53: v-bind:lg
+  - 基线：原表达式：{ span: 2, offset: 6 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07737 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 53: v-bind:md
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07738 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` template line 54: v-on:click
+  - 基线：原表达式：uploadImg()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+- I07739 `ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue` style[0] lines 147-171
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/user/profile/userAvatar.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

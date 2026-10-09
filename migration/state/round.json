@@ -1,0 +1,21 @@
+{
+  "status": "selected",
+  "mode": "new",
+  "group": "G253F018",
+  "title": "src/utils/time.js：getFormatter",
+  "feature": "shared",
+  "group_status": "pending",
+  "contract": "migration/state/groups/G253F018/contract.md",
+  "contract_sha256": "e815fca656ce1d588e3edca6992f0108f75d1e315f159574a4e034dfd0e84ffc",
+  "inventory_digest": "b4256433a58a115267b363b2ddb63433eb79384c6826fdc2c901ed72e05b6bea",
+  "items": [
+    "I02810"
+  ],
+  "depends_on": [
+    "G000",
+    "G253"
+  ],
+  "selected_at": "2026-10-09T10:19:06.972696+00:00",
+  "reason": "ready dependencies; current feature; entry priority; downstream count; item count; stable ID",
+  "scope_digest": "481443b1c308bd326486311119b6326730d792da85144e18ed1269b8e897ab06"
+}

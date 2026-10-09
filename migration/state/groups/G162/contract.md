@@ -1,0 +1,331 @@
+# G162 src/components/Crontab/index.vue：完整能力
+
+依赖：G000, G160, G161, G163, G164, G165, G166, G167, G168
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I00969 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 128-128 ImportDeclaration: 
+  - 基线：源语句 sha256=64f3348f5c640b85ab6d48b0ba57ea23b23a77d87845b8dae732c4b3eab76dd2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00970 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 129-129 ImportDeclaration: 
+  - 基线：源语句 sha256=31bdbc30ab255d2139de12bee41072f6c735b2a2fc6120551f3eb23b05a69cc0；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00971 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 130-130 ImportDeclaration: 
+  - 基线：源语句 sha256=a459f76f797666fd89152d199055f1700c971db9b518404d9eeeba90edfd2861；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00972 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 131-131 ImportDeclaration: 
+  - 基线：源语句 sha256=c8fdd5048ca91cf7deaa99a0cee3fb9a84aea77bd057394c9098b1e026fe0fe7；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00973 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 132-132 ImportDeclaration: 
+  - 基线：源语句 sha256=d9c3bd908e6876d941bed283fdbfed96c1c82b33e222db3c82dc4eeeb5f80c99；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00974 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 133-133 ImportDeclaration: 
+  - 基线：源语句 sha256=dd7e23acbfeebabcf1395055e0a5ea01272422cbc2ed061107598e3943826b2a；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00975 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 134-134 ImportDeclaration: 
+  - 基线：源语句 sha256=6309a8fd4e7f1bcf29a36bf36c7a62d35f4883e319c430c6e188b0dd06ddcf19；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00976 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 135-135 ImportDeclaration: 
+  - 基线：源语句 sha256=6c98b8ea8e7bb31ea957d6cde499423e39b48968f38787286c7c06dbeae518b8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00977 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 136-136 VariableDeclaration: 
+  - 基线：源语句 sha256=d3917068104e0f2158733e5e758c09ff6781b09fc4b90611c9a30e2625c695d6；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00978 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 137-137 VariableDeclaration: emit
+  - 基线：源语句 sha256=4ab95bdc4ae3227ca6a575e98e718be2001800b6b276ed7245c1e2b38da107b4；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00979 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 138-151 VariableDeclaration: props
+  - 基线：源语句 sha256=f2e22ba432f8637d1bec41711d354896d81e7aceb5347be4c4972e2aee1efe36；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00980 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 152-152 VariableDeclaration: tabTitles
+  - 基线：源语句 sha256=89b6b8e2b281f351203188ae3a04a1b86ef771dc63c59b8b3dd9690422d833be；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00981 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 153-153 VariableDeclaration: tabActive
+  - 基线：源语句 sha256=f05ab61e5c3d5c90f05bb527e0cb11af385754c67ddc56e8c8d0aa6591ca4cb9；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00982 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 154-154 VariableDeclaration: hideComponent
+  - 基线：源语句 sha256=ab33ae979484b8ae854abdc629806f56c879ac71cb9d24d2c7bb2496ff1bba0c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00983 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 155-155 VariableDeclaration: expression
+  - 基线：源语句 sha256=59c4a733e934f62bed4aabe2126343559e4ffae9345f1d70e83fa24d9db54c20；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00984 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 156-164 VariableDeclaration: crontabValueObj
+  - 基线：源语句 sha256=f4561e016d0fbb179a37e32cea3fb4a1d41b85dbfa4701670191204d60e991c7；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00985 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 165-179 VariableDeclaration: crontabValueString
+  - 基线：源语句 sha256=39062aa8ad522e3d6686c5b8b36b6985eed49db9ee2eee7de21e6d5df8ad809c；保留返回、异常及 2 个分支，调用=computed。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00986 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 180-180 ExpressionStatement: 
+  - 基线：源语句 sha256=9f09e1f6ad84f18e25b7d68516d27c59fc46db03b2df855f222e9374b5efe0c0；保留返回、异常及 0 个分支，调用=watch, resolveExp。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00987 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 181-183 FunctionDeclaration: shouldHide
+  - 基线：源语句 sha256=48893809e1cea9b1f4b08fb04126872fbaa0176714e15d4a262c3ae1f0747a96；保留返回、异常及 2 个分支，调用=hideComponent.value.includes。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00988 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 184-207 FunctionDeclaration: resolveExp
+  - 基线：源语句 sha256=2f891449fa9a62bb54c5ef36e98aa6ab44dd512dad76aadc605e9d01c81b62cf；保留返回、异常及 3 个分支，调用=expression.value.split, clearCron。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00989 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 209-211 FunctionDeclaration: tabCheck
+  - 基线：源语句 sha256=f826b15ee96293fa416ca656bd1fd8321bc1305a84f09ae4a42b703e7f343d97；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00990 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 213-215 FunctionDeclaration: updateCrontabValue
+  - 基线：源语句 sha256=c92e0c6f49082b1f4a1034f55f209163a2eb6e1b2286259b0130b51e5a7d5bc8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00991 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 217-226 FunctionDeclaration: checkNumber
+  - 基线：源语句 sha256=034bf83ae594df2537d0f1032d7973b2ed869d135fbbd42d6251d833b722c28e；保留返回、异常及 3 个分支，调用=Math.floor。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00992 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 228-230 FunctionDeclaration: hidePopup
+  - 基线：源语句 sha256=d6acd1f5c7e9ec189786f7bbf3ea3265a491abab8dec94cf30810ef39e940650；保留返回、异常及 0 个分支，调用=emit。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00993 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 232-235 FunctionDeclaration: submitFill
+  - 基线：源语句 sha256=017e79cfcca8a974f126219cdbd4d97afea4a91015c1ab84ecd3a4a6be6d265b；保留返回、异常及 0 个分支，调用=emit, hidePopup。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00994 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 236-247 FunctionDeclaration: clearCron
+  - 基线：源语句 sha256=4e041323f7712d7795289aa7f2fb498fbe6daec00ac3542542e947c38a606a00；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00995 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` lines 248-251 ExpressionStatement: 
+  - 基线：源语句 sha256=b80355fe9dfe80983582eca9929ff3b68c8b479d011679d79268baded78739ed；保留返回、异常及 0 个分支，调用=onMounted。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00996 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template lines 1-125（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00997 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 4: v-if:
+  - 基线：原表达式：shouldHide('second')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00998 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 6: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I00999 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 7: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01000 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 8: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01001 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 13: v-if:
+  - 基线：原表达式：shouldHide('min')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01002 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 15: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01003 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 16: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01004 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 17: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01005 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 22: v-if:
+  - 基线：原表达式：shouldHide('hour')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01006 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 24: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01007 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 25: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01008 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 26: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01009 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 31: v-if:
+  - 基线：原表达式：shouldHide('day')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01010 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 33: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01011 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 34: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01012 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 35: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01013 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 40: v-if:
+  - 基线：原表达式：shouldHide('month')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01014 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 42: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01015 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 43: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01016 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 44: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01017 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 49: v-if:
+  - 基线：原表达式：shouldHide('week')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01018 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 51: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01019 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 52: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01020 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 53: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01021 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 58: v-if:
+  - 基线：原表达式：shouldHide('year')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01022 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 60: v-on:update
+  - 基线：原表达式：updateCrontabValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01023 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 61: v-bind:check
+  - 基线：原表达式：checkNumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01024 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 62: v-bind:cron
+  - 基线：原表达式：crontabValueObj；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01025 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 74: v-for:
+  - 基线：原表达式：item of tabTitles；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01026 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 74: v-bind:key
+  - 基线：原表达式：item；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01027 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 81: v-if:
+  - 基线：原表达式：crontabValueObj.second.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01028 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 82: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01029 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 82: v-bind:content
+  - 基线：原表达式：crontabValueObj.second；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01030 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 85: v-if:
+  - 基线：原表达式：crontabValueObj.min.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01031 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 86: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01032 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 86: v-bind:content
+  - 基线：原表达式：crontabValueObj.min；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01033 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 89: v-if:
+  - 基线：原表达式：crontabValueObj.hour.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01034 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 90: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01035 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 90: v-bind:content
+  - 基线：原表达式：crontabValueObj.hour；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01036 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 93: v-if:
+  - 基线：原表达式：crontabValueObj.day.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01037 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 94: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01038 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 94: v-bind:content
+  - 基线：原表达式：crontabValueObj.day；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01039 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 97: v-if:
+  - 基线：原表达式：crontabValueObj.month.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01040 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 98: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01041 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 98: v-bind:content
+  - 基线：原表达式：crontabValueObj.month；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01042 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 101: v-if:
+  - 基线：原表达式：crontabValueObj.week.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01043 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 102: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01044 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 102: v-bind:content
+  - 基线：原表达式：crontabValueObj.week；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01045 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 105: v-if:
+  - 基线：原表达式：crontabValueObj.year.length < 10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01046 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 106: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01047 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 106: v-bind:content
+  - 基线：原表达式：crontabValueObj.year；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01048 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 109: v-if:
+  - 基线：原表达式：crontabValueString.length < 90；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01049 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 110: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01050 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 110: v-bind:content
+  - 基线：原表达式：crontabValueString；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01051 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 116: v-bind:ex
+  - 基线：原表达式：crontabValueString；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01052 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 116: v-bind:time-zone
+  - 基线：原表达式：timeZone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01053 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 119: v-on:click
+  - 基线：原表达式：submitFill；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01054 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 120: v-on:click
+  - 基线：原表达式：clearCron；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01055 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template line 121: v-on:click
+  - 基线：原表达式：hidePopup；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01056 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 74
+  - 基线：原显示表达式：item
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01057 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 81
+  - 基线：原显示表达式：crontabValueObj.second
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01058 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 82
+  - 基线：原显示表达式：crontabValueObj.second
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01059 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 85
+  - 基线：原显示表达式：crontabValueObj.min
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01060 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 86
+  - 基线：原显示表达式：crontabValueObj.min
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01061 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 89
+  - 基线：原显示表达式：crontabValueObj.hour
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01062 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 90
+  - 基线：原显示表达式：crontabValueObj.hour
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01063 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 93
+  - 基线：原显示表达式：crontabValueObj.day
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01064 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 94
+  - 基线：原显示表达式：crontabValueObj.day
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01065 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 97
+  - 基线：原显示表达式：crontabValueObj.month
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01066 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 98
+  - 基线：原显示表达式：crontabValueObj.month
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01067 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 101
+  - 基线：原显示表达式：crontabValueObj.week
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01068 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 102
+  - 基线：原显示表达式：crontabValueObj.week
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01069 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 105
+  - 基线：原显示表达式：crontabValueObj.year
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01070 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 106
+  - 基线：原显示表达式：crontabValueObj.year
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01071 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 109
+  - 基线：原显示表达式：crontabValueString
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01072 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` template interpolation line 110
+  - 基线：原显示表达式：crontabValueString
+  - 去向：react-front/src/components/Crontab/index.tsx
+- I01073 `ruoyi-fastapi-frontend/src/components/Crontab/index.vue` style[0] lines 254-317
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/components/Crontab/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

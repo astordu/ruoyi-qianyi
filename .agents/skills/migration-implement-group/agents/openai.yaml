@@ -1,0 +1,4 @@
+interface:
+  display_name: "实施本轮迁移"
+  short_description: "每轮只迁移选定的一组功能，保留旧行为并记录源内容到目标代码的映射"
+  default_prompt: "使用 $migration-implement-group，只实施 round.json 选定的小组，保留旧行为并更新逐项目标映射。"

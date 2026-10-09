@@ -1,0 +1,766 @@
+# G320V src/views/tool/build/RightPanel.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G187, G235, G242, G319, G320, G320F010, G320F011, G320F014, G320F015, G320F016, G320F017, G320F018, G320F019, G320F020, G320F021, G320F022, G320F023, G320F024, G320F025, G320F026, G320F027, G320F028, G320F029, G320F030, G320F031, G320F032, G320F033, G320F034, G320F035, G321
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07953 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template lines 1-464（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07954 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 3: v-model:
+  - 基线：原表达式：currentTab；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07955 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 8: v-bind:href
+  - 基线：原表达式：documentLink；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07956 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 15: v-show:
+  - 基线：原表达式：currentTab === 'field' && showField；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07957 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 17: v-if:
+  - 基线：原表达式：activeData.changeTag；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07958 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 18: v-model:
+  - 基线：原表达式：activeData.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07959 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 18: v-bind:style
+  - 基线：原表达式：{ width: '100%' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07960 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 18: v-on:change
+  - 基线：原表达式：tagChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07961 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 19: v-for:
+  - 基线：原表达式：group in tagList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07962 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 19: v-bind:key
+  - 基线：原表达式：group.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07963 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 19: v-bind:label
+  - 基线：原表达式：group.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07964 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 20: v-for:
+  - 基线：原表达式：item in group.options；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07965 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 20: v-bind:key
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07966 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 20: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07967 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 20: v-bind:value
+  - 基线：原表达式：item.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07968 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 21: v-bind:icon-class
+  - 基线：原表达式：item.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07969 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 27: v-if:
+  - 基线：原表达式：activeData.vModel !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07970 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 28: v-model:
+  - 基线：原表达式：activeData.vModel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07971 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 30: v-if:
+  - 基线：原表达式：activeData.componentName !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07972 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 33: v-if:
+  - 基线：原表达式：activeData.label !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07973 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 34: v-model:
+  - 基线：原表达式：activeData.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07974 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 36: v-if:
+  - 基线：原表达式：activeData.placeholder !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07975 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 37: v-model:
+  - 基线：原表达式：activeData.placeholder；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07976 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 39: v-if:
+  - 基线：原表达式：activeData['start-placeholder'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07977 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 40: v-model:
+  - 基线：原表达式：activeData['start-placeholder']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07978 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 42: v-if:
+  - 基线：原表达式：activeData['end-placeholder'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07979 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 43: v-model:
+  - 基线：原表达式：activeData['end-placeholder']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07980 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 45: v-if:
+  - 基线：原表达式：activeData.span !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07981 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 46: v-model:
+  - 基线：原表达式：activeData.span；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07982 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 46: v-bind:max
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07983 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 46: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07984 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 46: v-bind:marks
+  - 基线：原表达式：{ 12: '' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07985 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 46: v-on:change
+  - 基线：原表达式：spanChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07986 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 48: v-if:
+  - 基线：原表达式：activeData.layout === 'rowFormItem'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07987 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 49: v-model:
+  - 基线：原表达式：activeData.gutter；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07988 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 49: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07989 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 52: v-if:
+  - 基线：原表达式：activeData.justify !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07990 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 53: v-model:
+  - 基线：原表达式：activeData.justify；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07991 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 53: v-bind:style
+  - 基线：原表达式：{ width: '100%' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07992 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 54: v-for:
+  - 基线：原表达式：(item, index) in justifyOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07993 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 54: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07994 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 54: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07995 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 54: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07996 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 57: v-if:
+  - 基线：原表达式：activeData.align !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07997 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 58: v-model:
+  - 基线：原表达式：activeData.align；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07998 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 64: v-if:
+  - 基线：原表达式：activeData.labelWidth !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I07999 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 65: v-model:
+  - 基线：原表达式：activeData.labelWidth；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08000 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 67: v-if:
+  - 基线：原表达式：activeData.style && activeData.style.width !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08001 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 68: v-model:
+  - 基线：原表达式：activeData.style.width；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08002 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 70: v-if:
+  - 基线：原表达式：activeData.vModel !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08003 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 71: v-bind:value
+  - 基线：原表达式：setDefaultValue(activeData.defaultValue)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08004 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 72: v-on:input
+  - 基线：原表达式：onDefaultValueInput；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08005 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 74: v-if:
+  - 基线：原表达式：activeData.tag === 'el-checkbox-group'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08006 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 75: v-bind:value
+  - 基线：原表达式：activeData.min；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08007 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 75: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08008 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 76: v-on:input
+  - 基线：原表达式：$set(activeData, 'min', $event ? $event : undefined)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08009 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 78: v-if:
+  - 基线：原表达式：activeData.tag === 'el-checkbox-group'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08010 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 79: v-bind:value
+  - 基线：原表达式：activeData.max；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08011 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 79: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08012 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 80: v-on:input
+  - 基线：原表达式：$set(activeData, 'max', $event ? $event : undefined)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08013 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 82: v-if:
+  - 基线：原表达式：activeData.prepend !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08014 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 83: v-model:
+  - 基线：原表达式：activeData.prepend；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08015 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 85: v-if:
+  - 基线：原表达式：activeData.append !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08016 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 86: v-model:
+  - 基线：原表达式：activeData.append；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08017 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 88: v-if:
+  - 基线：原表达式：activeData['prefix-icon'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08018 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 89: v-model:
+  - 基线：原表达式：activeData['prefix-icon']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08019 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 90: v-slot:append
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08020 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 91: v-on:click
+  - 基线：原表达式：openIconsDialog('prefix-icon')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08021 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 97: v-if:
+  - 基线：原表达式：activeData['suffix-icon'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08022 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 98: v-model:
+  - 基线：原表达式：activeData['suffix-icon']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08023 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 99: v-slot:append
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08024 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 100: v-on:click
+  - 基线：原表达式：openIconsDialog('suffix-icon')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08025 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 106: v-if:
+  - 基线：原表达式：activeData.tag === 'el-cascader'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08026 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 107: v-model:
+  - 基线：原表达式：activeData.separator；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08027 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 109: v-if:
+  - 基线：原表达式：activeData.autosize !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08028 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 110: v-model:
+  - 基线：原表达式：activeData.autosize.minRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08029 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 110: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08030 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 112: v-if:
+  - 基线：原表达式：activeData.autosize !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08031 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 113: v-model:
+  - 基线：原表达式：activeData.autosize.maxRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08032 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 113: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08033 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 115: v-if:
+  - 基线：原表达式：activeData.min !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08034 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 116: v-model:
+  - 基线：原表达式：activeData.min；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08035 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 118: v-if:
+  - 基线：原表达式：activeData.max !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08036 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 119: v-model:
+  - 基线：原表达式：activeData.max；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08037 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 121: v-if:
+  - 基线：原表达式：activeData.step !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08038 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 122: v-model:
+  - 基线：原表达式：activeData.step；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08039 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 124: v-if:
+  - 基线：原表达式：activeData.tag === 'el-input-number'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08040 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 125: v-model:
+  - 基线：原表达式：activeData.precision；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08041 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 125: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08042 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 127: v-if:
+  - 基线：原表达式：activeData.tag === 'el-input-number'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08043 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 128: v-model:
+  - 基线：原表达式：activeData['controls-position']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08044 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 137: v-if:
+  - 基线：原表达式：activeData.maxlength !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08045 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 138: v-model:
+  - 基线：原表达式：activeData.maxlength；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08046 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 144: v-if:
+  - 基线：原表达式：activeData['active-text'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08047 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 145: v-model:
+  - 基线：原表达式：activeData['active-text']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08048 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 147: v-if:
+  - 基线：原表达式：activeData['inactive-text'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08049 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 148: v-model:
+  - 基线：原表达式：activeData['inactive-text']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08050 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 150: v-if:
+  - 基线：原表达式：activeData['active-value'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08051 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 151: v-bind:value
+  - 基线：原表达式：setDefaultValue(activeData['active-value'])；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08052 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 152: v-on:input
+  - 基线：原表达式：onSwitchValueInput($event, 'active-value')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08053 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 154: v-if:
+  - 基线：原表达式：activeData['inactive-value'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08054 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 155: v-bind:value
+  - 基线：原表达式：setDefaultValue(activeData['inactive-value'])；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08055 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 156: v-on:input
+  - 基线：原表达式：onSwitchValueInput($event, 'inactive-value')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08056 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 158: v-if:
+  - 基线：原表达式：activeData.type !== undefined && 'el-date-picker' === activeData.tag；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08057 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 159: v-model:
+  - 基线：原表达式：activeData.type；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08058 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 159: v-bind:style
+  - 基线：原表达式：{ width: '100%' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08059 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 160: v-on:change
+  - 基线：原表达式：dateTypeChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08060 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 161: v-for:
+  - 基线：原表达式：(item, index) in dateOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08061 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 161: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08062 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 161: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08063 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 161: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08064 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 164: v-if:
+  - 基线：原表达式：activeData.name !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08065 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 165: v-model:
+  - 基线：原表达式：activeData.name；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08066 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 167: v-if:
+  - 基线：原表达式：activeData.accept !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08067 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 168: v-model:
+  - 基线：原表达式：activeData.accept；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08068 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 168: v-bind:style
+  - 基线：原表达式：{ width: '100%' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08069 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 178: v-if:
+  - 基线：原表达式：activeData.fileSize !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08070 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 179: v-model:
+  - 基线：原表达式：activeData.fileSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08071 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 180: v-model:
+  - 基线：原表达式：activeData.sizeUnit；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08072 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 180: v-bind:style
+  - 基线：原表达式：{ width: '66px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08073 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 187: v-if:
+  - 基线：原表达式：activeData.action !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08074 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 188: v-model:
+  - 基线：原表达式：activeData.action；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08075 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 190: v-if:
+  - 基线：原表达式：activeData['list-type'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08076 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 191: v-model:
+  - 基线：原表达式：activeData['list-type']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08077 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 203: v-if:
+  - 基线：原表达式：activeData.buttonText !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08078 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 203: v-show:
+  - 基线：原表达式：'picture-card' !== activeData['list-type']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08079 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 205: v-model:
+  - 基线：原表达式：activeData.buttonText；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08080 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 207: v-if:
+  - 基线：原表达式：activeData['range-separator'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08081 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 208: v-model:
+  - 基线：原表达式：activeData['range-separator']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08082 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 210: v-if:
+  - 基线：原表达式：activeData['picker-options'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08083 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 211: v-model:
+  - 基线：原表达式：activeData['picker-options'].selectableRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08084 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 213: v-if:
+  - 基线：原表达式：activeData.format !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08085 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 214: v-bind:value
+  - 基线：原表达式：activeData.format；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08086 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 214: v-on:input
+  - 基线：原表达式：setTimeValue($event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08087 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 216: v-if:
+  - 基线：原表达式：['el-checkbox-group', 'el-radio-group', 'el-select'].indexOf(activeData.tag) > -1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08088 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 218: v-bind:list
+  - 基线：原表达式：activeData.options；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08089 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 218: v-bind:animation
+  - 基线：原表达式：340；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08090 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 220: v-slot:item
+  - 基线：原表达式：{ element, index }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08091 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 221: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08092 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 225: v-model:
+  - 基线：原表达式：element.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08093 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 226: v-bind:value
+  - 基线：原表达式：element.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08094 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 227: v-on:input
+  - 基线：原表达式：setOptionValue(element, $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08095 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 228: v-on:click
+  - 基线：原表达式：activeData.options.splice(index, 1)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08096 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 238: v-on:click
+  - 基线：原表达式：addSelectItem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08097 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 245: v-if:
+  - 基线：原表达式：['el-cascader'].indexOf(activeData.tag) > -1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08098 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 248: v-model:
+  - 基线：原表达式：activeData.dataType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08099 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 258: v-if:
+  - 基线：原表达式：activeData.dataType === 'dynamic'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08100 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 260: v-model:
+  - 基线：原表达式：activeData.labelKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08101 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 263: v-model:
+  - 基线：原表达式：activeData.valueKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08102 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 266: v-model:
+  - 基线：原表达式：activeData.childrenKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08103 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 270: v-if:
+  - 基线：原表达式：activeData.dataType === 'static'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08104 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 270: v-bind:data
+  - 基线：原表达式：activeData.options；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08105 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 271: v-bind:expand-on-click-node
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08106 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 271: v-bind:render-content
+  - 基线：原表达式：renderContent；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08107 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 272: v-if:
+  - 基线：原表达式：activeData.dataType === 'static'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08108 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 274: v-on:click
+  - 基线：原表达式：addTreeItem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08109 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 281: v-if:
+  - 基线：原表达式：activeData.optionType !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08110 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 282: v-model:
+  - 基线：原表达式：activeData.optionType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08111 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 291: v-if:
+  - 基线：原表达式：activeData['active-color'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08112 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 292: v-model:
+  - 基线：原表达式：activeData['active-color']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08113 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 294: v-if:
+  - 基线：原表达式：activeData['inactive-color'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08114 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 295: v-model:
+  - 基线：原表达式：activeData['inactive-color']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08115 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 298: v-if:
+  - 基线：原表达式：activeData['allow-half'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08116 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 299: v-model:
+  - 基线：原表达式：activeData['allow-half']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08117 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 301: v-if:
+  - 基线：原表达式：activeData['show-text'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08118 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 302: v-model:
+  - 基线：原表达式：activeData['show-text']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08119 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 302: v-on:change
+  - 基线：原表达式：rateTextChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08120 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 304: v-if:
+  - 基线：原表达式：activeData['show-score'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08121 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 305: v-model:
+  - 基线：原表达式：activeData['show-score']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08122 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 305: v-on:change
+  - 基线：原表达式：rateScoreChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08123 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 307: v-if:
+  - 基线：原表达式：activeData['show-stops'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08124 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 308: v-model:
+  - 基线：原表达式：activeData['show-stops']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08125 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 310: v-if:
+  - 基线：原表达式：activeData.range !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08126 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 311: v-model:
+  - 基线：原表达式：activeData.range；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08127 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 311: v-on:change
+  - 基线：原表达式：rangeChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08128 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 313: v-if:
+  - 基线：原表达式：activeData.border !== undefined && activeData.optionType === 'default'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08129 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 314: v-model:
+  - 基线：原表达式：activeData.border；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08130 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 316: v-if:
+  - 基线：原表达式：activeData.tag === 'el-color-picker'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08131 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 317: v-model:
+  - 基线：原表达式：activeData['color-format']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08132 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 317: v-bind:style
+  - 基线：原表达式：{ width: '100%' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08133 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 318: v-on:change
+  - 基线：原表达式：colorFormatChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08134 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 319: v-for:
+  - 基线：原表达式：(item, index) in colorFormatOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08135 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 319: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08136 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 319: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08137 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 320: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08138 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 323: v-if:
+  - 基线：原表达式：activeData.size !== undefined &&
+            (activeData.optionType === 'button' ||
+              activeData.border ||
+              activeData.tag === 'el-color-picker')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08139 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 327: v-model:
+  - 基线：原表达式：activeData.size；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08140 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 339: v-if:
+  - 基线：原表达式：activeData['show-word-limit'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08141 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 340: v-model:
+  - 基线：原表达式：activeData['show-word-limit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08142 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 342: v-if:
+  - 基线：原表达式：activeData.tag === 'el-input-number'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08143 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 343: v-model:
+  - 基线：原表达式：activeData['step-strictly']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08144 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 345: v-if:
+  - 基线：原表达式：activeData.tag === 'el-cascader'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08145 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 346: v-model:
+  - 基线：原表达式：activeData.props.props.multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08146 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 348: v-if:
+  - 基线：原表达式：activeData.tag === 'el-cascader'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08147 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 349: v-model:
+  - 基线：原表达式：activeData['show-all-levels']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08148 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 351: v-if:
+  - 基线：原表达式：activeData.tag === 'el-cascader'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08149 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 352: v-model:
+  - 基线：原表达式：activeData.filterable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08150 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 354: v-if:
+  - 基线：原表达式：activeData.clearable !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08151 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 355: v-model:
+  - 基线：原表达式：activeData.clearable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08152 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 357: v-if:
+  - 基线：原表达式：activeData.showTip !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08153 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 358: v-model:
+  - 基线：原表达式：activeData.showTip；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08154 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 360: v-if:
+  - 基线：原表达式：activeData.multiple !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08155 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 361: v-model:
+  - 基线：原表达式：activeData.multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08156 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 363: v-if:
+  - 基线：原表达式：activeData['auto-upload'] !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08157 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 364: v-model:
+  - 基线：原表达式：activeData['auto-upload']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08158 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 366: v-if:
+  - 基线：原表达式：activeData.readonly !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08159 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 367: v-model:
+  - 基线：原表达式：activeData.readonly；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08160 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 369: v-if:
+  - 基线：原表达式：activeData.disabled !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08161 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 370: v-model:
+  - 基线：原表达式：activeData.disabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08162 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 372: v-if:
+  - 基线：原表达式：activeData.tag === 'el-select'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08163 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 373: v-model:
+  - 基线：原表达式：activeData.filterable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08164 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 375: v-if:
+  - 基线：原表达式：activeData.tag === 'el-select'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08165 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 376: v-model:
+  - 基线：原表达式：activeData.multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08166 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 376: v-on:change
+  - 基线：原表达式：multipleChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08167 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 378: v-if:
+  - 基线：原表达式：activeData.required !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08168 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 379: v-model:
+  - 基线：原表达式：activeData.required；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08169 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 382: v-if:
+  - 基线：原表达式：activeData.layoutTree；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08170 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 384: v-bind:data
+  - 基线：原表达式：[activeData]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08171 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 384: v-bind:props
+  - 基线：原表达式：layoutTreeProps；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08172 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 385: v-slot:default
+  - 基线：原表达式：{ node, data }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08173 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 387: v-bind:icon-class
+  - 基线：原表达式：data.tagIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08174 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 394: v-if:
+  - 基线：原表达式：activeData.layout === 'colFormItem'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08175 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 396: v-for:
+  - 基线：原表达式：(item, index) in activeData.regList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08176 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 396: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08177 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 397: v-on:click
+  - 基线：原表达式：activeData.regList.splice(index, 1)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08178 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 403: v-model:
+  - 基线：原表达式：item.pattern；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08179 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 406: v-model:
+  - 基线：原表达式：item.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08180 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 411: v-on:click
+  - 基线：原表达式：addReg；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08181 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 418: v-show:
+  - 基线：原表达式：currentTab === 'form'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08182 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 420: v-model:
+  - 基线：原表达式：formConf.formRef；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08183 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 423: v-model:
+  - 基线：原表达式：formConf.formModel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08184 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 426: v-model:
+  - 基线：原表达式：formConf.formRules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08185 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 429: v-model:
+  - 基线：原表达式：formConf.size；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08186 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 436: v-model:
+  - 基线：原表达式：formConf.labelPosition；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08187 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 443: v-model:
+  - 基线：原表达式：formConf.labelWidth；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08188 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 446: v-model:
+  - 基线：原表达式：formConf.gutter；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08189 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 446: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08190 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 449: v-model:
+  - 基线：原表达式：formConf.disabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08191 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 452: v-model:
+  - 基线：原表达式：formConf.formBtns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08192 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 455: v-model:
+  - 基线：原表达式：formConf.unFocusedComponentBorder；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08193 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 460: v-model:
+  - 基线：原表达式：iconsVisible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08194 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 460: v-bind:current
+  - 基线：原表达式：activeData[currentIconModel]；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08195 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 460: v-on:select
+  - 基线：原表达式：setIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08196 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 461: v-model:
+  - 基线：原表达式：dialogVisible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08197 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template line 461: v-on:commit
+  - 基线：原表达式：addNode；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08198 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template interpolation line 22
+  - 基线：原显示表达式：item.label
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08199 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template interpolation line 31
+  - 基线：原显示表达式：activeData.componentName
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08200 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` template interpolation line 388
+  - 基线：原显示表达式：node.label
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+- I08201 `ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue` style[0] lines 765-906
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/tool/build/RightPanel.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

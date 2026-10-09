@@ -1,0 +1,394 @@
+# G275V src/views/monitor/transportCrypto/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G034, G250, G275, G275F016, G275F017, G275F018, G275F019, G275F020, G275F021, G275F022, G275F023, G275F024, G275F025, G275F026, G275F027, G275F028, G275F029, G275F030, G275F031, G275F032, G275F033, G275F034, G275F035, G275F036, G275F037, G275F038, G275F039, G275F040, G275F041, G275F042, G275F043, G275F044, G275F045, G275F046, G275F047, G275F048, G275F049, G275F050, G275F051, G275F052, G275F053, G275F054, G275F055, G275F056
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04174 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template lines 1-330（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04175 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 3: v-bind:gutter
+  - 基线：原表达式：16；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04176 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 4: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04177 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 4: v-bind:sm
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04178 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 4: v-bind:lg
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04179 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 8: v-bind:type
+  - 基线：原表达式：monitorData.transportCryptoEnabled ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04180 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 19: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04181 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 19: v-bind:sm
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04182 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 19: v-bind:lg
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04183 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 32: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04184 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 32: v-bind:sm
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04185 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 32: v-bind:lg
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04186 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 36: v-bind:type
+  - 基线：原表达式：decryptSuccessRate >= 95 ? 'success' : decryptSuccessRate >= 80 ? 'warning' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04187 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 47: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04188 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 47: v-bind:sm
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04189 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 47: v-bind:lg
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04190 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 61: v-bind:gutter
+  - 基线：原表达式：16；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04191 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 62: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04192 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 62: v-bind:lg
+  - 基线：原表达式：16；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04193 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 64: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04194 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 69: v-model:
+  - 基线：原表达式：autoRefresh；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04195 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 74: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04196 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 74: v-on:click
+  - 基线：原表达式：loadMonitorData；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04197 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 81: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04198 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 96: v-for:
+  - 基线：原表达式：kid in monitorData.supportedKids || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04199 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 96: v-bind:key
+  - 基线：原表达式：kid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04200 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 99: v-if:
+  - 基线：原表达式：!(monitorData.supportedKids || []).length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04201 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 105: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04202 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 111: v-for:
+  - 基线：原表达式：path in monitorData.enabledPaths || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04203 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 112: v-bind:key
+  - 基线：原表达式：path；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04204 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 119: v-if:
+  - 基线：原表达式：!(monitorData.enabledPaths || []).length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04205 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 125: v-for:
+  - 基线：原表达式：path in monitorData.requiredPaths || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04206 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 126: v-bind:key
+  - 基线：原表达式：path；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04207 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 133: v-if:
+  - 基线：原表达式：!(monitorData.requiredPaths || []).length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04208 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 136: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04209 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 139: v-for:
+  - 基线：原表达式：path in monitorData.excludePaths || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04210 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 140: v-bind:key
+  - 基线：原表达式：path；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04211 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 147: v-if:
+  - 基线：原表达式：!(monitorData.excludePaths || []).length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04212 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 154: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04213 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 154: v-bind:lg
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04214 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 156: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04215 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 159: v-bind:type
+  - 基线：原表达式：healthTagLabelType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04216 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 168: v-bind:percentage
+  - 基线：原表达式：Number(decryptSuccessRate.toFixed(1))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04217 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 168: v-bind:status
+  - 基线：原表达式：healthProgressStatus；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04218 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 176: v-bind:percentage
+  - 基线：原表达式：Number(encryptedRequestRate.toFixed(1))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04219 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 184: v-bind:percentage
+  - 基线：原表达式：Number(encryptedResponseRate.toFixed(1))；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04220 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 188: v-bind:title
+  - 基线：原表达式：healthMessage；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04221 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 189: v-bind:type
+  - 基线：原表达式：healthTagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04222 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 190: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04223 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 197: v-bind:gutter
+  - 基线：原表达式：16；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04224 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 198: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04225 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 198: v-bind:lg
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04226 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 200: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04227 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 205: v-if:
+  - 基线：原表达式：selectedFailureReason；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04228 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 205: v-on:close
+  - 基线：原表达式：clearFailureReasonSelection；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04229 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 212: v-if:
+  - 基线：原表达式：failureReasonRows.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04230 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 213: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04231 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 213: v-bind:image-size
+  - 基线：原表达式：88；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04232 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 217: v-bind:data
+  - 基线：原表达式：displayedFailureReasonRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04233 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 220: v-bind:row-class-name
+  - 基线：原表达式：getFailureReasonRowClassName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04234 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 221: v-on:row-click
+  - 基线：原表达式：handleFailureReasonRowClick；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04235 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 224: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04236 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 225: v-bind:type
+  - 基线：原表达式：getFailureTagType(scope.row.reason)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04237 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 232: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04238 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 240: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04239 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 240: v-bind:lg
+  - 基线：原表达式：14；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04240 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 242: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04241 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 247: v-if:
+  - 基线：原表达式：selectedKid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04242 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 247: v-on:close
+  - 基线：原表达式：clearKidSelection；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04243 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 254: v-if:
+  - 基线：原表达式：kidStatRows.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04244 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 255: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04245 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 255: v-bind:image-size
+  - 基线：原表达式：88；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04246 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 259: v-bind:data
+  - 基线：原表达式：displayedKidStatRows；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04247 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 262: v-bind:row-class-name
+  - 基线：原表达式：getKidStatRowClassName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04248 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 263: v-on:row-click
+  - 基线：原表达式：handleKidStatRowClick；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04249 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 266: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04250 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 267: v-bind:type
+  - 基线：原表达式：scope.row.kid === monitorData.currentKid ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04251 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 277: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04252 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 287: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04253 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 293: v-if:
+  - 基线：原表达式：selectedFailureReason || selectedKid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04254 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 303: v-bind:data
+  - 基线：原表达式：displayedRecentFailures；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04255 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 305: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04256 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 310: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04257 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 314: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04258 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 316: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04259 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 317: v-bind:type
+  - 基线：原表达式：getFailureTagType(scope.row.reason)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04260 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template line 323: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04261 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 9
+  - 基线：原显示表达式：monitorData.transportCryptoEnabled ? '已启用' : '未启用'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04262 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 12
+  - 基线：原显示表达式：modeLabel
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04263 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 14
+  - 基线：原显示表达式：monitorData.transportCryptoMode || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04264 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 25
+  - 基线：原显示表达式：formatCount(monitorData.requestsTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04265 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 27
+  - 基线：原显示表达式：formatCount(monitorData.plainRequestsTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04266 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 27
+  - 基线：原显示表达式：formatCount(monitorData.encryptedRequestsTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04267 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 37
+  - 基线：原显示表达式：decryptSuccessRate.toFixed(1)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04268 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 40
+  - 基线：原显示表达式：formatCount(monitorData.decryptSuccessTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04269 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 42
+  - 基线：原显示表达式：formatCount(monitorData.decryptFailureTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04270 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 42
+  - 基线：原显示表达式：formatCount(monitorData.requiredRejectedTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04271 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 53
+  - 基线：原显示表达式：formatCount(monitorData.encryptedResponsesTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04272 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 55
+  - 基线：原显示表达式：formatCount(monitorData.plainResponsesTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04273 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 55
+  - 基线：原显示表达式：formatCount(monitorData.encryptedErrorResponsesTotal)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04274 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 83
+  - 基线：原显示表达式：monitorScopeLabel
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04275 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 86
+  - 基线：原显示表达式：monitorData.appEnv || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04276 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 89
+  - 基线：原显示表达式：monitorData.currentKid || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04277 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 92
+  - 基线：原显示表达式：formatMonitorTime(monitorData.startedAt) || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04278 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 97
+  - 基线：原显示表达式：kid
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04279 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 103
+  - 基线：原显示表达式：failureReasonRows.length
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04280 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 106
+  - 基线：原显示表达式：monitorScopeDescription
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04281 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 117
+  - 基线：原显示表达式：path
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04282 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 131
+  - 基线：原显示表达式：path
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04283 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 145
+  - 基线：原显示表达式：path
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04284 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 159
+  - 基线：原显示表达式：healthLabel
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04285 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 166
+  - 基线：原显示表达式：decryptSuccessRate.toFixed(1)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04286 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 174
+  - 基线：原显示表达式：encryptedRequestRate.toFixed(1)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04287 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 182
+  - 基线：原显示表达式：encryptedResponseRate.toFixed(1)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04288 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 206
+  - 基线：原显示表达式：selectedFailureReason
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04289 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 226
+  - 基线：原显示表达式：scope.row.reason
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04290 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 233
+  - 基线：原显示表达式：formatPercent(scope.row.count, totalFailureReasonCount)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04291 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 248
+  - 基线：原显示表达式：selectedKid
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04292 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 268
+  - 基线：原显示表达式：scope.row.kid || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04293 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 278
+  - 基线：原显示表达式：formatRate(scope.row.decryptSuccess, scope.row.decryptSuccess + scope.row.decryptFailure)
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04294 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 291
+  - 基线：原显示表达式：displayedRecentFailures.length
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04295 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 306
+  - 基线：原显示表达式：formatMonitorTime(scope.row.time) || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04296 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 311
+  - 基线：原显示表达式：scope.row.method || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04297 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 318
+  - 基线：原显示表达式：scope.row.reason || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04298 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` template interpolation line 324
+  - 基线：原显示表达式：scope.row.kid || '-'
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+- I04299 `ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue` style[0] lines 880-1011
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/monitor/transportCrypto/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,4554 @@
+{
+  "edges": [
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/api/chat.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/api/model.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/plugins/ai/api/model.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listModelAll"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/plugins/ai/api/chat.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listChatSession",
+        "delChatSession",
+        "getChatSession",
+        "getUserChatConfig",
+        "saveUserChatConfig",
+        "cancelChatRun"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/plugins/ai/views/chat/components/AiMessage.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/plugins/ai/api/model.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listModel",
+        "addModel",
+        "delModel",
+        "getModel",
+        "updateModel"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/App.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/App.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/theme.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "handleThemeStyle"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/App.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "refreshDeviceTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/login.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/menu.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/cache.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/job.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/jobLog.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/logininfor.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/online.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/operlog.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/server.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/monitor/transportCrypto.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/config.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/dept.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/dict/data.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/dict/type.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/menu.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/notice.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/plugin.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/post.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/role.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseStrEmpty"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/api/tool/gen.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Breadcrumb/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/BusinessDateTimePicker/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatBusinessTime",
+        "getDisplayTimezone",
+        "getWallTimeCandidates"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/BusinessFileUpload/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/second.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/min.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/hour.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/day.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/month.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/week.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/year.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/result.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/result.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "previewJob"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/result.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatBusinessTime"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Editor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ExcelImportDialog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/FileUpload/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getNormalPath"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isHttp"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/IconSelect/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/IconSelect/requireIcons.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ImagePreview/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isExternal"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ImageUpload/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ImageUpload/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isExternal"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/scroll-to.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "scrollTo"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/SizeSelect/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/directive/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/directive/permission/hasRole.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/directive/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/directive/permission/hasPermi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/directive/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/directive/common/copyText.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/directive/permission/hasPermi.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/directive/permission/hasRole.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Copyright/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/IframeToggle/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Copyright/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/DetailView.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/notice.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getNotice"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/DetailView.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/notice.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listNoticeTop",
+        "markNoticeRead",
+        "markNoticeReadAll"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/IframeToggle/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/InnerLink/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/IframeToggle/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Breadcrumb/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Hamburger/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Screenfull/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SizeSelect/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RuoYi/Git/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RuoYi/Doc/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/lock.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/theme.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "handleThemeStyle"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Link.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isExternal"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/logo/logo.png",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/styles/variables.module.scss",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isExternal"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Link.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getNormalPath"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/styles/variables.module.scss",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/ScrollPane.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/TagsView/ScrollPane.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getNormalPath"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "constantRoutes"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isHttp"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "AppMain",
+        "Navbar",
+        "Settings",
+        "TagsView"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/app.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/styles/index.scss",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": []
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/App.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/directive/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "download"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/svgicon.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": []
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "useDict"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getConfigKey"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseTime",
+        "resetForm",
+        "addDateRange",
+        "handleTree",
+        "selectDictLabel",
+        "selectDictLabels"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Editor/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/FileUpload/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/BusinessFileUpload/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/ImageUpload/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/ImagePreview/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/main.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isHttp",
+        "isPathMatch"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isRelogin"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/lock.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/auth.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/download.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/download.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/errorCode.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/download.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "blobValidate"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/tab.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/modal.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/download.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/tab.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/plugins/tab.js",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "kind": "integration",
+      "basis": "路由 catalog 引用布局注册表；实际挂载在集成验证",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/redirect/index.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/error/404.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/error/401.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/dashboard/index.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/authRole.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/router/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "integration",
+      "basis": "路由注册/匹配接口注入",
+      "names": [
+        "default",
+        "constantRoutes",
+        "dynamicRoutes"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/api/menu.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getRouters"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "kind": "integration",
+      "basis": "组件名→页面/布局注册表注入；权限 store 只处理路由元数据，不导入布局组件",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/components/ParentView/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/InnerLink/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/pluginViewResolver.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "resolvePluginViewPath"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/views/error/404.vue",
+      "kind": "integration",
+      "basis": "runtime import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "dependency": "ruoyi-fastapi-frontend/src/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dynamicTitle.js",
+      "kind": "integration",
+      "basis": "setTitle 后的纯标题同步函数接收状态参数，避免反读 store",
+      "names": [
+        "useDynamicTitle"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/theme.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "handleThemeStyle"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/tagsView.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "integration",
+      "basis": "退出/路由 reset 回调注入",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/api/login.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "login",
+        "logout",
+        "getInfo"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken",
+        "setToken",
+        "removeToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "setBusinessTimezone",
+        "setUserTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/validate.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isHttp",
+        "isEmpty"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/lock.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/images/profile.jpg",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/dict.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/data.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDicts"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/dynamicTitle.js",
+      "dependency": "ruoyi-fastapi-frontend/src/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/dynamicTitle.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/generator/html.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "trigger"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/generator/js.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "titleCase"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/generator/js.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "trigger"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/generator/render.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "makeMap"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/index.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseTime"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/passwordRule.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/permission.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/auth.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getToken"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/errorCode.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "tansParams",
+        "blobValidate"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "integration",
+      "basis": "401 重新登录回调注入；request 不静态导入用户 store",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/request.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/transportCrypto.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "decryptTransportErrorResponse",
+        "decryptTransportResponse",
+        "encryptTransportRequest",
+        "invalidateTransportKeyMeta",
+        "resetTransportRequestConfig",
+        "shouldRetryTransportWithFreshKey"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatBusinessTime",
+        "normalizeRangeBoundary"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/transportCrypto.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/transportCryptoPolicy.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "ensureTransportCryptoPolicyLoaded",
+        "getTransportCryptoPolicy",
+        "shouldEncryptQuery",
+        "shouldEncryptRequest",
+        "shouldEncryptResponse"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/transportCrypto.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/utils/transportCryptoPolicy.js",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/dashboard/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/dashboard/editable-link-group.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/dashboard/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/error/401.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/401_images/401.gif",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/lock.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/login.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "unlockScreen"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatBusinessTime"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/images/profile.jpg",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/login.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getCodeImg"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/jsencrypt.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "encrypt",
+        "decrypt"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/cache/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getCache"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/cache.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listCacheName",
+        "listCacheKey",
+        "getCacheValue",
+        "clearCacheName",
+        "clearCacheKey",
+        "clearCacheAll"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/druid/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/iFrame/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "syncStates"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseJobParameter",
+        "buildJobPayload",
+        "syncStates",
+        "notifyJobMutation"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/permission.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "checkPermi"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listJob",
+        "getJob",
+        "delJob",
+        "addJob",
+        "updateJob",
+        "runJob",
+        "changeJobStatus"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/jobLog.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listJobLog",
+        "delJobLog",
+        "cleanJobLog"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listJobExecutions",
+        "listJobSync",
+        "retryJobSync"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "executionStates",
+        "syncStates",
+        "notifyJobMutation"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/logininfor.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "list",
+        "delLogininfor",
+        "cleanLogininfor",
+        "unlockLogininfor"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/online/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/online.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "forceLogout",
+        "list"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/monitor/operlog/detail.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/operlog.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "list",
+        "delOperlog",
+        "cleanOperlog"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/server/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/server.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getServer"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/monitor/transportCrypto.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getTransportCryptoMonitor"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseTime"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/login.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getCodeImg",
+        "register"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/settings.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/passwordRule.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "usePasswordRule"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listConfig",
+        "getConfig",
+        "delConfig",
+        "addConfig",
+        "updateConfig",
+        "refreshCache"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dept.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listDept",
+        "getDept",
+        "delDept",
+        "addDept",
+        "updateDept",
+        "updateDeptSort",
+        "listDeptExcludeChild"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/dict.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/type.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "optionselect",
+        "getType"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/data.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listData",
+        "getData",
+        "delData",
+        "addData",
+        "updateData"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/data.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listData"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/dict/detail.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/dict.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/type.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listType",
+        "getType",
+        "delType",
+        "addType",
+        "updateType",
+        "refreshCache"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "batchSaveFileAcl",
+        "getFileAclDeptTree",
+        "listFileAcl",
+        "saveFileAcl",
+        "searchFileAclSubjects"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "prepareTimeFields",
+        "serializeTimeFieldsForSubmit"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/BusinessDateTimePicker/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listFileAccessLog"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "actionLabel",
+        "formatFileSize",
+        "parseOperationDetail",
+        "resultLabel",
+        "resultTagType"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileDetailDialog.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "accessTypeLabel",
+        "formatFileSize",
+        "statusLabel",
+        "storageStatusLabel"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getFileReconcileStats",
+        "handleFileReconcileIssue",
+        "listFileReconcileIssue",
+        "listFileReconcileRun",
+        "startFileReconcile"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatFileSize"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReferenceDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listFileReference"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "addFileRetentionPolicy",
+        "delFileRetentionPolicy",
+        "listFileRetentionPolicy",
+        "updateFileRetentionPolicy"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "disposeExpiredFile",
+        "extendFileRetention",
+        "listFileRetentionReminder",
+        "readFileRetentionReminder",
+        "scanFileRetentionReminder"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "toBusinessDateTimeInput",
+        "serializeTimeFieldsForSubmit"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/BusinessDateTimePicker/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileStatistics.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatFileSize"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "expirationLabel",
+        "expirationTagType",
+        "formatFileSize",
+        "isAclExpiring",
+        "storageStatusLabel",
+        "storageStatusTagType"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTransferDialog.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getFileAclDeptTree",
+        "searchFileAclSubjects",
+        "transferFile"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "parseTime"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/file.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "delFile",
+        "getFile",
+        "getFileAclDeptTree",
+        "getFileStats",
+        "listFile",
+        "purgeFile",
+        "restoreFile"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileDetailDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReferenceDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileSearchForm.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileStatistics.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTransferDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/menu.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "addMenu",
+        "delMenu",
+        "getMenu",
+        "listMenu",
+        "updateMenu",
+        "updateMenuSort"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/IconSelect/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/notice.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listNoticeReadUsers"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/DetailView.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/notice.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listNotice",
+        "getNotice",
+        "delNotice",
+        "addNotice",
+        "updateNotice"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/plugin.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "batchPlugins",
+        "checkPlugin",
+        "checkPluginDependencies",
+        "diagnosePlugin",
+        "disablePlugin",
+        "enablePlugin",
+        "getPlugin",
+        "getPluginConfig",
+        "getPluginOperationLog",
+        "healthPlugin",
+        "installPluginDependencies",
+        "installPlugin",
+        "listPlugin",
+        "listPluginMigrations",
+        "listPluginOperationLog",
+        "markPluginMigrationFailed",
+        "markPluginMigrationSuccess",
+        "planPlugins",
+        "purgePlugin",
+        "retainPluginOperationLog",
+        "uninstallPlugin",
+        "updatePluginConfig",
+        "upgradePlugin"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getConfigKey"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/pluginPlanFormatter.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getPlanBlockerStatusLabel",
+        "getPlanOperationLabel",
+        "getPlanReadyTagType",
+        "getValidationLevelLabel",
+        "getValidationLevelTagType",
+        "normalizePluginActionResult",
+        "normalizePluginBatchResponse",
+        "normalizePluginOperationLogDetail",
+        "normalizePluginPlanResponse"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/post.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listPost",
+        "addPost",
+        "delPost",
+        "getPost",
+        "updatePost"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/role.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "allocatedUserList",
+        "authUserCancel",
+        "authUserCancelAll"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/role.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "addRole",
+        "changeRoleStatus",
+        "dataScope",
+        "delRole",
+        "getRole",
+        "listRole",
+        "updateRole",
+        "deptTreeSelect"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/menu.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "roleMenuTreeselect",
+        "treeselect"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/role.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "authUserSelectAll",
+        "unallocatedUserList"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/authRole.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getAuthRole",
+        "updateAuthRole"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getDisplayTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/TreePanel/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/ExcelImportDialog/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/view.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/passwordRule.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "usePasswordRule"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "changeUserStatus",
+        "listUser",
+        "resetUserPwd",
+        "delUser",
+        "getUser",
+        "updateUser",
+        "addUser",
+        "deptTreeSelect"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/profile/userInfo.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/profile/resetPwd.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getUserProfile"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/resetPwd.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/passwordRule.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "usePasswordRule"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/resetPwd.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "updateUserPwd"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getTimezoneOptions",
+        "updateUserTimezone"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "formatBusinessTime",
+        "getBusinessTimezone",
+        "getDeviceTimezone",
+        "getDisplayTimezone",
+        "getSupportedTimezones"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "uploadAvatar"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/store/modules/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/userInfo.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "updateUserProfile"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/view.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/user.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getUser"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/DraggableItem.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/render.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "isNumberStr"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/build/IconsDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/build/TreeNodeDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "inputComponents",
+        "selectComponents"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/assets/logo/logo.png",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/config.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "inputComponents",
+        "selectComponents",
+        "layoutComponents",
+        "formConf"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "beautifierConf"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/drawingDefault.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "drawingDefaultValue",
+        "initDrawingDefaultValue",
+        "cleanDrawingDefaultValue"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/html.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "makeUpHtml",
+        "vueTemplate",
+        "vueScript",
+        "cssStyle"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/js.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "makeUpJs"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/generator/css.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "makeUpCss"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/plugins/download.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/build/DraggableItem.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/build/CodeTypeDialog.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/createTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/tool/gen.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "createTable"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/tool/gen.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "getGenTable",
+        "updateGenTable"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/dict/type.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "optionselect"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/gen/basicInfoForm.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/system/menu.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listMenu"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/tool/gen.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listDbTable",
+        "importTable"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/api/tool/gen.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "listDataSources",
+        "listTable",
+        "previewTable",
+        "delTable",
+        "genCode",
+        "synchDb"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/router/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/views/tool/gen/createTable.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/swagger/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/iFrame/index.vue",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/tests/job/job-form.test.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/job.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "buildJobPayload",
+        "parseJobParameter"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/tests/plugins/pluginViewResolver.test.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/pluginViewResolver.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "resolvePluginViewPath"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/tests/time/time.test.js",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/time.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "*"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/vite.config.js",
+      "dependency": "ruoyi-fastapi-frontend/vite/plugins/index.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/vite/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/vite/plugins/auto-import.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/vite/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/vite/plugins/svg-icon.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/vite/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/vite/plugins/compression.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/vite/plugins/index.js",
+      "dependency": "ruoyi-fastapi-frontend/vite/plugins/setup-extend.js",
+      "kind": "prerequisite",
+      "basis": "static import",
+      "names": [
+        "default"
+      ]
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/IconSelect/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RuoYi/Doc/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RuoYi/Git/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Screenfull/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/SizeSelect/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/online/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/online/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/detail.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 selectDictLabel"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 parseTime"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 handleTree"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 handleTree"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Editor/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 parseTime"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/authRole.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/view.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/dict.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 useDict"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/view.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 selectDictLabel"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 handleTree"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "kind": "prerequisite",
+      "basis": "main.js 全局组件注册"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 resetForm"
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "dependency": "ruoyi-fastapi-frontend/src/utils/ruoyi.js",
+      "kind": "prerequisite",
+      "basis": "main.js 全局函数 addDateRange"
+    }
+  ],
+  "unresolved": [
+    {
+      "source": "ruoyi-fastapi-frontend/tests/time/time.test.js",
+      "specifier": "../../../ruoyi-fastapi-test/time-contract/contract.mjs",
+      "reason": "本地路径不在源快照或不存在；实施前补契约证据，不能忽略"
+    }
+  ],
+  "minimal_cycles": [],
+  "dynamic_registry": {
+    "source": "src/utils/pluginViewResolver.js",
+    "coverage": "plugins/**/views/**/*.vue 与 src/views/**/*.vue 的完整清单；实际映射由视图解析组及 J 集成检查"
+  },
+  "inversion_contracts": [
+    {
+      "source": "src/utils/request.js",
+      "dependency": "src/store/modules/user.js",
+      "method": "401 重新登录回调注入；request 不静态导入用户 store"
+    },
+    {
+      "source": "src/store/modules/user.js",
+      "dependency": "src/router/index.js",
+      "method": "退出/路由 reset 回调注入"
+    },
+    {
+      "source": "src/store/modules/permission.js",
+      "dependency": "src/router/index.js",
+      "method": "路由注册/匹配接口注入"
+    },
+    {
+      "source": "src/store/modules/permission.js",
+      "dependency": "src/layout/index.vue",
+      "method": "组件名→页面/布局注册表注入；权限 store 只处理路由元数据，不导入布局组件"
+    },
+    {
+      "source": "src/router/index.js",
+      "dependency": "src/layout/index.vue",
+      "method": "路由 catalog 引用布局注册表；实际挂载在集成验证"
+    },
+    {
+      "source": "src/store/modules/settings.js",
+      "dependency": "src/utils/dynamicTitle.js",
+      "method": "setTitle 后的纯标题同步函数接收状态参数，避免反读 store"
+    }
+  ]
+}

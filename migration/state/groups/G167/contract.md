@@ -1,0 +1,214 @@
+# G167 src/components/Crontab/week.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I01229 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 72-72 VariableDeclaration: emit
+  - 基线：源语句 sha256=f52c487d27bf44d349196d1da2411f18a851ffd07aa7988aba1c29134849f094；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01230 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 73-91 VariableDeclaration: props
+  - 基线：源语句 sha256=36da941f3b71ce09238ff930b72ae508548937e1d248797e4646f7a343cc87de；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01231 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 92-92 VariableDeclaration: radioValue
+  - 基线：源语句 sha256=06c8c8e4fc443289fcc68e9fa5c50476b63fa2bec5ca9e43889b8171c5f0637f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01232 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 93-93 VariableDeclaration: cycle01
+  - 基线：源语句 sha256=9c17a1b8b16ecd9d6021b20abf478841f42eec3577bf73dc1e3bbb8b17350a4d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01233 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 94-94 VariableDeclaration: cycle02
+  - 基线：源语句 sha256=6a4ddeca87164732181c1a537978a4dce80e95fa0ec3c023d76a67ab5d487481；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01234 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 95-95 VariableDeclaration: average01
+  - 基线：源语句 sha256=943ac7abea6f0424ef0ef828aec950e41170731fd483df6407c9cd1ccd92c24a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01235 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 96-96 VariableDeclaration: average02
+  - 基线：源语句 sha256=152c5be48be27fa11f0bfc74cbf5a959a0fb20c77407635b99a607de7efd349d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01236 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 97-97 VariableDeclaration: weekday
+  - 基线：源语句 sha256=8b2a93106b4c09605a0557207cd1075a2ba7712878912f80b373b8016574b84e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01237 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 98-98 VariableDeclaration: checkboxList
+  - 基线：源语句 sha256=ee3b33beba175fcd3d908e44f74569f944c4962386599cbf458bb60ee9361945；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01238 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 99-99 VariableDeclaration: checkCopy
+  - 基线：源语句 sha256=032b02da82da8664a9b41841bb6f8686f8c085129d4d23a8f87dc131157a46fb；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01239 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 100-108 VariableDeclaration: weekList
+  - 基线：源语句 sha256=96676688bb0f290e9d132a24cf6615faf9cf9d21a393fe9499012682213c0b49；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01240 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 109-113 VariableDeclaration: cycleTotal
+  - 基线：源语句 sha256=13133a1f3f6ce9d77542167f42139b8d505c64561b68a7be440c7eec538a93c6；保留返回、异常及 1 个分支，调用=computed, props.check。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01241 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 114-118 VariableDeclaration: averageTotal
+  - 基线：源语句 sha256=7eba723d4429c9275719c1e9ae976e5b1ea2abd344eba9f4b8f4d8c155a2a0a8；保留返回、异常及 1 个分支，调用=computed, props.check。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01242 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 119-122 VariableDeclaration: weekdayTotal
+  - 基线：源语句 sha256=b20254610f38c094e397e088f87672594dfd831534e0a73c59321eba3016a91f；保留返回、异常及 1 个分支，调用=computed, props.check。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01243 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 123-125 VariableDeclaration: checkboxString
+  - 基线：源语句 sha256=b2ff8a92eb8c9d806982bb74302990c19f032df3d9f67b81b253f9cf7884714a；保留返回、异常及 1 个分支，调用=computed, checkboxList.value.join。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01244 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 126-126 ExpressionStatement: 
+  - 基线：源语句 sha256=a7b412791976b30ad3c277010474c88f38c7a1ee08d94f48baf995227ebd6fc0；保留返回、异常及 0 个分支，调用=watch, changeRadioValue。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01245 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 127-127 ExpressionStatement: 
+  - 基线：源语句 sha256=ba265ab15f7afa639acb0309aa3b3a75321ea6c7e3dd22d4de7f08ae7edade6f；保留返回、异常及 0 个分支，调用=watch, onRadioChange。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01246 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 128-151 FunctionDeclaration: changeRadioValue
+  - 基线：源语句 sha256=715897b2936aade018e2bc4260bd227093309f6fc6a630bb2f00e3548a221dac；保留返回、异常及 5 个分支，调用=value.indexOf, value.split, Number, CallExpression.map。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01247 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` lines 152-184 FunctionDeclaration: onRadioChange
+  - 基线：源语句 sha256=0b6a6ef67cdfcb762edfaf609c03192bd77fafa0d81b2254817bb6f2bc7a721d；保留返回、异常及 11 个分支，调用=emit, checkboxList.value.push。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01248 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template lines 1-69（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01249 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 4: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01250 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 4: v-bind:value
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01251 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 10: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01252 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 10: v-bind:value
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01253 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 16: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01254 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 16: v-bind:value
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01255 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 18: v-model:
+  - 基线：原表达式：cycle01；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01256 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 20: v-for:
+  - 基线：原表达式：(item,index) of weekList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01257 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 21: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01258 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 22: v-bind:label
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01259 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 23: v-bind:value
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01260 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 24: v-bind:disabled
+  - 基线：原表达式：item.key === 7；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01261 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 28: v-model:
+  - 基线：原表达式：cycle02；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01262 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 30: v-for:
+  - 基线：原表达式：(item,index) of weekList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01263 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 31: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01264 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 32: v-bind:label
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01265 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 33: v-bind:value
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01266 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 34: v-bind:disabled
+  - 基线：原表达式：item.key <= cycle01；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01267 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 41: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01268 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 41: v-bind:value
+  - 基线：原表达式：4；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01269 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 43: v-model:
+  - 基线：原表达式：average01；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01270 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 43: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01271 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 43: v-bind:max
+  - 基线：原表达式：4；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01272 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 44: v-model:
+  - 基线：原表达式：average02；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01273 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 45: v-for:
+  - 基线：原表达式：item in weekList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01274 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 45: v-bind:key
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01275 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 45: v-bind:label
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01276 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 45: v-bind:value
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01277 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 51: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01278 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 51: v-bind:value
+  - 基线：原表达式：5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01279 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 53: v-model:
+  - 基线：原表达式：weekday；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01280 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 54: v-for:
+  - 基线：原表达式：item in weekList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01281 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 54: v-bind:key
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01282 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 54: v-bind:label
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01283 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 54: v-bind:value
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01284 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 60: v-model:
+  - 基线：原表达式：radioValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01285 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 60: v-bind:value
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01286 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 62: v-model:
+  - 基线：原表达式：checkboxList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01287 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 62: v-bind:multiple-limit
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01288 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 63: v-for:
+  - 基线：原表达式：item in weekList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01289 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 63: v-bind:key
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01290 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 63: v-bind:label
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01291 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template line 63: v-bind:value
+  - 基线：原表达式：item.key；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01292 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template interpolation line 25
+  - 基线：原显示表达式：item.value
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01293 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` template interpolation line 35
+  - 基线：原显示表达式：item.value
+  - 去向：react-front/src/components/Crontab/week.tsx
+- I01294 `ruoyi-fastapi-frontend/src/components/Crontab/week.vue` style[0] lines 187-197
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/components/Crontab/week.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,208 @@
+# G264 src/views/monitor/cache/list.vue：完整能力
+
+依赖：G000, G027
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I03180 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 158-158 ImportDeclaration: 
+  - 基线：源语句 sha256=12ac829cad59f11bc4ebb929a9a1543159fc84232fdc47679b528176c2b59035；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03181 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 160-160 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03182 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 162-162 VariableDeclaration: cacheNames
+  - 基线：源语句 sha256=ebf39d5eb1210ac09f5f63827ca10ea43d73190c8af00ea3aababd3c5aea581f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03183 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 163-163 VariableDeclaration: cacheKeys
+  - 基线：源语句 sha256=558b28561ab5e4f5a199c179f29d3122a4d0254a081eab65af11caf0e8e2ba4e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03184 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 164-164 VariableDeclaration: cacheForm
+  - 基线：源语句 sha256=227e4d29826eba1acaef1e852a2ca03d04d17bc589074aed9afb2a5b68c11ca7；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03185 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 165-165 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03186 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 166-166 VariableDeclaration: subLoading
+  - 基线：源语句 sha256=498bf5c64f22df62cd8c83ed910d3bac63c3b800cccaf83910720e63a44b9498；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03187 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 167-167 VariableDeclaration: nowCacheName
+  - 基线：源语句 sha256=9fec6d26167086ba9a652269ffb842d58199b730df09c46a073703028db8ff7b；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03188 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 168-168 VariableDeclaration: tableHeight
+  - 基线：源语句 sha256=e6035792ec04dcf0fea11ba7db0de67629fc70fea9cb9896fc33fdd2015f310c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03189 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 171-177 FunctionDeclaration: getCacheNames
+  - 基线：源语句 sha256=069b8971b014f68a4e6f4b1d67ea5bc5cee22d72ee664e4d8d91777564495abc；保留返回、异常及 0 个分支，调用=CallExpression.then, listCacheName。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03190 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 180-183 FunctionDeclaration: refreshCacheNames
+  - 基线：源语句 sha256=ccb32a2317efde1b87cfcf6b2a6a95106fa7f73aab3b61b449a0a5c99e7909a1；保留返回、异常及 0 个分支，调用=getCacheNames, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03191 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 186-191 FunctionDeclaration: handleClearCacheName
+  - 基线：源语句 sha256=de788964145ccf6ded16e1ad04a87403bfc4bc7f68c098f278d213c11d79012b；保留返回、异常及 0 个分支，调用=CallExpression.then, clearCacheName, proxy.$modal.msgSuccess, getCacheKeys。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03192 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 194-205 FunctionDeclaration: getCacheKeys
+  - 基线：源语句 sha256=802fdc7472099b517f5693d713718fa2a2334368505a8519a5e5930662e5b789；保留返回、异常及 3 个分支，调用=CallExpression.then, listCacheKey。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03193 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 208-211 FunctionDeclaration: refreshCacheKeys
+  - 基线：源语句 sha256=a3eaa0be362075118402be19bdc061207e3a5b7c1a353db9fc19f9a11a37c833；保留返回、异常及 0 个分支，调用=getCacheKeys, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03194 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 214-219 FunctionDeclaration: handleClearCacheKey
+  - 基线：源语句 sha256=c0344d5822ce204cfcdc06e26a056011d1de3cfaacccc169bead535364bb9982；保留返回、异常及 0 个分支，调用=CallExpression.then, clearCacheKey, proxy.$modal.msgSuccess, getCacheKeys。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03195 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 222-224 FunctionDeclaration: nameFormatter
+  - 基线：源语句 sha256=65f38834d980261851375d58e7a228327a198f919e3030fb1eb8e8489ba981ff；保留返回、异常及 1 个分支，调用=row.cacheName.replace。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03196 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 227-229 FunctionDeclaration: keyFormatter
+  - 基线：源语句 sha256=7b655ba40b2775be5e3a5a0e1ce45bc70e8be4e1fd178678415cbcfd4f427249；保留返回、异常及 1 个分支，调用=cacheKey.replace。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03197 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 232-236 FunctionDeclaration: handleCacheValue
+  - 基线：源语句 sha256=28a078d616932f45a08742fdc3a4c37f073b3925eea451c1013de98c31815341；保留返回、异常及 0 个分支，调用=CallExpression.then, getCacheValue。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03198 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 239-243 FunctionDeclaration: handleClearCacheAll
+  - 基线：源语句 sha256=482d100d16808eedb6d174af03ff8746fbdb3485910e599c611954613c94132d；保留返回、异常及 0 个分支，调用=CallExpression.then, clearCacheAll, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03199 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` lines 245-245 ExpressionStatement: 
+  - 基线：源语句 sha256=efba787c9a3d8aa1cff80c70720562e4051be04fc02ecfab946580b67d372c73；保留返回、异常及 0 个分支，调用=getCacheNames。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03200 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template lines 1-155（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03201 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 3: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03202 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 4: v-bind:span
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03203 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 6: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03204 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 13: v-on:click
+  - 基线：原表达式：refreshCacheNames()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03205 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 17: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03206 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 18: v-bind:data
+  - 基线：原表达式：cacheNames；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03207 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 19: v-bind:height
+  - 基线：原表达式：tableHeight；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03208 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 21: v-on:row-click
+  - 基线：原表达式：getCacheKeys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03209 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 34: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03210 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 35: v-bind:formatter
+  - 基线：原表达式：nameFormatter；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03211 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 42: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03212 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 50: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03213 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 55: v-on:click
+  - 基线：原表达式：handleClearCacheName(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03214 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 63: v-bind:span
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03215 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 65: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03216 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 72: v-on:click
+  - 基线：原表达式：refreshCacheKeys()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03217 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 76: v-loading:
+  - 基线：原表达式：subLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03218 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 77: v-bind:data
+  - 基线：原表达式：cacheKeys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03219 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 78: v-bind:height
+  - 基线：原表达式：tableHeight；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03220 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 80: v-on:row-click
+  - 基线：原表达式：handleCacheValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03221 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 91: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03222 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 92: v-bind:formatter
+  - 基线：原表达式：keyFormatter；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03223 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 101: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03224 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 106: v-on:click
+  - 基线：原表达式：handleClearCacheKey(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03225 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 114: v-bind:span
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03226 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 115: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03227 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 116: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03228 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 123: v-on:click
+  - 基线：原表达式：handleClearCacheAll()；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03229 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 127: v-bind:model
+  - 基线：原表达式：cacheForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03230 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 128: v-bind:gutter
+  - 基线：原表达式：32；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03231 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 129: v-bind:offset
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03232 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 129: v-bind:span
+  - 基线：原表达式：22；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03233 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 131: v-model:
+  - 基线：原表达式：cacheForm.cacheName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03234 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 131: v-bind:readOnly
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03235 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 134: v-bind:offset
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03236 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 134: v-bind:span
+  - 基线：原表达式：22；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03237 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 136: v-model:
+  - 基线：原表达式：cacheForm.cacheKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03238 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 136: v-bind:readOnly
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03239 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 139: v-bind:offset
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03240 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 139: v-bind:span
+  - 基线：原表达式：22；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03241 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 142: v-model:
+  - 基线：原表达式：cacheForm.cacheValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03242 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 144: v-bind:rows
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+- I03243 `ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue` template line 145: v-bind:readOnly
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/cache/list.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

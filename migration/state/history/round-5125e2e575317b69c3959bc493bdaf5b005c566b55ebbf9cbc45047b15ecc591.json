@@ -1,0 +1,39 @@
+{
+  "status": "selected",
+  "mode": "new",
+  "group": "G253",
+  "title": "src/utils/time.js：状态、输入与依赖接口",
+  "feature": "shared",
+  "group_status": "pending",
+  "contract": "migration/state/groups/G253/contract.md",
+  "contract_sha256": "f91193793f4471917a8bcda4f90003423c5eb3c4d4e27c4c932bbd4d3aac4fd1",
+  "inventory_digest": "b4256433a58a115267b363b2ddb63433eb79384c6826fdc2c901ed72e05b6bea",
+  "items": [
+    "I02792",
+    "I02793",
+    "I02794",
+    "I02795",
+    "I02796",
+    "I02797",
+    "I02798",
+    "I02799",
+    "I02800",
+    "I02801",
+    "I02802",
+    "I02803",
+    "I02804",
+    "I02805",
+    "I02806",
+    "I02807",
+    "I02808",
+    "I02809",
+    "I02835",
+    "I02836"
+  ],
+  "depends_on": [
+    "G000"
+  ],
+  "selected_at": "2026-10-09T09:57:50.809329+00:00",
+  "reason": "ready dependencies; current feature; entry priority; downstream count; item count; stable ID",
+  "scope_digest": "c92599fb8b44b55937f8eab950b2e495b7064db0d0ddb5dbd93435e0dd96a8b8"
+}

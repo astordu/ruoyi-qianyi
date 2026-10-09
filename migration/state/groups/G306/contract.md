@@ -1,0 +1,211 @@
+# G306 src/views/system/role/authUser.vue：完整能力
+
+依赖：G000, G044, G169, G180, G182, G232, G250, G308
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07058 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 95-95 ImportDeclaration: 
+  - 基线：源语句 sha256=5ccc95984d149e8aa4879d26cd4ed29e82114ec9e20d4606f1f103d2abea75e2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07059 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 96-96 ImportDeclaration: 
+  - 基线：源语句 sha256=65d8ba21226fa96ddcafcd7c0b22e93fcf6501f43af3656e734a89fe19378ea2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07060 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 98-98 VariableDeclaration: route
+  - 基线：源语句 sha256=19ffaf888604ba2654aa25f29ba0210e96226ea7089e9e15dc5c05cf276b3a9f；保留返回、异常及 0 个分支，调用=useRoute。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07061 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 99-99 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07062 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 100-100 VariableDeclaration: 
+  - 基线：源语句 sha256=e39eef28f5bbe01b170f2bfb21463bd64109f87928694efa0dd8eb360768e609；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07063 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 102-102 VariableDeclaration: userList
+  - 基线：源语句 sha256=27329f009483a63c964b05b2e6dcbf3a61052d302dbb204b9efcc11efd5d485b；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07064 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 103-103 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07065 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 104-104 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07066 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 105-105 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07067 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 106-106 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07068 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 107-107 VariableDeclaration: userIds
+  - 基线：源语句 sha256=d6782c35c2dc1256465c3b6c6c769b20577bd543f6596e059b536680c1c5a75d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07069 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 109-115 VariableDeclaration: queryParams
+  - 基线：源语句 sha256=96317b4339160cbc6da0cfe89a5accf4ee7746388772b880ea836c87e48c56ad；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07070 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 118-125 FunctionDeclaration: getList
+  - 基线：源语句 sha256=77729d6c2fc7edd9695d9f7773cb47a0717b14ca13232940b72f40ae9b4b9659；保留返回、异常及 0 个分支，调用=CallExpression.then, allocatedUserList。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07071 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 127-130 FunctionDeclaration: handleClose
+  - 基线：源语句 sha256=4742a19eb9715099fb074753dedd61f5f957c2908fc4bb3868b2166e6193786b；保留返回、异常及 0 个分支，调用=proxy.$tab.closeOpenPage。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07072 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 132-135 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=edd514b444273e1673cb3a87378aacdb6449d6d09764ffd0dde80e216d9ef27e；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07073 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 137-140 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=92181fa4359ab7a75cdb4811fb23d7927c816d7cf603e5534064a28e122424e0；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07074 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 142-145 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=362fdf2c35ac5b1ab941e372202b7625c5428fef4e0a1652d7d4af3d218c264b；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07075 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 147-149 FunctionDeclaration: openSelectUser
+  - 基线：源语句 sha256=f297864a71ce8ce7f35abb57eb52f6cabe7ee051ee213865b78b63a4d73faa71；保留返回、异常及 0 个分支，调用=proxy.$refs.selectRef.show。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07076 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 151-158 FunctionDeclaration: cancelAuthUser
+  - 基线：源语句 sha256=d249ea486e88236e604406be5b688893d3d60607283c13c88f3b28affa22cb0b；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, authUserCancel, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07077 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 160-169 FunctionDeclaration: cancelAuthUserAll
+  - 基线：源语句 sha256=ae06ccdf670dd4ca197332182b83a343cfebb8d15e692e598fe6f2b69d8a976b；保留返回、异常及 1 个分支，调用=userIds.value.join, CallExpression.catch, CallExpression.then, proxy.$modal.confirm, authUserCancelAll, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07078 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` lines 171-171 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07079 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template lines 2-92（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07080 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 4: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07081 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 4: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07082 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 4: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07083 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 7: v-model:
+  - 基线：原表达式：queryParams.userName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07084 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 11: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07085 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 16: v-model:
+  - 基线：原表达式：queryParams.phonenumber；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07086 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 20: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07087 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 24: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07088 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 25: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07089 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 29: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07090 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 30: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07091 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 35: v-on:click
+  - 基线：原表达式：openSelectUser；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07092 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 36: v-hasPermi:
+  - 基线：原表达式：['system:role:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07093 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 39: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07094 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 44: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07095 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 45: v-on:click
+  - 基线：原表达式：cancelAuthUserAll；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07096 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 46: v-hasPermi:
+  - 基线：原表达式：['system:role:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07097 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 49: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07098 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 54: v-on:click
+  - 基线：原表达式：handleClose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07099 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 57: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07100 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 57: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07101 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 60: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07102 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 60: v-bind:data
+  - 基线：原表达式：userList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07103 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 60: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07104 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 62: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07105 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 63: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07106 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 64: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07107 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 65: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07108 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 67: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07109 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 68: v-bind:options
+  - 基线：原表达式：sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07110 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 68: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07111 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 72: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07112 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 77: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07113 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 78: v-on:click
+  - 基线：原表达式：cancelAuthUser(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07114 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 78: v-hasPermi:
+  - 基线：原表达式：['system:role:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07115 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 84: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07116 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 85: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07117 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 86: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07118 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 87: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07119 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 88: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07120 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 90: v-bind:roleId
+  - 基线：原表达式：queryParams.roleId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07121 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template line 90: v-on:ok
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/authUser.tsx
+- I07122 `ruoyi-fastapi-frontend/src/views/system/role/authUser.vue` template interpolation line 73
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/role/authUser.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

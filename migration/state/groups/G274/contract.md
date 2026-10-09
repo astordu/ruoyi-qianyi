@@ -1,0 +1,238 @@
+# G274 src/views/monitor/server/index.vue：完整能力
+
+依赖：G000, G033
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04038 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` lines 169-169 ImportDeclaration: 
+  - 基线：源语句 sha256=1b3b8840bad3eabdd7dff72cb2c22048c3b6ad8af63d9192952a132b3804ebc4；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04039 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` lines 171-171 VariableDeclaration: server
+  - 基线：源语句 sha256=3e45225617a90f22a415cfe76a9cd6b52f40273c6b8f91ac2a87933b4da13922；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04040 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` lines 172-172 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04041 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` lines 174-180 FunctionDeclaration: getList
+  - 基线：源语句 sha256=42d69a50cf7eee73999b0fff401aec5196ddb59ad0129495ab39ceb01fa38034；保留返回、异常及 0 个分支，调用=proxy.$modal.loading, CallExpression.then, getServer, proxy.$modal.closeLoading。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04042 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` lines 182-182 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04043 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template lines 1-166（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04044 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 3: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04045 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 4: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04046 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 6: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04047 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 18: v-if:
+  - 基线：原表达式：server.cpu；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04048 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 22: v-if:
+  - 基线：原表达式：server.cpu；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04049 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 26: v-if:
+  - 基线：原表达式：server.cpu；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04050 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 30: v-if:
+  - 基线：原表达式：server.cpu；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04051 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 38: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04052 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 40: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04053 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 53: v-if:
+  - 基线：原表达式：server.mem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04054 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 54: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04055 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 58: v-if:
+  - 基线：原表达式：server.mem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04056 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 59: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04057 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 63: v-if:
+  - 基线：原表达式：server.mem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04058 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 64: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04059 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 68: v-if:
+  - 基线：原表达式：server.mem；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04060 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 68: v-bind:class
+  - 基线：原表达式：{'text-danger': server.mem.usage > 80}；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04061 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 69: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04062 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 69: v-bind:class
+  - 基线：原表达式：{'text-danger': server.py.usage > 80}；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04063 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 77: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04064 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 79: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04065 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 85: v-if:
+  - 基线：原表达式：server.sys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04066 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 87: v-if:
+  - 基线：原表达式：server.sys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04067 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 91: v-if:
+  - 基线：原表达式：server.sys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04068 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 93: v-if:
+  - 基线：原表达式：server.sys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04069 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 101: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04070 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 103: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04071 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 109: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04072 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 111: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04073 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 115: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04074 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 117: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04075 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 121: v-if:
+  - 基线：原表达式：server.py；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04076 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 125: v-if:
+  - 基线：原表达式：server.sys；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04077 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 133: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04078 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 135: v-slot:header
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04079 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 149: v-if:
+  - 基线：原表达式：server.sysFiles；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04080 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 150: v-for:
+  - 基线：原表达式：(sysFile, index) in server.sysFiles；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04081 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 150: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04082 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template line 157: v-bind:class
+  - 基线：原表达式：{'text-danger': sysFile.usage > 80}；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04083 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 18
+  - 基线：原显示表达式：server.cpu.cpuNum
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04084 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 22
+  - 基线：原显示表达式：server.cpu.used
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04085 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 26
+  - 基线：原显示表达式：server.cpu.sys
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04086 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 30
+  - 基线：原显示表达式：server.cpu.free
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04087 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 53
+  - 基线：原显示表达式：server.mem.total
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04088 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 54
+  - 基线：原显示表达式：server.py.total
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04089 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 58
+  - 基线：原显示表达式：server.mem.used
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04090 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 59
+  - 基线：原显示表达式：server.py.used
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04091 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 63
+  - 基线：原显示表达式：server.mem.free
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04092 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 64
+  - 基线：原显示表达式：server.py.free
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04093 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 68
+  - 基线：原显示表达式：server.mem.usage
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04094 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 69
+  - 基线：原显示表达式：server.py.usage
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04095 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 85
+  - 基线：原显示表达式：server.sys.computerName
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04096 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 87
+  - 基线：原显示表达式：server.sys.osName
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04097 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 91
+  - 基线：原显示表达式：server.sys.computerIp
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04098 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 93
+  - 基线：原显示表达式：server.sys.osArch
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04099 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 109
+  - 基线：原显示表达式：server.py.name
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04100 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 111
+  - 基线：原显示表达式：server.py.version
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04101 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 115
+  - 基线：原显示表达式：parseTime(server.py.startTime)
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04102 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 117
+  - 基线：原显示表达式：server.py.runTime
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04103 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 121
+  - 基线：原显示表达式：server.py.home
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04104 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 125
+  - 基线：原显示表达式：server.sys.userDir
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04105 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 151
+  - 基线：原显示表达式：sysFile.dirName
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04106 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 152
+  - 基线：原显示表达式：sysFile.sysTypeName
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04107 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 153
+  - 基线：原显示表达式：sysFile.typeName
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04108 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 154
+  - 基线：原显示表达式：sysFile.total
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04109 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 155
+  - 基线：原显示表达式：sysFile.free
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04110 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 156
+  - 基线：原显示表达式：sysFile.used
+  - 去向：react-front/src/views/monitor/server/index.tsx
+- I04111 `ruoyi-fastapi-frontend/src/views/monitor/server/index.vue` template interpolation line 157
+  - 基线：原显示表达式：sysFile.usage
+  - 去向：react-front/src/views/monitor/server/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

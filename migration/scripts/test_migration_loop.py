@@ -1,0 +1,219 @@
+"""Temporary fixtures + fake CLI only. Never starts a real agent or migration."""
+import argparse
+from contextlib import redirect_stdout
+import importlib.util
+import io
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+spec = importlib.util.spec_from_file_location('migration_loop', Path(__file__).with_name('migration_loop.py'))
+loop = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(loop)
+
+FAKE = '''#!/usr/bin/env python3
+import argparse,importlib.util,json,os,re,sys,time
+from pathlib import Path
+root=Path.cwd(); state=root/'migration/state'; prompt=sys.argv[-1]
+spec=importlib.util.spec_from_file_location('migration_state',root/'.agents/skills/migration-plan/scripts/migration_state.py')
+m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+stage='next' if '$migration-next-group' in prompt else 'implement' if '$migration-implement-group' in prompt else 'validate'
+with (root/'calls.jsonl').open('a') as f:f.write(json.dumps({'stage':stage,'prompt':prompt,'argv':sys.argv[1:]})+'\\n')
+behavior=os.environ.get('FAKE_BEHAVIOR','pass')
+if behavior=='exit':sys.exit(7)
+if behavior=='timeout':time.sleep(10)
+if behavior=='noop':sys.exit(0)
+if behavior=='validate-noop' and stage=='validate':sys.exit(0)
+if stage=='next':m.select(state,True)
+elif stage=='implement':
+ p=m.read(state/'plan.json');gid=p['active_group'];g=next(g for g in p['groups'] if g['id']==gid)
+ if behavior=='wrong-group':p['active_group']='G2'
+ else:
+  for i in p['items']:
+   if i.get('group')==gid:
+    for target in i['targets']:
+     path=root/target;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('translated '+gid)
+  g['status']='implemented'
+ m.write(state/'plan.json',p)
+elif '收尾模式' in prompt:
+ (state/'final-report.md').write_text('All fixtures verified; fake CLI, no real business proof.')
+else:
+ p=m.read(state/'plan.json');integration='集成模式' in prompt
+ key=re.search(r'本次只执行 (J\\d+)',prompt).group(1) if integration else p['active_group']
+ call_count=sum(1 for line in (root/'calls.jsonl').read_text().splitlines() if json.loads(line)['stage']=='validate')
+ result='failed' if behavior=='always-fail' or behavior=='fail-once' and call_count==1 else 'blocked' if behavior=='blocked' else 'passed'
+ attempt='migration/state/evidence/'+key+'/'+str(time.time_ns());report=root/(attempt+'/report.md');report.parent.mkdir(parents=True);report.write_text('expected/source/actual/reproduction/result '+result)
+ evidence=root/(attempt+'/test.txt');evidence.write_text('fixture check '+result)
+ m.record(argparse.Namespace(group=None if integration else key,integration=key if integration else None,result=result,report=str(report.relative_to(root)),evidence=[str(evidence.relative_to(root))],note='failure: retry fixture' if result!='passed' else ''),state)
+'''
+
+
+class MigrationLoopTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory(prefix='migration loop ')
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        state_script = self.root / loop.STATE_SCRIPT
+        state_script.parent.mkdir(parents=True)
+        shutil.copyfile(loop.ROOT / loop.STATE_SCRIPT, state_script)
+        for skill in loop.SKILLS.values():
+            p=self.root / '.agents/skills' / skill / 'SKILL.md';p.parent.mkdir(parents=True,exist_ok=True);p.write_text('fixture skill')
+        self.m = loop.load_state_module(self.root)
+        self.state = self.root / 'migration/state'
+        for n in (1,2):self.put(f'vue/{n}.js',f'original {n}')
+        self.m.inventory(argparse.Namespace(root=str(self.root),source=['vue'],target='react',exclude_dirs='node_modules'),self.state)
+        plan = self.m.read(self.state/'plan.json')
+        for review in plan['files'].values():review.update(reviewed=True,review_evidence='full fixture review')
+        plan['groups']=[];plan['items']=[]
+        for n in (1,2):
+            contract=f'migration/state/groups/G{n}/contract.md';self.put(contract,'old fixture behavior and assertions')
+            plan['groups'].append(dict(id=f'G{n}',title=f'fixture {n}',feature='shared',entry_priority=0 if n==1 else 2,depends_on=[] if n==1 else ['G1'],contract=contract,status='pending',targets=[]))
+            plan['items'].append(dict(id=f'I{n}',source=f'vue/{n}.js',locator='complete fixture',basis='original fixture',disposition='migrate',group=f'G{n}',targets=[f'react/{n}.ts'],target_locator='translated fixture'))
+        self.put('migration/state/integration/J1-contract.md','fixture wiring assertions')
+        plan['integration_checks']=[dict(id='J1',groups=['G1','G2'],contract='migration/state/integration/J1-contract.md',status='pending')]
+        self.m.write(self.state/'plan.json',plan)
+        binpath=self.root/'bin';binpath.mkdir()
+        for cli in ('codex','claude','qodercli'):
+            path=binpath/cli;path.write_text(FAKE);path.chmod(0o755)
+        self.env = patch.dict(os.environ, {'PATH':str(binpath)+os.pathsep+os.environ['PATH'],'FAKE_BEHAVIOR':'pass'})
+        self.env.start();self.addCleanup(self.env.stop)
+        self.args=argparse.Namespace(adapter='codex',max_iterations=10,state='migration/state',max_retries=2,timeout=10,model=None,dry_run=False)
+
+    def put(self,path,text):
+        p=self.root/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text);return p
+
+    def calls(self):
+        path=self.root/'calls.jsonl'
+        return [json.loads(line) for line in path.read_text().splitlines()] if path.exists() else []
+
+    def run_loop(self):
+        with redirect_stdout(io.StringIO()):
+            return loop.MigrationLoop(self.args,self.root).run()
+
+    def fail_current(self):
+        self.m.select(self.state,True)
+        self.put('migration/state/failure-report.md','I1 expected old, actual broken, reproduce fixture')
+        self.put('migration/state/failure.txt','fixture assertion failed')
+        self.m.record(argparse.Namespace(group='G1',integration=None,result='failed',report='migration/state/failure-report.md',evidence=['migration/state/failure.txt'],note='fix fixture I1'),self.state)
+
+    def test_normal_groups_integration_final_and_second_run_no_calls(self):
+        self.assertEqual(self.run_loop(),0)
+        self.assertEqual([c['stage'] for c in self.calls()],['next','implement','validate','next','implement','validate','validate','validate'])
+        self.assertEqual(self.m.check_state(self.state)['status'],'complete')
+        count=len(self.calls());self.assertEqual(self.run_loop(),0);self.assertEqual(len(self.calls()),count)
+
+    def test_failure_repairs_same_group_without_reselecting(self):
+        os.environ['FAKE_BEHAVIOR']='fail-once';self.args.max_iterations=1
+        self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()],['next','implement','validate','implement','validate'])
+        self.assertEqual(self.m.read(self.state/'plan.json')['groups'][0]['status'],'passed')
+        self.assertEqual(len(list((self.state/'evidence/G1').glob('*/report.md'))),2)
+
+    def test_failed_task_resumes_directly_from_saved_report(self):
+        self.fail_current();self.args.max_iterations=1
+        self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
+        self.assertIn('validation.report/note/artifacts',self.calls()[0]['prompt'])
+        self.assertTrue((self.state/'failure-report.md').exists())
+
+    def test_implemented_resume_only_validates(self):
+        self.m.select(self.state,True);p=self.m.read(self.state/'plan.json');p['groups'][0]['status']='implemented';self.m.write(self.state/'plan.json',p);self.put('react/1.ts','translated G1')
+        self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()],['validate'])
+
+    def test_retry_limit_persists_across_restarts(self):
+        os.environ['FAKE_BEHAVIOR']='always-fail'
+        with self.assertRaisesRegex(loop.LoopStop,'修复上限'):self.run_loop()
+        self.assertEqual([c['stage'] for c in self.calls()].count('implement'),3)
+        count=len(self.calls())
+        with self.assertRaisesRegex(loop.LoopStop,'修复上限'):self.run_loop()
+        self.assertEqual(len(self.calls()),count)
+        self.assertEqual(self.m.read(self.state/'plan.json')['active_group'],'G1')
+
+    def test_zero_exit_without_state_is_not_success(self):
+        os.environ['FAKE_BEHAVIOR']='noop'
+        with self.assertRaisesRegex(loop.LoopStop,'round.json'):self.run_loop()
+        self.assertTrue(list((self.state/'loop/runs').glob('*/result.json')))
+
+    def test_validate_zero_exit_without_new_record_is_rejected(self):
+        os.environ['FAKE_BEHAVIOR']='validate-noop'
+        with self.assertRaisesRegex(loop.LoopStop,'没有生成新的有效记账'):self.run_loop()
+        self.assertEqual(self.m.read(self.state/'plan.json')['groups'][0]['status'],'implemented')
+
+    def test_missing_failure_evidence_stops_before_repair(self):
+        self.fail_current();(self.state/'failure.txt').unlink()
+        with self.assertRaisesRegex(loop.LoopStop,'失败报告/证据缺失'):self.run_loop()
+        self.assertEqual(self.calls(),[])
+
+    def test_cli_error_and_timeout_leave_logs(self):
+        os.environ['FAKE_BEHAVIOR']='exit'
+        with self.assertRaisesRegex(loop.LoopStop,'退出码'):self.run_loop()
+        os.environ['FAKE_BEHAVIOR']='timeout';self.args.timeout=0.1
+        with self.assertRaisesRegex(loop.LoopStop,'超时'):self.run_loop()
+        self.assertEqual(len(list((self.state/'loop/runs').glob('*/001-next.log'))),2)
+
+    def test_dry_run_is_read_only(self):
+        before={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.args.dry_run=True;self.assertEqual(self.run_loop(),0)
+        after={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(before,after);self.assertEqual(self.calls(),[])
+
+    def test_changed_source_stops_before_agent(self):
+        self.put('vue/1.js','source changed')
+        with self.assertRaisesRegex(ValueError,'snapshot changed'):self.run_loop()
+        self.assertEqual(self.calls(),[])
+
+    def test_project_lock_rejects_second_runner(self):
+        with loop.project_lock(self.root):
+            with self.assertRaisesRegex(loop.LoopStop,'已有 migration-loop'):self.run_loop()
+        # The same lock file is reusable after release.
+        self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
+
+    def test_wrong_group_after_implementation_stops(self):
+        os.environ['FAKE_BEHAVIOR']='wrong-group'
+        with self.assertRaisesRegex(loop.LoopStop,'未将当前组'):self.run_loop()
+        self.assertEqual([c['stage'] for c in self.calls()],['next','implement'])
+
+    def test_all_blocked_stops_and_does_not_run_implementation_again(self):
+        os.environ['FAKE_BEHAVIOR']='blocked'
+        with self.assertRaisesRegex(loop.LoopStop,'没有可执行组'):self.run_loop()
+        self.assertEqual([c['stage'] for c in self.calls()],['next','implement','validate'])
+        self.assertIsNone(self.m.read(self.state/'plan.json')['active_group'])
+
+    def test_stale_passed_group_revalidates_without_implementation(self):
+        self.args.max_iterations=1;self.run_loop();count=len(self.calls())
+        self.put('react/1.ts','changed translated G1')
+        self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()[count:]],['next','validate'])
+
+    def test_each_adapter_works_and_model_is_not_silently_selected(self):
+        for adapter in ('claude','qodercli'):
+            self.args.adapter=adapter;self.args.max_iterations=1
+            self.assertEqual(self.run_loop(),4)
+            self.assertNotIn('--model',self.calls()[-1]['argv'])
+        command=loop.cli_command('codex','prompt',Path('answer'),model='user-choice')
+        self.assertEqual(command[command.index('--model')+1],'user-choice')
+
+    def test_shell_entrypoint_help_and_invalid_limit(self):
+        entry=loop.ROOT/'migration-loop.sh'
+        help_result=subprocess.run(['bash',str(entry),'--help'],capture_output=True,text=True)
+        self.assertEqual(help_result.returncode,0);self.assertIn('--dry-run',help_result.stdout)
+        invalid=subprocess.run(['bash',str(entry),'codex','0'],capture_output=True,text=True)
+        self.assertEqual(invalid.returncode,2)
+
+    def test_shell_uses_its_own_project_from_another_cwd_with_spaces(self):
+        entry=self.root/'migration-loop.sh';shutil.copyfile(loop.ROOT/'migration-loop.sh',entry)
+        helper=self.root/'migration/scripts/migration_loop.py';helper.parent.mkdir(parents=True)
+        shutil.copyfile(Path(loop.__file__),helper)
+        result=subprocess.run(['bash',str(entry),'codex','1'],cwd=self.root.parent,capture_output=True,text=True,timeout=10)
+        self.assertEqual(result.returncode,4,result.stderr)
+        self.assertEqual([c['stage'] for c in self.calls()],['next','implement','validate'])
+
+
+if __name__=='__main__':unittest.main()

@@ -145,6 +145,7 @@ cython_debug/
 .vscode/
 
 # AI Editor
+/migration/.migration-loop.lock
 .agent/
 .claude/
 .codebuddy/

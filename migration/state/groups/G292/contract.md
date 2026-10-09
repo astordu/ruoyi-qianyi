@@ -1,0 +1,236 @@
+# G292 src/views/system/file/components/FileTable.vue：完整能力
+
+依赖：G000, G294
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05434 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` lines 256-263 ImportDeclaration: 
+  - 基线：源语句 sha256=5787c9a57d855338dbb1445d64ba98fbf484b59809566ceea56988a99d85eee8；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05435 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` lines 265-274 ExpressionStatement: 
+  - 基线：源语句 sha256=19fb299f19097c4d81f9be5146630249652c15d39df79fdc9b8f7265bbc81897；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05436 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` lines 276-287 VariableDeclaration: emit
+  - 基线：源语句 sha256=744e64fc204babc322a90c23f2185070b10376190214de7e7a4f36d917ce28d7；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05437 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template lines 1-253（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05438 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 3: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05439 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 4: v-bind:data
+  - 基线：原表达式：fileList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05440 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 5: v-on:selection-change
+  - 基线：原表达式：emit('selection-change', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05441 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 13: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05442 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 16: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05443 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 17: v-if:
+  - 基线：原表达式：scope.row.accessType === 'public'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05444 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 18: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05445 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 23: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05446 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 30: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05447 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 37: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05448 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 39: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05449 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 48: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05450 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 50: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05451 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 55: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05452 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 56: v-bind:type
+  - 基线：原表达式：expirationTagType(scope.row.expireTime)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05453 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 62: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05454 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 64: v-if:
+  - 基线：原表达式：scope.row.aclNearestExpireTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05455 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 65: v-bind:content
+  - 基线：原表达式：`最近过期：${parseTime(scope.row.aclNearestExpireTime)}`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05456 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 69: v-bind:type
+  - 基线：原表达式：isAclExpiring(scope.row.aclNearestExpireTime) ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05457 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 73: v-if:
+  - 基线：原表达式：isAclExpiring(scope.row.aclNearestExpireTime)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05458 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 79: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05459 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 88: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05460 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 90: v-if:
+  - 基线：原表达式：scope.row.referenceCount；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05461 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 93: v-on:click
+  - 基线：原表达式：emit('reference', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05462 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 97: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05463 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 106: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05464 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 108: v-bind:type
+  - 基线：原表达式：storageStatusTagType(scope.row.storageStatus)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05465 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 116: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05466 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 119: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05467 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 120: v-if:
+  - 基线：原表达式：scope.row.status === 'active'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05468 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 121: v-else-if:
+  - 基线：原表达式：scope.row.status === 'deleted'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05469 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 124: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05470 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 134: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05471 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 140: v-on:click
+  - 基线：原表达式：emit('view', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05472 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 141: v-hasPermi:
+  - 基线：原表达式：['system:file:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05473 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 145: v-if:
+  - 基线：原表达式：scope.row.status === 'active'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05474 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 153: v-on:click
+  - 基线：原表达式：emit('download', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05475 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 154: v-hasPermi:
+  - 基线：原表达式：['system:file:download']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05476 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 158: v-if:
+  - 基线：原表达式：
+            scope.row.accessType === 'private' && scope.row.status === 'active'
+          ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05477 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 168: v-on:click
+  - 基线：原表达式：emit('acl', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05478 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 169: v-hasPermi:
+  - 基线：原表达式：['system:file:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05479 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 173: v-if:
+  - 基线：原表达式：scope.row.status === 'active'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05480 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 181: v-on:click
+  - 基线：原表达式：emit('transfer', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05481 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 182: v-hasPermi:
+  - 基线：原表达式：['system:file:transfer']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05482 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 190: v-on:click
+  - 基线：原表达式：emit('audit', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05483 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 191: v-hasPermi:
+  - 基线：原表达式：['system:file:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05484 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 195: v-if:
+  - 基线：原表达式：scope.row.status === 'active' && scope.row.referenceCount；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05485 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 205: v-hasPermi:
+  - 基线：原表达式：['system:file:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05486 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 210: v-else-if:
+  - 基线：原表达式：scope.row.status === 'active'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05487 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 218: v-on:click
+  - 基线：原表达式：emit('delete', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05488 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 219: v-hasPermi:
+  - 基线：原表达式：['system:file:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05489 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 223: v-if:
+  - 基线：原表达式：scope.row.status === 'deleted'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05490 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 231: v-on:click
+  - 基线：原表达式：emit('restore', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05491 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 232: v-hasPermi:
+  - 基线：原表达式：['system:file:restore']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05492 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 236: v-if:
+  - 基线：原表达式：scope.row.status !== 'active'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05493 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 237: v-bind:content
+  - 基线：原表达式：
+            scope.row.status === 'purging' ? '重试永久清理' : '永久清理'
+          ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05494 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 246: v-on:click
+  - 基线：原表达式：emit('purge', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05495 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template line 247: v-hasPermi:
+  - 基线：原表达式：['system:file:purge']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05496 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 23
+  - 基线：原显示表达式：formatFileSize(scope.row.fileSize)
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05497 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 40
+  - 基线：原显示表达式：scope.row.ownerName || scope.row.ownerUserId || "-"
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05498 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 51
+  - 基线：原显示表达式：scope.row.deptName || scope.row.deptId || "-"
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05499 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 57
+  - 基线：原显示表达式：expirationLabel(scope.row.expireTime)
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05500 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 72
+  - 基线：原显示表达式：scope.row.aclEntryCount
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05501 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 79
+  - 基线：原显示表达式：scope.row.aclEntryCount || 0
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05502 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 95
+  - 基线：原显示表达式：scope.row.referenceCount
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05503 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 111
+  - 基线：原显示表达式：storageStatusLabel(scope.row.storageStatus)
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05504 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` template interpolation line 116
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+- I05505 `ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue` style[0] lines 290-297
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/file/components/FileTable.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

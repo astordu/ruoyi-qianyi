@@ -1,0 +1,196 @@
+# G202 src/layout/components/Settings/index.vue：完整能力
+
+依赖：G000, G224, G227, G228, G252
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I02070 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 127-127 ImportDeclaration: 
+  - 基线：源语句 sha256=b6ad1bf6c41f923901306683414efcc226cc2299d4a2d3ca4208a8af934a00cf；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02071 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 128-128 ImportDeclaration: 
+  - 基线：源语句 sha256=88996687f5ac2ffe958aa6952515839565c6f908d46ea4106fe92135e3f788d7；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02072 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 129-129 ImportDeclaration: 
+  - 基线：源语句 sha256=efbb342d84aefbc6dc4b206f290d81fe87a23b34796df1ad0da69cd6a90b7ea3；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02073 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 130-130 ImportDeclaration: 
+  - 基线：源语句 sha256=f00234927a82d6dda0e854cdc6bd4e18a8ac0f1cb1a6670d355e2a40714f55c0；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02074 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 132-132 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02075 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 133-133 VariableDeclaration: appStore
+  - 基线：源语句 sha256=060bc36594e85646e5cc27ede11c88fb8230b9d84a9ac50cfd6e4bbef468bdf4；保留返回、异常及 0 个分支，调用=useAppStore。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02076 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 134-134 VariableDeclaration: settingsStore
+  - 基线：源语句 sha256=53647c4c620ff8d612232f46d116eb0d1e39a2943e0b2af620b068ca8e6d3ba3；保留返回、异常及 0 个分支，调用=useSettingsStore。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02077 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 135-135 VariableDeclaration: permissionStore
+  - 基线：源语句 sha256=8aea4ee78c3bc335fb25695e39a02e09a8551a4b638040cc30c3a575ef5ec2ed；保留返回、异常及 0 个分支，调用=usePermissionStore。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02078 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 136-136 VariableDeclaration: showSettings
+  - 基线：源语句 sha256=dc9fd278791e5250a9d7046defd75570d5ac755ac7219d5d35e784791dfa325a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02079 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 137-137 VariableDeclaration: navType
+  - 基线：源语句 sha256=d2514089c24f5849dd2899c85953f60ba5d051bbae127f226842978dab9df8b9；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02080 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 138-138 VariableDeclaration: theme
+  - 基线：源语句 sha256=9cb0ed464042e720a1cc2e08572dec67c6bce8c2d6fc267ff18b71bee0b8d033；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02081 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 139-139 VariableDeclaration: sideTheme
+  - 基线：源语句 sha256=8466b16bbe6a12b4779794fa28cec19c83f0cda7252f623cfcf2e6565ebbf2fa；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02082 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 140-140 VariableDeclaration: tagsViewPersist
+  - 基线：源语句 sha256=5b0dda14fbb011545528a21e13ab9047db0674c226ac36e7da9f3595e34b5bf0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02083 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 141-141 VariableDeclaration: storeSettings
+  - 基线：源语句 sha256=9cb5912eded7a794be6354a87f4cc7a881b591764588d4faf8f17e490a930da2；保留返回、异常及 0 个分支，调用=computed。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02084 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 142-142 VariableDeclaration: predefineColors
+  - 基线：源语句 sha256=01d9ce485276e09f976b08716202be937626504acd08dcbed07ac7d65e1d0c7c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02085 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 145-147 FunctionDeclaration: dynamicTitleChange
+  - 基线：源语句 sha256=451583a948b07eec0a61aecd82c6b75314b7def8cc9b956a3a75889b89a94c1b；保留返回、异常及 0 个分支，调用=CallExpression.setTitle, useSettingsStore。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02086 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 149-152 FunctionDeclaration: tagsViewPersistChange
+  - 基线：源语句 sha256=a9d16a77bbcba9bec4c1f0b007503d11dc3123ef81a5b17e5aa335ca58db0ab1；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02087 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 154-157 FunctionDeclaration: themeChange
+  - 基线：源语句 sha256=05f4098ed9121604dd88d5c634889b0288c09fbb57aa7a6331b59264dcb59963；保留返回、异常及 0 个分支，调用=handleThemeStyle。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02088 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 159-162 FunctionDeclaration: handleTheme
+  - 基线：源语句 sha256=1fccfee6737b3f6f7f9db3d9b47e03559f628731d536320ee4503469ee534b9e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02089 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 164-167 FunctionDeclaration: handleNavType
+  - 基线：源语句 sha256=565e02c26e8ffd49f308e10375cbb1a7034654c2a8b8ae4a85a28875acfe9d1c；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02090 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 170-186 ExpressionStatement: 
+  - 基线：源语句 sha256=7079050bfd7995b1b4b81558f9616fad361c5a4ff838447cd320ff70d05afdb7；保留返回、异常及 4 个分支，调用=watch, appStore.toggleSideBarHide, ArrayExpression.includes, permissionStore.setSidebarRouters。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02091 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 188-208 FunctionDeclaration: saveSetting
+  - 基线：源语句 sha256=d772eadad491df2118135d27ecc728a414cec51dac71ded571bcf4ef39032c53；保留返回、异常及 1 个分支，调用=proxy.$modal.loading, proxy.$cache.local.remove, localStorage.setItem, JSON.stringify, setTimeout, proxy.$modal.closeLoading。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02092 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 210-215 FunctionDeclaration: resetSetting
+  - 基线：源语句 sha256=29efe620d5dbc41fb0c1d7076fbf5afdaadaeff96e1db79f9c944d806a31c563；保留返回、异常及 0 个分支，调用=proxy.$cache.local.remove, proxy.$modal.loading, localStorage.removeItem, setTimeout。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02093 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 217-219 FunctionDeclaration: openSetting
+  - 基线：源语句 sha256=7f8640423a1a839aaafca43de4ad97f49195beac59e87208004a735d91035363；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02094 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` lines 221-223 ExpressionStatement: 
+  - 基线：源语句 sha256=16491cef9458fed8eb3fb334fdb12094052e928ef53713a746553a4e46cfa2be；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02095 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template lines 1-124（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02096 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 2: v-model:
+  - 基线：原表达式：showSettings；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02097 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 2: v-bind:withHeader
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02098 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 2: v-bind:lock-scroll
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02099 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 8: v-on:click
+  - 基线：原表达式：handleNavType(1)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02100 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 8: v-bind:class
+  - 基线：原表达式：{ activeItem: navType == 1 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02101 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 14: v-on:click
+  - 基线：原表达式：handleNavType(2)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02102 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 14: v-bind:class
+  - 基线：原表达式：{ activeItem: navType == 2 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02103 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 19: v-on:click
+  - 基线：原表达式：handleNavType(3)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02104 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 19: v-bind:class
+  - 基线：原表达式：{ activeItem: navType == 3 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02105 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 28: v-on:click
+  - 基线：原表达式：handleTheme('theme-dark')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02106 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 30: v-if:
+  - 基线：原表达式：sideTheme === 'theme-dark'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02107 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 32: v-bind:fill
+  - 基线：原表达式：theme；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02108 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 38: v-on:click
+  - 基线：原表达式：handleTheme('theme-light')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02109 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 40: v-if:
+  - 基线：原表达式：sideTheme === 'theme-light'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02110 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 42: v-bind:fill
+  - 基线：原表达式：theme；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02111 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 52: v-model:
+  - 基线：原表达式：theme；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02112 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 52: v-bind:predefine
+  - 基线：原表达式：predefineColors；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02113 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 52: v-on:change
+  - 基线：原表达式：themeChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02114 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 62: v-model:
+  - 基线：原表达式：settingsStore.tagsView；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02115 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 69: v-model:
+  - 基线：原表达式：settingsStore.tagsViewPersist；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02116 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 69: v-bind:disabled
+  - 基线：原表达式：!settingsStore.tagsView；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02117 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 69: v-on:change
+  - 基线：原表达式：tagsViewPersistChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02118 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 76: v-model:
+  - 基线：原表达式：settingsStore.tagsIcon；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02119 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 76: v-bind:disabled
+  - 基线：原表达式：!settingsStore.tagsView；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02120 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 83: v-model:
+  - 基线：原表达式：settingsStore.tagsViewStyle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02121 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 83: v-bind:disabled
+  - 基线：原表达式：!settingsStore.tagsView；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02122 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 93: v-model:
+  - 基线：原表达式：settingsStore.fixedHeader；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02123 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 100: v-model:
+  - 基线：原表达式：settingsStore.sidebarLogo；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02124 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 107: v-model:
+  - 基线：原表达式：settingsStore.dynamicTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02125 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 107: v-on:change
+  - 基线：原表达式：dynamicTitleChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02126 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 114: v-model:
+  - 基线：原表达式：settingsStore.footerVisible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02127 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 120: v-on:click
+  - 基线：原表达式：saveSetting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02128 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` template line 121: v-on:click
+  - 基线：原表达式：resetSetting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+- I02129 `ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue` style[0] lines 226-344
+  - 基线：保留全部选择器、声明和 url；lang=scss, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/layout/components/Settings/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

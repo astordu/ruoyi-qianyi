@@ -1,0 +1,69 @@
+{
+  "result": "passed",
+  "recorded_at": "2026-10-09T09:40:43.817884+00:00",
+  "report": "migration/state/groups/G000/validation.md",
+  "artifacts": [
+    {
+      "path": "migration/state/evidence/G000/attempt-1-command-2.log",
+      "sha256": "f62e8aa46010d9c2a6d5b83c1eb3c2798581443b408fee8b968fe41ea7ba2eb3"
+    },
+    {
+      "path": "migration/state/evidence/G000/attempt-1-command-3.log",
+      "sha256": "17293c3367e7ed1325cc01df293466b154d1bb7cd632f5a414be071b60cad4c8"
+    },
+    {
+      "path": "migration/state/evidence/G000/attempt-1-command-4.log",
+      "sha256": "f03144cd14d1d1b5585e005de6b48546d9403ec1ad8945138218d09fb41ff231"
+    },
+    {
+      "path": "migration/state/evidence/G000/attempt-2-command-1.log",
+      "sha256": "83340d3ff949a58dac97f36a69e823d52e627632ca20e175f9275cf0153d0190"
+    },
+    {
+      "path": "migration/state/evidence/G000/attempt-2-command-2.log",
+      "sha256": "8079ad8f2c20f9a44a10bfcaf009ae45a85ad3681808c722a2a7bf6a8c24301d"
+    },
+    {
+      "path": "migration/state/evidence/G000/attempt-3-config.log",
+      "sha256": "16e2d69d6e802b3755f815813e20bd4d2413c4578fa8cf147be95f73c44d2858"
+    },
+    {
+      "path": "migration/state/evidence/G000/browser-results.json",
+      "sha256": "82843bcdeeebd25a648a14b975dda6e395af34aec867e3ab48ef07a87a292e46"
+    },
+    {
+      "path": "migration/state/evidence/G000/dev-mounted.png",
+      "sha256": "fafdd05231f4f3625e4e070fe94b9550559e953d2aa591eea52b06891af88053"
+    },
+    {
+      "path": "migration/state/evidence/G000/loading-comparison.json",
+      "sha256": "f5480d262615863ef4a18d8baa202bde9d8171a266bdf30403c995cac5cc4afa"
+    },
+    {
+      "path": "migration/state/evidence/G000/original-loading.png",
+      "sha256": "b79ff2e8462f88b4a46186ba9627d9083e9b2c250b05c70285d24567a1e28608"
+    },
+    {
+      "path": "migration/state/evidence/G000/production-preview-mounted.png",
+      "sha256": "fafdd05231f4f3625e4e070fe94b9550559e953d2aa591eea52b06891af88053"
+    },
+    {
+      "path": "migration/state/evidence/G000/react-loading.png",
+      "sha256": "b79ff2e8462f88b4a46186ba9627d9083e9b2c250b05c70285d24567a1e28608"
+    },
+    {
+      "path": "migration/state/evidence/G000/summary.json",
+      "sha256": "5f0d480f93e649d0c22dc75fddbb4cbe214e41db80fb501e089a3c2c5d2407c1"
+    },
+    {
+      "path": "migration/state/groups/G000/baseline.json",
+      "sha256": "f76118517dd7d54a2881dad430efcca73aa620495a6bf5dfd6c24b7ebd1fb740"
+    },
+    {
+      "path": "migration/state/groups/G000/validation.md",
+      "sha256": "2798201f62449d39b08de8c0cbf08df001d8f34a3b616c91790be24a447ab58b"
+    }
+  ],
+  "note": "",
+  "snapshot": "0dcc2111f13826a2dfc52c7ea6744d794272a24a459f7bfcf35fdc5e9cbb3ac4"
+}

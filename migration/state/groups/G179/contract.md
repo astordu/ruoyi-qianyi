@@ -1,0 +1,169 @@
+# G179 src/components/JsonEditor/index.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I01640 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 30-30 ImportDeclaration: 
+  - 基线：源语句 sha256=a56ebeb14e5d89f01d9e90c8cca4add2acd91660711127b180905af450556c76；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01641 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 32-37 VariableDeclaration: props
+  - 基线：源语句 sha256=422bd493cb1aca15ca3e5873168ad72aa634ce8483592358f8228e831ee501d7；保留返回、异常及 0 个分支，调用=defineProps, JSON.parse。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01642 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 38-38 VariableDeclaration: emit
+  - 基线：源语句 sha256=48e31d22dd6f9557c9bd375eac02969fa05939ffd4a3babb5a2d09b587201e9c；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01643 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 39-39 VariableDeclaration: 
+  - 基线：源语句 sha256=019cc2c8d69076482286f60dcd59b1aa8216c699c20178c3ed369fb2045f9357；保留返回、异常及 0 个分支，调用=useFormItem。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01644 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 40-40 VariableDeclaration: editorRef
+  - 基线：源语句 sha256=ecbf8c7917402c2721adc0b3c4e0184ba52fed7e59b1bb3e940f926e52d0154f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01645 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 41-41 VariableDeclaration: editorReady
+  - 基线：源语句 sha256=91b98abcc33aa7d198a16d9da554869e9fbf5fc3033ae7dab627bfd20dc2132d；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01646 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 42-42 VariableDeclaration: loadFailed
+  - 基线：源语句 sha256=3213cf8a94dedabd7b797d1dc2526dccf875ac0544a2dd9b4c10c209c90db702；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01647 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 43-43 VariableDeclaration: expanded
+  - 基线：源语句 sha256=392103f890787d8e5a49a33226e218f8029ea7d707864c3a038aea8ff86868a5；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01648 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 44-44 VariableDeclaration: firstMarker
+  - 基线：源语句 sha256=1879da0b6bf6cb8f0e993976fe3b4a3de39999d1f2bfde36bb5899f31c1d2bda；保留返回、异常及 0 个分支，调用=shallowRef。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01649 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 45-52 VariableDeclaration: validation
+  - 基线：源语句 sha256=27ecc704ac75a52ac0159706c0a2cc0e7c7f788e04a3dee1d8be4d0ab36b65d7；保留返回、异常及 3 个分支，调用=computed, props.validate。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01650 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 53-55 VariableDeclaration: errorLocation
+  - 基线：源语句 sha256=9bd42b9ed02171fc920f20e0f7afe03ff168facfba4fe06df51967713aaae720；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01651 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 57-57 VariableDeclaration: editor
+  - 基线：源语句 sha256=c65e0951caf85f1accb2bfee8893129a2bdb68c6079e3a786c7bdce17a68eb14；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01652 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 58-58 VariableDeclaration: model
+  - 基线：源语句 sha256=617cb2ef4437a0f112b9dcca888e1a9c96658308be8d38b556fc2de0afd60bed；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01653 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 59-59 VariableDeclaration: themeObserver
+  - 基线：源语句 sha256=117e36ceb0804017d9797339bea2a3f1eb736d58cb0af82bda5b4992e6b259a5；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01654 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 60-60 VariableDeclaration: disposed
+  - 基线：源语句 sha256=5e46652c8b9fe5d2244f095ba1d5887bd5ebf6cdce319bbfe878bd344cea3a97；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01655 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 61-61 VariableDeclaration: listeners
+  - 基线：源语句 sha256=de8309b96f696daf1692f1567a4345022a634cfe1bbc00db81b38d9f71d4a859；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01656 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 64-69 FunctionDeclaration: updateValue
+  - 基线：源语句 sha256=64457331cd69261c50ba46ba8798879ec2d5ecfe51a56efd1d2c8a1c99700e66；保留返回、异常及 1 个分支，调用=emit, nextTick。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01657 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 72-74 FunctionDeclaration: validateForm
+  - 基线：源语句 sha256=04777f374417eff2898f3af50c008af836237f74cf35bfc6df448f8a20eb1734；保留返回、异常及 0 个分支，调用=OptionalCallExpression.catch, formItem.validate。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01658 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 77-81 FunctionDeclaration: formatDocument
+  - 基线：源语句 sha256=afc8f300235d2a176d32cb6c15fae41b05ead19bf841ea71cb30d8d9f362fe80；保留返回、异常及 3 个分支，调用=CallExpression.run, editor.getAction, editor.focus。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01659 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 84-90 FunctionDeclaration: revealError
+  - 基线：源语句 sha256=c76cc8b2fd0011f611d526976e3034c5545d5ee4ec8066c384b1df4e5b671cc9；保留返回、异常及 2 个分支，调用=editor.setPosition, editor.revealPositionInCenter, editor.focus。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01660 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 93-95 FunctionDeclaration: updateTheme
+  - 基线：源语句 sha256=9b332392a3a676083298f3016387ec4ce145e29aa744c9daa4c2abe204f22366；保留返回、异常及 1 个分支，调用=editor.updateOptions, document.documentElement.classList.contains。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01661 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 97-101 ExpressionStatement: 
+  - 基线：源语句 sha256=e410335440e288fa5961ba5c3558523e4c898d149e73add6a1ac15d4a675ebb3；保留返回、异常及 2 个分支，调用=watch, model.getValue, model.setValue。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01662 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 103-146 ExpressionStatement: 
+  - 基线：源语句 sha256=378d255f1c6925c00dd47cac231435d5dd66704c76e01dde233189f93f06acb6；保留返回、异常及 6 个分支，调用=onMounted, Promise.all, Import, monaco.editor.createModel, model.updateOptions, monaco.editor.create, listeners.push, editor.onDidChangeModelContent, updateValue, model.getValue, editor.onDidBlurEditorText, monaco.editor.onDidChangeMarkers, resources.some, resource.toString, model.uri.toString, CallExpression.sort, CallExpression.filter, monaco.editor.getModelMarkers, updateTheme, themeObserver.observe。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01663 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` lines 148-154 ExpressionStatement: 
+  - 基线：源语句 sha256=3ba6cdf4c67b52d6556afb52fa01690eabd4bb5525ca890468b0cb9ee633c525；保留返回、异常及 0 个分支，调用=onBeforeUnmount, themeObserver.disconnect, listeners.forEach, listener.dispose, editor.dispose, model.dispose。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01664 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template lines 1-27（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01665 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 2: v-bind:class
+  - 基线：原表达式：{ 'has-error': !validation.valid }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01666 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 6: v-bind:disabled
+  - 基线：原表达式：!editorReady || !validation.valid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01667 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 7: v-bind:aria-label
+  - 基线：原表达式：`格式化${label}`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01668 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 7: v-on:click
+  - 基线：原表达式：formatDocument；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01669 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 8: v-bind:aria-label
+  - 基线：原表达式：`${expanded ? '收起' : '展开'}${label}编辑器`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01670 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 9: v-bind:aria-expanded
+  - 基线：原表达式：expanded；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01671 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 9: v-on:click
+  - 基线：原表达式：expanded = !expanded；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01672 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 12: v-bind:style
+  - 基线：原表达式：{ height: expanded ? '360px' : '160px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01673 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 13: v-if:
+  - 基线：原表达式：!loadFailed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01674 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 14: v-if:
+  - 基线：原表达式：!editorReady && !loadFailed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01675 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 15: v-if:
+  - 基线：原表达式：loadFailed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01676 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 15: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01677 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 15: v-bind:rows
+  - 基线：原表达式：expanded ? 16 : 7；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01678 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 16: v-bind:aria-label
+  - 基线：原表达式：label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01679 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 16: v-on:update:model-value
+  - 基线：原表达式：updateValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01680 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 16: v-on:blur
+  - 基线：原表达式：validateForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01681 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 19: v-if:
+  - 基线：原表达式：validation.valid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01682 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 20: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01683 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 20: v-on:click
+  - 基线：原表达式：revealError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01684 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template line 24: v-if:
+  - 基线：原表达式：validation.valid；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01685 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template interpolation line 4
+  - 基线：原显示表达式：valueType === 'array' ? 'JSON 数组 [ ]' : 'JSON 对象 { }'
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01686 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template interpolation line 9
+  - 基线：原显示表达式：expanded ? '收起' : '展开'
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01687 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template interpolation line 22
+  - 基线：原显示表达式：errorLocation
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01688 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template interpolation line 22
+  - 基线：原显示表达式：validation.message
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01689 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` template interpolation line 24
+  - 基线：原显示表达式：loadFailed ? '编辑器加载失败，已切换文本输入' : 'Tab 切换焦点 · Alt+Shift+F 格式化'
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+- I01690 `ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue` style[0] lines 157-238
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/components/JsonEditor/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

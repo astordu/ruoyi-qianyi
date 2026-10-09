@@ -1,0 +1,508 @@
+# G267V src/views/monitor/job/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G028, G162, G179, G180, G182, G230, G232, G243, G246, G250, G266, G267, G267F029, G267F035, G267F036, G267F040, G267F041, G267F042, G267F043, G267F044, G267F045, G267F046, G267F047, G267F048, G267F049, G267F050, G267F051, G267F052, G267F053, G267F054, G267F055, G267F056, G267F057, G267F058, G267F059, G267F060, G269
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I03426 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template lines 1-308（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03427 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03428 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03429 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03430 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.jobName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03431 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03432 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 14: v-model:
+  - 基线：原表达式：queryParams.jobGroup；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03433 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 14: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03434 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 17: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03435 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 19: v-for:
+  - 基线：原表达式：dict in sys_job_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03436 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 20: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03437 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 21: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03438 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 22: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03439 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 27: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03440 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 28: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03441 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 32: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03442 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 33: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03443 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 38: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03444 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 39: v-hasPermi:
+  - 基线：原表达式：['monitor:job:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03445 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 42: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03446 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 47: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03447 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 48: v-on:click
+  - 基线：原表达式：handleUpdate；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03448 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 49: v-hasPermi:
+  - 基线：原表达式：['monitor:job:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03449 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 52: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03450 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 57: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03451 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 58: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03452 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 59: v-hasPermi:
+  - 基线：原表达式：['monitor:job:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03453 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 62: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03454 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 67: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03455 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 68: v-hasPermi:
+  - 基线：原表达式：['monitor:job:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03456 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 71: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03457 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 76: v-on:click
+  - 基线：原表达式：handleJobLog；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03458 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 77: v-hasPermi:
+  - 基线：原表达式：['monitor:job:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03459 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 80: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03460 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 81: v-on:click
+  - 基线：原表达式：handleRuntime('executions')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03461 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 82: v-hasPermi:
+  - 基线：原表达式：['monitor:job:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03462 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 84: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03463 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 84: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03464 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 87: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03465 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 87: v-bind:data
+  - 基线：原表达式：jobList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03466 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 87: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03467 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 90: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03468 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 91: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03469 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 92: v-on:click
+  - 基线：原表达式：handleView(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03470 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 96: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03471 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 100: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03472 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 101: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03473 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 104: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03474 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 105: v-if:
+  - 基线：原表达式：canQueryRuntime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03475 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 105: v-bind:type
+  - 基线：原表达式：syncStates[scope.row.syncStatus]?.type || 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03476 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 106: v-on:click
+  - 基线：原表达式：handleRuntime('sync', scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03477 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 109: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03478 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 113: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03479 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 115: v-model:
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03480 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 118: v-bind:disabled
+  - 基线：原表达式：changingIds.has(scope.row.jobId)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03481 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 119: v-bind:aria-label
+  - 基线：原表达式：`任务 ${scope.row.jobName} 的启停状态`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03482 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 120: v-on:change
+  - 基线：原表达式：handleStatusChange(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03483 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 125: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03484 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 127: v-on:click
+  - 基线：原表达式：handleUpdate(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03485 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 127: v-hasPermi:
+  - 基线：原表达式：['monitor:job:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03486 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 130: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03487 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 130: v-hasPermi:
+  - 基线：原表达式：['monitor:job:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03488 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 133: v-bind:loading
+  - 基线：原表达式：runningIds.has(scope.row.jobId)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03489 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 134: v-bind:aria-label
+  - 基线：原表达式：`立即执行 ${scope.row.jobName}`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03490 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 134: v-on:click
+  - 基线：原表达式：handleRun(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03491 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 135: v-hasPermi:
+  - 基线：原表达式：['monitor:job:changeStatus']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03492 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 138: v-on:click
+  - 基线：原表达式：handleJobLog(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03493 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 138: v-hasPermi:
+  - 基线：原表达式：['monitor:job:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03494 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 145: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03495 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 146: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03496 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 147: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03497 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 148: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03498 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 149: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03499 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 153: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03500 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 153: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03501 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 154: v-bind:close-on-click-modal
+  - 基线：原表达式：!submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03502 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 154: v-bind:close-on-press-escape
+  - 基线：原表达式：!submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03503 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 154: v-bind:show-close
+  - 基线：原表达式：!submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03504 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 155: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03505 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 155: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03506 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 157: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03507 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 159: v-model:
+  - 基线：原表达式：form.jobName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03508 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 162: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03509 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 164: v-model:
+  - 基线：原表达式：form.jobGroup；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03510 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 167: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03511 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 169: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03512 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 173: v-slot:content
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03513 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 182: v-model:
+  - 基线：原表达式：form.jobExecutor；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03514 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 184: v-for:
+  - 基线：原表达式：dict in sys_job_executor；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03515 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 185: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03516 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 186: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03517 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 187: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03518 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 192: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03519 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 194: v-model:
+  - 基线：原表达式：form.jobStore；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03520 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 195: v-for:
+  - 基线：原表达式：dict in sys_job_store；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03521 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 195: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03522 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 195: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03523 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 195: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03524 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 200: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03525 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 202: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03526 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 206: v-slot:content
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03527 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 215: v-model:
+  - 基线：原表达式：form.invokeTarget；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03528 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 218: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03529 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 220: v-model:
+  - 基线：原表达式：form.jobArgs；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03530 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 220: v-bind:validate
+  - 基线：原表达式：value => parseJobParameter(value, 'jobArgs')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03531 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 224: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03532 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 226: v-model:
+  - 基线：原表达式：form.jobKwargs；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03533 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 226: v-bind:validate
+  - 基线：原表达式：value => parseJobParameter(value, 'jobKwargs')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03534 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 230: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03535 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 232: v-model:
+  - 基线：原表达式：form.cronExpression；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03536 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 233: v-slot:append
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03537 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 234: v-on:click
+  - 基线：原表达式：handleShowCron；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03538 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 242: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03539 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 244: v-model:
+  - 基线：原表达式：form.timeZone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03540 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 245: v-for:
+  - 基线：原表达式：zone in timeZoneOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03541 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 245: v-bind:key
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03542 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 245: v-bind:label
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03543 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 245: v-bind:value
+  - 基线：原表达式：zone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03544 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 249: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03545 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 249: v-if:
+  - 基线：原表达式：form.jobId !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03546 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 251: v-model:
+  - 基线：原表达式：form.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03547 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 253: v-for:
+  - 基线：原表达式：dict in sys_job_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03548 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 254: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03549 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 255: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03550 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 260: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03551 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 262: v-if:
+  - 基线：原表达式：!unlimitedDelay；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03552 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 262: v-model:
+  - 基线：原表达式：form.misfireGraceTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03553 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 262: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03554 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 262: v-bind:max
+  - 基线：原表达式：2147483647；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03555 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 262: v-bind:precision
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03556 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 263: v-if:
+  - 基线：原表达式：!unlimitedDelay；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03557 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 264: v-model:
+  - 基线：原表达式：unlimitedDelay；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03558 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 268: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03559 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 270: v-model:
+  - 基线：原表达式：form.coalesce；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03560 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 271: v-bind:value
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03561 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 272: v-bind:value
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03562 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 277: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03563 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 279: v-model:
+  - 基线：原表达式：form.maxInstances；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03564 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 279: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03565 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 279: v-bind:max
+  - 基线：原表达式：2147483647；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03566 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 279: v-bind:precision
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03567 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 285: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03568 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 287: v-bind:loading
+  - 基线：原表达式：submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03569 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 287: v-on:click
+  - 基线：原表达式：submitForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03570 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 288: v-bind:disabled
+  - 基线：原表达式：submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03571 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 288: v-on:click
+  - 基线：原表达式：cancel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03572 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 293: v-model:
+  - 基线：原表达式：openCron；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03573 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 296: v-bind:expression
+  - 基线：原表达式：expression；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03574 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 297: v-bind:time-zone
+  - 基线：原表达式：form.timeZone；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03575 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 298: v-on:hide
+  - 基线：原表达式：openCron=false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03576 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 299: v-on:fill
+  - 基线：原表达式：crontabFill；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03577 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 304: v-model:visible
+  - 基线：原表达式：openView；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03578 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 304: v-bind:row
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03579 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 305: v-model:visible
+  - 基线：原表达式：runtimeOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03580 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 305: v-bind:initial-tab
+  - 基线：原表达式：runtimeContext.tab；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03581 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 306: v-bind:job-id
+  - 基线：原表达式：runtimeContext.jobId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03582 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 306: v-bind:execution-id
+  - 基线：原表达式：runtimeContext.executionId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03583 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template line 306: v-on:sync-updated
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03584 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template interpolation line 92
+  - 基线：原显示表达式：scope.row.jobName
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03585 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template interpolation line 97
+  - 基线：原显示表达式：scope.row.jobGroup
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03586 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template interpolation line 107
+  - 基线：原显示表达式：syncStates[scope.row.syncStatus]?.label || '待同步'
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03587 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template interpolation line 109
+  - 基线：原显示表达式：syncStates[scope.row.syncStatus]?.label || '待同步'
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03588 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` template interpolation line 256
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/monitor/job/index.tsx
+- I03589 `ruoyi-fastapi-frontend/src/views/monitor/job/index.vue` style[0] lines 619-629
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/monitor/job/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

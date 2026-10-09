@@ -1,0 +1,24 @@
+[
+  {
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.18,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-2-command-1.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:foundation:browser"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 4.554,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-2-command-2.log"
+  }
+]

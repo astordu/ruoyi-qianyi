@@ -1,0 +1,1720 @@
+{
+  "schema_version": 1,
+  "project_root": "/Users/dulei/Documents/projects/ruoyi-qianyi",
+  "source_roots": [
+    "ruoyi-fastapi-frontend"
+  ],
+  "target_root": "react-front",
+  "exclude_dirs": [
+    ".git",
+    ".vite",
+    "coverage",
+    "dist",
+    "node_modules"
+  ],
+  "created_at": "2026-10-09T09:17:38.167934+00:00",
+  "files": {
+    "ruoyi-fastapi-frontend/.env.development": {
+      "kind": "file",
+      "sha256": "2316819f2b242a841b26080bc46216bfac9881aa2c7bfd1b56ff33c1f9cd51fb",
+      "bytes": 170
+    },
+    "ruoyi-fastapi-frontend/.env.docker": {
+      "kind": "file",
+      "sha256": "4a885f752e60287f3b66fb4c4893d4d0341cd9b348b7faac59fa7c4cd9d49ccc",
+      "bytes": 253
+    },
+    "ruoyi-fastapi-frontend/.env.production": {
+      "kind": "file",
+      "sha256": "7283eb6d43d4874631f6de0391fd72c22c710cf522cf43d9dd5fc5a8954bfaa4",
+      "bytes": 255
+    },
+    "ruoyi-fastapi-frontend/.env.staging": {
+      "kind": "file",
+      "sha256": "2c5036f05231607c23b626875913b84249fab433fe50385883457239eae6cfde",
+      "bytes": 253
+    },
+    "ruoyi-fastapi-frontend/.gitignore": {
+      "kind": "file",
+      "sha256": "eca38dd740d56ff72cfdb78a135518e2bbcb68b7ad981c5786ec754cf722ec2e",
+      "bytes": 256
+    },
+    "ruoyi-fastapi-frontend/Dockerfile": {
+      "kind": "file",
+      "sha256": "ca76db22769ab5be70025c5a069f4d7115d658a1cefdb02e83cf52334ad15df4",
+      "bytes": 467
+    },
+    "ruoyi-fastapi-frontend/LICENSE": {
+      "kind": "file",
+      "sha256": "7296da00ac5dfc56c36e6ac10ce5abdb2900898c101d5c4720d7b6c1254dd993",
+      "bytes": 1071
+    },
+    "ruoyi-fastapi-frontend/bin/build.bat": {
+      "kind": "file",
+      "sha256": "5383ac12fb3c229248d4de99cde3d172b34268ed1ff8a1c5de896f0cbbb3699c",
+      "bytes": 106
+    },
+    "ruoyi-fastapi-frontend/bin/nginx.dockermy.conf": {
+      "kind": "file",
+      "sha256": "b095a9356e3cac412f7d129be67235d772c5ea7b1b64797b3b9d8e235b5cac4d",
+      "bytes": 633
+    },
+    "ruoyi-fastapi-frontend/bin/nginx.dockerpg.conf": {
+      "kind": "file",
+      "sha256": "159ab424005dfb373ea8acce572830b2755d29b2f382ec0b0b99874b3ccdb81c",
+      "bytes": 638
+    },
+    "ruoyi-fastapi-frontend/bin/package.bat": {
+      "kind": "file",
+      "sha256": "abda7a23caa70d327d0032aeb823ca09961f503492e0445c801f6973ccccd993",
+      "bytes": 145
+    },
+    "ruoyi-fastapi-frontend/bin/run-web.bat": {
+      "kind": "file",
+      "sha256": "ea5f174fc146fa7727cba55883346e1202a49e366bed2146078544ca38ddf395",
+      "bytes": 101
+    },
+    "ruoyi-fastapi-frontend/html/ie.html": {
+      "kind": "file",
+      "sha256": "55b2939532c33192444ba701a6062068a3796a869a425b2b8db4e22e9bdaffbe",
+      "bytes": 23578
+    },
+    "ruoyi-fastapi-frontend/index.html": {
+      "kind": "file",
+      "sha256": "fb6ca55844e86e10c438c84edab4b1722ebacc25fb049332bcde4579892e1f05",
+      "bytes": 5290
+    },
+    "ruoyi-fastapi-frontend/package-lock.json": {
+      "kind": "file",
+      "sha256": "7f59b1fc3a62bd0da6eecdb8d40a697e390e9ff168539af0cd18244f24c12046",
+      "bytes": 459109
+    },
+    "ruoyi-fastapi-frontend/package.json": {
+      "kind": "file",
+      "sha256": "e29ed2512e057a65b53e7881822d03119585657c7ec84f10160f2f501e907666",
+      "bytes": 1939
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/README.md": {
+      "kind": "file",
+      "sha256": "2a1c2f51affb589b9749a49c76cd86d38904dc41e5c5c8dc0633e8e6dc6ffac8",
+      "bytes": 2658
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/api/chat.js": {
+      "kind": "file",
+      "sha256": "f8a309b22b05ea3b38dc4929a567571ca0f1297c3f75102d990c8bba2a2f64cd",
+      "bytes": 958
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/api/model.js": {
+      "kind": "file",
+      "sha256": "7b7875fbc5a6ae971e25f84d7b9036d4ce7699c6cd3ca7f78d2235ccd7fdf32e",
+      "bytes": 880
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/views/chat/components/AiMessage.vue": {
+      "kind": "file",
+      "sha256": "31991d377894beba267d114249c302d5b52835e9c8aab61693659cd896c9b35c",
+      "bytes": 3601
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue": {
+      "kind": "file",
+      "sha256": "a135f3594989b8cac0ca719aeffd6294230d996c1f1cb7da5837527baea8c76f",
+      "bytes": 37007
+    },
+    "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue": {
+      "kind": "file",
+      "sha256": "0f700e0f7867ce96fcb7c7e0f76caa99336f6d33cc363643dcd21cb09b51b7f0",
+      "bytes": 13496
+    },
+    "ruoyi-fastapi-frontend/public/favicon.ico": {
+      "kind": "file",
+      "sha256": "373ceb12c982bd8d54a05a124cd07c007cfdead662deb15f403f29e4cb7a8dfb",
+      "bytes": 10729
+    },
+    "ruoyi-fastapi-frontend/src/App.vue": {
+      "kind": "file",
+      "sha256": "090c57cc67f4cc01d0cdeb624203a02ce956b569c3c02ef5537c5600728e561e",
+      "bytes": 811
+    },
+    "ruoyi-fastapi-frontend/src/api/login.js": {
+      "kind": "file",
+      "sha256": "73716abfda1528e6318ff493652269ba9c4b869440c08b59167d0ab6223fcf6b",
+      "bytes": 1132
+    },
+    "ruoyi-fastapi-frontend/src/api/menu.js": {
+      "kind": "file",
+      "sha256": "c1bf52f93ee005217023ff445dc14b66340c79c02693329b9b06197760cfb8bd",
+      "bytes": 156
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/cache.js": {
+      "kind": "file",
+      "sha256": "51e19a745fb0af583b65a88a895d55d945844334eaae677e46ebd525c7d07a52",
+      "bytes": 1144
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/job.js": {
+      "kind": "file",
+      "sha256": "8ad538e64959cdb7ee0abbd26e27b732d74c9b566468a1cf4e40c50a15c36c2b",
+      "bytes": 2265
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/jobLog.js": {
+      "kind": "file",
+      "sha256": "064caee5d44c46250a389d200981993c4f4292d2ee6de0d2feef0c44288ab33b",
+      "bytes": 483
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/logininfor.js": {
+      "kind": "file",
+      "sha256": "d433ef0932b0249a561eaf08c683b13dec63876ba7e81af19c891f6b1cf62d64",
+      "bytes": 662
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/online.js": {
+      "kind": "file",
+      "sha256": "9e3cf87d0cc57a62f9ddb581223fb928d7e9685e1834790e35c9aa4a0999d4e2",
+      "bytes": 335
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/operlog.js": {
+      "kind": "file",
+      "sha256": "2329e2beb29be7ba3eb96f291592fc7b8668eb450bfae81f752a3c6ee5e724dc",
+      "bytes": 478
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/server.js": {
+      "kind": "file",
+      "sha256": "2f47f8c7027f01001b226bf92b0c897db6b59b3d32b6318a1e797246e19f1acb",
+      "bytes": 162
+    },
+    "ruoyi-fastapi-frontend/src/api/monitor/transportCrypto.js": {
+      "kind": "file",
+      "sha256": "d82addac801d7b299942959e139920c7e60ea21ba5451cb553dcd1e68ce8ef54",
+      "bytes": 201
+    },
+    "ruoyi-fastapi-frontend/src/api/system/config.js": {
+      "kind": "file",
+      "sha256": "8da11bde6f5dbe8b189816dcd8d1c5d8cd18823a6a288d45b8b80d4b09115210",
+      "bytes": 1092
+    },
+    "ruoyi-fastapi-frontend/src/api/system/dept.js": {
+      "kind": "file",
+      "sha256": "419e9033bb1310e0a82986926450f0e17ceb837f06ded68bdd9af762f6ef9840",
+      "bytes": 1066
+    },
+    "ruoyi-fastapi-frontend/src/api/system/dict/data.js": {
+      "kind": "file",
+      "sha256": "6def8190755a899f6560d02d8671ffa2983ec31dd949b43fd9e307f1e6b16188",
+      "bytes": 967
+    },
+    "ruoyi-fastapi-frontend/src/api/system/dict/type.js": {
+      "kind": "file",
+      "sha256": "2aa16217b8158c86677051a99f360e090ef45e0ac32c533098c32292b8177860",
+      "bytes": 1082
+    },
+    "ruoyi-fastapi-frontend/src/api/system/file.js": {
+      "kind": "file",
+      "sha256": "dbbb8a65f7b817388d2720dc91f48e9d7eb94a733f64d6a6978a4af1c9cd2a61",
+      "bytes": 5066
+    },
+    "ruoyi-fastapi-frontend/src/api/system/menu.js": {
+      "kind": "file",
+      "sha256": "caf4afda4eb483589f8572ab005681ea42b739c4053d4c08a53fa4026b2a6fcb",
+      "bytes": 1218
+    },
+    "ruoyi-fastapi-frontend/src/api/system/notice.js": {
+      "kind": "file",
+      "sha256": "187bba697fe0a130167234fb3cec374c110952fde46dfc5a5898c574dbea2d28",
+      "bytes": 1447
+    },
+    "ruoyi-fastapi-frontend/src/api/system/plugin.js": {
+      "kind": "file",
+      "sha256": "a64dcbc537bfb232e339a4eefc92831bd14e66c59a0ced4fef0c0ab08bdc1432",
+      "bytes": 4476
+    },
+    "ruoyi-fastapi-frontend/src/api/system/post.js": {
+      "kind": "file",
+      "sha256": "adf958a0cec7caf996fc6850b02e5e626646cd7cde0f240e2e1e0776338f33f8",
+      "bytes": 729
+    },
+    "ruoyi-fastapi-frontend/src/api/system/role.js": {
+      "kind": "file",
+      "sha256": "5f087d90810fb15b21222d5961e1c9ae3df2f29c632cb112aafc5d0142fd871d",
+      "bytes": 2177
+    },
+    "ruoyi-fastapi-frontend/src/api/system/user.js": {
+      "kind": "file",
+      "sha256": "a3ee3db09b1e20209edb94e3c52f61095da25512dcaed2251f7719e326731cad",
+      "bytes": 2783
+    },
+    "ruoyi-fastapi-frontend/src/api/tool/gen.js": {
+      "kind": "file",
+      "sha256": "2d5286c799723899ed8da2eaa9626be99867b7a9b3e732b8034121ef224f304c",
+      "bytes": 1865
+    },
+    "ruoyi-fastapi-frontend/src/assets/401_images/401.gif": {
+      "kind": "file",
+      "sha256": "a61ddb94a3e5c0a604e32c7f51d3f2bc2fa7a5b2b9db52735f8a058767d98124",
+      "bytes": 164227
+    },
+    "ruoyi-fastapi-frontend/src/assets/404_images/404.png": {
+      "kind": "file",
+      "sha256": "538aa4d7334df582e45c6f998b2a98dad44062fa8586a6c602af103a61f1d63e",
+      "bytes": 98071
+    },
+    "ruoyi-fastapi-frontend/src/assets/404_images/404_cloud.png": {
+      "kind": "file",
+      "sha256": "98e7ac66d86036e26a821eb4882d8d040e48991f9ae200119cdefaf450a405e8",
+      "bytes": 4766
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/404.svg": {
+      "kind": "file",
+      "sha256": "ddd506c6b05200a90bdb55857ff4d44386e261bc43151f1582efd3311e45e1da",
+      "bytes": 1444
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/ai-chat.svg": {
+      "kind": "file",
+      "sha256": "7f700ff2e3b4de1902f8b3570de97bb82a2c9834dc5252ad934e6ddbad08e212",
+      "bytes": 2715
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/ai-manage.svg": {
+      "kind": "file",
+      "sha256": "d2f3acf0c20df2065af60bc3e8137a1aba358d23803a148dc35b26756907e22e",
+      "bytes": 1599
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/ai-model.svg": {
+      "kind": "file",
+      "sha256": "26e95350cd141fc71530638e1e94da7a9dce87c3871f6c30b2bf15ea63ae88f9",
+      "bytes": 848
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/bell.svg": {
+      "kind": "file",
+      "sha256": "dad1c6849ed32f0188220addc19d499c8ea4087354db5c8b8a1d8052e7e26f13",
+      "bytes": 750
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/bug.svg": {
+      "kind": "file",
+      "sha256": "6072aa1fcada6457e45ba21d74bc7077a6f0ed4a75ff1068dc349c69dfaad89e",
+      "bytes": 1575
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/build.svg": {
+      "kind": "file",
+      "sha256": "df478a2b8c78de71c692017e29515ab0f0e7fed6486198b258c9c3898113c253",
+      "bytes": 954
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/button.svg": {
+      "kind": "file",
+      "sha256": "04c839d6ad5849f08692e226de64fdc32850eb5868a7f5977c8d75c011a275d5",
+      "bytes": 2370
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/cascader.svg": {
+      "kind": "file",
+      "sha256": "86d686bd4e10df1a6b4b98920a81ae341c0843d8b2cb3b6b7ef8fd49f0a9400b",
+      "bytes": 2279
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/chart.svg": {
+      "kind": "file",
+      "sha256": "a027cd524d9e9baa13ca53515ad6d89715f2c11b7124034b957a8ed6b6dde294",
+      "bytes": 179
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/checkbox.svg": {
+      "kind": "file",
+      "sha256": "c4f0703be2bf451a46b25db4589764821bbc3055e0e0aab4a926a3bd64dfbe90",
+      "bytes": 1261
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/clipboard.svg": {
+      "kind": "file",
+      "sha256": "9c56eaf6ec568214a124f5db1061dec2c79689a9cc0616e1bd3469fda28babbc",
+      "bytes": 971
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/code.svg": {
+      "kind": "file",
+      "sha256": "4fee30a6cdbbef00b636845148f60a66859ba84b7dd859630f84e15019162b47",
+      "bytes": 717
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/color.svg": {
+      "kind": "file",
+      "sha256": "a2a1a4c254c4c40d6b0b55002fa5448c02a9478b28167525df03aac880335fc8",
+      "bytes": 4020
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/component.svg": {
+      "kind": "file",
+      "sha256": "8f346aae64a24d141c9290df9746afbe97c39c67f19dcc8324da2700a4b12a4a",
+      "bytes": 2433
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/dashboard.svg": {
+      "kind": "file",
+      "sha256": "742fa6e8a7437ddd64f268c47d963a366387b377e32064f770b668db4cb7e08d",
+      "bytes": 2335
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/date-range.svg": {
+      "kind": "file",
+      "sha256": "be0a664d3c7290092c435f19f18c6bb32d195e762df961052fb2df40f086f688",
+      "bytes": 2145
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/date.svg": {
+      "kind": "file",
+      "sha256": "47a735eddecf4d9516b20fc026d84931b26551976e163001b95af76aa7b03caa",
+      "bytes": 3372
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/deepthink.svg": {
+      "kind": "file",
+      "sha256": "6bb050d2993fd1cc1df0e54b416e4ec00e9d7d7d63611675da11efa4cd8e1dd2",
+      "bytes": 1874
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/dict.svg": {
+      "kind": "file",
+      "sha256": "e03b117db36d15787848833b5d5ba5adc86abb185ac6b91e66f151fe49e39cbe",
+      "bytes": 2871
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/documentation.svg": {
+      "kind": "file",
+      "sha256": "92323cc64cc0c5daf9fc9bf4e09f1cd217bb4e3f1169d574b2064bde3163bb97",
+      "bytes": 418
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/download.svg": {
+      "kind": "file",
+      "sha256": "98fa3b20efb95f16088bda6690909f469b5193cdd627a70d2be5e032e4cf7842",
+      "bytes": 1035
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/drag.svg": {
+      "kind": "file",
+      "sha256": "f4e33e85ad25ce0b2b1013ab86ebf4f4959df4468f2201b32398b3a050e5e00c",
+      "bytes": 356
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/druid.svg": {
+      "kind": "file",
+      "sha256": "57ab498438d980f2f42604bfed93b379aeb27e9be195c7744463e117a5b1172a",
+      "bytes": 724
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/edit.svg": {
+      "kind": "file",
+      "sha256": "88acfa6cc45aa10200b6ed1cad379ecd28ce8f159c9d7dc5397a88c5a7cca22c",
+      "bytes": 818
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/education.svg": {
+      "kind": "file",
+      "sha256": "4308b70c2a1f5e7e9bea806ee7fbf9b94e81fbc7fa48bff51027cc97f3fbc07b",
+      "bytes": 627
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/email.svg": {
+      "kind": "file",
+      "sha256": "29d2e3757f8064eb48da489d74e23be29f22a94401c2daff5e4822fc8a007c39",
+      "bytes": 347
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/enter.svg": {
+      "kind": "file",
+      "sha256": "251c580be35b4e447a1c583b77ba2f66096678ee9adb5f1fff27dd87bbf402ca",
+      "bytes": 1104
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/example.svg": {
+      "kind": "file",
+      "sha256": "20668f6a7134358ecd3d9302919fd2850db031dfb80497e1328f93cbd21713ec",
+      "bytes": 497
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/excel.svg": {
+      "kind": "file",
+      "sha256": "b8970c32d6c3542398d87c9adeccb83401897a8ca486c7c4934a9abde73d5993",
+      "bytes": 459
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/exit-fullscreen.svg": {
+      "kind": "file",
+      "sha256": "edd6f137b988ef8015e0f5202231a4d9de55b3a4db91e7255aeaa8cf88105d6c",
+      "bytes": 1803
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/eye-open.svg": {
+      "kind": "file",
+      "sha256": "26399dbbe81515e4d837a0404bf5abf6eae5321d6fbcd8019cedd65d62c7a6bb",
+      "bytes": 1290
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/eye.svg": {
+      "kind": "file",
+      "sha256": "0577dd930d4a73cf8cbdaa48577421e23230a374af9b957f951fb37143aaaae2",
+      "bytes": 944
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/form.svg": {
+      "kind": "file",
+      "sha256": "c28e12cd7cc3a00f0472971d11454b717bd4e14b7742efbd53f4b83451b40e73",
+      "bytes": 2494
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/fullscreen.svg": {
+      "kind": "file",
+      "sha256": "fdad759e5070276410738c5d91cd8f0bda6cdc607eadb70d7f15e4415f40edb4",
+      "bytes": 421
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/github.svg": {
+      "kind": "file",
+      "sha256": "559c5791cccbaf9fc1419441ebcb0357dc206f8839621915c97e1ada71f5ec97",
+      "bytes": 1644
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/guide.svg": {
+      "kind": "file",
+      "sha256": "441e177e7e7197bdedaa1b6725b20f8ea493465cfde929c19b5e0821ee831c06",
+      "bytes": 320
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/icon.svg": {
+      "kind": "file",
+      "sha256": "26344985fad1b083246f48ff6fdf4d66b4d3c098e9d5aa785f3cf7dcf223797f",
+      "bytes": 1076
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/input.svg": {
+      "kind": "file",
+      "sha256": "dc49adedfe8d23f1d52e200126f5e1339ca3685dc25e02f5f4b6726924b4ce83",
+      "bytes": 744
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/international.svg": {
+      "kind": "file",
+      "sha256": "cdcfd9ebc7a78deb94d4f205f6d163095789bfeef393bd7608c9cb04d94a6262",
+      "bytes": 1117
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/job.svg": {
+      "kind": "file",
+      "sha256": "0a38faae6889d4527735803517bf1d810a53d7f5595e289784be53fc5e4df964",
+      "bytes": 1753
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/language.svg": {
+      "kind": "file",
+      "sha256": "407b754891c33df1578e4f64ef186da23ecb6b82d141e9defce1a3938cd519d4",
+      "bytes": 1259
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/link.svg": {
+      "kind": "file",
+      "sha256": "b0c4e028d191f7c0a854a34e4081908c1646250a6241b408bebe89d6786f9d07",
+      "bytes": 285
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/list.svg": {
+      "kind": "file",
+      "sha256": "1107b3b6f971712be86e010ffa600453616a47419aecd299eab6f37e12d6746c",
+      "bytes": 1017
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/lock.svg": {
+      "kind": "file",
+      "sha256": "eb3ac9a332232c0fa02f11f12f026a52ffbd3e90ab2e05b4e31b8005114f10aa",
+      "bytes": 444
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/log.svg": {
+      "kind": "file",
+      "sha256": "1cbe92a90a92adb4911c7bb9fd112f272bee25908b30c4142acbb8b7a0aa7e0f",
+      "bytes": 1566
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/logininfor.svg": {
+      "kind": "file",
+      "sha256": "9f779b90ef2859ad4cdbf9c327db9363c5a88f51fd2ab94011e93a84deb39785",
+      "bytes": 1712
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/message.svg": {
+      "kind": "file",
+      "sha256": "cb1eb2d527df3071458689dbe420d09a96b08110fdb8d3f1d6eaacc3be69cf4a",
+      "bytes": 669
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/money.svg": {
+      "kind": "file",
+      "sha256": "ba9bc644b062fab1688ed9772818d0e4695c8f5c7ddef606ef2a3c535a8b3861",
+      "bytes": 335
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/monitor.svg": {
+      "kind": "file",
+      "sha256": "bc6d633883ea32f5012f4b159e5c51e8b106240d7e9d471f6ecaa4d3d1504e89",
+      "bytes": 883
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/moon.svg": {
+      "kind": "file",
+      "sha256": "aae298606dc4020630d92d8181abfe741d4773a579b1543300784b7df0889644",
+      "bytes": 619
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/more-up.svg": {
+      "kind": "file",
+      "sha256": "50954126b6f436bdbcc97a6af06ab7a1d6d1c259648c3ba7f0c29ee253ff2ec4",
+      "bytes": 1127
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/nested.svg": {
+      "kind": "file",
+      "sha256": "d8786b2537138ae78b91f9544bed62a69ffb0137a28f23059394700a6a1691ef",
+      "bytes": 821
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/number.svg": {
+      "kind": "file",
+      "sha256": "674e542442fe62bb89b4deb1debaffb6527db5ef2b947bf5156be19680808dc8",
+      "bytes": 3236
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/online.svg": {
+      "kind": "file",
+      "sha256": "5f3e51bcdc5b44f0e758f99f88ce9379c463cc51dff79c94bf2a2ebf4546c989",
+      "bytes": 3709
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/password.svg": {
+      "kind": "file",
+      "sha256": "bd1617ac57fc75d7e583d17f0c50807b9625f359f86b8b7edb56bc0d6b557a86",
+      "bytes": 1885
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/pdf.svg": {
+      "kind": "file",
+      "sha256": "77bd44caef6d698d05be1a861514697ca8e69d34362bd7f798bed249fc387e91",
+      "bytes": 1714
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/people.svg": {
+      "kind": "file",
+      "sha256": "be8c31f91f19ba4c2329976587e92e8b4dde07da69865d6e8b8c0fca9602365f",
+      "bytes": 1207
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/peoples.svg": {
+      "kind": "file",
+      "sha256": "8b86ef224743de81ba8102959374c86d3ed1f5d9c94caf66d8cea10dc8aa7b63",
+      "bytes": 731
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/phone.svg": {
+      "kind": "file",
+      "sha256": "a711d14fcc971825c5651e6b0f5e06acfc5062486517355c6e4ee697aaa33c04",
+      "bytes": 1537
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/post.svg": {
+      "kind": "file",
+      "sha256": "19463d24ecef96ccd587d9cb160bf5c418ea037b7abc2ebe528fb12720135108",
+      "bytes": 1221
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/qq.svg": {
+      "kind": "file",
+      "sha256": "9e3df35a21b2b7ede729323260d8ba0170e70881bd69fa78ee8dcd3eaf1e2de9",
+      "bytes": 3675
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/question.svg": {
+      "kind": "file",
+      "sha256": "0a0bd91de089db8f75ca1378ded922ee1133269e687f564e30193edc43ed0782",
+      "bytes": 1134
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/radio.svg": {
+      "kind": "file",
+      "sha256": "30b8b47c1b016f004b9feffae2b9ea88d8e84e84bfd92c581969ba1d1f30d473",
+      "bytes": 1364
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/rate.svg": {
+      "kind": "file",
+      "sha256": "2822f76cdef4139e023e9e28f026696409f96d757023bc7a7d430d265c244569",
+      "bytes": 1726
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/redis-list.svg": {
+      "kind": "file",
+      "sha256": "df08ee8d6714c43c6f56854e50f035874c24d2b9e01a9bc693622316034f409d",
+      "bytes": 2654
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/redis.svg": {
+      "kind": "file",
+      "sha256": "219b773cf381736ecab33428666e27888f4d472dde24295373de33feddae8161",
+      "bytes": 2830
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/row.svg": {
+      "kind": "file",
+      "sha256": "55339924c7c40ee310f9c85d6f3dbf317d55500fbcf2200163c28ba51af46281",
+      "bytes": 873
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/search.svg": {
+      "kind": "file",
+      "sha256": "b05d84995360e925cfe062baebea7e1492774b1a6d9bcea3c5f62b6c1b093784",
+      "bytes": 600
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/select.svg": {
+      "kind": "file",
+      "sha256": "2173c004e2d9cbd58c595f510f7995a14b8f1f81664d952d834c9bd15e01d1b1",
+      "bytes": 1367
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/server.svg": {
+      "kind": "file",
+      "sha256": "6de32aac7a07c30cf93e3b0c3b2327a83710b07654c9f36dfc1cc272db1af300",
+      "bytes": 742
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/shopping.svg": {
+      "kind": "file",
+      "sha256": "4f0d66684066ebf51f1d8d896c8c753c70fe860ca8b72ff9458628d86679a376",
+      "bytes": 2236
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/size.svg": {
+      "kind": "file",
+      "sha256": "7a7aa443059341021b39103e0699d36f8f6b13ecb840f16cefed8e50d8b725fc",
+      "bytes": 226
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/skill.svg": {
+      "kind": "file",
+      "sha256": "025afb8fc86be23ea838536bdcc273dd433df396bdaac1c692299e1f9a0248e1",
+      "bytes": 1188
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/slider.svg": {
+      "kind": "file",
+      "sha256": "f34180f22a34b954ea487099d8d1195d18d3016fb18d1c6a775bf19e56dbf7da",
+      "bytes": 564
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/star.svg": {
+      "kind": "file",
+      "sha256": "dc81e60f72d9be1c9e92ce00a20925baed8d7c980e013dd18fee6d4179d7914f",
+      "bytes": 563
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/sunny.svg": {
+      "kind": "file",
+      "sha256": "dbd9fb8b0f33a989bfc6321c48710f9824acca35ac58e151d4ef60699679d990",
+      "bytes": 1425
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/swagger.svg": {
+      "kind": "file",
+      "sha256": "c07d48c229f76204f694b362fa0a299da0157e028ceb4c8f17d03e1fb913ad94",
+      "bytes": 1831
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/switch.svg": {
+      "kind": "file",
+      "sha256": "ffcc91cdb88c132f573d619f06d7683d067c0741932f0cb24c1a58fb042c2e20",
+      "bytes": 679
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/system.svg": {
+      "kind": "file",
+      "sha256": "99991b7139021602e92877ca0f0a1400747cf4a4642337230c2ad0c0f6b293b3",
+      "bytes": 2958
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/tab.svg": {
+      "kind": "file",
+      "sha256": "d7c08170f304d33fdeca2b6b3522f2723e846bc23fac72eeefb8bad43b367287",
+      "bytes": 655
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/table.svg": {
+      "kind": "file",
+      "sha256": "8c21c0da3c562af7fe70722d0466777c3c04c668f0ed251fa7e8a56cb199942d",
+      "bytes": 597
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/textarea.svg": {
+      "kind": "file",
+      "sha256": "a253c0f4d07af1bde1f64e76db6e638b4db3f1228ddf884f39ae5292ea8596d2",
+      "bytes": 787
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/theme.svg": {
+      "kind": "file",
+      "sha256": "47bd8f777ab580fd6e692a01d65dcadcd181e926c450834a2685452435c70d57",
+      "bytes": 689
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/time-range.svg": {
+      "kind": "file",
+      "sha256": "18c6ed648335e463f9a4159b3d65489bd239b10da141abc584b686b7a5772464",
+      "bytes": 2881
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/time.svg": {
+      "kind": "file",
+      "sha256": "b96368e02742189b56d194b96c1a08293f71b494f54df9c625b5800f648e6656",
+      "bytes": 805
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/tool.svg": {
+      "kind": "file",
+      "sha256": "f015d958156dab3805625fb14e698bd3fed1f08942aab937675203e6130b9a15",
+      "bytes": 2646
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/tree-table.svg": {
+      "kind": "file",
+      "sha256": "57eb7565773353f8bb72c03b04bbca6b13d3570e2617f72df859ff3c7d5dc5b3",
+      "bytes": 906
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/tree.svg": {
+      "kind": "file",
+      "sha256": "60cea6a4686893dc055ee3fb692959cd9d412dae5f76386c01ab39c7480e0bc6",
+      "bytes": 1814
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/upload.svg": {
+      "kind": "file",
+      "sha256": "ad3bb44a436ccc10eb6f61c435d6a89ba8d592aaa4c4c845ef0a2420e168fda4",
+      "bytes": 1396
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/user.svg": {
+      "kind": "file",
+      "sha256": "64e211ff264fcc409fff91d675d31b03a34113094366ed853f39d1e9c7b23578",
+      "bytes": 440
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/validCode.svg": {
+      "kind": "file",
+      "sha256": "78b8cac8fb840ad5d5f748dc9731ff59af3a9db03164fec1f78ba6f4a5e15d31",
+      "bytes": 1340
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/wechat.svg": {
+      "kind": "file",
+      "sha256": "9e78a6a98ffc2edc11ecc00e317cd97d4c90aa9919a8a15c7785ed89e326c2ee",
+      "bytes": 1173
+    },
+    "ruoyi-fastapi-frontend/src/assets/icons/svg/zip.svg": {
+      "kind": "file",
+      "sha256": "f12aeb4c1a74fff0f60fb83ecf0484686de4d35684e728bc62f999ce0fbf2ad4",
+      "bytes": 1460
+    },
+    "ruoyi-fastapi-frontend/src/assets/images/dark.svg": {
+      "kind": "file",
+      "sha256": "004c3023be9bf0204a5f71dcb6c11d7a9159b6aec47c967257d976e4f461ef92",
+      "bytes": 2587
+    },
+    "ruoyi-fastapi-frontend/src/assets/images/light.svg": {
+      "kind": "file",
+      "sha256": "270914fef101265193695d80d78539b1ba89d64dc1d81b8613cde2b9b0bc9955",
+      "bytes": 2511
+    },
+    "ruoyi-fastapi-frontend/src/assets/images/login-background.jpg": {
+      "kind": "file",
+      "sha256": "3cdb3222af657c9a2fcbd716f46cf66d2efeffd25994c1b8997703e603575227",
+      "bytes": 521275
+    },
+    "ruoyi-fastapi-frontend/src/assets/images/profile.jpg": {
+      "kind": "file",
+      "sha256": "c74b445c08b60b50feda75dfd0ed5ef5cc8220da4e04f6947eee0737b42a141b",
+      "bytes": 8997
+    },
+    "ruoyi-fastapi-frontend/src/assets/logo/logo.png": {
+      "kind": "file",
+      "sha256": "d17002ef016bc829f678daf6da22465ec13d87c75287fd3c1972c9a8b3270fb4",
+      "bytes": 3501
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/btn.scss": {
+      "kind": "file",
+      "sha256": "93b8477a614a8bebf65fa06667caf496ca3d7e9afed8a0747135908317a02118",
+      "bytes": 1379
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/element-ui.scss": {
+      "kind": "file",
+      "sha256": "ab8a878b70e77817de6c749b7011df76648f1c0c3422574c926d2c05a59d4463",
+      "bytes": 1326
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/index.scss": {
+      "kind": "file",
+      "sha256": "b4e43a1c9c78f5127c7ca5328f393b49d3e1d118f534c009ece1f2fd980e212b",
+      "bytes": 2569
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/mixin.scss": {
+      "kind": "file",
+      "sha256": "2586cfdc36c9c432e6f4f792fa6ed77cef00fd5d999d6c23549f9926a55a7b22",
+      "bytes": 1311
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/ruoyi.scss": {
+      "kind": "file",
+      "sha256": "0c9194755ce4c5b637601b600523b3f8110ddfd56a2580b2840f726cca8f5249",
+      "bytes": 8984
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/sidebar.scss": {
+      "kind": "file",
+      "sha256": "41838ec44cd3d5a93a9e720dbbc4cd8c4e2e083c0b6fe25bfd4fe5419029b2f0",
+      "bytes": 7098
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/transition.scss": {
+      "kind": "file",
+      "sha256": "c785676a9d2325e25dc5743a6fe829a1e90e22e5e705f75c797541c01eaf3fc8",
+      "bytes": 1325
+    },
+    "ruoyi-fastapi-frontend/src/assets/styles/variables.module.scss": {
+      "kind": "file",
+      "sha256": "06b5d9b2c1edfa505a904e36fa50cee3971c2e9afe0e8d9b25183965b47a2f6f",
+      "bytes": 13559
+    },
+    "ruoyi-fastapi-frontend/src/components/Breadcrumb/index.vue": {
+      "kind": "file",
+      "sha256": "e1dcf4c428a60ccaef0c61a8247eb89a4e56612888b0d2c66e68acdc33491d1e",
+      "bytes": 2600
+    },
+    "ruoyi-fastapi-frontend/src/components/BusinessDateTimePicker/index.vue": {
+      "kind": "file",
+      "sha256": "7a8456c0cb56e7fa265d5c89e3a28af301cd75e41c934e61a017b38a18a75782",
+      "bytes": 3076
+    },
+    "ruoyi-fastapi-frontend/src/components/BusinessFileUpload/index.vue": {
+      "kind": "file",
+      "sha256": "6f9dfd56707d715b9ad24daa826b1b8e92f14dc67da204989f3522835195cf46",
+      "bytes": 13214
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/day.vue": {
+      "kind": "file",
+      "sha256": "c42f97f8331f6cdfc5032891a0194ef8cf378e5084e089f380bc87cec5db2b7f",
+      "bytes": 5467
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/hour.vue": {
+      "kind": "file",
+      "sha256": "c5a40549b54c6c314ad6069ee42a52f2b1fd53df5a89457dbe327fa56f25a50e",
+      "bytes": 4148
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/index.vue": {
+      "kind": "file",
+      "sha256": "28e1bc80377bf336a5349079bcb1317559101e1827cba5af286b536b800ce635",
+      "bytes": 10147
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/min.vue": {
+      "kind": "file",
+      "sha256": "b07e724887cfd6a39e4750204d74ae14b09ab35af981502e997d7d715fc98de9",
+      "bytes": 3971
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/month.vue": {
+      "kind": "file",
+      "sha256": "2caab8d70d8890cf4b953e096ff2f5be01a51a3ae33cf2794c439f488b9313a0",
+      "bytes": 4399
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/result.vue": {
+      "kind": "file",
+      "sha256": "548aba1e57e59ecc9754d85e03e647f559d4ca21d86c47d7809ee3a3e668714b",
+      "bytes": 2201
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/second.vue": {
+      "kind": "file",
+      "sha256": "aa29994e00ea577fb176b1dc533090e2f66cb9e67e3a19b6a7dde108901cbd0a",
+      "bytes": 4014
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/week.vue": {
+      "kind": "file",
+      "sha256": "52af5e16c406e7d6f3d541e431d672bd295080a233e382e483e2c71a4aa3584b",
+      "bytes": 6349
+    },
+    "ruoyi-fastapi-frontend/src/components/Crontab/year.vue": {
+      "kind": "file",
+      "sha256": "4b2b0b2f7cbe6a792845777203530228a5275d33c01624f038b6f516d47185d1",
+      "bytes": 4481
+    },
+    "ruoyi-fastapi-frontend/src/components/DictTag/index.vue": {
+      "kind": "file",
+      "sha256": "b49effc9f2374f7180b51ed8a90e7a64945f9cc75ef3d1cd716afbce2c5a0413",
+      "bytes": 2415
+    },
+    "ruoyi-fastapi-frontend/src/components/Editor/index.vue": {
+      "kind": "file",
+      "sha256": "8afb61f8793fa3b06dc410399bbb2e3c3e104105bbe5fa3a165e8a305abf7b05",
+      "bytes": 8112
+    },
+    "ruoyi-fastapi-frontend/src/components/ExcelImportDialog/index.vue": {
+      "kind": "file",
+      "sha256": "b48537ae1d55c009f5dc63ff017c2135b8cf7ca4f48510348163c5ad4cc67a9f",
+      "bytes": 4037
+    },
+    "ruoyi-fastapi-frontend/src/components/FileUpload/index.vue": {
+      "kind": "file",
+      "sha256": "7f68b98848625612ffc2889485d24a42fc5fda9fe2833ab1bf4a134578b3435c",
+      "bytes": 7657
+    },
+    "ruoyi-fastapi-frontend/src/components/Hamburger/index.vue": {
+      "kind": "file",
+      "sha256": "9ace3a28c9d7793b709dabb29cdda3638533db5d00481f75d56e533c057c4bb0",
+      "bytes": 1147
+    },
+    "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue": {
+      "kind": "file",
+      "sha256": "20735f9dbb06453d50d5eb2344ca30c1cf39d13433fc319a0f386d1750e4a1dd",
+      "bytes": 9057
+    },
+    "ruoyi-fastapi-frontend/src/components/IconSelect/index.vue": {
+      "kind": "file",
+      "sha256": "cfd6a196ae87b2c374348ee1f43a5ecf9c70c226e042026b0693a7321dca1dd2",
+      "bytes": 2533
+    },
+    "ruoyi-fastapi-frontend/src/components/IconSelect/requireIcons.js": {
+      "kind": "file",
+      "sha256": "94a77fd02e0ff4dfeffd05e1118db35712ddc8c55cd8a74cf2b077988221f65c",
+      "bytes": 218
+    },
+    "ruoyi-fastapi-frontend/src/components/ImagePreview/index.vue": {
+      "kind": "file",
+      "sha256": "53f5753fd7bed7af587de6702663b5f2f640a0edce969cf7d32e4d9cf01d7217",
+      "bytes": 1822
+    },
+    "ruoyi-fastapi-frontend/src/components/ImageUpload/index.vue": {
+      "kind": "file",
+      "sha256": "d4642d430d29b61f0887dd520d9e0b67486a1be5b6853b5aba773cad45e9866c",
+      "bytes": 6934
+    },
+    "ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue": {
+      "kind": "file",
+      "sha256": "51e08666b1ac7758e876b6da49824ff31eab10adf5366f3f058870bdb9232ab8",
+      "bytes": 7551
+    },
+    "ruoyi-fastapi-frontend/src/components/Pagination/index.vue": {
+      "kind": "file",
+      "sha256": "24813fa54408bb8cd5ac77619810330c4787758da2d39afa2fbd7b2e50eee3ed",
+      "bytes": 1919
+    },
+    "ruoyi-fastapi-frontend/src/components/ParentView/index.vue": {
+      "kind": "file",
+      "sha256": "352e3d3d6402407914c4a798d85093c3201bb58a3715bf33ebf6ae8420358991",
+      "bytes": 42
+    },
+    "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue": {
+      "kind": "file",
+      "sha256": "04530cc66864ee52d8011c1f36c72068dc04bfbba5bd5a3c915fa817dffbf24f",
+      "bytes": 7773
+    },
+    "ruoyi-fastapi-frontend/src/components/RuoYi/Doc/index.vue": {
+      "kind": "file",
+      "sha256": "e9192d86b196ed0e5ab49d899ee43aa82d1ba992ec3bb725189ac75b9d80ed19",
+      "bytes": 215
+    },
+    "ruoyi-fastapi-frontend/src/components/RuoYi/Git/index.vue": {
+      "kind": "file",
+      "sha256": "bcf4cb5f7fac745aaae78edf3e1df98b0dfd79c417feacba1fb747708d20efa6",
+      "bytes": 235
+    },
+    "ruoyi-fastapi-frontend/src/components/Screenfull/index.vue": {
+      "kind": "file",
+      "sha256": "4ed07bf16b85c2aa28dd808acf6d2e3bb11bd753aed236e724dc6519fe166168",
+      "bytes": 430
+    },
+    "ruoyi-fastapi-frontend/src/components/SizeSelect/index.vue": {
+      "kind": "file",
+      "sha256": "4453c463e9f815b0b50b11b2781b1a81a30e1e5745f0879982c331eccc98681f",
+      "bytes": 1153
+    },
+    "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue": {
+      "kind": "file",
+      "sha256": "c4fd5f862551ae22612c622d67222791afd390fb3784476d061c55bea375b2ed",
+      "bytes": 903
+    },
+    "ruoyi-fastapi-frontend/src/components/SvgIcon/svgicon.js": {
+      "kind": "file",
+      "sha256": "a0f0ae4e4fc32a404ff9c64728f98c440eca2dee33abcd64616aebab3ffba806",
+      "bytes": 275
+    },
+    "ruoyi-fastapi-frontend/src/components/TreePanel/index.vue": {
+      "kind": "file",
+      "sha256": "f264cab5c85cdb0beaca577576f0c3558d4c07626fb6cdd61f111979ef08913f",
+      "bytes": 16406
+    },
+    "ruoyi-fastapi-frontend/src/components/iFrame/index.vue": {
+      "kind": "file",
+      "sha256": "c15aee742d402f4ac16f63885cd49bf0d40d3917f90c0c49caa848ded8f82110",
+      "bytes": 652
+    },
+    "ruoyi-fastapi-frontend/src/directive/common/copyText.js": {
+      "kind": "file",
+      "sha256": "ddd4a611f9ebba1246c5737b13ce335ce17712f10b09cd7b2b11c6bbd52484be",
+      "bytes": 1652
+    },
+    "ruoyi-fastapi-frontend/src/directive/index.js": {
+      "kind": "file",
+      "sha256": "a2cf53abce4af1e4c87f2bc5f04d33f4a05e36af035e386f2dda90d52afbfeda",
+      "bytes": 283
+    },
+    "ruoyi-fastapi-frontend/src/directive/permission/hasPermi.js": {
+      "kind": "file",
+      "sha256": "ec7a4f3197cea8d2fe241c00633af0cd659305f54cee481b571dbd0f3f88067a",
+      "bytes": 710
+    },
+    "ruoyi-fastapi-frontend/src/directive/permission/hasRole.js": {
+      "kind": "file",
+      "sha256": "11cb0d212961fb0b6499fe0a572ca55781e61c3614ad0a8d3c2332cd97e3e625",
+      "bytes": 641
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue": {
+      "kind": "file",
+      "sha256": "f2346d1e42f56ab851447576476de87d537c44abfeada5a1642c05fbe9217d85",
+      "bytes": 2826
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Copyright/index.vue": {
+      "kind": "file",
+      "sha256": "c8817b1c9ad9f0e75bd7895d80d48b834c463d44e8a4025402add11fce93fef1",
+      "bytes": 620
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/DetailView.vue": {
+      "kind": "file",
+      "sha256": "407a9bf7f8b2fd67b547513ec9558a47ee2a17b1ad5d6603f7ff63823ee595c4",
+      "bytes": 7810
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue": {
+      "kind": "file",
+      "sha256": "d1b87ab9a457fa63c67e227ea9b21b6d48398e336766660d0176d00596ea571f",
+      "bytes": 5721
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/IframeToggle/index.vue": {
+      "kind": "file",
+      "sha256": "db01bd5a7aa594803076c96c847d9b8481507ed7f6dc65710205a5c18d19a41e",
+      "bytes": 654
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/InnerLink/index.vue": {
+      "kind": "file",
+      "sha256": "baa87326beb6c09ae3d58b5280c8ffcce66f0bed70b715d47eb25b61c74e7ced",
+      "bytes": 686
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue": {
+      "kind": "file",
+      "sha256": "17f5047a7ade2139be3efba00574f8ba23d4ee6e04f7c167b91425b150aeeafb",
+      "bytes": 8460
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue": {
+      "kind": "file",
+      "sha256": "5dce0a0d0ce8bbcf1bc720b971b14aed783c9a4eb29e8ce1d3c97a6202368a95",
+      "bytes": 10171
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Link.vue": {
+      "kind": "file",
+      "sha256": "cfc48b3fa1fe330de52cb2a7be33101aa6f145616d7c93ce2debc2552ec05c87",
+      "bytes": 592
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue": {
+      "kind": "file",
+      "sha256": "7499c66682930d32760cfe1468e2e04e93b38a15d0a9615fe10f0995db216de2",
+      "bytes": 2483
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue": {
+      "kind": "file",
+      "sha256": "b80727425a217716dc5566dba729b05b8b58bcaadfd863e4f2ea142fd5d091eb",
+      "bytes": 2721
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue": {
+      "kind": "file",
+      "sha256": "217f7e46ef4d5e4dee3dfb49c54ab469c02edf07e2d0c519ab19cfdf4c8fa0d8",
+      "bytes": 2867
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/TagsView/ScrollPane.vue": {
+      "kind": "file",
+      "sha256": "69fe721ca8e236efff673681193fa5d6b9f779aef52fa7eef26ca582b06cbb4b",
+      "bytes": 4176
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue": {
+      "kind": "file",
+      "sha256": "aded15842f37cb8d5517f5e7876d4e458f2f8ed9ff7601809faeab280cfa2611",
+      "bytes": 19203
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue": {
+      "kind": "file",
+      "sha256": "7d774f10a0083e2a3912cc6cd8b1c47f81f6ac312cd7310d55b2c15f561f3774",
+      "bytes": 3041
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue": {
+      "kind": "file",
+      "sha256": "e72dfcf2b386b7144f337b996165a2350516ae99359dd1105f9e0805904199e2",
+      "bytes": 6322
+    },
+    "ruoyi-fastapi-frontend/src/layout/components/index.js": {
+      "kind": "file",
+      "sha256": "39d84f3f8f8179e32071219f3ac04b1d785ecd781e55cdee7cb75ac9bbf38b72",
+      "bytes": 200
+    },
+    "ruoyi-fastapi-frontend/src/layout/index.vue": {
+      "kind": "file",
+      "sha256": "c6843c45ca46723faea8fc1d1e256f9f0b47d7d7475986c45bed643200bba69e",
+      "bytes": 2961
+    },
+    "ruoyi-fastapi-frontend/src/main.js": {
+      "kind": "file",
+      "sha256": "73fb7ccf3ad985c56db86f613e5806e80673dab502c80d6d56122ce2df3941e1",
+      "bytes": 2724
+    },
+    "ruoyi-fastapi-frontend/src/permission.js": {
+      "kind": "file",
+      "sha256": "f3b2dcb207312cf407cb6a4c89edea18eccdeb0c3eb020eb56bcdf7241f6be35",
+      "bytes": 2199
+    },
+    "ruoyi-fastapi-frontend/src/plugins/auth.js": {
+      "kind": "file",
+      "sha256": "ffc4ffce2417b7e6dc49f7284b66fcfc7c87f71878a65e2bb4c0760fd5569924",
+      "bytes": 1482
+    },
+    "ruoyi-fastapi-frontend/src/plugins/cache.js": {
+      "kind": "file",
+      "sha256": "dcff458aa6fc6e0d6806bb19e0877383839de9b4f033e333aa9f8faf3c87897c",
+      "bytes": 1408
+    },
+    "ruoyi-fastapi-frontend/src/plugins/download.js": {
+      "kind": "file",
+      "sha256": "c78a22e277a40afaa1920e4eb02ca7b7b67e6353df4a6ee663a3f6e60511ae3e",
+      "bytes": 5583
+    },
+    "ruoyi-fastapi-frontend/src/plugins/index.js": {
+      "kind": "file",
+      "sha256": "9da2efc4e952084a08446eca6e057771f6b4a8ee21bd2ec19505b2029c43b53d",
+      "bytes": 506
+    },
+    "ruoyi-fastapi-frontend/src/plugins/modal.js": {
+      "kind": "file",
+      "sha256": "5d743356cc2bbd7cd5bf280de3bf16e36a3d523d12f95bcdbffd5ee292eea4de",
+      "bytes": 1843
+    },
+    "ruoyi-fastapi-frontend/src/plugins/tab.js": {
+      "kind": "file",
+      "sha256": "82c14f99dc1fd0261fbf94cd31e90980642ccea527fb90512187db44602c2e7c",
+      "bytes": 2282
+    },
+    "ruoyi-fastapi-frontend/src/router/index.js": {
+      "kind": "file",
+      "sha256": "893ceb6d580f5d5038a4d404b786beed82edeb02e5fabd8621014338f213efff",
+      "bytes": 5275
+    },
+    "ruoyi-fastapi-frontend/src/settings.js": {
+      "kind": "file",
+      "sha256": "9f40804ebe7426b5145430874c97651ab39c99bef8792113afc6afa50dfc20f0",
+      "bytes": 1036
+    },
+    "ruoyi-fastapi-frontend/src/store/index.js": {
+      "kind": "file",
+      "sha256": "76904ca6afa316489bc8c7831c68fbc2c884a0c8b854966023cb2f70fc994470",
+      "bytes": 49
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/app.js": {
+      "kind": "file",
+      "sha256": "0b74b5a53ea2f6c70fa0e17f4fddf0e6532490da9ede37845b10dfeea34692d4",
+      "bytes": 1187
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/dict.js": {
+      "kind": "file",
+      "sha256": "c16440ece3a4710e67d37e871cc9deb1de49b187123ae756cc69cb51879f9f9b",
+      "bytes": 1214
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/lock.js": {
+      "kind": "file",
+      "sha256": "32d67cc639d13a2eb0c4f03d6a017c347cec292457cf5add21cba0383f9e756b",
+      "bytes": 799
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/permission.js": {
+      "kind": "file",
+      "sha256": "127285fb9f5c85466eae20087530cc381526c1d0a44297f2dde12c6ca8fe5ffc",
+      "bytes": 4593
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/settings.js": {
+      "kind": "file",
+      "sha256": "4d739783733ef6bc630ed5715a5dd3472895c930b50e2ff5ed05548eb0850f55",
+      "bytes": 2299
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/tagsView.js": {
+      "kind": "file",
+      "sha256": "039e53c1e5ef66fa116f7251bb833f5a520c9bd410955588fb22108ecee37e96",
+      "bytes": 7041
+    },
+    "ruoyi-fastapi-frontend/src/store/modules/user.js": {
+      "kind": "file",
+      "sha256": "4b86944ddd25e76b4bde5f4908db76fb5903fb3bd111eb53b0ca94ed4ac58b32",
+      "bytes": 3807
+    },
+    "ruoyi-fastapi-frontend/src/utils/auth.js": {
+      "kind": "file",
+      "sha256": "37fc40e3038d25d4d3adb990d01fc9b36f2dc430b025639742edb0115e53d096",
+      "bytes": 271
+    },
+    "ruoyi-fastapi-frontend/src/utils/dict.js": {
+      "kind": "file",
+      "sha256": "9a20ec76c8e92dfc7a6cad655166953f69bd63dbb106de22990c71b9ff545da6",
+      "bytes": 718
+    },
+    "ruoyi-fastapi-frontend/src/utils/dynamicTitle.js": {
+      "kind": "file",
+      "sha256": "89d1ae6c51bf067ed8571a3c5ed2fe29584e86905ffa0a95ef45a16173098f85",
+      "bytes": 378
+    },
+    "ruoyi-fastapi-frontend/src/utils/errorCode.js": {
+      "kind": "file",
+      "sha256": "197cb29f5dc51ed5a7ed67d64006eed11d4b2099e697f3c298bcfefbe858c3f0",
+      "bytes": 200
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/config.js": {
+      "kind": "file",
+      "sha256": "467460de64ec80a99d386e0f246a103e8b3cb71d0f3cac44abb7d62e4a50b048",
+      "bytes": 9907
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/css.js": {
+      "kind": "file",
+      "sha256": "0eef4019b3a3cb7fa4437d602cb04c4f229b42e073a0f849d5d1b821175bfcd1",
+      "bytes": 480
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/drawingDefault.js": {
+      "kind": "file",
+      "sha256": "d9d75babcc77548fb832e7f07dce260efd0c5b4cb7223a8947394fbb9c830a74",
+      "bytes": 905
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/html.js": {
+      "kind": "file",
+      "sha256": "2ba608fe1cecb6fc8bc1d51d9821184031c221b7e18f714cb9367f2f7721545e",
+      "bytes": 14669
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/icon.json": {
+      "kind": "file",
+      "sha256": "e01708122f8f318aa36a2e11d81645c8ffc496fb89ea4784b582d23c848a70e2",
+      "bytes": 3301
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/js.js": {
+      "kind": "file",
+      "sha256": "cef8b286e4a912c942c4ffec19d7fc5d6434f2a54d52488508c20ee9ccc12858",
+      "bytes": 8831
+    },
+    "ruoyi-fastapi-frontend/src/utils/generator/render.js": {
+      "kind": "file",
+      "sha256": "ab11183e4741b825e95d37d260be3a077ead8516bb9de6e2cb920989349b939e",
+      "bytes": 4824
+    },
+    "ruoyi-fastapi-frontend/src/utils/index.js": {
+      "kind": "file",
+      "sha256": "771ccb9591179ab1a13f840c9867734a375db52f613558cb744b44470395e97d",
+      "bytes": 8555
+    },
+    "ruoyi-fastapi-frontend/src/utils/job.js": {
+      "kind": "file",
+      "sha256": "d87e7cb158c8bf9f950fcdd340c040ee17cdc4fd3deac7a4365721a748b3ddb2",
+      "bytes": 2084
+    },
+    "ruoyi-fastapi-frontend/src/utils/jsencrypt.js": {
+      "kind": "file",
+      "sha256": "87c1df57623849dcba74842103a6c4b04612f4f8a6bf0eff77fe34211a7cdf18",
+      "bytes": 1194
+    },
+    "ruoyi-fastapi-frontend/src/utils/passwordRule.js": {
+      "kind": "file",
+      "sha256": "dda90b3fca16e0c74ec263103477e9e0ad45293e6b567220bd28b5da64add4d5",
+      "bytes": 2755
+    },
+    "ruoyi-fastapi-frontend/src/utils/permission.js": {
+      "kind": "file",
+      "sha256": "ec036b0ee9b58490deb20eb2a664b8b59f9a474f02bb5034246ab2a56b139448",
+      "bytes": 1265
+    },
+    "ruoyi-fastapi-frontend/src/utils/pluginPlanFormatter.js": {
+      "kind": "file",
+      "sha256": "d6d0898766b7efbdf1e748815dc1a741a0a73efb85bcc824309bb39a0e9d2df7",
+      "bytes": 6386
+    },
+    "ruoyi-fastapi-frontend/src/utils/pluginViewResolver.js": {
+      "kind": "file",
+      "sha256": "833d4e157d1cae92a57d23ea9f1e3abba4695931bdbf9f4eeb919f37017286b3",
+      "bytes": 856
+    },
+    "ruoyi-fastapi-frontend/src/utils/request.js": {
+      "kind": "file",
+      "sha256": "4b083c883beb9db7b5b774946ea17aad2fcc3276346986da98ab041a8a365839",
+      "bytes": 9008
+    },
+    "ruoyi-fastapi-frontend/src/utils/ruoyi.js": {
+      "kind": "file",
+      "sha256": "dd0f1b8ecbfe25d179a3f47d1af9387aa90af0b97ec0bc8facc58a6f04b1b4e4",
+      "bytes": 5492
+    },
+    "ruoyi-fastapi-frontend/src/utils/scroll-to.js": {
+      "kind": "file",
+      "sha256": "511d4061e68850b2e350c4777169f456d91efe5300bb9f2512dd81e80bfc2d01",
+      "bytes": 1720
+    },
+    "ruoyi-fastapi-frontend/src/utils/theme.js": {
+      "kind": "file",
+      "sha256": "0617a04ee4306a8b303f0a5feedfd977edd71e46e94d80b2c18672e002b2b5d7",
+      "bytes": 1960
+    },
+    "ruoyi-fastapi-frontend/src/utils/time.js": {
+      "kind": "file",
+      "sha256": "b82b399fa232d5a8ab5c895e6b348aabf70bdd5eabcc4daad4534d74328f05c1",
+      "bytes": 18780
+    },
+    "ruoyi-fastapi-frontend/src/utils/transportCrypto.js": {
+      "kind": "file",
+      "sha256": "1a95b1c5c81ea5b97edcc4a24c92587203bdb939174358a8cb01e41dc47ac98c",
+      "bytes": 23714
+    },
+    "ruoyi-fastapi-frontend/src/utils/transportCryptoPolicy.js": {
+      "kind": "file",
+      "sha256": "a3939e1df400119a6ec04c7bd11b7c43769ff7db2567d107110e1077e7137c52",
+      "bytes": 11550
+    },
+    "ruoyi-fastapi-frontend/src/utils/validate.js": {
+      "kind": "file",
+      "sha256": "18ffd77bf4d316c52496810264f7caf70927ad3cb0894925a4161c00efb77193",
+      "bytes": 2755
+    },
+    "ruoyi-fastapi-frontend/src/views/dashboard/editable-link-group.vue": {
+      "kind": "file",
+      "sha256": "80b2713f82ae1607548af895acc574d175f575614353fb15677a3278d7b308fd",
+      "bytes": 1058
+    },
+    "ruoyi-fastapi-frontend/src/views/dashboard/index.vue": {
+      "kind": "file",
+      "sha256": "968123d8aca4c09c8d74934545463f9f1a3cdab082ff2766b75423c5c5edcf93",
+      "bytes": 17089
+    },
+    "ruoyi-fastapi-frontend/src/views/error/401.vue": {
+      "kind": "file",
+      "sha256": "a709f0d6afd79fb50f6dbf7aa74101b9d5a24705dad98cc8c760ccb689a1cb40",
+      "bytes": 1722
+    },
+    "ruoyi-fastapi-frontend/src/views/error/404.vue": {
+      "kind": "file",
+      "sha256": "cc89ec435105ba94f0d3332f9c40fea40ceb84687cd8743ab62b44af41510e66",
+      "bytes": 5152
+    },
+    "ruoyi-fastapi-frontend/src/views/lock.vue": {
+      "kind": "file",
+      "sha256": "c88287be1cd14f43efccc52eef1ccc224247ba6665c27cf277cf25547160b9bd",
+      "bytes": 8447
+    },
+    "ruoyi-fastapi-frontend/src/views/login.vue": {
+      "kind": "file",
+      "sha256": "2397e514951c77d3eb9007ea884e80b477ab5d6bddf9403247ae36847f209629",
+      "bytes": 6770
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/cache/index.vue": {
+      "kind": "file",
+      "sha256": "eba3b91d20a25a177cc44865c0fc767d0c08d700edc8a3b42387c0c4a180f6ce",
+      "bytes": 6129
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue": {
+      "kind": "file",
+      "sha256": "fefb4f78a92393fe2d9d73a3400902bcfaafe78ee18636004e59c374acb962fa",
+      "bytes": 7409
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/druid/index.vue": {
+      "kind": "file",
+      "sha256": "0817611e44f4d1d0c02320cd843dab70612333548799122ae8fa373dbeaf6e2b",
+      "bytes": 301
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue": {
+      "kind": "file",
+      "sha256": "7fecba6645df67c5dd442e188b46455d837d2bc80d680684c9faef1ae81477e6",
+      "bytes": 15052
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue": {
+      "kind": "file",
+      "sha256": "d98ca812571569702a3b575886d65a36211b683b42042a200f4844a418b058e1",
+      "bytes": 25320
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue": {
+      "kind": "file",
+      "sha256": "1483062658481f6382a41b39a5be18e2a720e07a21f1763c47616ef1cf865782",
+      "bytes": 9056
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue": {
+      "kind": "file",
+      "sha256": "86096a719f59ff44499642776cc409e8cfd0c0bfeb1eb617b402bc9c61a513df",
+      "bytes": 9946
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue": {
+      "kind": "file",
+      "sha256": "e0553c562a9be036b699969afdffb760133dc87b9ef6206080ed0d775e1f34bc",
+      "bytes": 8312
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/online/index.vue": {
+      "kind": "file",
+      "sha256": "6ed6023b75508c03dd9fdaa4a71411793c0cb398132d108a16794c529e0d37d3",
+      "bytes": 3995
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/operlog/detail.vue": {
+      "kind": "file",
+      "sha256": "e5d40800bbb15c1aa6510d070ef49b6be2e200b6595e1af7d8d8d4f349d0e466",
+      "bytes": 5980
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue": {
+      "kind": "file",
+      "sha256": "2eab545d3ebc2424d8a407cee18de0c117fd49ebbddc8b37f56e6a75fc42965d",
+      "bytes": 9348
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/server/index.vue": {
+      "kind": "file",
+      "sha256": "e3cf24d29a6b22f7669e5ac1e6efd58e77800cf2e6538fbb366c97ce837ea21a",
+      "bytes": 10325
+    },
+    "ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue": {
+      "kind": "file",
+      "sha256": "ff9fb1be8107090a91cb0b823da85d0aeac3b11ff1c7e15d6ce1d4102ef50d0a",
+      "bytes": 29987
+    },
+    "ruoyi-fastapi-frontend/src/views/redirect/index.vue": {
+      "kind": "file",
+      "sha256": "65732b9572201862623918744c9c1a6143bee26c67954f23e9cccdbd0935dc6e",
+      "bytes": 267
+    },
+    "ruoyi-fastapi-frontend/src/views/register.vue": {
+      "kind": "file",
+      "sha256": "baea186c60f165a4968e2416959a98f78ad73bd9333934abd29917ed4563c623",
+      "bytes": 5900
+    },
+    "ruoyi-fastapi-frontend/src/views/system/config/index.vue": {
+      "kind": "file",
+      "sha256": "4ebd8d5727da23a2a738555ee921b7184196d6a28c1e347cca3f63f149c36ce2",
+      "bytes": 10988
+    },
+    "ruoyi-fastapi-frontend/src/views/system/dept/index.vue": {
+      "kind": "file",
+      "sha256": "2c082936f638f7d936660255d0fccb61d75e2096eb2eb24c748c5814b1529bed",
+      "bytes": 11418
+    },
+    "ruoyi-fastapi-frontend/src/views/system/dict/data.vue": {
+      "kind": "file",
+      "sha256": "474769e3246c7505b51202cdb0ce42c64224996462edd07a00599959358a3235",
+      "bytes": 12433
+    },
+    "ruoyi-fastapi-frontend/src/views/system/dict/detail.vue": {
+      "kind": "file",
+      "sha256": "b4cf61dc727e01b6052f0a713b33cf11ebde7ef132bd7272672b7301c8aa3664",
+      "bytes": 5757
+    },
+    "ruoyi-fastapi-frontend/src/views/system/dict/index.vue": {
+      "kind": "file",
+      "sha256": "32f069d3fe51b3fcc4f2a8103a860bce820085ab58ed95d856b37181f29f114b",
+      "bytes": 11650
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue": {
+      "kind": "file",
+      "sha256": "ae1ac9ebe016e6de8fb9ebc83d49c30d420fbe13bf8a8568f8aeff396527d40e",
+      "bytes": 11789
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue": {
+      "kind": "file",
+      "sha256": "13883029524dc76ac596b449e9efa73503de61048dfd0d76e5aea58309a76dea",
+      "bytes": 8578
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileDetailDialog.vue": {
+      "kind": "file",
+      "sha256": "f2a9caf929c9ba2901f8abd76a221d0112b04611524e85d0b3307712fcb2c9dd",
+      "bytes": 5091
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue": {
+      "kind": "file",
+      "sha256": "df0756ffac2ecc454b46dc00d311bedadaef67e0e87fe94eac3b4ededb15e74c",
+      "bytes": 23493
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileReferenceDrawer.vue": {
+      "kind": "file",
+      "sha256": "6fa600fe25e3df4e72d9511513acd8c9a2391a909e0ec0331df5a011cc39ba8d",
+      "bytes": 2790
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue": {
+      "kind": "file",
+      "sha256": "d3da6c83f6dd60a552875429d132edfdab20dfb27ab0fdf0a330fb957ad1df4c",
+      "bytes": 6469
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue": {
+      "kind": "file",
+      "sha256": "588cf583fb9f9de7fd21b568369152d1808973c657a770405e2b01b4c509883e",
+      "bytes": 12018
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileSearchForm.vue": {
+      "kind": "file",
+      "sha256": "e6424667407889efe93a5f0035ab669cdb1fcee371865ac86fa6124c1a786dcf",
+      "bytes": 3705
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileStatistics.vue": {
+      "kind": "file",
+      "sha256": "93df901afdbb5814f29ce1b30b691c8ca3ac22350511eff3d7c507a23a846208",
+      "bytes": 6646
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue": {
+      "kind": "file",
+      "sha256": "812c6089a73b5c5720f45f37f7fcadbaeba3b5bcce7e3ce076f6b374576c880b",
+      "bytes": 8352
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/FileTransferDialog.vue": {
+      "kind": "file",
+      "sha256": "c624080ee81b53833507e291ba470e4c987eed8c597cb5f8721acbf3f5212404",
+      "bytes": 4792
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/components/fileFormatters.js": {
+      "kind": "file",
+      "sha256": "5cff6107074a776efe17edc65db4d4a4607b2096b070fdfe371c6c30b6a77272",
+      "bytes": 4337
+    },
+    "ruoyi-fastapi-frontend/src/views/system/file/index.vue": {
+      "kind": "file",
+      "sha256": "6e410a59b188eda53c27c15cd832d2702f23dad267a4db8af7e8f40b02f0edb4",
+      "bytes": 10391
+    },
+    "ruoyi-fastapi-frontend/src/views/system/menu/index.vue": {
+      "kind": "file",
+      "sha256": "c633626bded693af3b763f6c727d9d9bfc4c81fa466ce255cf2f4ce6a31b8f0a",
+      "bytes": 20017
+    },
+    "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue": {
+      "kind": "file",
+      "sha256": "982b6d8c279d1f57d94aebe460e10957d5961e41438fb7e618f20018bd26a92e",
+      "bytes": 3371
+    },
+    "ruoyi-fastapi-frontend/src/views/system/notice/index.vue": {
+      "kind": "file",
+      "sha256": "bdbb13541c08fb1de0b9bd636e40d9c33817f5698a3421b7bb0c2b056ec8a66e",
+      "bytes": 10399
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue": {
+      "kind": "file",
+      "sha256": "23fe87f69e035c5c9ab3fba6585001c644b271a1f17df9fcc96d8fd0761134d3",
+      "bytes": 10848
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue": {
+      "kind": "file",
+      "sha256": "9825235506c08d2e83dbd1aa16ded227f5fbec991483b65860b05f1a38536c83",
+      "bytes": 12592
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue": {
+      "kind": "file",
+      "sha256": "b92cde9d669168c01069bd8070b8afa6a3faadb53f1a80f6506576da7402ebaa",
+      "bytes": 18525
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue": {
+      "kind": "file",
+      "sha256": "4b602f2a7317732383a6ed12379af3f4cfbeb68af8d131f78ab2eb35d980e36b",
+      "bytes": 6938
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue": {
+      "kind": "file",
+      "sha256": "1aa2c264176ef4bfc28c004aabd58d9c3c5c7718a4feea089db53fa5ea8db98e",
+      "bytes": 9087
+    },
+    "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue": {
+      "kind": "file",
+      "sha256": "985f2196a6d05a7864d4e11f8a4bf0894addfbb1f0ccd226c8c18caa642b67fe",
+      "bytes": 71357
+    },
+    "ruoyi-fastapi-frontend/src/views/system/post/index.vue": {
+      "kind": "file",
+      "sha256": "241665b9a010450e415731471d11507d4d61a75a53a27058d62bfc5599e51398",
+      "bytes": 9326
+    },
+    "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue": {
+      "kind": "file",
+      "sha256": "1ee216345eb4772cc5861daa6f0b17b3cada0d06aa3a253c575ad186f6e5aff7",
+      "bytes": 5898
+    },
+    "ruoyi-fastapi-frontend/src/views/system/role/index.vue": {
+      "kind": "file",
+      "sha256": "d79a6487f37787b0faa66923ab21cb2e7edffaaa7ac1417b5c4253a5746d1a54",
+      "bytes": 20077
+    },
+    "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue": {
+      "kind": "file",
+      "sha256": "fc8825705a45324eedc70a0245250e482cc5f49e0b3808a8a29dc069e1cc2340",
+      "bytes": 4426
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/authRole.vue": {
+      "kind": "file",
+      "sha256": "e92ffcd8ff8e41bcfa8ca0f2088d2e9d4c609b8857cd302f7c4373258f97118e",
+      "bytes": 3934
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/index.vue": {
+      "kind": "file",
+      "sha256": "a6c8830ce2d87bd20fcc745d9e0cca4266b1c91fbadaf42e99aa6f9002603969",
+      "bytes": 23457
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue": {
+      "kind": "file",
+      "sha256": "28f1aadd292740e1b5ecb23a84337d7f0fdb15c10b89bf5cf28e2d2473cdbd19",
+      "bytes": 3730
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/profile/resetPwd.vue": {
+      "kind": "file",
+      "sha256": "04ea3e7fb05d2ec39712b32d280fee5a775d7615932b21ef66ebdf399bc614a7",
+      "bytes": 1968
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue": {
+      "kind": "file",
+      "sha256": "5b7dd436332ca4b00a60d3d8263ef30592a3cf80f5fd5848e847dc154ea480ee",
+      "bytes": 4829
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue": {
+      "kind": "file",
+      "sha256": "30ab28768068b2f0e15c5582cb88140edc6d215b84499cec69dda93126af8f68",
+      "bytes": 5085
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/profile/userInfo.vue": {
+      "kind": "file",
+      "sha256": "3f172eb1bf8e1f5d61cf1f25f4bb45f9f0d123970cd0fd3236a5f6c58b81f8a1",
+      "bytes": 2237
+    },
+    "ruoyi-fastapi-frontend/src/views/system/user/view.vue": {
+      "kind": "file",
+      "sha256": "492fd788ad3a3fc662e37da67912c74fd07c7b4c4fbd716d7171cb5d5330f94f",
+      "bytes": 6187
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/CodeTypeDialog.vue": {
+      "kind": "file",
+      "sha256": "9cbe34e2f326550a0e5c7aef73b55f456f19a7d7e4b08d9c4bea18de3f005baf",
+      "bytes": 1783
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/DraggableItem.vue": {
+      "kind": "file",
+      "sha256": "28c956042fefedf15b1d88b77feb4a6d3d58dd5cee713f9d1c6c774f1ff76094",
+      "bytes": 2651
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/IconsDialog.vue": {
+      "kind": "file",
+      "sha256": "526c33d94528f7296d52d2754a82697fa1a30184f4b7a522aa4f3dc216ec3011",
+      "bytes": 2540
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue": {
+      "kind": "file",
+      "sha256": "56a1c7971882f07c9dcb73fa990ce1e1c124b555abd4ea8dde82f11847ee7178",
+      "bytes": 34024
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/TreeNodeDialog.vue": {
+      "kind": "file",
+      "sha256": "4652317924763f4ee01a47aed625cbed380f312d11d9d3da7a05029d06999e74",
+      "bytes": 2386
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/build/index.vue": {
+      "kind": "file",
+      "sha256": "4c495069af5a333b4de8cdc93c8cceb322ee9b519523c3b608e7faae08e64e3f",
+      "bytes": 19380
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/basicInfoForm.vue": {
+      "kind": "file",
+      "sha256": "91feb9373ee7703ee0f3cc4cd86143e27f64803f65c8cc06fd9a0849783eafc1",
+      "bytes": 1682
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/createTable.vue": {
+      "kind": "file",
+      "sha256": "b68112dd4c5320080bc3b159ea234995331549da40cdffa96b3bd4ed3a33e463",
+      "bytes": 2089
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue": {
+      "kind": "file",
+      "sha256": "4baa021ccb1f5b66ee955c24c5738ba51fa7ee1d7fc8983aa56a4f6afc143375",
+      "bytes": 9233
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue": {
+      "kind": "file",
+      "sha256": "ea3cbada99f3613c9bf9b5b4b169d1a86e319b3fd06b8ce705debf2035f23542",
+      "bytes": 11574
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue": {
+      "kind": "file",
+      "sha256": "2b2898144871d2862bafe4f33a8c9c045cc49c6d363b1a4d0071505980f2b698",
+      "bytes": 5230
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue": {
+      "kind": "file",
+      "sha256": "ed4a20042b965a3e95a60251ce4b2db9fc86481af46fd8067b6bd22582cc3812",
+      "bytes": 11804
+    },
+    "ruoyi-fastapi-frontend/src/views/tool/swagger/index.vue": {
+      "kind": "file",
+      "sha256": "e5b4c947c4963a0c05521d505f93cf66bbe88608e7c9321907c45f1a413a05eb",
+      "bytes": 199
+    },
+    "ruoyi-fastapi-frontend/tests/job/job-form.test.js": {
+      "kind": "file",
+      "sha256": "36b6a63cd26d85eac92dce232bd04d79637b2fe770af49cb35f7c5acc344d23f",
+      "bytes": 1543
+    },
+    "ruoyi-fastapi-frontend/tests/plugins/pluginViewResolver.test.js": {
+      "kind": "file",
+      "sha256": "9e2dab995ae5e7682b6bdf7b8083f5839f048df29f02f43266f7403484bd494d",
+      "bytes": 811
+    },
+    "ruoyi-fastapi-frontend/tests/plugins/run-plugin-tests.js": {
+      "kind": "file",
+      "sha256": "fbaa4143180bef9a09ccad35f3d62f23c16f55b9d835f2acca3b469f5fc88e5b",
+      "bytes": 1377
+    },
+    "ruoyi-fastapi-frontend/tests/time/time.test.js": {
+      "kind": "file",
+      "sha256": "073268506c1c3f6c85827552f779dfdfbef9d6cd01b7740c6312199653939a55",
+      "bytes": 161
+    },
+    "ruoyi-fastapi-frontend/vite.config.js": {
+      "kind": "file",
+      "sha256": "8314aa2690335f5a53d9eb3672605ad90ae7b0144209f6578c867ce765721dc1",
+      "bytes": 2388
+    },
+    "ruoyi-fastapi-frontend/vite/plugins/auto-import.js": {
+      "kind": "file",
+      "sha256": "ce83c86782035da181e26e1906ac4eae0f172ca1738cec73c31d6a697ec2686e",
+      "bytes": 210
+    },
+    "ruoyi-fastapi-frontend/vite/plugins/compression.js": {
+      "kind": "file",
+      "sha256": "ba14ebfb1cb86b029ab778406c907fa9aceecd80b96003c580aed845e9a40c96",
+      "bytes": 719
+    },
+    "ruoyi-fastapi-frontend/vite/plugins/index.js": {
+      "kind": "file",
+      "sha256": "351e5764321ec830c6d4923b56bba69a9842d9bd780bb4840e2d2c043b1ef43e",
+      "bytes": 1268
+    },
+    "ruoyi-fastapi-frontend/vite/plugins/setup-extend.js": {
+      "kind": "file",
+      "sha256": "6247ce790922443286481430292bcaff90d965712014a24cec9ca8fb393faa0e",
+      "bytes": 136
+    },
+    "ruoyi-fastapi-frontend/vite/plugins/svg-icon.js": {
+      "kind": "file",
+      "sha256": "236d65e7ecbb64ee3a45729f7f28119add88f3eab62d1a2e99f3f3b5da880e0d",
+      "bytes": 303
+    }
+  },
+  "excluded": [
+    {
+      "path": "ruoyi-fastapi-frontend/node_modules",
+      "reason": "explicit excluded directory name: node_modules"
+    }
+  ],
+  "digest": "b4256433a58a115267b363b2ddb63433eb79384c6826fdc2c901ed72e05b6bea"
+}

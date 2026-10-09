@@ -1,0 +1,187 @@
+# G302 src/views/system/plugin/components/PluginDiagnosticDialog.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06318 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 85-85 ImportDeclaration: 
+  - 基线：源语句 sha256=3227c0d87d8b6ba62cf7963bbbc427a54421c82bef587eec504cdc798552959e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06319 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 87-120 VariableDeclaration: props
+  - 基线：源语句 sha256=0fa367e26f733df9072b216d364ca9cee803754dd699826db55214360c774452；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06320 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 122-122 VariableDeclaration: emit
+  - 基线：源语句 sha256=fd7875f4edb47d33917ba819078482cc9784b30e4829ddc50650672db1d67e28；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06321 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 124-124 VariableDeclaration: health
+  - 基线：源语句 sha256=dbee1153345fd5ad875be4e25662c39a2b5948eaee09d2cbadca7170615e5290；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06322 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 125-125 VariableDeclaration: diagnose
+  - 基线：源语句 sha256=7e5cb9be14e28082c7ff35427af290cfbe1cb2bb768e95dd94d52fa4a7af2339；保留返回、异常及 2 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06323 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` lines 127-149 VariableDeclaration: validationItems
+  - 基线：源语句 sha256=e4a9c383c90002622852692b3ea7596c12743b18760730336c12c8b319043724；保留返回、异常及 16 个分支，调用=computed, groups.flatMap, Array.isArray, items.map, category.includes。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06324 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template lines 1-82（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06325 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 2: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06326 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 2: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06327 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 2: v-on:update:model-value
+  - 基线：原表达式：emit('update:modelValue', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06328 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 4: v-if:
+  - 基线：原表达式：result.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06329 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 5: v-bind:title
+  - 基线：原表达式：result.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06330 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 6: v-bind:type
+  - 基线：原表达式：result.ok ? 'success' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06331 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 8: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06332 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 12: v-if:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06333 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 12: v-bind:rows
+  - 基线：原表达式：6；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06334 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 13: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06335 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 21: v-bind:type
+  - 基线：原表达式：result.ok ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06336 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 23: v-if:
+  - 基线：原表达式：health；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06337 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 27: v-if:
+  - 基线：原表达式：health；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06338 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 34: v-if:
+  - 基线：原表达式：health；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06339 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 35: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06340 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 38: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06341 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 39: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06342 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 41: v-bind:model-value
+  - 基线：原表达式：formatJson(health.details)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06343 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 41: v-bind:rows
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06344 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 44: v-if:
+  - 基线：原表达式：diagnose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06345 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 45: v-bind:column
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06346 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 53: v-bind:data
+  - 基线：原表达式：validationItems；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06347 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 56: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06348 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 57: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06349 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 60: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06350 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 61: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06351 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 62: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06352 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 66: v-if:
+  - 基线：原表达式：diagnose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06353 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 67: v-bind:model-value
+  - 基线：原表达式：formatJson(diagnose.menuPlan)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06354 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 67: v-bind:rows
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06355 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 71: v-bind:model-value
+  - 基线：原表达式：formatJson(result)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06356 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 71: v-bind:rows
+  - 基线：原表达式：14；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06357 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 76: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06358 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template line 78: v-on:click
+  - 基线：原表达式：emit('update:modelValue', false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06359 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 17
+  - 基线：原显示表达式：result.pluginId || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06360 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 21
+  - 基线：原显示表达式：result.ok ? "正常" : "异常"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06361 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 25
+  - 基线：原显示表达式：health.status || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06362 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 29
+  - 基线：原显示表达式：health.durationMs ?? "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06363 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 36
+  - 基线：原显示表达式：health.checker || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06364 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 37
+  - 基线：原显示表达式：health.status || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06365 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 38
+  - 基线：原显示表达式：health.message || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06366 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 39
+  - 基线：原显示表达式：health.error || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06367 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 46
+  - 基线：原显示表达式：formatBoolean(diagnose.check?.dependencyOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06368 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 47
+  - 基线：原显示表达式：formatBoolean(diagnose.check?.manifestOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06369 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 48
+  - 基线：原显示表达式：formatBoolean(diagnose.check?.structureOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06370 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 49
+  - 基线：原显示表达式：formatBoolean(diagnose.check?.pluginDependencyOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06371 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 50
+  - 基线：原显示表达式：formatBoolean(diagnose.check?.menuConflictOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06372 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 51
+  - 基线：原显示表达式：diagnose.config?.summary?.total ?? "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06373 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` template interpolation line 57
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+- I06374 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue` style[0] lines 152-185
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/components/PluginDiagnosticDialog.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

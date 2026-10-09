@@ -1,0 +1,196 @@
+# G316 src/views/system/user/view.vue：完整能力
+
+依赖：G000, G045, G232, G250
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07759 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 129-129 ImportDeclaration: 
+  - 基线：源语句 sha256=bde6566ed1f1d6743ed93ba22f946ec34a4eff3eb0edcdb8401b77f33a92190b；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07760 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 131-131 VariableDeclaration: visible
+  - 基线：源语句 sha256=131588e506b10f4b16485c9067fceb50053d9acd0559369303f97aa3a383855a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07761 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 132-132 VariableDeclaration: loading
+  - 基线：源语句 sha256=360133162609dea18ceb29cc60a4fd9166a9ed26b0d8544941212d26502f30ef；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07762 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 133-133 VariableDeclaration: info
+  - 基线：源语句 sha256=a0412b7653c196f3d44c6449b4ddb439fdad07f71430d35d45b1cb365cc0d58b；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07763 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 134-134 VariableDeclaration: postOptions
+  - 基线：源语句 sha256=7338739d34291bf1480b3737666cd33c2837aa9e85f31c45836d77d3b2c7ad75；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07764 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 135-135 VariableDeclaration: roleOptions
+  - 基线：源语句 sha256=ea884133b4c9ceec8c43c6d8062988eeb3ee7b38f18b075e537d6578f7183e4c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07765 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 136-136 VariableDeclaration: 
+  - 基线：源语句 sha256=d3917068104e0f2158733e5e758c09ff6781b09fc4b90611c9a30e2625c695d6；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07766 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 138-138 VariableDeclaration: 
+  - 基线：源语句 sha256=3a30e68b94104c8a28f324ba341aece7bbecbf5a9a31677edf0a293df0a39ddb；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07767 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 140-140 VariableDeclaration: sexLabel
+  - 基线：源语句 sha256=6cdf1798ecfb29eb85594b7153437e075398b21e157a3ca08e0863850c100bbc；保留返回、异常及 1 个分支，调用=computed, proxy.selectDictLabel。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07768 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 142-145 VariableDeclaration: postNames
+  - 基线：源语句 sha256=e6371268c66d387d9147d30fc1a84baef2d904cc52962747485e2335e6b38616；保留返回、异常及 5 个分支，调用=computed, CallExpression.join, CallExpression.map, postOptions.value.filter, info.postIds.includes。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07769 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 147-150 VariableDeclaration: roleNames
+  - 基线：源语句 sha256=025f26f7c95e29754bad7725062dcf4d08ee346f5553df80d8eb22139ef25227；保留返回、异常及 5 个分支，调用=computed, CallExpression.join, CallExpression.map, roleOptions.value.filter, info.roleIds.includes。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07770 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 152-167 VariableDeclaration: open
+  - 基线：源语句 sha256=7bbe247491306bb6696bcafb2bdec0743d2fa6d34c1f24a0e4a2e1675d517c8a；保留返回、异常及 6 个分支，调用=getUser, Object.assign, console.error。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07771 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 169-171 FunctionDeclaration: handleClose
+  - 基线：源语句 sha256=46a0accff4d4a715cccfc73935d9c059fbb270b4c716e01254c9ee203b864778；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07772 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` lines 173-175 ExpressionStatement: 
+  - 基线：源语句 sha256=64705ef294d9f2ca1192d1c35cd3874553f37329b77d7c9615d5c7fbc3aae3a4；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07773 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template lines 1-126（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07774 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 2: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07775 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 2: v-bind:before-close
+  - 基线：原表达式：handleClose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07776 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 3: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07777 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 6: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07778 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 7: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07779 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 13: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07780 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 20: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07781 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 21: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07782 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 27: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07783 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 34: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07784 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 35: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07785 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 41: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07786 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 45: v-bind:type
+  - 基线：原表达式：info.status === '0' ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07787 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 50: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07788 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 51: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07789 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 57: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07790 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 64: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07791 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 65: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07792 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 74: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07793 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 75: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07794 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 81: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07795 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 88: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07796 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 89: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07797 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 95: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07798 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 102: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07799 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 103: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07800 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 109: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07801 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 116: v-bind:gutter
+  - 基线：原表达式：20；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07802 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template line 117: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07803 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 10
+  - 基线：原显示表达式：info.nickName
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07804 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 16
+  - 基线：原显示表达式：(info.dept && info.dept.deptName)
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07805 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 24
+  - 基线：原显示表达式：info.phonenumber
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07806 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 30
+  - 基线：原显示表达式：info.email
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07807 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 38
+  - 基线：原显示表达式：info.userName
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07808 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 45
+  - 基线：原显示表达式：info.status === '0' ? '正常' : '停用'
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07809 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 54
+  - 基线：原显示表达式：postNames || '无岗位'
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07810 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 60
+  - 基线：原显示表达式：sexLabel
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07811 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 68
+  - 基线：原显示表达式：roleNames || '无角色'
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07812 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 78
+  - 基线：原显示表达式：info.createBy
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07813 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 84
+  - 基线：原显示表达式：parseTime(info.createTime)
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07814 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 92
+  - 基线：原显示表达式：info.updateBy
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07815 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 98
+  - 基线：原显示表达式：parseTime(info.updateTime)
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07816 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 106
+  - 基线：原显示表达式：info.loginIp
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07817 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 112
+  - 基线：原显示表达式：parseTime(info.loginDate)
+  - 去向：react-front/src/views/system/user/view.tsx
+- I07818 `ruoyi-fastapi-frontend/src/views/system/user/view.vue` template interpolation line 120
+  - 基线：原显示表达式：info.remark
+  - 去向：react-front/src/views/system/user/view.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

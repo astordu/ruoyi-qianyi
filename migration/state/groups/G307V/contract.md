@@ -1,0 +1,361 @@
+# G307V src/views/system/role/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G040, G044, G180, G182, G232, G250, G253F025, G307, G307F028, G307F029, G307F030, G307F031, G307F032, G307F033, G307F034, G307F035, G307F036, G307F037, G307F038, G307F039, G307F040, G307F041, G307F042, G307F043, G307F044, G307F045, G307F046, G307F047, G307F048, G307F049, G307F050, G307F051, G307F052, G307F053
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I07179 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template lines 1-243（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07180 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07181 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07182 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07183 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.roleName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07184 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07185 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 15: v-model:
+  - 基线：原表达式：queryParams.roleKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07186 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 19: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07187 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07188 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 30: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07189 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 31: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07190 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 32: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07191 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 33: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07192 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 39: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07193 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 42: v-bind:aria-label
+  - 基线：原表达式：`日期范围（${getDisplayTimezone()}）`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07194 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 49: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07195 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 50: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07196 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 53: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07197 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 54: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07198 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 59: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07199 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 60: v-hasPermi:
+  - 基线：原表达式：['system:role:add']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07200 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 63: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07201 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 68: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07202 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 69: v-on:click
+  - 基线：原表达式：handleUpdate；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07203 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 70: v-hasPermi:
+  - 基线：原表达式：['system:role:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07204 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 73: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07205 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 78: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07206 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 79: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07207 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 80: v-hasPermi:
+  - 基线：原表达式：['system:role:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07208 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 83: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07209 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 88: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07210 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 89: v-hasPermi:
+  - 基线：原表达式：['system:role:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07211 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 92: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07212 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 92: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07213 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 96: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07214 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 96: v-bind:data
+  - 基线：原表达式：roleList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07215 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 96: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07216 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 99: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07217 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 100: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07218 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 103: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07219 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 105: v-model:
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07220 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 108: v-on:change
+  - 基线：原表达式：handleStatusChange(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07221 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 113: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07222 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 118: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07223 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 119: v-if:
+  - 基线：原表达式：scope.row.roleId !== 1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07224 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 120: v-on:click
+  - 基线：原表达式：handleUpdate(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07225 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 120: v-hasPermi:
+  - 基线：原表达式：['system:role:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07226 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 122: v-if:
+  - 基线：原表达式：scope.row.roleId !== 1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07227 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 123: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07228 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 123: v-hasPermi:
+  - 基线：原表达式：['system:role:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07229 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 125: v-if:
+  - 基线：原表达式：scope.row.roleId !== 1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07230 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 126: v-on:click
+  - 基线：原表达式：handleDataScope(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07231 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 126: v-hasPermi:
+  - 基线：原表达式：['system:role:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07232 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 128: v-if:
+  - 基线：原表达式：scope.row.roleId !== 1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07233 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 129: v-on:click
+  - 基线：原表达式：handleAuthUser(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07234 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 129: v-hasPermi:
+  - 基线：原表达式：['system:role:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07235 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 136: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07236 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 137: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07237 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 138: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07238 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 139: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07239 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 140: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07240 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 144: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07241 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 144: v-model:
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07242 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 145: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07243 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 145: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07244 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 147: v-model:
+  - 基线：原表达式：form.roleName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07245 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 150: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07246 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 158: v-model:
+  - 基线：原表达式：form.roleKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07247 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 161: v-model:
+  - 基线：原表达式：form.roleSort；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07248 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 161: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07249 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 164: v-model:
+  - 基线：原表达式：form.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07250 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 166: v-for:
+  - 基线：原表达式：dict in sys_normal_disable；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07251 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 167: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07252 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 168: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07253 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 173: v-model:
+  - 基线：原表达式：menuExpand；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07254 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 173: v-on:change
+  - 基线：原表达式：handleCheckedTreeExpand($event, 'menu')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07255 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 174: v-model:
+  - 基线：原表达式：menuNodeAll；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07256 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 174: v-on:change
+  - 基线：原表达式：handleCheckedTreeNodeAll($event, 'menu')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07257 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 175: v-model:
+  - 基线：原表达式：form.menuCheckStrictly；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07258 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 175: v-on:change
+  - 基线：原表达式：handleCheckedTreeConnect($event, 'menu')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07259 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 178: v-bind:data
+  - 基线：原表达式：menuOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07260 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 182: v-bind:check-strictly
+  - 基线：原表达式：!form.menuCheckStrictly；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07261 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 184: v-bind:props
+  - 基线：原表达式：{ label: 'label', children: 'children' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07262 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 188: v-model:
+  - 基线：原表达式：form.remark；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07263 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 191: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07264 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 193: v-on:click
+  - 基线：原表达式：submitForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07265 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 194: v-on:click
+  - 基线：原表达式：cancel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07266 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 200: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07267 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 200: v-model:
+  - 基线：原表达式：openDataScope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07268 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 201: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07269 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 203: v-model:
+  - 基线：原表达式：form.roleName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07270 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 203: v-bind:disabled
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07271 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 206: v-model:
+  - 基线：原表达式：form.roleKey；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07272 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 206: v-bind:disabled
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07273 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 209: v-model:
+  - 基线：原表达式：form.dataScope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07274 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 209: v-on:change
+  - 基线：原表达式：dataScopeSelectChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07275 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 211: v-for:
+  - 基线：原表达式：item in dataScopeOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07276 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 212: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07277 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 213: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07278 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 214: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07279 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 218: v-show:
+  - 基线：原表达式：form.dataScope == 2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07280 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 219: v-model:
+  - 基线：原表达式：deptExpand；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07281 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 219: v-on:change
+  - 基线：原表达式：handleCheckedTreeExpand($event, 'dept')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07282 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 220: v-model:
+  - 基线：原表达式：deptNodeAll；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07283 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 220: v-on:change
+  - 基线：原表达式：handleCheckedTreeNodeAll($event, 'dept')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07284 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 221: v-model:
+  - 基线：原表达式：form.deptCheckStrictly；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07285 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 221: v-on:change
+  - 基线：原表达式：handleCheckedTreeConnect($event, 'dept')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07286 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 224: v-bind:data
+  - 基线：原表达式：deptOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07287 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 229: v-bind:check-strictly
+  - 基线：原表达式：!form.deptCheckStrictly；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07288 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 231: v-bind:props
+  - 基线：原表达式：{ label: 'label', children: 'children' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07289 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 235: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07290 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 237: v-on:click
+  - 基线：原表达式：submitDataScope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07291 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template line 238: v-on:click
+  - 基线：原表达式：cancelDataScope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07292 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template interpolation line 114
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/role/index.tsx
+- I07293 `ruoyi-fastapi-frontend/src/views/system/role/index.vue` template interpolation line 169
+  - 基线：原显示表达式：dict.label
+  - 去向：react-front/src/views/system/role/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

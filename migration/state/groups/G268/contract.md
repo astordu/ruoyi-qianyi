@@ -1,0 +1,277 @@
+# G268 src/views/monitor/job/log.vue：完整能力
+
+依赖：G000, G029, G169, G180, G182, G232, G250, G253F025, G266
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I03590 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 137-137 ImportDeclaration: 
+  - 基线：源语句 sha256=5ded6eea1b8b6b5a422c9929d852248cb6a5f6bab74a1bf6350e8bf942cda7ae；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03591 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 138-138 ImportDeclaration: 
+  - 基线：源语句 sha256=bc9badff35f5f48e4bf982c9fd8dad330f971871307c0a26c2f87406df34b1a5；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03592 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 139-139 ImportDeclaration: 
+  - 基线：源语句 sha256=5834f644e9560d2801ed92b086ddf13f50789b2078d37e61b628e089c2f83ebf；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03593 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 141-141 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03594 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 142-142 VariableDeclaration: 
+  - 基线：源语句 sha256=4866dd62ff46af554efce7b6b334676035cae1a1ca219611971f55bd24b9bd90；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03595 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 144-144 VariableDeclaration: jobLogList
+  - 基线：源语句 sha256=efa85402e73d6cd6c2cdda7d815ecd279f1d2ca7ea7513dfa78fdb8a38bd7cb7；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03596 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 145-145 VariableDeclaration: open
+  - 基线：源语句 sha256=a542e4df0517d4fd7db7dda3114abbaf21c848158a19f33261b636975b69e307；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03597 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 146-146 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03598 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 147-147 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03599 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 148-148 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03600 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 149-149 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03601 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 150-150 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03602 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 151-151 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03603 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 152-152 VariableDeclaration: route
+  - 基线：源语句 sha256=19ffaf888604ba2654aa25f29ba0210e96226ea7089e9e15dc5c05cf276b3a9f；保留返回、异常及 0 个分支，调用=useRoute。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03604 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 154-165 VariableDeclaration: data
+  - 基线：源语句 sha256=9bb77a97fcfebcf814fc5577279237879027a0cff492a8f9848822e64cf85fed；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03605 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 167-167 VariableDeclaration: 
+  - 基线：源语句 sha256=1302c7f6c9f01c8414a694cd88e708a5a66cf40450bbd6957204a754bd0d4050；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03606 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 170-183 FunctionDeclaration: getList
+  - 基线：源语句 sha256=7d4d22cc0872ea9386477779d475b85c46548d00b99765e333cc219476a85c25；保留返回、异常及 2 个分支，调用=CallExpression.finally, CallExpression.then, listJobLog, proxy.addDateRange。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03607 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 185-188 FunctionDeclaration: handleClose
+  - 基线：源语句 sha256=e738c1d1ab833302ce8db547d57b49eb734b9b2784b6a54a3911cdfe2ce4f43a；保留返回、异常及 0 个分支，调用=proxy.$tab.closeOpenPage。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03608 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 190-193 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=71d9364cef95db7495918f6fbda87103b5332e631eb6cac8bd039c5558ee3065；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03609 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 195-199 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=9b12e7bcce3e9874baec61cc44dbc25eba4cf58578f5232f5206376e3b16e484；保留返回、异常及 0 个分支，调用=proxy.resetForm, handleQuery。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03610 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 201-204 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=ed3ae6470786def2434a3fdc244af26f0d2f0c8908c65677b454a45df07bb2b3；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03611 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 206-209 FunctionDeclaration: handleView
+  - 基线：源语句 sha256=87864b7dcb2a85be573d31e44051aebecfe488837dcf11530603883a08955123；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03612 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 211-218 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=48600d26c58372be0de17fd95e0c4b4a0974280436cc69ca65b3b51219034acf；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delJobLog, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03613 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 220-227 FunctionDeclaration: handleClean
+  - 基线：源语句 sha256=80fbd46fd1608eafcce6ccaf3b041b7c6e8491ec4b1cd983805d728807212e79；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, cleanJobLog, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03614 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 229-235 FunctionDeclaration: handleExport
+  - 基线：源语句 sha256=adf47b25e46d47e4b00d30ef48df463e643dff54aee1eacea04a34acc802977f；保留返回、异常及 2 个分支，调用=proxy.download, proxy.addDateRange, NewExpression.getTime。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03615 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 238-244 ExpressionStatement: 
+  - 基线：源语句 sha256=818b1a7b29871248fd1767405e5c5ab156cb2072594b0f4cb276c65019eca45e；保留返回、异常及 3 个分支，调用=watch, handleQuery。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03616 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` lines 246-250 ExpressionStatement: 
+  - 基线：源语句 sha256=17ffa6410b29708eb725aa6841db9de40066edef1ed09032f679fbd2d0c31972；保留返回、异常及 1 个分支，调用=watch, handleQuery。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03617 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template lines 1-134（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03618 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03619 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03620 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03621 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.jobName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03622 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03623 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 14: v-model:
+  - 基线：原表达式：queryParams.jobGroup；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03624 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 14: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03625 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 17: v-model:
+  - 基线：原表达式：queryParams.jobId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03626 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 17: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03627 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 20: v-model:
+  - 基线：原表达式：queryParams.executionId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03628 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 20: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03629 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03630 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 30: v-for:
+  - 基线：原表达式：dict in sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03631 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 31: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03632 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 32: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03633 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 33: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03634 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 39: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03635 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 42: v-bind:aria-label
+  - 基线：原表达式：`日期范围（${getDisplayTimezone()}）`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03636 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 49: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03637 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 50: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03638 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 54: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03639 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 55: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03640 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 60: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03641 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 61: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03642 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 62: v-hasPermi:
+  - 基线：原表达式：['monitor:job:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03643 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 65: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03644 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 70: v-on:click
+  - 基线：原表达式：handleClean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03645 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 71: v-hasPermi:
+  - 基线：原表达式：['monitor:job:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03646 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 74: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03647 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 79: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03648 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 80: v-hasPermi:
+  - 基线：原表达式：['monitor:job:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03649 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 83: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03650 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 88: v-on:click
+  - 基线：原表达式：handleClose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03651 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 91: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03652 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 91: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03653 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 94: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03654 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 94: v-bind:data
+  - 基线：原表达式：jobLogList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03655 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 94: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03656 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 98: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03657 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 99: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03658 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 100: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03659 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 104: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03660 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 105: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03661 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 107: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03662 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 108: v-bind:options
+  - 基线：原表达式：sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03663 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 108: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03664 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 112: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03665 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 117: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03666 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 118: v-on:click
+  - 基线：原表达式：handleView(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03667 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 118: v-hasPermi:
+  - 基线：原表达式：['monitor:job:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03668 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 124: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03669 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 125: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03670 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 126: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03671 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 127: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03672 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 128: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03673 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 132: v-model:visible
+  - 基线：原表达式：open；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03674 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template line 132: v-bind:row
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03675 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template interpolation line 101
+  - 基线：原显示表达式：scope.row.jobGroup
+  - 去向：react-front/src/views/monitor/job/log.tsx
+- I03676 `ruoyi-fastapi-frontend/src/views/monitor/job/log.vue` template interpolation line 113
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/monitor/job/log.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

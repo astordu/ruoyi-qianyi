@@ -1,0 +1,253 @@
+# G284 src/views/system/file/components/FileAuditDrawer.vue：完整能力
+
+依赖：G000, G039, G180, G250, G294
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I04921 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 214-214 ImportDeclaration: 
+  - 基线：源语句 sha256=81f96cf22397a4b05d2514dc7c26c0cae11b24152c294fc7a50bdbc9927e0b44；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04922 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 215-221 ImportDeclaration: 
+  - 基线：源语句 sha256=4a2ed69459629781854d93545fb196032764e7a5882d57227ff2f2966f4cde7e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04923 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 223-223 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04924 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 224-224 VariableDeclaration: visible
+  - 基线：源语句 sha256=1e5831fe2e56f6cc177d5ecfd848b4a6a30d10008c0fed3fc9f2ab7bcf3c3453；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04925 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 225-225 VariableDeclaration: loading
+  - 基线：源语句 sha256=0f2d86fe0699597a69087a478d5543264e008a02dbd9826dd2138c7409858393；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04926 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 226-226 VariableDeclaration: fileId
+  - 基线：源语句 sha256=8ef95f1aa02843b4237f20852f2498fe27f22fc19215b9e1d5f4bfa884027157；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04927 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 227-227 VariableDeclaration: fileName
+  - 基线：源语句 sha256=002d68d0f126e088bacfdbc8f608f68deeccca37344c0fcc0fa31a91662553f3；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04928 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 228-228 VariableDeclaration: auditList
+  - 基线：源语句 sha256=88919b1da19262ce4deba37d40b97fec4e87be37d350bc106da91a4f60db584f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04929 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 229-229 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04930 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 230-230 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04931 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 231-231 VariableDeclaration: queryRef
+  - 基线：源语句 sha256=b52ca337d7c86a04eaef302f27d98b1831ddd5d7dd99f23be1ffd9df6a470f89；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04932 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 232-232 VariableDeclaration: detailOpen
+  - 基线：源语句 sha256=d2aa1c8f08f340b5854c656d25fe7c836f08651a576ba301e4f7a271ab83d433；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04933 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 233-233 VariableDeclaration: detail
+  - 基线：源语句 sha256=861938c5dad2feaf03f00d31af121a4a833d99f0f5d5b503edaa67a85e929b17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04934 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 234-236 VariableDeclaration: detailEntries
+  - 基线：源语句 sha256=cc60ef01f69a2a98f305687218683c39a23cb4f7d62e70f9619515213f6e0c8f；保留返回、异常及 0 个分支，调用=computed, parseOperationDetail。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04935 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 237-243 VariableDeclaration: queryParams
+  - 基线：源语句 sha256=cfed3418954527e044c1a62867b5567b92b08a1dcc8c1bc391b72f093ea68c59；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04936 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 245-257 FunctionDeclaration: open
+  - 基线：源语句 sha256=a646735e28286ff3ed986400188507acec611afbbd503572e8f13597651b7eca；保留返回、异常及 0 个分支，调用=Object.assign, getList。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04937 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 259-272 FunctionDeclaration: getList
+  - 基线：源语句 sha256=abee820443c2209a6e2c459a52672ad74e930929c50c357fbbea017ed9a3b4aa；保留返回、异常及 0 个分支，调用=CallExpression.finally, CallExpression.then, listFileAccessLog, proxy.addDateRange。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04938 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 274-277 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=edd514b444273e1673cb3a87378aacdb6449d6d09764ffd0dde80e216d9ef27e；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04939 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 279-284 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=0ac798e376a10e846d6c9921b6ac15aafb053e6ace6c7af5ca0b64f2f5cb5e1a；保留返回、异常及 0 个分支，调用=queryRef.value.resetFields, getList。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04940 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 286-289 FunctionDeclaration: handleDetail
+  - 基线：源语句 sha256=888e7da94fb3f26254c2a20ec7081b4fd058767f6b8e432be7f73d6c5538eb9a；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04941 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` lines 291-291 ExpressionStatement: 
+  - 基线：源语句 sha256=2e56640d2586072b42b8ea1f2cbd05f1d669da4f3e9e5617eb50a334cf1e3d67；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04942 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template lines 1-211（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04943 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 3: v-bind:title
+  - 基线：原表达式：`文件审计 - ${fileName}`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04944 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 4: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04945 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 7: v-on:closed
+  - 基线：原表达式：detailOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04946 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 11: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04947 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 12: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04948 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 17: v-model:
+  - 基线：原表达式：queryParams.action；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04949 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 36: v-model:
+  - 基线：原表达式：queryParams.result；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04950 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 49: v-model:
+  - 基线：原表达式：queryParams.actorName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04951 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 53: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04952 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 58: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04953 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 68: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04954 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 71: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04955 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 74: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04956 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 74: v-bind:data
+  - 基线：原表达式：auditList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04957 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 76: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04958 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 79: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04959 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 80: v-bind:type
+  - 基线：原表达式：resultTagType(scope.row.result)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04960 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 90: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04961 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 97: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04962 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 105: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04963 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 114: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04964 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 122: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04965 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 125: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04966 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 131: v-on:click
+  - 基线：原表达式：handleDetail(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04967 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 138: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04968 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 139: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04969 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 140: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04970 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 141: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04971 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 142: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04972 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 144: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04973 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 146: v-on:click
+  - 基线：原表达式：visible = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04974 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 153: v-model:
+  - 基线：原表达式：detailOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04975 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 158: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04976 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 181: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04977 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 184: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04978 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 187: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04979 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 192: v-if:
+  - 基线：原表达式：detailEntries.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04980 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 193: v-bind:data
+  - 基线：原表达式：detailEntries；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04981 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 201: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04982 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 204: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04983 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 204: v-bind:image-size
+  - 基线：原表达式：60；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04984 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 205: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04985 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template line 207: v-on:click
+  - 基线：原表达式：detailOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04986 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 76
+  - 基线：原显示表达式：actionLabel(scope.row.action)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04987 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 81
+  - 基线：原显示表达式：resultLabel(scope.row.result)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04988 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 106
+  - 基线：原显示表达式：scope.row.bytesSent ? formatFileSize(scope.row.bytesSent) : "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04989 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 122
+  - 基线：原显示表达式：parseTime(scope.row.accessTime)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04990 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 164
+  - 基线：原显示表达式：actionLabel(detail.action)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04991 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 167
+  - 基线：原显示表达式：resultLabel(detail.result)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04992 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 170
+  - 基线：原显示表达式：detail.actorName || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04993 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 173
+  - 基线：原显示表达式：detail.ipAddress || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04994 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 176
+  - 基线：原显示表达式：detail.requestId || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04995 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 179
+  - 基线：原显示表达式：detail.traceId || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04996 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 182
+  - 基线：原显示表达式：parseTime(detail.accessTime)
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04997 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 185
+  - 基线：原显示表达式：detail.userAgent || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04998 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` template interpolation line 188
+  - 基线：原显示表达式：detail.errorMessage || "-"
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+- I04999 `ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue` style[0] lines 294-303
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/file/components/FileAuditDrawer.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

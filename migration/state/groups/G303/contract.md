@@ -1,0 +1,223 @@
+# G303 src/views/system/plugin/components/PluginPlanDialog.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06375 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` lines 132-132 ImportDeclaration: 
+  - 基线：源语句 sha256=3227c0d87d8b6ba62cf7963bbbc427a54421c82bef587eec504cdc798552959e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06376 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` lines 134-179 VariableDeclaration: props
+  - 基线：源语句 sha256=14e1172b6c7e09f7f7157c0c03077aa54568ae335a901c7d01f6e80c91a5df5b；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06377 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` lines 181-181 VariableDeclaration: emit
+  - 基线：源语句 sha256=f8cafaaf9a1429dc20dd29c470426a7d099bf3af0451ca18a84009291cf214ba；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06378 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` lines 183-185 VariableDeclaration: canExecuteBatchPlan
+  - 基线：源语句 sha256=304b7c8cb4ad5c8a8e937ed636cb4aab3d4c420482fddf076c1c74f66a1f003e；保留返回、异常及 2 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06379 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template lines 1-129（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06380 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 2: v-bind:title
+  - 基线：原表达式：title；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06381 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 2: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06382 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 2: v-on:update:model-value
+  - 基线：原表达式：emit('update:modelValue', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06383 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 4: v-if:
+  - 基线：原表达式：planResult.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06384 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 5: v-bind:title
+  - 基线：原表达式：planResult.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06385 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 6: v-bind:type
+  - 基线：原表达式：planResult.ok ? 'success' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06386 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 8: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06387 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 29: v-bind:column
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06388 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 33: v-for:
+  - 基线：原表达式：pluginId in planResult.executablePluginIds；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06389 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 34: v-bind:key
+  - 基线：原表达式：pluginId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06390 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 38: v-if:
+  - 基线：原表达式：!planResult.executablePluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06391 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 44: v-bind:data
+  - 基线：原表达式：planResult.items；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06392 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 46: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06393 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 47: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06394 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 50: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06395 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 51: v-bind:type
+  - 基线：原表达式：scope.row.requested ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06396 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 55: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06397 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 56: v-bind:type
+  - 基线：原表达式：getPlanReadyTagType(scope.row.ready)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06398 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 59: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06399 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 60: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06400 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 65: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06401 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 66: v-bind:type
+  - 基线：原表达式：scope.row.blockers?.length ? 'danger' : 'success'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06402 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 72: v-bind:data
+  - 基线：原表达式：planResult.blockers；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06403 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 73: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06404 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 74: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06405 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 76: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06406 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 80: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06407 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 84: v-bind:column
+  - 基线：原表达式：4；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06408 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 90: v-bind:data
+  - 基线：原表达式：batchResult.executed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06409 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 91: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06410 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 93: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06411 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 96: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06412 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 97: v-bind:type
+  - 基线：原表达式：scope.row.ok ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06413 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 101: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06414 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 103: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06415 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 104: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06416 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 109: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06417 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 112: v-bind:model-value
+  - 基线：原表达式：continueOnError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06418 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 116: v-on:update:model-value
+  - 基线：原表达式：emit('update:continueOnError', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06419 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 120: v-bind:disabled
+  - 基线：原表达式：!canExecuteBatchPlan；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06420 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 121: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06421 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 122: v-on:click
+  - 基线：原表达式：emit('execute')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06422 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 123: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06423 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template line 125: v-on:click
+  - 基线：原表达式：emit('update:modelValue', false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06424 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 14
+  - 基线：原显示表达式：formatPluginOperation(planResult.operation)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06425 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 18
+  - 基线：原显示表达式：planResult.requestedPluginIds.length
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06426 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 22
+  - 基线：原显示表达式：planResult.executablePluginIds.length
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06427 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 26
+  - 基线：原显示表达式：planResult.blockerCount
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06428 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 30
+  - 基线：原显示表达式：formatPluginIdsForDisplay(planResult.requestedPluginIds)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06429 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 37
+  - 基线：原显示表达式：pluginId
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06430 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 51
+  - 基线：原显示表达式：scope.row.requested ? "是" : "依赖"
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06431 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 56
+  - 基线：原显示表达式：scope.row.ready ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06432 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 61
+  - 基线：原显示表达式：formatPlanDependencies(scope.row.dependencies)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06433 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 66
+  - 基线：原显示表达式：scope.row.blockers?.length || 0
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06434 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 77
+  - 基线：原显示表达式：getPlanBlockerStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06435 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 85
+  - 基线：原显示表达式：batchResult.summary.total
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06436 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 86
+  - 基线：原显示表达式：batchResult.summary.succeeded
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06437 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 87
+  - 基线：原显示表达式：batchResult.summary.failed
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06438 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 88
+  - 基线：原显示表达式：batchResult.summary.skipped
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06439 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 93
+  - 基线：原显示表达式：formatPluginOperation(scope.row.operation)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06440 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 97
+  - 基线：原显示表达式：scope.row.status || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06441 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 101
+  - 基线：原显示表达式：scope.row.durationMs ?? "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06442 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` template interpolation line 124
+  - 基线：原显示表达式：formatPluginOperation(planResult.operation)
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+- I06443 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue` style[0] lines 188-246
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/components/PluginPlanDialog.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,320 @@
+# G289 src/views/system/file/components/FileRetentionReminderDrawer.vue：完整能力
+
+依赖：G000, G039, G158, G180, G253F038, G253F046
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05291 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 266-272 ImportDeclaration: 
+  - 基线：源语句 sha256=c8d8751cf263c641c0fb52fbb81bb9ab236cbc24a74da73aa8d4a29ba0f0f6ff；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05292 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 273-273 ImportDeclaration: 
+  - 基线：源语句 sha256=f4e8d3fd11e6eca7b60d67b7171adfd80b772ba1fc87089818a52601a2139cda；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05293 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 274-274 ImportDeclaration: 
+  - 基线：源语句 sha256=43c18c9dd358c16b77c25456394a957803835e7380ef5cfa199370b907c127e2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05294 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 276-276 VariableDeclaration: emit
+  - 基线：源语句 sha256=000f8803e150d60c6d770de50ab5bdb69c7c7599de94c475abb3a63c89abf22c；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05295 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 277-277 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05296 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 278-278 VariableDeclaration: visible
+  - 基线：源语句 sha256=1e5831fe2e56f6cc177d5ecfd848b4a6a30d10008c0fed3fc9f2ab7bcf3c3453；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05297 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 279-279 VariableDeclaration: loading
+  - 基线：源语句 sha256=0f2d86fe0699597a69087a478d5543264e008a02dbd9826dd2138c7409858393；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05298 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 280-280 VariableDeclaration: scanning
+  - 基线：源语句 sha256=8a64ceb75636e741a8e179a8c651785c58944136b787225218b40eea49c9a284；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05299 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 281-281 VariableDeclaration: reminderList
+  - 基线：源语句 sha256=26660e7ede8959dfcf3aa674309e3e8594e8ac2fd32d6ad269354c0a22bc356c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05300 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 282-282 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05301 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 283-283 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05302 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 284-284 VariableDeclaration: queryRef
+  - 基线：源语句 sha256=b52ca337d7c86a04eaef302f27d98b1831ddd5d7dd99f23be1ffd9df6a470f89；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05303 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 285-285 VariableDeclaration: extendRef
+  - 基线：源语句 sha256=1a4c9cc46ba11eb880f79a96ae022176dd40a37aad871f05fdadac359d9adb6e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05304 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 286-286 VariableDeclaration: extendOpen
+  - 基线：源语句 sha256=0653b5de1f568666bb6920b1ff4525b870fa0f9c8ef44e538438e4c73dfdcef1；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05305 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 287-287 VariableDeclaration: submitting
+  - 基线：源语句 sha256=a34593ddd3f7624e09cce0d11047ff1f08df09e7c8286c2ed9433e777da0f101；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05306 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 288-288 VariableDeclaration: currentRow
+  - 基线：源语句 sha256=2a90b46bb60faf4a8260a03cf6e91e0e2cb4fdaaaa8601b75e1f47b89a51251a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05307 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 289-292 VariableDeclaration: extendForm
+  - 基线：源语句 sha256=852801a8f8577378389820beb47183351fea2528908cd6e795db2da8955f77e8；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05308 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 293-300 VariableDeclaration: extendRules
+  - 基线：源语句 sha256=8180035e2096b304734c9b23e1d0e7a5313e2f2f8cfd2b30d41822eac5c4d8b0；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05309 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 301-307 VariableDeclaration: queryParams
+  - 基线：源语句 sha256=6c482ad5d0614b20b7b1b3f8446f4920ccd778c0e0d1c929668c909614cd7274；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05310 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 309-313 FunctionDeclaration: open
+  - 基线：源语句 sha256=1c07d99b45b663c7dcd4b947941c78b3b2553b4570dab58a132a9b82ab07cb5c；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05311 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 315-325 FunctionDeclaration: getList
+  - 基线：源语句 sha256=48506c5e255a57ab652c2c4fd3f44fe0895679c3a2b432cac6661ca731e5beaf；保留返回、异常及 0 个分支，调用=CallExpression.finally, CallExpression.then, listFileRetentionReminder。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05312 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 327-330 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=edd514b444273e1673cb3a87378aacdb6449d6d09764ffd0dde80e216d9ef27e；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05313 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 332-336 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=9b980190812d63fe7a79b86d6dd550b26b1e57a93e93aee7b0533338def7bd70；保留返回、异常及 0 个分支，调用=queryRef.value.resetFields, getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05314 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 338-352 FunctionDeclaration: handleScan
+  - 基线：源语句 sha256=56a58f65de727d361d0cc32350e2732b6d94b76ba110e352634ccc2a4c32c6a7；保留返回、异常及 0 个分支，调用=CallExpression.finally, CallExpression.then, scanFileRetentionReminder, proxy.$modal.msgSuccess, getList, emit。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05315 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 354-356 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=40edb9e135b65165f768a21ef8ed99de798d7f97790e4073c08fe21e10ca0682；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05316 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 358-363 FunctionDeclaration: handleRead
+  - 基线：源语句 sha256=3312073e33d6a523ef268acbd151c3807374fb0fae0613fa480c064d244bbcb8；保留返回、异常及 0 个分支，调用=CallExpression.then, readFileRetentionReminder, ids.value.join, proxy.$modal.msgSuccess, getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05317 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 365-367 FunctionDeclaration: isExpired
+  - 基线：源语句 sha256=0019ec8a641973610f6c4c264f8f4f9e09c7d25b537f2d6acfcda212f367438f；保留返回、异常及 1 个分支，调用=NewExpression.getTime, Date.now。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05318 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 369-377 FunctionDeclaration: handleExtend
+  - 基线：源语句 sha256=1536a283e09772d0c04912a1f399e7414358567aa3099e941650c6ec21c09b99；保留返回、异常及 0 个分支，调用=Object.assign, defaultExtendTime, nextTick, extendRef.value.clearValidate。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05319 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 379-396 FunctionDeclaration: submitExtend
+  - 基线：源语句 sha256=47ac46b4d500791d92bf159dfbdf3df1d96bcd38ae24a1d9a3b7d985c7320545；保留返回、异常及 4 个分支，调用=extendRef.value.validate, serializeTimeFieldsForSubmit, CallExpression.finally, CallExpression.then, extendFileRetention, proxy.$modal.msgSuccess, getList, emit。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05320 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 398-425 FunctionDeclaration: handleDispose
+  - 基线：源语句 sha256=7e66014f2f4d9a451af1ac9a9c75434938a32748f61d73246776244486d42a59；保留返回、异常及 6 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$prompt, value.trim, disposeExpiredFile, proxy.$modal.msgSuccess, getList, emit。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05321 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 427-431 FunctionDeclaration: defaultExtendTime
+  - 基线：源语句 sha256=0c8dd1894cb275b00eee17eac791f7c42dc72677bdbb72d38aa0e45e5a9e30b7；保留返回、异常及 1 个分支，调用=Math.max, Date.now, NewExpression.getTime, toBusinessDateTimeInput。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05322 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` lines 433-433 ExpressionStatement: 
+  - 基线：源语句 sha256=2e56640d2586072b42b8ea1f2cbd05f1d669da4f3e9e5617eb50a334cf1e3d67；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05323 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template lines 1-263（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05324 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 4: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05325 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 11: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05326 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 17: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05327 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 18: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05328 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 23: v-model:
+  - 基线：原表达式：queryParams.originalName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05329 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 27: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05330 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 32: v-model:
+  - 基线：原表达式：queryParams.noticeType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05331 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 43: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05332 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 53: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05333 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 56: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05334 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 59: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05335 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 60: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05336 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 65: v-bind:loading
+  - 基线：原表达式：scanning；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05337 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 66: v-on:click
+  - 基线：原表达式：handleScan；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05338 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 67: v-hasPermi:
+  - 基线：原表达式：['system:file:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05339 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 72: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05340 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 77: v-bind:disabled
+  - 基线：原表达式：!ids.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05341 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 78: v-on:click
+  - 基线：原表达式：handleRead；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05342 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 85: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05343 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 86: v-bind:data
+  - 基线：原表达式：reminderList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05344 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 87: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05345 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 93: v-bind:selectable
+  - 基线：原表达式：row => row.status === '0'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05346 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 100: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05347 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 107: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05348 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 109: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05349 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 116: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05350 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 118: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05351 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 126: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05352 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 127: v-bind:type
+  - 基线：原表达式：scope.row.noticeType === 'expired' ? 'danger' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05353 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 138: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05354 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 141: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05355 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 142: v-bind:type
+  - 基线：原表达式：scope.row.status === '0' ? 'warning' : 'success'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05356 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 159: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05357 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 166: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05358 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 168: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05359 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 176: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05360 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 182: v-on:click
+  - 基线：原表达式：handleExtend(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05361 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 183: v-hasPermi:
+  - 基线：原表达式：['system:file:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05362 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 187: v-if:
+  - 基线：原表达式：isExpired(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05363 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 188: v-bind:content
+  - 基线：原表达式：
+              scope.row.canDispose
+                ? '移入回收站'
+                : '存在永久或尚未到期的业务引用，暂不可处置'
+            ；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05364 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 200: v-bind:disabled
+  - 基线：原表达式：!scope.row.canDispose；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05365 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 201: v-on:click
+  - 基线：原表达式：handleDispose(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05366 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 202: v-hasPermi:
+  - 基线：原表达式：['system:file:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05367 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 210: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05368 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 211: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05369 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 212: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05370 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 213: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05371 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 214: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05372 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 220: v-model:
+  - 基线：原表达式：extendOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05373 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 226: v-bind:model
+  - 基线：原表达式：extendForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05374 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 227: v-bind:rules
+  - 基线：原表达式：extendRules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05375 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 238: v-model:
+  - 基线：原表达式：extendForm.expireTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05376 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 245: v-model:
+  - 基线：原表达式：extendForm.reason；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05377 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 247: v-bind:rows
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05378 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 254: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05379 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 256: v-bind:loading
+  - 基线：原表达式：submitting；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05380 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 256: v-on:click
+  - 基线：原表达式：submitExtend；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05381 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template line 259: v-on:click
+  - 基线：原表达式：extendOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05382 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 109
+  - 基线：原显示表达式：scope.row.ownerName || "-"
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05383 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 118
+  - 基线：原显示表达式：scope.row.deptName || "-"
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05384 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 128
+  - 基线：原显示表达式：scope.row.noticeType === "expired" ? "已到期" : "即将到期"
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05385 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 138
+  - 基线：原显示表达式：parseTime(scope.row.expireTime)
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05386 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 143
+  - 基线：原显示表达式：scope.row.status === "0" ? "未读" : "已读"
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05387 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 159
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05388 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 168
+  - 基线：原显示表达式：scope.row.readBy || "-"
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05389 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 231
+  - 基线：原显示表达式：currentRow.originalName
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+- I05390 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue` template interpolation line 234
+  - 基线：原显示表达式：parseTime(currentRow.expireTime)
+  - 去向：react-front/src/views/system/file/components/FileRetentionReminderDrawer.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

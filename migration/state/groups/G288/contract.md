@@ -1,0 +1,187 @@
+# G288 src/views/system/file/components/FileRetentionPolicyDrawer.vue：完整能力
+
+依赖：G000, G039, G250
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I05234 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 144-149 ImportDeclaration: 
+  - 基线：源语句 sha256=c3ecda157411ee7aee7e8c2c04f493ca8e36f57467359f4aa9ad05b3a5132f1f；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05235 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 151-151 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05236 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 152-152 VariableDeclaration: visible
+  - 基线：源语句 sha256=1e5831fe2e56f6cc177d5ecfd848b4a6a30d10008c0fed3fc9f2ab7bcf3c3453；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05237 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 153-153 VariableDeclaration: loading
+  - 基线：源语句 sha256=0f2d86fe0699597a69087a478d5543264e008a02dbd9826dd2138c7409858393；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05238 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 154-154 VariableDeclaration: policyList
+  - 基线：源语句 sha256=4fc9b6d1c3edd711da6c6f3e40f18a143c548ac08723a15d03e3040356a1184e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05239 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 155-155 VariableDeclaration: formOpen
+  - 基线：源语句 sha256=32d43018e855d2b095addd043827e9feb2ece0465c471b1a0e7b3f42bf81c8a1；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05240 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 156-156 VariableDeclaration: editing
+  - 基线：源语句 sha256=70efb2f2b09e6eea787060765a589d14256e66c2699446530956aff4c20330d2；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05241 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 157-157 VariableDeclaration: saving
+  - 基线：源语句 sha256=0ed4610a63d84622d45fa05fda6df512f5264acc5b946a32df9ca21ed419ed5a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05242 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 158-158 VariableDeclaration: formRef
+  - 基线：源语句 sha256=675818d38d5ba9d23f55c06aae6e2ca2f35bc0b963de79460f91f8c6ec4da123；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05243 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 159-161 VariableDeclaration: formTitle
+  - 基线：源语句 sha256=dc32da69d7ca0e32456c66c19484d013960b7e955a1456ee0074a3066f399a5f；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05244 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 162-167 VariableDeclaration: form
+  - 基线：源语句 sha256=33c63cb2a59544db2664badbc90c7d5197b701f3267eee0741316dc726835ff2；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05245 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 168-171 VariableDeclaration: rules
+  - 基线：源语句 sha256=d1eb2c6e3f9b46fa9cbb91bf7ec1db8c94c715677bd7497dc81252282a1a080c；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05246 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 173-176 FunctionDeclaration: open
+  - 基线：源语句 sha256=1c37bf4e75eb17b5c8b3d130fb0c56a1f3aaab1b06f92b91846ba2df5e2da967；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05247 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 178-187 FunctionDeclaration: getList
+  - 基线：源语句 sha256=498f1cde7e59076e1eb7f1c725d2a16b678717d4991f47d5cc25c77d51a881e0；保留返回、异常及 0 个分支，调用=CallExpression.finally, CallExpression.then, listFileRetentionPolicy。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05248 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 189-197 FunctionDeclaration: resetForm
+  - 基线：源语句 sha256=02de191f77142bdb3a6f16f2807231d0f900b876866bd64e6b6f4e3bd56049bc；保留返回、异常及 0 个分支，调用=Object.assign, nextTick, formRef.value.clearValidate。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05249 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 199-203 FunctionDeclaration: handleAdd
+  - 基线：源语句 sha256=9d630f93f49f425eb2ac2eb548e7e03c1b4598bfece6f0ecc602d01b0bf60643；保留返回、异常及 0 个分支，调用=resetForm。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05250 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 205-215 FunctionDeclaration: handleEdit
+  - 基线：源语句 sha256=db0cead4d89fc0fa4e59a064e0e8918299fb9f2fc8d5e689e7e4ea1784bf7094；保留返回、异常及 0 个分支，调用=Object.assign, nextTick, formRef.value.clearValidate。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05251 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 217-234 FunctionDeclaration: submit
+  - 基线：源语句 sha256=32dda47a2c7a330aa89ac22a0046d35fe79d5e2260edde9cc2d2efffb5de2e16；保留返回、异常及 4 个分支，调用=formRef.value.validate, updateFileRetentionPolicy, addFileRetentionPolicy, CallExpression.finally, submitRequest.then, proxy.$modal.msgSuccess, getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05252 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 236-245 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=29b394071183a3d242f9a26089b217dc867c478662e308a1024a3aaa00b20816；保留返回、异常及 0 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delFileRetentionPolicy, proxy.$modal.msgSuccess, getList。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05253 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` lines 247-247 ExpressionStatement: 
+  - 基线：源语句 sha256=2e56640d2586072b42b8ea1f2cbd05f1d669da4f3e9e5617eb50a334cf1e3d67；保留返回、异常及 0 个分支，调用=defineExpose。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05254 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template lines 1-141（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05255 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 4: v-model:
+  - 基线：原表达式：visible；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05256 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 11: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05257 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 15: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05258 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 16: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05259 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 17: v-on:click
+  - 基线：原表达式：handleAdd；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05260 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 22: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05261 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 22: v-bind:data
+  - 基线：原表达式：policyList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05262 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 28: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05263 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 37: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05264 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 38: v-bind:type
+  - 基线：原表达式：scope.row.status === '0' ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05265 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 48: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05266 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 50: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05267 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 58: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05268 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 63: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05269 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 69: v-on:click
+  - 基线：原表达式：handleEdit(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05270 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 77: v-on:click
+  - 基线：原表达式：handleDelete(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05271 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 86: v-bind:title
+  - 基线：原表达式：formTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05272 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 87: v-model:
+  - 基线：原表达式：formOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05273 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 93: v-bind:model
+  - 基线：原表达式：form；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05274 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 94: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05275 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 99: v-model:
+  - 基线：原表达式：form.businessType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05276 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 100: v-bind:disabled
+  - 基线：原表达式：editing；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05277 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 107: v-model:
+  - 基线：原表达式：form.retentionDays；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05278 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 109: v-bind:min
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05279 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 110: v-bind:max
+  - 基线：原表达式：36500；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05280 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 111: v-bind:precision
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05281 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 116: v-model:
+  - 基线：原表达式：form.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05282 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 123: v-model:
+  - 基线：原表达式：form.remark；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05283 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 125: v-bind:rows
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05284 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 132: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05285 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 134: v-bind:loading
+  - 基线：原表达式：saving；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05286 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 134: v-on:click
+  - 基线：原表达式：submit；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05287 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template line 137: v-on:click
+  - 基线：原表达式：formOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05288 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template interpolation line 39
+  - 基线：原显示表达式：scope.row.status === "0" ? "启用" : "停用"
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05289 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template interpolation line 50
+  - 基线：原显示表达式：scope.row.remark || "-"
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+- I05290 `ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue` template interpolation line 59
+  - 基线：原显示表达式：parseTime(scope.row.updateTime) || "-"
+  - 去向：react-front/src/views/system/file/components/FileRetentionPolicyDrawer.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

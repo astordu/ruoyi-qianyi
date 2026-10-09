@@ -1,4 +1,0 @@
-interface:
-  display_name: "迁移需求 PRD"
-  short_description: "将已确认的 Vue 到 React 迁移范围和源码转化为本地 PRD，列出场景、源码证据和可验证验收条件。用于范围确认后"
-  default_prompt: "使用 $to-prd-migration，根据当前模块的范围和 PRD 完成对应迁移阶段。"

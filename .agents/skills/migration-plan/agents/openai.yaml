@@ -1,0 +1,4 @@
+interface:
+  display_name: "全项目迁移规划"
+  short_description: "用固定脚本盘点全部源文件，建立内容去向、小组和依赖关系，防止遗漏"
+  default_prompt: "使用 $migration-plan，完整盘点 Vue 到 React 的迁移，生成全部文件与内容去向、小组、依赖和验证计划。"

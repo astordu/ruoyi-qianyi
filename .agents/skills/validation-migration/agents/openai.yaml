@@ -1,4 +1,0 @@
-interface:
-  display_name: "迁移验证与人工验收"
-  short_description: "按迁移 PRD 独立检查 Vue 原代码与 React 实现的场景覆盖、运行行为和截图差异，并形成可供人工验收的报告。用"
-  default_prompt: "使用 $validation-migration，根据当前模块的范围和 PRD 完成对应迁移阶段。"

@@ -1,0 +1,298 @@
+# G300 src/views/system/plugin/components/PluginDependencyDialog.vue：完整能力
+
+依赖：G000
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06075 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 140-140 ImportDeclaration: 
+  - 基线：源语句 sha256=3227c0d87d8b6ba62cf7963bbbc427a54421c82bef587eec504cdc798552959e；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06076 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 141-141 ImportDeclaration: 
+  - 基线：源语句 sha256=d46a5214bf499175e748e954be54324d6066ab7d53e4eeed603e4285b4bb9e94；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06077 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 143-176 VariableDeclaration: props
+  - 基线：源语句 sha256=5bd0e424f2aec3974e90ab1a2bbccb49f54e458a525badfb22bd67eff6b19232；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06078 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 178-178 VariableDeclaration: emit
+  - 基线：源语句 sha256=fb37c5355710590d596b05f604a6e722c26e94394ce4c0c6ad116b47e4ef669f；保留返回、异常及 0 个分支，调用=defineEmits。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06079 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 180-183 VariableDeclaration: dependencyProblemCount
+  - 基线：源语句 sha256=aad61491a8a935ec02f776944670c6581ec9ccd5043295773f591f811694412f；保留返回、异常及 3 个分支，调用=computed, Array.isArray, dependencies.filter。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06080 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 185-188 VariableDeclaration: policy
+  - 基线：源语句 sha256=a3af6a0b263ed988024c3ea9451dddced569419f93fb00f6fd1daa41340ccfd7；保留返回、异常及 3 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06081 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 190-190 VariableDeclaration: policyAllowed
+  - 基线：源语句 sha256=b1902e716a1d5b6c5272d9ff68159b53dae9eb40fced0887e53e2dd2499af702；保留返回、异常及 0 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06082 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 192-192 VariableDeclaration: policyTagType
+  - 基线：源语句 sha256=b629ca01bb95d3235b8f0cc46201f086415aa5b8b0540b1cccf517e473e8f4ab；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06083 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 194-194 VariableDeclaration: policySummaryTitle
+  - 基线：源语句 sha256=7826f50d124b17edf6d4405d6ec0163d070fc24d7ae3a5ea495a22d3d318c787；保留返回、异常及 1 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06084 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 196-205 VariableDeclaration: policyMessages
+  - 基线：源语句 sha256=4139fe7316cc39237821b6853d0b1472bf0cbc4eed6c6097085c1257176ccd20；保留返回、异常及 6 个分支，调用=computed, Array.isArray。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06085 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 207-215 VariableDeclaration: policyNextStep
+  - 基线：源语句 sha256=a3df12c8f1df9ee1d7b3792817058b7f32605cd6dff396b96addc39d298a2832；保留返回、异常及 6 个分支，调用=computed。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06086 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 217-222 VariableDeclaration: canInstall
+  - 基线：源语句 sha256=3b6719b4cc978bca50d9459ddce965dcf57ce25f54c2bb2ab4971057d6ff7ec6；保留返回、异常及 4 个分支，调用=computed, props.isCapabilityOperationBlocked, Array.isArray。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06087 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 224-226 FunctionDeclaration: formatPolicyList
+  - 基线：源语句 sha256=fc9436a703d5cb11d8b5f4c17e8f202d33cd999cec14c6393f5c33751b948152；保留返回、异常及 3 个分支，调用=Array.isArray, items.join。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06088 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 228-234 FunctionDeclaration: formatPolicyItemMessage
+  - 基线：源语句 sha256=7eb762f225235915fc4fd8ce45e09414d69e3d108a65f260640059ac832e30d1；保留返回、异常及 4 个分支，调用=formatPolicyList, Array.isArray。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06089 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 236-245 FunctionDeclaration: copyDependencyCommand
+  - 基线：源语句 sha256=762e5d99dce6c9d925671b2e241ba038a46b3d5957d11c1bc92b294732c012ce；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, copyText, ElMessage.success, ElMessage.error。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06090 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` lines 247-264 FunctionDeclaration: copyText
+  - 基线：源语句 sha256=16416ec57342bf59815eaa1b6a24a328a6d4174461e04cb7f5d192845bdc946e；保留返回、异常及 4 个分支，调用=navigator.clipboard.writeText, document.createElement, textarea.setAttribute, document.body.appendChild, textarea.select, document.execCommand, document.body.removeChild。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06091 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template lines 1-137（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06092 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 2: v-bind:model-value
+  - 基线：原表达式：modelValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06093 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 2: v-on:update:model-value
+  - 基线：原表达式：emit('update:modelValue', $event)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06094 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 4: v-if:
+  - 基线：原表达式：result.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06095 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 5: v-bind:title
+  - 基线：原表达式：result.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06096 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 6: v-bind:type
+  - 基线：原表达式：result.ok ? 'success' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06097 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 8: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06098 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 18: v-bind:type
+  - 基线：原表达式：result.dependencyOk ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06099 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 30: v-if:
+  - 基线：原表达式：policy；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06100 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 30: v-bind:type
+  - 基线：原表达式：policyTagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06101 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 31: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06102 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 35: v-if:
+  - 基线：原表达式：policy；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06103 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 36: v-bind:title
+  - 基线：原表达式：policySummaryTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06104 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 37: v-bind:type
+  - 基线：原表达式：policyAllowed ? 'success' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06105 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 39: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06106 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 42: v-slot:default
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06107 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 43: v-if:
+  - 基线：原表达式：policyMessages.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06108 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 44: v-for:
+  - 基线：原表达式：message in policyMessages；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06109 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 44: v-bind:key
+  - 基线：原表达式：message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06110 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 46: v-if:
+  - 基线：原表达式：policyNextStep；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06111 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 51: v-bind:data
+  - 基线：原表达式：result.dependencies || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06112 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 53: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06113 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 54: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06114 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 55: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06115 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 58: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06116 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 59: v-bind:type
+  - 基线：原表达式：getDependencyTagType(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06117 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 63: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06118 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 64: v-bind:type
+  - 基线：原表达式：getDependencyTagType(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06119 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 67: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06120 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 71: v-bind:data
+  - 基线：原表达式：result.plan || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06121 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 73: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06122 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 74: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06123 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 76: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06124 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 84: v-bind:disabled
+  - 基线：原表达式：!scope.row.commandText；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06125 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 85: v-on:click
+  - 基线：原表达式：copyDependencyCommand(scope.row.commandText)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06126 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 93: v-if:
+  - 基线：原表达式：policy；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06127 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 94: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06128 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 97: v-bind:type
+  - 基线：原表达式：policyAllowed ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06129 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 103: v-bind:data
+  - 基线：原表达式：policy.items || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06130 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 105: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06131 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 107: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06132 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 108: v-bind:type
+  - 基线：原表达式：scope.row.allowed ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06133 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 111: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06134 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 112: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06135 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 114: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06136 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 115: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06137 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 117: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06138 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 118: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06139 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 123: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06140 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 125: v-bind:disabled
+  - 基线：原表达式：isCapabilityOperationBlocked(result.capability, 'dependency_install')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06141 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 125: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06142 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 125: v-on:click
+  - 基线：原表达式：emit('dry-run')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06143 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 128: v-bind:disabled
+  - 基线：原表达式：!canInstall；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06144 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 129: v-bind:loading
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06145 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 130: v-on:click
+  - 基线：原表达式：emit('install')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06146 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 131: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06147 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template line 133: v-on:click
+  - 基线：原表达式：emit('update:modelValue', false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06148 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 14
+  - 基线：原显示表达式：result.pluginId || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06149 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 18
+  - 基线：原显示表达式：formatBoolean(result.dependencyOk)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06150 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 22
+  - 基线：原显示表达式：dependencyProblemCount
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06151 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 26
+  - 基线：原显示表达式：result.planCount ?? (result.plan || []).length
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06152 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 30
+  - 基线：原显示表达式：policy.mode || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06153 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 44
+  - 基线：原显示表达式：message
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06154 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 46
+  - 基线：原显示表达式：policyNextStep
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06155 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 55
+  - 基线：原显示表达式：scope.row.installedVersion || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06156 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 59
+  - 基线：原显示表达式：formatDependencyInstalled(scope.row)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06157 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 64
+  - 基线：原显示表达式：formatDependencyVersionSatisfied(scope.row)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06158 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 78
+  - 基线：原显示表达式：scope.row.commandText || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06159 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 95
+  - 基线：原显示表达式：policy.mode || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06160 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 97
+  - 基线：原显示表达式：policyAllowed ? "允许" : "阻断"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06161 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 99
+  - 基线：原显示表达式：formatPolicyList(policy.reasons)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06162 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 100
+  - 基线：原显示表达式：formatPolicyList(policy.requirements)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06163 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 101
+  - 基线：原显示表达式：formatPolicyList(policy.warnings)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06164 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 108
+  - 基线：原显示表达式：scope.row.allowed ? "允许" : "阻断"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06165 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 112
+  - 基线：原显示表达式：scope.row.lockedVersion || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06166 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 115
+  - 基线：原显示表达式：scope.row.artifactPath || "-"
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06167 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` template interpolation line 118
+  - 基线：原显示表达式：formatPolicyItemMessage(scope.row)
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+- I06168 `ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue` style[0] lines 267-342
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/components/PluginDependencyDialog.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

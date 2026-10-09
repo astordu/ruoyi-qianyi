@@ -1,0 +1,1141 @@
+# G304V src/views/system/plugin/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G035, G042, G180, G182, G232, G247, G250, G299, G300, G301, G302, G303, G304, G304F061, G304F066, G304F067, G304F068, G304F069, G304F070, G304F071, G304F072, G304F073, G304F074, G304F075, G304F076, G304F077, G304F078, G304F079, G304F080, G304F081, G304F082, G304F083, G304F084, G304F085, G304F086, G304F087, G304F088, G304F089, G304F090, G304F091, G304F092, G304F093, G304F094, G304F095, G304F096, G304F097, G304F098, G304F099, G304F100, G304F101, G304F102, G304F103, G304F104, G304F105, G304F106, G304F107, G304F108, G304F109, G304F110, G304F111, G304F112, G304F113, G304F114, G304F115, G304F116, G304F117, G304F118, G304F119, G304F120, G304F121, G304F122, G304F123, G304F124, G304F125, G304F126, G304F127, G304F128, G304F129, G304F130, G304F131, G304F132, G304F133, G304F134, G304F135, G304F136, G304F137, G304F138, G304F139, G304F140, G304F141, G304F142, G304F143, G304F144
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06590 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template lines 1-610（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06591 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06592 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06593 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06594 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.pluginId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06595 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 9: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06596 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 14: v-model:
+  - 基线：原表达式：queryParams.pluginName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06597 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 17: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06598 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 21: v-model:
+  - 基线：原表达式：queryParams.enabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06599 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 27: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06600 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 28: v-for:
+  - 基线：原表达式：item in pluginStatusOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06601 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 28: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06602 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 28: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06603 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 28: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06604 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 32: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06605 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 33: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06606 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 37: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06607 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 38: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06608 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 39: v-bind:disabled
+  - 基线：原表达式：!selectedPluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06609 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 39: v-on:click
+  - 基线：原表达式：handlePlan('install')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06610 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 39: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06611 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 41: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06612 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 42: v-bind:disabled
+  - 基线：原表达式：!selectedPluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06613 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 42: v-on:click
+  - 基线：原表达式：handlePlan('enable')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06614 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 42: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06615 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 44: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06616 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 45: v-bind:disabled
+  - 基线：原表达式：!selectedPluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06617 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 45: v-on:click
+  - 基线：原表达式：handlePlan('upgrade')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06618 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 45: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06619 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 47: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06620 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 48: v-on:click
+  - 基线：原表达式：handleOperationLog；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06621 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 48: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06622 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 50: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06623 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 51: v-bind:content
+  - 基线：原表达式：formatPluginIdsForDisplay(selectedPluginIds)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06624 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 51: v-bind:disabled
+  - 基线：原表达式：!selectedPluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06625 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 53: v-bind:type
+  - 基线：原表达式：selectedPluginIds.length ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06626 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 54: v-bind:closable
+  - 基线：原表达式：!!selectedPluginIds.length；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06627 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 55: v-bind:disable-transitions
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06628 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 57: v-on:close
+  - 基线：原表达式：clearSelectedPlugins；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06629 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 61: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06630 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 61: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06631 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 64: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06632 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 64: v-bind:data
+  - 基线：原表达式：pluginList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06633 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 64: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06634 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 65: v-bind:selectable
+  - 基线：原表达式：canSelectForBatch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06635 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 66: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06636 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 67: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06637 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 70: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06638 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 75: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06639 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 76: v-bind:content
+  - 基线：原表达式：getEnabledSwitchTooltip(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06640 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 76: v-bind:disabled
+  - 基线：原表达式：!isEnabledSwitchBlocked(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06641 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 79: v-model:
+  - 基线：原表达式：scope.row.enabled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06642 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 82: v-bind:disabled
+  - 基线：原表达式：isEnabledSwitchBlocked(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06643 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 83: v-on:change
+  - 基线：原表达式：handleEnabledChange(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06644 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 84: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06645 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 91: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06646 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 92: v-bind:type
+  - 基线：原表达式：getStatusTagType(scope.row.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06647 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 97: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06648 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 102: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06649 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 105: v-on:click
+  - 基线：原表达式：handleDetail(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06650 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 105: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06651 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 107: v-if:
+  - 基线：原表达式：!isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06652 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 108: v-on:click
+  - 基线：原表达式：handleConfig(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06653 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 108: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06654 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 110: v-if:
+  - 基线：原表达式：!isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06655 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 111: v-on:click
+  - 基线：原表达式：handleDependencies(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06656 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 111: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06657 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 113: v-if:
+  - 基线：原表达式：!isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06658 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 114: v-on:click
+  - 基线：原表达式：handleCheck(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06659 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 114: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06660 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 116: v-if:
+  - 基线：原表达式：!isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06661 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 117: v-on:click
+  - 基线：原表达式：handleHealth(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06662 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 117: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06663 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 119: v-if:
+  - 基线：原表达式：!isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06664 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 120: v-on:click
+  - 基线：原表达式：handleDiagnose(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06665 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 120: v-hasPermi:
+  - 基线：原表达式：['system:plugin:query']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06666 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 122: v-bind:content
+  - 基线：原表达式：getOperationTooltip(scope.row, 'install', '安装')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06667 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 122: v-if:
+  - 基线：原表达式：canInstall(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06668 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 123: v-bind:disabled
+  - 基线：原表达式：isOperationBlocked(scope.row, 'install')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06669 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 123: v-on:click
+  - 基线：原表达式：handleInstallDryRun(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06670 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 123: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06671 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 125: v-bind:content
+  - 基线：原表达式：getOperationTooltip(scope.row, 'upgrade', '升级')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06672 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 125: v-if:
+  - 基线：原表达式：canUpgrade(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06673 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 126: v-bind:disabled
+  - 基线：原表达式：isOperationBlocked(scope.row, 'upgrade')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06674 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 126: v-on:click
+  - 基线：原表达式：handleUpgradeDryRun(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06675 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 126: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06676 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 128: v-bind:content
+  - 基线：原表达式：getOperationTooltip(scope.row, 'uninstall', '卸载')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06677 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 128: v-if:
+  - 基线：原表达式：canUninstall(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06678 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 129: v-bind:disabled
+  - 基线：原表达式：isOperationBlocked(scope.row, 'uninstall')；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06679 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 129: v-on:click
+  - 基线：原表达式：handleUninstallDryRun(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06680 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 129: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06681 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 131: v-if:
+  - 基线：原表达式：isOrphanPlugin(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06682 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 132: v-on:click
+  - 基线：原表达式：handlePurgeDryRun(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06683 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 132: v-hasPermi:
+  - 基线：原表达式：['system:plugin:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06684 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 140: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06685 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 141: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06686 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 142: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06687 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 143: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06688 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 144: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06689 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 148: v-model:
+  - 基线：原表达式：detailOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06690 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 149: v-bind:detail
+  - 基线：原表达式：detail；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06691 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 150: v-bind:get-status-label
+  - 基线：原表达式：getStatusLabel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06692 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 151: v-bind:format-plugin-time
+  - 基线：原表达式：formatPluginTime；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06693 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 152: v-bind:format-config-default-value
+  - 基线：原表达式：formatConfigDefaultValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06694 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 153: v-bind:format-config-constraint
+  - 基线：原表达式：formatConfigConstraint；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06695 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 154: v-bind:migration-history
+  - 基线：原表达式：migrationHistory；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06696 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 155: v-bind:migration-loading
+  - 基线：原表达式：migrationLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06697 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 156: v-on:repair
+  - 基线：原表达式：handleRepairFromDetail；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06698 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 157: v-on:mark-migration-success
+  - 基线：原表达式：handleMarkMigrationSuccess；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06699 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 158: v-on:mark-migration-failed
+  - 基线：原表达式：handleMarkMigrationFailed；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06700 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 162: v-model:
+  - 基线：原表达式：dependencyOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06701 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 163: v-bind:result
+  - 基线：原表达式：dependencyResult；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06702 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 164: v-bind:loading
+  - 基线：原表达式：dependencyLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06703 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 165: v-bind:is-capability-operation-blocked
+  - 基线：原表达式：isCapabilityOperationBlocked；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06704 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 166: v-bind:format-boolean
+  - 基线：原表达式：formatBoolean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06705 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 167: v-bind:get-dependency-tag-type
+  - 基线：原表达式：getDependencyTagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06706 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 168: v-bind:format-dependency-installed
+  - 基线：原表达式：formatDependencyInstalled；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06707 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 169: v-bind:format-dependency-version-satisfied
+  - 基线：原表达式：formatDependencyVersionSatisfied；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06708 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 170: v-on:dry-run
+  - 基线：原表达式：handleDependencyDryRun；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06709 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 171: v-on:install
+  - 基线：原表达式：handleDependencyInstall；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06710 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 175: v-model:
+  - 基线：原表达式：diagnosticOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06711 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 176: v-bind:title
+  - 基线：原表达式：diagnosticTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06712 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 177: v-bind:result
+  - 基线：原表达式：diagnosticResult；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06713 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 178: v-bind:loading
+  - 基线：原表达式：diagnosticLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06714 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 179: v-bind:format-json
+  - 基线：原表达式：formatJson；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06715 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 180: v-bind:format-boolean
+  - 基线：原表达式：formatBoolean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06716 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 181: v-bind:get-validation-level-label
+  - 基线：原表达式：getValidationLevelLabel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06717 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 182: v-bind:get-validation-level-tag-type
+  - 基线：原表达式：getValidationLevelTagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06718 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 186: v-model:
+  - 基线：原表达式：planOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06719 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 187: v-model:continue-on-error
+  - 基线：原表达式：batchContinueOnError；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06720 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 188: v-bind:title
+  - 基线：原表达式：planTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06721 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 189: v-bind:plan-result
+  - 基线：原表达式：planResult；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06722 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 190: v-bind:batch-result
+  - 基线：原表达式：batchResult；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06723 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 191: v-bind:loading
+  - 基线：原表达式：planLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06724 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 192: v-bind:format-plugin-operation
+  - 基线：原表达式：formatPluginOperation；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06725 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 193: v-bind:format-plugin-ids-for-display
+  - 基线：原表达式：formatPluginIdsForDisplay；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06726 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 194: v-bind:format-plan-dependencies
+  - 基线：原表达式：formatPlanDependencies；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06727 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 195: v-bind:get-plan-ready-tag-type
+  - 基线：原表达式：getPlanReadyTagType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06728 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 196: v-bind:get-plan-blocker-status-label
+  - 基线：原表达式：getPlanBlockerStatusLabel；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06729 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 197: v-on:execute
+  - 基线：原表达式：handleExecuteBatch(false)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06730 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 200: v-model:
+  - 基线：原表达式：operationLogOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06731 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 202: v-show:
+  - 基线：原表达式：operationLogShowSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06732 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 203: v-bind:model
+  - 基线：原表达式：operationLogQueryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06733 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 203: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06734 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 206: v-model:
+  - 基线：原表达式：operationLogQueryParams.pluginId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06735 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 209: v-on:keyup
+  - 基线：原表达式：handleOperationLogQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06736 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 213: v-model:
+  - 基线：原表达式：operationLogQueryParams.operation；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06737 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 214: v-for:
+  - 基线：原表达式：item in plugin_operation_type；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06738 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 214: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06739 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 214: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06740 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 214: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06741 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 218: v-model:
+  - 基线：原表达式：operationLogQueryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06742 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 219: v-for:
+  - 基线：原表达式：item in operationLogStatusOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06743 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 219: v-bind:key
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06744 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 219: v-bind:label
+  - 基线：原表达式：item.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06745 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 219: v-bind:value
+  - 基线：原表达式：item.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06746 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 224: v-model:
+  - 基线：原表达式：operationLogDateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06747 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 233: v-on:click
+  - 基线：原表达式：handleOperationLogQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06748 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 234: v-on:click
+  - 基线：原表达式：resetOperationLogQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06749 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 239: v-model:
+  - 基线：原表达式：operationLogMaintenanceActive；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06750 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 241: v-slot:title
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06751 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 245: v-bind:model
+  - 基线：原表达式：operationLogRetentionForm；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06752 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 245: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06753 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 247: v-model:
+  - 基线：原表达式：operationLogRetentionForm.retentionDays；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06754 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 247: v-bind:min
+  - 基线：原表达式：0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06755 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 247: v-bind:max
+  - 基线：原表达式：3650；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06756 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 250: v-bind:loading
+  - 基线：原表达式：operationLogRetentionLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06757 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 250: v-on:click
+  - 基线：原表达式：handleOperationLogRetentionPreview；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06758 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 255: v-bind:loading
+  - 基线：原表达式：operationLogRetentionLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06759 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 256: v-on:click
+  - 基线：原表达式：handleOperationLogRetentionClean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06760 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 257: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06761 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 262: v-if:
+  - 基线：原表达式：operationLogRetentionResult.matchedCount !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06762 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 263: v-bind:title
+  - 基线：原表达式：formatRetentionMessage(operationLogRetentionResult)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06763 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 264: v-bind:type
+  - 基线：原表达式：operationLogRetentionResult.deletedCount ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06764 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 266: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06765 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 273: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06766 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 274: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06767 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 279: v-bind:loading
+  - 基线：原表达式：operationLogExportLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06768 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 280: v-on:click
+  - 基线：原表达式：handleOperationLogExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06769 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 281: v-hasPermi:
+  - 基线：原表达式：['system:plugin:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06770 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 285: v-model:showSearch
+  - 基线：原表达式：operationLogShowSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06771 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 285: v-on:queryTable
+  - 基线：原表达式：getOperationLogList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06772 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 287: v-loading:
+  - 基线：原表达式：operationLogLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06773 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 287: v-bind:data
+  - 基线：原表达式：operationLogList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06774 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 290: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06775 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 293: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06776 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 294: v-bind:type
+  - 基线：原表达式：getOperationLogStatusTagType(scope.row.status)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06777 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 297: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06778 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 298: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06779 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 301: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06780 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 304: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06781 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 307: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06782 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 310: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06783 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 312: v-on:click
+  - 基线：原表达式：handleOperationLogDetail(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06784 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 318: v-show:
+  - 基线：原表达式：operationLogTotal > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06785 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 319: v-bind:total
+  - 基线：原表达式：operationLogTotal；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06786 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 320: v-model:page
+  - 基线：原表达式：operationLogQueryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06787 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 321: v-model:limit
+  - 基线：原表达式：operationLogQueryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06788 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 322: v-on:pagination
+  - 基线：原表达式：getOperationLogList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06789 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 327: v-on:click
+  - 基线：原表达式：operationLogOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06790 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 332: v-model:
+  - 基线：原表达式：operationLogDetailOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06791 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 333: v-bind:column
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06792 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 340: v-bind:span
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06793 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 341: v-bind:span
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06794 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 345: v-bind:column
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06795 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 349: v-bind:span
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06796 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 352: v-bind:span
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06797 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 355: v-bind:span
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06798 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 361: v-bind:data
+  - 基线：原表达式：operationLogDetail.validationItems || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06799 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 364: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06800 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 365: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06801 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 368: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06802 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 369: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06803 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 370: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06804 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 374: v-bind:data
+  - 基线：原表达式：operationLogDetail.actionItems || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06805 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 375: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06806 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 377: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06807 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 378: v-bind:type
+  - 基线：原表达式：scope.row.enabled ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06808 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 382: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06809 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 384: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06810 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 385: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06811 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 390: v-bind:data
+  - 基线：原表达式：operationLogDetail.planItems || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06812 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 391: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06813 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 394: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06814 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 395: v-bind:type
+  - 基线：原表达式：getPlanReadyTagType(scope.row.ready)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06815 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 398: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06816 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 399: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06817 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 404: v-bind:data
+  - 基线：原表达式：operationLogDetail.result?.executed || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06818 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 405: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06819 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 407: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06820 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 410: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06821 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 411: v-bind:type
+  - 基线：原表达式：scope.row.ok ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06822 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 415: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06823 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 417: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06824 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 418: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06825 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 420: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06826 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 421: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06827 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 425: v-bind:data
+  - 基线：原表达式：operationLogDetail.configChanges || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06828 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 426: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06829 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 427: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06830 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 429: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06831 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 430: v-bind:type
+  - 基线：原表达式：scope.row.secret ? 'warning' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06832 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 433: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06833 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 434: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06834 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 438: v-bind:model-value
+  - 基线：原表达式：formatJson(operationLogDetail.result)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06835 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 438: v-bind:rows
+  - 基线：原表达式：14；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06836 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 441: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06837 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 443: v-on:click
+  - 基线：原表达式：operationLogDetailOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06838 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 449: v-model:
+  - 基线：原表达式：configOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06839 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 450: v-bind:title
+  - 基线：原表达式：configTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06840 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 451: v-bind:items
+  - 基线：原表达式：configItems；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06841 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 452: v-bind:loading
+  - 基线：原表达式：configLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06842 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 453: v-bind:format-config-default-value
+  - 基线：原表达式：formatConfigDefaultValue；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06843 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 454: v-bind:format-config-constraint
+  - 基线：原表达式：formatConfigConstraint；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06844 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 455: v-on:submit
+  - 基线：原表达式：submitConfig；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06845 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 458: v-bind:title
+  - 基线：原表达式：actionTitle；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06846 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 458: v-model:
+  - 基线：原表达式：actionOpen；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06847 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 460: v-if:
+  - 基线：原表达式：actionResult.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06848 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 461: v-bind:title
+  - 基线：原表达式：actionResult.message；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06849 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 462: v-bind:type
+  - 基线：原表达式：actionResult.ok ? 'success' : 'warning'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06850 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 464: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06851 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 467: v-bind:column
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06852 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 477: v-if:
+  - 基线：原表达式：actionResult.error；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06853 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 479: v-bind:title
+  - 基线：原表达式：actionResult.error.message || '插件操作失败'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06854 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 482: v-bind:closable
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06855 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 485: v-bind:column
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06856 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 489: v-if:
+  - 基线：原表达式：actionResult.migrationRecovery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06857 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 492: v-if:
+  - 基线：原表达式：actionResult.migrationRecovery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06858 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 495: v-bind:span
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06859 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 497: v-bind:model-value
+  - 基线：原表达式：formatJson(actionResult.error.raw)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06860 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 497: v-bind:rows
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06861 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 500: v-bind:data
+  - 基线：原表达式：actionResult.actions || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06862 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 501: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06863 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 503: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06864 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 504: v-bind:type
+  - 基线：原表达式：scope.row.enabled ? 'success' : 'info'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06865 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 508: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06866 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 509: v-if:
+  - 基线：原表达式：scope.row.ok !== undefined；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06867 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 509: v-bind:type
+  - 基线：原表达式：scope.row.ok ? 'success' : 'danger'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06868 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 512: v-else:
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06869 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 516: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06870 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 521: v-bind:data
+  - 基线：原表达式：actionResult.dependencies || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06871 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 523: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06872 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 524: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06873 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 530: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06874 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 532: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06875 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 533: v-bind:type
+  - 基线：原表达式：getDependencyTagType(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06876 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 537: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06877 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 538: v-bind:type
+  - 基线：原表达式：getDependencyTagType(scope.row)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06878 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 541: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06879 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 545: v-bind:data
+  - 基线：原表达式：actionResult.manifestIssues || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06880 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 547: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06881 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 548: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06882 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 554: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06883 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 555: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06884 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 556: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06885 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 560: v-bind:data
+  - 基线：原表达式：actionResult.structureErrors || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06886 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 562: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06887 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 563: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06888 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 569: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06889 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 570: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06890 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 574: v-bind:data
+  - 基线：原表达式：actionResult.menuConflicts || []；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06891 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 576: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06892 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 577: v-bind:type
+  - 基线：原表达式：getValidationLevelTagType(scope.row.level)；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06893 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 583: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06894 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 584: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06895 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 589: v-slot:footer
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06896 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 592: v-if:
+  - 基线：原表达式：pendingAction.type && pendingAction.type !== 'purge'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06897 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 594: v-bind:loading
+  - 基线：原表达式：actionLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06898 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 595: v-on:click
+  - 基线：原表达式：handleExecutePendingAction；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06899 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 596: v-hasPermi:
+  - 基线：原表达式：['system:plugin:edit']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06900 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 599: v-if:
+  - 基线：原表达式：pendingAction.type === 'purge'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06901 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 601: v-bind:loading
+  - 基线：原表达式：actionLoading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06902 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 602: v-on:click
+  - 基线：原表达式：handleExecutePendingAction；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06903 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 603: v-hasPermi:
+  - 基线：原表达式：['system:plugin:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06904 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template line 605: v-on:click
+  - 基线：原表达式：actionOpen = false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06905 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 58
+  - 基线：原显示表达式：planTargetSummary
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06906 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 71
+  - 基线：原显示表达式：scope.row.installedVersion || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06907 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 92
+  - 基线：原显示表达式：getStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06908 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 98
+  - 基线：原显示表达式：formatPluginTime(scope.row.updateTime)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06909 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 243
+  - 基线：原显示表达式：operationLogRetentionDefaultDays
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06910 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 290
+  - 基线：原显示表达式：formatPluginOperation(scope.row.operation)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06911 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 294
+  - 基线：原显示表达式：getOperationLogStatusLabel(scope.row.status)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06912 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 298
+  - 基线：原显示表达式：formatPlanDependencies(scope.row.pluginIds)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06913 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 301
+  - 基线：原显示表达式：scope.row.summary?.succeeded ?? 0
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06914 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 304
+  - 基线：原显示表达式：scope.row.summary?.failed ?? 0
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06915 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 307
+  - 基线：原显示表达式：parseTime(scope.row.createTime)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06916 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 334
+  - 基线：原显示表达式：operationLogDetail.operationId || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06917 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 335
+  - 基线：原显示表达式：formatPluginOperation(operationLogDetail.operation)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06918 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 336
+  - 基线：原显示表达式：getOperationLogStatusLabel(operationLogDetail.status)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06919 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 337
+  - 基线：原显示表达式：operationLogDetail.dryRun ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06920 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 338
+  - 基线：原显示表达式：operationLogDetail.continueOnError ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06921 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 339
+  - 基线：原显示表达式：parseTime(operationLogDetail.createTime) || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06922 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 340
+  - 基线：原显示表达式：formatPlanDependencies(operationLogDetail.pluginIds)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06923 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 341
+  - 基线：原显示表达式：operationLogDetail.remark || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06924 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 346
+  - 基线：原显示表达式：operationLogDetail.summary?.succeeded ?? 0
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06925 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 347
+  - 基线：原显示表达式：operationLogDetail.summary?.failed ?? 0
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06926 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 348
+  - 基线：原显示表达式：operationLogDetail.summary?.skipped ?? 0
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06927 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 350
+  - 基线：原显示表达式：formatPlanDependencies(operationLogDetail.summary?.changedKeys)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06928 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 353
+  - 基线：原显示表达式：operationLogDetail.failedSuggestion || "暂无"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06929 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 356
+  - 基线：原显示表达式：operationLogDetail.failedStep || operationLogDetail.result?.failedStep || operationLogDetail.result?.failed?.result?.failedStep || "暂无"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06930 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 365
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06931 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 378
+  - 基线：原显示表达式：scope.row.enabled ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06932 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 382
+  - 基线：原显示表达式：scope.row.count ?? "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06933 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 385
+  - 基线：原显示表达式：formatActionPlanState(scope.row)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06934 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 395
+  - 基线：原显示表达式：scope.row.ready ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06935 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 399
+  - 基线：原显示表达式：formatPlanDependencies(scope.row.dependencies)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06936 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 407
+  - 基线：原显示表达式：formatPluginOperation(scope.row.operation)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06937 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 411
+  - 基线：原显示表达式：scope.row.status || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06938 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 415
+  - 基线：原显示表达式：scope.row.durationMs ?? "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06939 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 418
+  - 基线：原显示表达式：scope.row.failedStep || scope.row.result?.failedStep || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06940 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 430
+  - 基线：原显示表达式：scope.row.secret ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06941 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 468
+  - 基线：原显示表达式：actionResult.pluginId || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06942 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 469
+  - 基线：原显示表达式：formatBoolean(actionResult.dependencyOk)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06943 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 470
+  - 基线：原显示表达式：formatBoolean(actionResult.structureOk)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06944 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 471
+  - 基线：原显示表达式：formatBoolean(actionResult.menuConflictOk)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06945 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 472
+  - 基线：原显示表达式：actionResult.dryRun ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06946 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 473
+  - 基线：原显示表达式：formatBoolean(actionResult.needsUpgrade)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06947 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 486
+  - 基线：原显示表达式：actionResult.pluginId || pendingAction.pluginId || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06948 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 487
+  - 基线：原显示表达式：actionResult.operation ? formatPluginOperation(actionResult.operation) : (pendingAction.label || "-")
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06949 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 488
+  - 基线：原显示表达式：actionResult.failedStep || actionResult.error.failedStep || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06950 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 490
+  - 基线：原显示表达式：actionResult.migrationRecovery.migrationPath || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06951 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 493
+  - 基线：原显示表达式：actionResult.migrationRecovery.status || "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06952 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 495
+  - 基线：原显示表达式：actionResult.error.suggestion || "请查看后端日志或重新执行检查。"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06953 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 504
+  - 基线：原显示表达式：scope.row.enabled ? "是" : "否"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06954 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 510
+  - 基线：原显示表达式：scope.row.ok ? "通过" : "异常"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06955 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 516
+  - 基线：原显示表达式：scope.row.count ?? "-"
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06956 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 525
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06957 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 533
+  - 基线：原显示表达式：formatDependencyInstalled(scope.row)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06958 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 538
+  - 基线：原显示表达式：formatDependencyVersionSatisfied(scope.row)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06959 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 549
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06960 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 564
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06961 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 578
+  - 基线：原显示表达式：getValidationLevelLabel(scope.row.level)
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06962 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 597
+  - 基线：原显示表达式：pendingAction.label
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06963 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` template interpolation line 604
+  - 基线：原显示表达式：pendingAction.label
+  - 去向：react-front/src/views/system/plugin/index.tsx
+- I06964 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` style[0] lines 1663-1786
+  - 基线：保留全部选择器、声明和 url；lang=css, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/system/plugin/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

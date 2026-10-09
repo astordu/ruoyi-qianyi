@@ -1,0 +1,313 @@
+# G326 src/views/tool/gen/genInfoForm.vue：完整能力
+
+依赖：G000, G040, G250
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I08446 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 260-260 ImportDeclaration: 
+  - 基线：源语句 sha256=e1a7c5d2e4f8a4f613fb62d0559b61f943e8f5cedc6db21ec6e910d2cc501d0c；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08447 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 262-262 VariableDeclaration: subColumns
+  - 基线：源语句 sha256=dca645676e706bf1037177f3dce48143a39f1c7a1c89918279c1faf4fd9341d4；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08448 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 263-263 VariableDeclaration: menuOptions
+  - 基线：源语句 sha256=aa6f219d637ba0a755a162a075eb4a9213231a429125b79e42f9e187d9d55645；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08449 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 264-264 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08450 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 266-275 VariableDeclaration: props
+  - 基线：源语句 sha256=c791029191fba7822725fa4cdfc1fc252f01f1d0d020a2261e15a168dffbd2a0；保留返回、异常及 0 个分支，调用=defineProps。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08451 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 278-284 VariableDeclaration: rules
+  - 基线：源语句 sha256=6517216180c8640f387dad3a1d45fd278ddd659d57c248421fdf9dd64caadf16；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08452 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 286-288 FunctionDeclaration: subSelectChange
+  - 基线：源语句 sha256=8d1c2c8f89db61b718e21cee7744153adbfd7b5ac3e56dead5c3483b76c90ae5；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08453 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 290-295 FunctionDeclaration: tplSelectChange
+  - 基线：源语句 sha256=91e1689e190f4cb845f45fef3deeaa31bf535049d4cec7904336684c42c46ceb；保留返回、异常及 1 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08454 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 297-305 FunctionDeclaration: setSubTableColumns
+  - 基线：源语句 sha256=9d4865856d960b84f2e6969bbbd7b8b68bc1fa9513700651cbb8157e00b38784；保留返回、异常及 1 个分支，调用=。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08455 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 308-312 FunctionDeclaration: getMenuTreeselect
+  - 基线：源语句 sha256=bc7b94fdbcc8bde7b5a570765c20fe67fec7c0e105bfeba882d95dc9da42843b；保留返回、异常及 0 个分支，调用=CallExpression.then, listMenu, proxy.handleTree。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08456 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 314-316 ExpressionStatement: 
+  - 基线：源语句 sha256=a66c7440095d2215d0aa49669eec230d9e5f17c88ce6628df9f6fb482c05a218；保留返回、异常及 0 个分支，调用=onMounted, getMenuTreeselect。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08457 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 318-320 ExpressionStatement: 
+  - 基线：源语句 sha256=80cacba0657acb961222640d65b8e29ad0c029d6a4bf4e2c60f7571111885a03；保留返回、异常及 0 个分支，调用=watch, setSubTableColumns。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08458 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` lines 322-326 ExpressionStatement: 
+  - 基线：源语句 sha256=0f468502f493a7b789d12ffb3e6169dbdc9dd77dd8338ef7cc0f253dde131818；保留返回、异常及 1 个分支，调用=watch。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08459 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template lines 1-257（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08460 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 2: v-bind:model
+  - 基线：原表达式：info；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08461 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 2: v-bind:rules
+  - 基线：原表达式：rules；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08462 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 4: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08463 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 6: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08464 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 7: v-model:
+  - 基线：原表达式：info.tplCategory；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08465 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 7: v-on:change
+  - 基线：原表达式：tplSelectChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08466 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 15: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08467 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 17: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08468 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 18: v-model:
+  - 基线：原表达式：info.tplWebType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08469 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 25: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08470 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 27: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08471 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 33: v-model:
+  - 基线：原表达式：info.packageName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08472 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 37: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08473 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 39: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08474 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 45: v-model:
+  - 基线：原表达式：info.moduleName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08475 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 49: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08476 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 51: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08477 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 57: v-model:
+  - 基线：原表达式：info.businessName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08478 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 61: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08479 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 63: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08480 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 69: v-model:
+  - 基线：原表达式：info.functionName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08481 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 73: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08482 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 75: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08483 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 81: v-model:
+  - 基线：原表达式：info.formColNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08484 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 82: v-bind:value
+  - 基线：原表达式：1；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08485 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 83: v-bind:value
+  - 基线：原表达式：2；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08486 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 84: v-bind:value
+  - 基线：原表达式：3；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08487 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 89: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08488 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 91: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08489 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 92: v-model:
+  - 基线：原表达式：info.view；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08490 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 96: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08491 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 98: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08492 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 104: v-model:
+  - 基线：原表达式：info.genType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08493 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 105: v-model:
+  - 基线：原表达式：info.genType；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08494 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 109: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08495 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 111: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08496 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 118: v-model:
+  - 基线：原表达式：info.parentMenuId；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08497 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 119: v-bind:data
+  - 基线：原表达式：menuOptions；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08498 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 120: v-bind:props
+  - 基线：原表达式：{ value: 'menuId', label: 'menuName', children: 'children' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08499 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 127: v-bind:span
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08500 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 127: v-if:
+  - 基线：原表达式：info.genType == '1'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08501 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 129: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08502 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 135: v-model:
+  - 基线：原表达式：info.genPath；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08503 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 136: v-slot:append
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08504 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 142: v-slot:dropdown
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08505 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 144: v-on:click
+  - 基线：原表达式：info.genPath = '/'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08506 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 154: v-if:
+  - 基线：原表达式：info.tplCategory == 'tree'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08507 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 156: v-show:
+  - 基线：原表达式：info.tplCategory == 'tree'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08508 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 157: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08509 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 159: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08510 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 165: v-model:
+  - 基线：原表达式：info.treeCode；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08511 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 167: v-for:
+  - 基线：原表达式：(column, index) in info.columns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08512 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 168: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08513 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 169: v-bind:label
+  - 基线：原表达式：column.columnName + '：' + column.columnComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08514 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 170: v-bind:value
+  - 基线：原表达式：column.columnName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08515 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 175: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08516 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 177: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08517 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 183: v-model:
+  - 基线：原表达式：info.treeParentCode；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08518 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 185: v-for:
+  - 基线：原表达式：(column, index) in info.columns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08519 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 186: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08520 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 187: v-bind:label
+  - 基线：原表达式：column.columnName + '：' + column.columnComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08521 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 188: v-bind:value
+  - 基线：原表达式：column.columnName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08522 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 193: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08523 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 195: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08524 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 201: v-model:
+  - 基线：原表达式：info.treeName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08525 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 203: v-for:
+  - 基线：原表达式：(column, index) in info.columns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08526 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 204: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08527 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 205: v-bind:label
+  - 基线：原表达式：column.columnName + '：' + column.columnComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08528 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 206: v-bind:value
+  - 基线：原表达式：column.columnName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08529 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 214: v-if:
+  - 基线：原表达式：info.tplCategory == 'sub'；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08530 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 217: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08531 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 219: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08532 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 225: v-model:
+  - 基线：原表达式：info.subTableName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08533 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 225: v-on:change
+  - 基线：原表达式：subSelectChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08534 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 227: v-for:
+  - 基线：原表达式：(table, index) in tables；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08535 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 228: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08536 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 229: v-bind:label
+  - 基线：原表达式：table.tableName + '：' + table.tableComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08537 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 230: v-bind:value
+  - 基线：原表达式：table.tableName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08538 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 235: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08539 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 237: v-slot:label
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08540 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 243: v-model:
+  - 基线：原表达式：info.subTableFkName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08541 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 245: v-for:
+  - 基线：原表达式：(column, index) in subColumns；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08542 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 246: v-bind:key
+  - 基线：原表达式：index；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08543 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 247: v-bind:label
+  - 基线：原表达式：column.columnName + '：' + column.columnComment；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+- I08544 `ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue` template line 248: v-bind:value
+  - 基线：原表达式：column.columnName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/tool/gen/genInfoForm.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

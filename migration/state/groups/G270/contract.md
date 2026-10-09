@@ -1,0 +1,265 @@
+# G270 src/views/monitor/logininfor/index.vue：完整能力
+
+依赖：G000, G030, G169, G180, G182, G232, G250, G253F025
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I03769 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 128-128 ImportDeclaration: 
+  - 基线：源语句 sha256=5ded6eea1b8b6b5a422c9929d852248cb6a5f6bab74a1bf6350e8bf942cda7ae；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03770 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 129-129 ImportDeclaration: 
+  - 基线：源语句 sha256=08a9a37088a57ba461ba3fe6ab9e330b2d947efbcdd4cd272f301824696e3c84；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03771 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 131-131 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03772 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 132-132 VariableDeclaration: 
+  - 基线：源语句 sha256=4866dd62ff46af554efce7b6b334676035cae1a1ca219611971f55bd24b9bd90；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03773 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 134-134 VariableDeclaration: logininforList
+  - 基线：源语句 sha256=9553aca3fab44f2803bac4687d82543dab3c32e5d757ec4477141b3188a9b5b5；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03774 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 135-135 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03775 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 136-136 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03776 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 137-137 VariableDeclaration: ids
+  - 基线：源语句 sha256=470784de1db68be78831742511d0069dcbb9f19878d3ca4a6d5a2ad0370b79f0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03777 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 138-138 VariableDeclaration: single
+  - 基线：源语句 sha256=d8b92433028a1ee7912903c3a8cf52435102e8d5f5c98809c169ecda5a0c1d2a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03778 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 139-139 VariableDeclaration: multiple
+  - 基线：源语句 sha256=1e95758ba50bec4821d45483dad55ab07195518d0ab2626c714ec7b128480ffc；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03779 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 140-140 VariableDeclaration: selectName
+  - 基线：源语句 sha256=786a66e9df5be2662e1265491a14a972e5d11b435703579bc5ebef89a28a6164；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03780 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 141-141 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03781 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 142-142 VariableDeclaration: dateRange
+  - 基线：源语句 sha256=645ab2e4a50a3ccee4a3e4ae7d6fa25173814ae1fe56176486474669de8e0b86；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03782 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 143-143 VariableDeclaration: defaultSort
+  - 基线：源语句 sha256=ab048b04dd8df7667bd78da64d16d673940feaa2b6295ee10298bd7fa7b66214；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03783 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 146-154 VariableDeclaration: queryParams
+  - 基线：源语句 sha256=969c0ba4a0e85d359a1a1cc238e9e7a2ec5ef18f043ac2f12712c043599251f3；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03784 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 157-164 FunctionDeclaration: getList
+  - 基线：源语句 sha256=c7d400caf4aea0e28024ede57a39715dc5138759da3eb3b4e4600397baf9ca0b；保留返回、异常及 0 个分支，调用=CallExpression.then, list, proxy.addDateRange。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03785 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 166-169 FunctionDeclaration: handleQuery
+  - 基线：源语句 sha256=71d9364cef95db7495918f6fbda87103b5332e631eb6cac8bd039c5558ee3065；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03786 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 171-176 FunctionDeclaration: resetQuery
+  - 基线：源语句 sha256=3f9bfce7d4c3411239469e11577ee3ad516b3285bd3837aaaa0577754c1df903；保留返回、异常及 0 个分支，调用=proxy.resetForm, proxy.$refs.logininforRef.sort。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03787 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 178-183 FunctionDeclaration: handleSelectionChange
+  - 基线：源语句 sha256=34f333689eb3cca3be8148bd08772a3924e1d3ef9b7c46949556612663c5e62e；保留返回、异常及 0 个分支，调用=selection.map。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03788 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 185-189 FunctionDeclaration: handleSortChange
+  - 基线：源语句 sha256=614e2bb3c621ea45df4ae95f359cffd5b291ab7fa552da3bb3e464cdf90b99bf；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03789 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 191-199 FunctionDeclaration: handleDelete
+  - 基线：源语句 sha256=2c8a45404b955910d884e79dca956bc70a78ceea16700028086462c456efd8ef；保留返回、异常及 2 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, delLogininfor, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03790 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 201-208 FunctionDeclaration: handleClean
+  - 基线：源语句 sha256=597ab43d2414c569897e5d4537e74522f9459d7bf94c4299bf285a6bcc5eb3a8；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, cleanLogininfor, getList, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03791 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 210-217 FunctionDeclaration: handleUnlock
+  - 基线：源语句 sha256=ee6a41d2ff4d1eb3f7372395c5a14d821d0bd2d4f3de7a6c6116ef85793202ad；保留返回、异常及 1 个分支，调用=CallExpression.catch, CallExpression.then, proxy.$modal.confirm, unlockLogininfor, proxy.$modal.msgSuccess。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03792 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 219-223 FunctionDeclaration: handleExport
+  - 基线：源语句 sha256=2918c74b14abb0a5207e3a21f05fdd4c85ed655ebbee4b3f7fab957ca24f6db0；保留返回、异常及 0 个分支，调用=proxy.download, NewExpression.getTime。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03793 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 225-225 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03794 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` lines 227-231 ExpressionStatement: 
+  - 基线：源语句 sha256=17ffa6410b29708eb725aa6841db9de40066edef1ed09032f679fbd2d0c31972；保留返回、异常及 1 个分支，调用=watch, handleQuery。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03795 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template lines 1-125（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03796 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 3: v-bind:model
+  - 基线：原表达式：queryParams；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03797 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 3: v-bind:inline
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03798 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 3: v-show:
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03799 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 6: v-model:
+  - 基线：原表达式：queryParams.ipaddr；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03800 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 10: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03801 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 15: v-model:
+  - 基线：原表达式：queryParams.userName；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03802 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 19: v-on:keyup
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03803 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 24: v-model:
+  - 基线：原表达式：queryParams.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03804 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 30: v-for:
+  - 基线：原表达式：dict in sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03805 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 31: v-bind:key
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03806 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 32: v-bind:label
+  - 基线：原表达式：dict.label；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03807 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 33: v-bind:value
+  - 基线：原表达式：dict.value；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03808 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 39: v-model:
+  - 基线：原表达式：dateRange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03809 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 42: v-bind:aria-label
+  - 基线：原表达式：`日期范围（${getDisplayTimezone()}）`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03810 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 49: v-on:click
+  - 基线：原表达式：handleQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03811 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 50: v-on:click
+  - 基线：原表达式：resetQuery；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03812 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 54: v-bind:gutter
+  - 基线：原表达式：10；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03813 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 55: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03814 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 60: v-bind:disabled
+  - 基线：原表达式：multiple；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03815 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 61: v-on:click
+  - 基线：原表达式：handleDelete；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03816 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 62: v-hasPermi:
+  - 基线：原表达式：['monitor:logininfor:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03817 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 65: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03818 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 70: v-on:click
+  - 基线：原表达式：handleClean；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03819 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 71: v-hasPermi:
+  - 基线：原表达式：['monitor:logininfor:remove']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03820 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 74: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03821 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 79: v-bind:disabled
+  - 基线：原表达式：single；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03822 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 80: v-on:click
+  - 基线：原表达式：handleUnlock；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03823 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 81: v-hasPermi:
+  - 基线：原表达式：['monitor:logininfor:unlock']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03824 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 84: v-bind:span
+  - 基线：原表达式：1.5；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03825 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 89: v-on:click
+  - 基线：原表达式：handleExport；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03826 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 90: v-hasPermi:
+  - 基线：原表达式：['monitor:logininfor:export']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03827 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 93: v-model:showSearch
+  - 基线：原表达式：showSearch；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03828 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 93: v-on:queryTable
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03829 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 96: v-loading:
+  - 基线：原表达式：loading；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03830 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 96: v-bind:data
+  - 基线：原表达式：logininforList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03831 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 96: v-on:selection-change
+  - 基线：原表达式：handleSelectionChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03832 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 96: v-bind:default-sort
+  - 基线：原表达式：defaultSort；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03833 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 96: v-on:sort-change
+  - 基线：原表达式：handleSortChange；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03834 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 99: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03835 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 99: v-bind:sort-orders
+  - 基线：原表达式：['descending', 'ascending']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03836 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 100: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03837 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 101: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03838 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 102: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03839 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 103: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03840 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 105: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03841 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 106: v-bind:options
+  - 基线：原表达式：sys_common_status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03842 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 106: v-bind:value
+  - 基线：原表达式：scope.row.status；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03843 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 109: v-bind:show-overflow-tooltip
+  - 基线：原表达式：true；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03844 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 110: v-bind:sort-orders
+  - 基线：原表达式：['descending', 'ascending']；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03845 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 111: v-slot:default
+  - 基线：原表达式：scope；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03846 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 118: v-show:
+  - 基线：原表达式：total > 0；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03847 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 119: v-bind:total
+  - 基线：原表达式：total；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03848 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 120: v-model:page
+  - 基线：原表达式：queryParams.pageNum；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03849 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 121: v-model:limit
+  - 基线：原表达式：queryParams.pageSize；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03850 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template line 122: v-on:pagination
+  - 基线：原表达式：getList；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+- I03851 `ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue` template interpolation line 112
+  - 基线：原显示表达式：parseTime(scope.row.loginTime)
+  - 去向：react-front/src/views/monitor/logininfor/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

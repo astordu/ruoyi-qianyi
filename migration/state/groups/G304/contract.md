@@ -1,0 +1,214 @@
+# G304 src/views/system/plugin/index.vue：状态、输入与依赖接口
+
+依赖：G000, G035, G042, G232, G247, G250, G299, G300, G301, G302, G303
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I06444 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 613-637 ImportDeclaration: 
+  - 基线：源语句 sha256=7dfa6a0235c1facf692582b201f6cd005382092bc5c4060d37cde27586f406f2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06445 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 638-638 ImportDeclaration: 
+  - 基线：源语句 sha256=c748e0955c51c5482f843aa911a6c647baf7c781c4e369851abec4336fd1ff1c；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06446 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 639-639 ImportDeclaration: 
+  - 基线：源语句 sha256=9d5ec25dfbdf7511d50c3e899a7f6e4d37f6ce143f6de05d6edcf62d02ce5fe0；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06447 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 640-640 ImportDeclaration: 
+  - 基线：源语句 sha256=6b53b797228a8fc763ef4d8aa5691f3858d6142b7b0b9b17ff5aa8e6e761e64a；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06448 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 641-641 ImportDeclaration: 
+  - 基线：源语句 sha256=a6457c381b71c1f500c69372b899e5486bd5f10109be98a9bc476903edb89e22；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06449 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 642-642 ImportDeclaration: 
+  - 基线：源语句 sha256=b642914ddf0f5be5a5bf4fde9e39a887b30047b4a909b733fb2cdac18ce3d4b2；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06450 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 643-643 ImportDeclaration: 
+  - 基线：源语句 sha256=26f316a5ee775fd85394ecdd52ea4512422d0c3842cc6a028ac575699b2bb683；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06451 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 644-654 ImportDeclaration: 
+  - 基线：源语句 sha256=d6935c350eb13926e4c73d8fb6b8302d00af157bf0e9fd3bdaa79364a8fe20f7；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06452 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 656-656 VariableDeclaration: 
+  - 基线：源语句 sha256=5f11c95d75add065fffa6246968f543edb06a68cc290963d8a011cfc62b1f0af；保留返回、异常及 0 个分支，调用=getCurrentInstance。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06453 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 657-657 VariableDeclaration: 
+  - 基线：源语句 sha256=4b1ca8c9d7e33215a54c0dc26dc923b97f1783cfa0bf6e9eefc108174a9295c0；保留返回、异常及 0 个分支，调用=proxy.useDict。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06454 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 658-658 VariableDeclaration: parseTime
+  - 基线：源语句 sha256=5fee95844b858167e3a81784ee721c6737c470d128db9e2f59b652a2b2ccd8b4；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06455 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 659-659 VariableDeclaration: INVALID_PLUGIN_TIME_VALUES
+  - 基线：源语句 sha256=b341e797c0aae9f5b479c17fa580801e9e90a2447b1d07018ad34d6bb148450d；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06456 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 660-660 VariableDeclaration: OPERATION_LOG_RETENTION_CONFIG_KEY
+  - 基线：源语句 sha256=02a47c0a6c9d674deb1686ad31fb8b7c6258e3f8bd3a2586fbaeb7ae336e037f；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06457 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 662-662 VariableDeclaration: pluginTableRef
+  - 基线：源语句 sha256=c4e4682e500f379d23319456d1810723e408568e24c89684490a5903f684c704；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06458 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 663-663 VariableDeclaration: pluginList
+  - 基线：源语句 sha256=2d6f04faa186a2cac20c56f0ddf10f3ca47e656fdbc987b7167b9ee48e7e776c；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06459 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 664-664 VariableDeclaration: selectedPluginIds
+  - 基线：源语句 sha256=8f1e2573b417543ebaaa7dec3ec921cc0748f0e8b83117dd90c2e6e3cd5836c2；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06460 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 665-665 VariableDeclaration: loading
+  - 基线：源语句 sha256=c6d283c2f3ea7c9a46a2b20e0ef90bfcf6ffbde99656d9a424ad43f7d28f2aba；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06461 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 666-666 VariableDeclaration: showSearch
+  - 基线：源语句 sha256=484353ab3c6f747541b20072d8cc3a9816d7c60d7a687326a0ab4d6700d69e17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06462 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 667-667 VariableDeclaration: total
+  - 基线：源语句 sha256=3ea22b280c119d04a2e23fb7967b98534357cc6c46eb2621b3817c605f822958；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06463 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 668-668 VariableDeclaration: detailOpen
+  - 基线：源语句 sha256=d2aa1c8f08f340b5854c656d25fe7c836f08651a576ba301e4f7a271ab83d433；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06464 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 669-669 VariableDeclaration: detail
+  - 基线：源语句 sha256=861938c5dad2feaf03f00d31af121a4a833d99f0f5d5b503edaa67a85e929b17；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06465 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 670-670 VariableDeclaration: migrationLoading
+  - 基线：源语句 sha256=9983f55f33b2a4f5bdff976c706f6bfd64d0a7144b7d061be42e91709e93f46a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06466 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 671-671 VariableDeclaration: migrationHistory
+  - 基线：源语句 sha256=e0ac0af478121a34950cc444a68f5296d23c435d6f5a4e3b89caae042b48f860；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06467 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 672-672 VariableDeclaration: actionOpen
+  - 基线：源语句 sha256=1c071738a80ae9a2f62ca9284752847522451b467cc0c0c3464ac3ec711874a0；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06468 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 673-673 VariableDeclaration: actionLoading
+  - 基线：源语句 sha256=bb62b6ca95613b3cee620fc4f105ed6575907588312ab130f2ec591e3214f3d3；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06469 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 674-674 VariableDeclaration: actionTitle
+  - 基线：源语句 sha256=dc961fc7ce0376542ad6e5434b8f6d84a5aacac0d6840c1404a2c63a455d7fe9；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06470 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 675-675 VariableDeclaration: actionResult
+  - 基线：源语句 sha256=dc4c0f3ca4e8fd2cc97ea7a6beaef377d4f47c23e1d54a3f2a23da2ce05dafd2；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06471 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 676-676 VariableDeclaration: pendingAction
+  - 基线：源语句 sha256=40d8536a3de700f87daf1225df8d46b99ee55c5fe34eabcaebbcacf12b1c0783；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06472 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 677-677 VariableDeclaration: configOpen
+  - 基线：源语句 sha256=55dba102a0bfe32998551f9e7a7e33740ef54ea80695faa44459f31e6e0cfb94；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06473 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 678-678 VariableDeclaration: configLoading
+  - 基线：源语句 sha256=32ca8650a3dea4353ee48964ce23f756b0f2239dc7c2de7e44d49266ab368fe2；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06474 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 679-679 VariableDeclaration: configTitle
+  - 基线：源语句 sha256=e567aa30518cdd6f237078c62f98d8b63e61b9e55da46800f56f8d2afcd45292；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06475 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 680-680 VariableDeclaration: configPluginId
+  - 基线：源语句 sha256=a288e45a098432b9af7c07dc3fba14a1f4a3ea1a143d61722f709874bb6901c6；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06476 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 681-681 VariableDeclaration: configItems
+  - 基线：源语句 sha256=d26185d4cea5a7d1ddf9d75a0b2ec6573becde2531f2831e42e8e1d83a9db3c4；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06477 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 682-682 VariableDeclaration: dependencyOpen
+  - 基线：源语句 sha256=8c526ad1ffc37de6008c279e8b472263578f5e7a99c8408dd061208fe23e8d50；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06478 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 683-683 VariableDeclaration: dependencyLoading
+  - 基线：源语句 sha256=0dd91679276be50e2f34a537fba11b86a38ec6ab07ef2762f5facbbde1252a74；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06479 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 684-684 VariableDeclaration: dependencyPluginId
+  - 基线：源语句 sha256=de3e46d6e7ab3ed73683199e69eada4cb4f096ecf2c03e9346184b9753e37b71；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06480 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 685-685 VariableDeclaration: dependencyResult
+  - 基线：源语句 sha256=da8d82773f00d38f9c2db027a668383406def5bdd9006c4e0e306570e95bdf66；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06481 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 686-686 VariableDeclaration: diagnosticOpen
+  - 基线：源语句 sha256=f60bcc491968e0929f0299751fdb2d2b5b0067082b7f630a02de28be79791d5a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06482 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 687-687 VariableDeclaration: diagnosticLoading
+  - 基线：源语句 sha256=c33f9c8b9c7f827e774729b3ed86b9abd4816aa0a8f97bb4a802edba1c1a6498；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06483 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 688-688 VariableDeclaration: diagnosticTitle
+  - 基线：源语句 sha256=288da004d5e250409a8c437ffd0c8528ab5eb672aaae3ad6f18f7bc2212f0a7a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06484 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 689-689 VariableDeclaration: diagnosticResult
+  - 基线：源语句 sha256=367f4e057e0736576e07d5392aae4a129b03e1ff7fa673c1055c802b409bb030；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06485 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 690-690 VariableDeclaration: planOpen
+  - 基线：源语句 sha256=17ded270b9a175690c372d8fa394b4f95bcbb5c3223a6fba9aac30ad66caed68；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06486 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 691-691 VariableDeclaration: planLoading
+  - 基线：源语句 sha256=0d0fec988cbc271277634047cad401aa1807007d4258b646e91ae4cbea026bb2；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06487 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 692-692 VariableDeclaration: planTitle
+  - 基线：源语句 sha256=7ca7676a7b061a65fbb4fec8f860dc8392a9e3e20583efd579e28d7fb0143750；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06488 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 693-693 VariableDeclaration: planResult
+  - 基线：源语句 sha256=e63a8c406bdbaa9ef9071f374da6df45cdb2fa23fbb690e7b3136fd07c672386；保留返回、异常及 0 个分支，调用=ref, normalizePluginPlanResponse。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06489 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 694-694 VariableDeclaration: batchContinueOnError
+  - 基线：源语句 sha256=8f9b87ca77ac32a7f55eec17aed8b83b92ad190dd14148e151dfb587d52f389a；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06490 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 695-695 VariableDeclaration: batchResult
+  - 基线：源语句 sha256=98604cec1a62946d0a9edb48a6055b4a2ba131d900e40fb93c086f4b8703aa93；保留返回、异常及 0 个分支，调用=ref, normalizePluginBatchResponse。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06491 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 696-696 VariableDeclaration: operationLogOpen
+  - 基线：源语句 sha256=bccd9c30967d346605e1305359475e3e36d712943cc2fedbbc38a72182cc5e4e；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06492 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 697-697 VariableDeclaration: operationLogShowSearch
+  - 基线：源语句 sha256=889be288bd7ec0d7d32511a86d4369442fa7fcff83bb034297ce7d8daffa3a19；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06493 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 698-698 VariableDeclaration: operationLogLoading
+  - 基线：源语句 sha256=a64526f9aad2d29b91a6c23dd0b0a5008ae6204903d415ba96de5365fc3df519；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06494 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 699-699 VariableDeclaration: operationLogExportLoading
+  - 基线：源语句 sha256=83aef95277726dc2f5723fa0e6f33bc80e18a1acffd2f27e5cb05d30a694f6be；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06495 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 700-700 VariableDeclaration: operationLogList
+  - 基线：源语句 sha256=27874c596bf0c0a0898d0af279dd5aa28dc232d71f5186c5f1026d7aee7aef1f；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06496 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 701-701 VariableDeclaration: operationLogTotal
+  - 基线：源语句 sha256=e32846a5c852bf0421b9d03c93b0cded2df3a062604a2d970f6df15b56f80338；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06497 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 702-702 VariableDeclaration: operationLogDateRange
+  - 基线：源语句 sha256=3277c5ee6776428d0872fe0329540543b0390e7e7977d28d7fce77d5edbab20b；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06498 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 703-703 VariableDeclaration: operationLogDetailOpen
+  - 基线：源语句 sha256=5c3f044cdc1a307316890daf75241ef03b6ad154988b80df5ab4536c11d55c79；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06499 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 704-704 VariableDeclaration: operationLogDetail
+  - 基线：源语句 sha256=67d5e8724daf75587e0f8232c461257c7ce3f3452152ef17e3b7610b94c11430；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06500 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 705-705 VariableDeclaration: operationLogRetentionLoading
+  - 基线：源语句 sha256=b8147cb8f5e49d7b316e98d7b45de7a1c262ceeb0300ac0fbe71928b7480f477；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06501 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 706-706 VariableDeclaration: operationLogRetentionResult
+  - 基线：源语句 sha256=67e6259c104ed8bd3c100496d8b25754423ff4d4f8edda100700897aa7bd92f7；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06502 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 707-707 VariableDeclaration: operationLogRetentionDefaultDays
+  - 基线：源语句 sha256=0439ee0426d6cec9c10449a5104db8c415bfb8bffb545dc76a74bba815342a13；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06503 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 708-708 VariableDeclaration: operationLogMaintenanceActive
+  - 基线：源语句 sha256=e3810b4b865ab0c9c2d3474574ac2079571212d04140591053e9f4940fa1a4ec；保留返回、异常及 0 个分支，调用=ref。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06504 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 709-711 VariableDeclaration: operationLogRetentionForm
+  - 基线：源语句 sha256=80a0cd34e73d5ed3c09c976970b61c0954a63c49a0a7f0ba1268864611382114；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06506 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 729-734 VariableDeclaration: pluginStatusOptions
+  - 基线：源语句 sha256=915c9289e1bc566f4799a0407d4f2d09e5b85b0f174033b16e2b5c23287e2634；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06507 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 736-741 VariableDeclaration: operationLogStatusOptions
+  - 基线：源语句 sha256=36b38c696eab9767fda129b5986a7caab9a75ff7565df33b8cc0802c334b3009；保留返回、异常及 0 个分支，调用=。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06508 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 743-760 VariableDeclaration: data
+  - 基线：源语句 sha256=114ef2dac6ec3a6ae5bcb8c59315730fc899fd11348c425335067fda4d6adb93；保留返回、异常及 0 个分支，调用=reactive。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06509 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 762-762 VariableDeclaration: 
+  - 基线：源语句 sha256=abfed0a756171dcee0fd574a4b88464a1cb82be12b707c0811819f6e69d643b0；保留返回、异常及 0 个分支，调用=toRefs。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+- I06589 `ruoyi-fastapi-frontend/src/views/system/plugin/index.vue` lines 1660-1660 ExpressionStatement: 
+  - 基线：源语句 sha256=e966d3b08f869f7c7962cc988172bf8bc4840aa64d83fa58b0a15b31a76e4d3d；保留返回、异常及 0 个分支，调用=getList。
+  - 去向：react-front/src/views/system/plugin/index.context.ts
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

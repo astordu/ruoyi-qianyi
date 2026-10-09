@@ -1,0 +1,230 @@
+# G258V src/views/dashboard/index.vue：页面渲染、事件接线和生命周期
+
+依赖：G000, G228, G257, G258
+
+本组以以下完整源段为行为基线。实施前重读源码，选定同输入、输出、异常、状态与副作用案例；测试不得从目标实现倒推。
+
+逐项合同（函数内所有分支、模板事件/插值、静态模板与全部样式均保留）：
+
+- I02962 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template lines 1-167（完整静态文本/DOM/插槽）
+  - 基线：保持完整原模板的文案、层级、props/slots 和条件挂载/隐藏语义；组件样式替换仍需原界面对照。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02963 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 4: v-bind:theme
+  - 基线：原表达式：{
+        algorithm: settingsStore.isDark
+          ? theme.darkAlgorithm
+          : theme.defaultAlgorithm,
+      }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02964 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 12: v-bind:src
+  - 基线：原表达式：currentUser.avatar；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02965 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 24: v-bind:value
+  - 基线：原表达式：56；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02966 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 27: v-bind:value
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02967 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 30: v-bind:value
+  - 基线：原表达式：2223；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02968 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 36: v-bind:gutter
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02969 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 37: v-bind:xl
+  - 基线：原表达式：16；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02970 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 37: v-bind:lg
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02971 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 37: v-bind:md
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02972 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 37: v-bind:sm
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02973 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 37: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02974 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 40: v-bind:style
+  - 基线：原表达式：{ marginBottom: '24px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02975 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 42: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02976 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 43: v-bind:loading
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02977 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 44: v-bind:body-style
+  - 基线：原表达式：{ padding: 0 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02978 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 46: v-slot:extra
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02979 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 52: v-for:
+  - 基线：原表达式：item in projectNotice；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02980 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 53: v-bind:key
+  - 基线：原表达式：item.id；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02981 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 57: v-bind:body-style
+  - 基线：原表达式：{ padding: 0 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02982 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 59: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02983 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 61: v-bind:description
+  - 基线：原表达式：item.description；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02984 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 62: v-slot:title
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02985 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 64: v-bind:src
+  - 基线：原表达式：item.logo；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02986 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 65: v-bind:href
+  - 基线：原表达式：item.href；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02987 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 72: v-bind:href
+  - 基线：原表达式：item.memberLink；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02988 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 75: v-bind:title
+  - 基线：原表达式：item.updatedAt；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02989 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 83: v-bind:body-style
+  - 基线：原表达式：{ padding: 0 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02990 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 84: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02991 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 87: v-bind:loading
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02992 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 89: v-bind:data-source
+  - 基线：原表达式：activities；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02993 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 90: v-slot:renderItem
+  - 基线：原表达式：{ item }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02994 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 91: v-bind:key
+  - 基线：原表达式：item.id；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02995 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 93: v-slot:title
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02996 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 110: v-slot:avatar
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02997 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 111: v-bind:src
+  - 基线：原表达式：item.user.avatar；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02998 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 113: v-slot:description
+  - 基线：原表达式：；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I02999 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 114: v-bind:title
+  - 基线：原表达式：item.updatedAt；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03000 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 124: v-bind:xl
+  - 基线：原表达式：8；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03001 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 124: v-bind:lg
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03002 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 124: v-bind:md
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03003 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 124: v-bind:sm
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03004 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 124: v-bind:xs
+  - 基线：原表达式：24；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03005 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 126: v-bind:style
+  - 基线：原表达式：{ marginBottom: '24px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03006 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 128: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03007 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 129: v-bind:body-style
+  - 基线：原表达式：{ padding: 0 }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03008 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 134: v-bind:style
+  - 基线：原表达式：{ marginBottom: '24px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03009 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 135: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03010 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 143: v-bind:body-style
+  - 基线：原表达式：{ paddingTop: '12px', paddingBottom: '12px' }；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03011 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 144: v-bind:bordered
+  - 基线：原表达式：false；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03012 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 148: v-bind:gutter
+  - 基线：原表达式：48；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03013 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 150: v-for:
+  - 基线：原表达式：item in projectNotice；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03014 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 151: v-bind:key
+  - 基线：原表达式：`members-item-${item.id}`；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03015 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 152: v-bind:span
+  - 基线：原表达式：12；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03016 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 154: v-bind:href
+  - 基线：原表达式：item.href；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03017 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template line 155: v-bind:src
+  - 基线：原表达式：item.logo；分别验证受控值/事件参数/分支/列表键。
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03018 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 17
+  - 基线：原显示表达式：currentUser.name
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03019 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 20
+  - 基线：原显示表达式：currentUser.title
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03020 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 20
+  - 基线：原显示表达式：currentUser.group
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03021 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 66
+  - 基线：原显示表达式：item.title
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03022 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 73
+  - 基线：原显示表达式：item.member || ""
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03023 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 76
+  - 基线：原显示表达式：item.updatedAt
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03024 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 95
+  - 基线：原显示表达式：item.user.name
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03025 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 98
+  - 基线：原显示表达式：item.template1
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03026 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 101
+  - 基线：原显示表达式：item?.group?.name
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03027 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 102
+  - 基线：原显示表达式：item.template2
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03028 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 105
+  - 基线：原显示表达式：item?.project?.name
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03029 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 115
+  - 基线：原显示表达式：item.updatedAt
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03030 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` template interpolation line 156
+  - 基线：原显示表达式：item.member
+  - 去向：react-front/src/views/dashboard/index.tsx
+- I03031 `ruoyi-fastapi-frontend/src/views/dashboard/index.vue` style[0] lines 501-752
+  - 基线：保留全部选择器、声明和 url；lang=less, scoped=True；原样式选择器在 source-audit.json。
+  - 去向：react-front/src/views/dashboard/index.tsx
+
+验证：纯函数直接比较原/新正常、空值、边界及异常；状态动作比较变化与清理；API 比较 method/url/参数/错误；组件独立挂载比较 props、受控值、回调和交互；页面比较操作与请求；资源比内容与真实加载。
+
+大文件函数组使用显式注入的共享状态/依赖接口，保留原调用次序；生命周期启动及页面按钮接线由 V 组验证。循环闭环成员不得拆掉依赖或增加占位实现。
+
+全文件结构审阅已经完成，语义等价仍待逐组实施与验证。当前合同中的源段是检查范围，真正的案例、固定条件与运行证据应在实施前记录 baseline.md；必要条件缺失则不通过。
+
+待集成：所属 J 合同及 dependency-edges.json 的运行时回调、动态 import、glob、全局注册；本组通过仅证明实际执行的本组条件。

@@ -1,0 +1,51 @@
+{
+  "kind": "original-source-contract",
+  "source_runtime_business_equivalence": false,
+  "source_files": {
+    "index.html": "fb6ca55844e86e10c438c84edab4b1722ebacc25fb049332bcde4579892e1f05",
+    "vite.config.js": "8314aa2690335f5a53d9eb3672605ad90ae7b0144209f6578c867ce765721dc1",
+    "package.json": "e29ed2512e057a65b53e7881822d03119585657c7ec84f10160f2f501e907666",
+    ".gitignore": "eca38dd740d56ff72cfdb78a135518e2bbcb68b7ad981c5786ec754cf722ec2e",
+    "public/favicon.ico": "373ceb12c982bd8d54a05a124cd07c007cfdead662deb15f403f29e4cb7a8dfb",
+    "html/ie.html": "55b2939532c33192444ba701a6062068a3796a869a425b2b8db4e22e9bdaffbe",
+    ".env.development": "2316819f2b242a841b26080bc46216bfac9881aa2c7bfd1b56ff33c1f9cd51fb",
+    ".env.production": "7283eb6d43d4874631f6de0391fd72c22c710cf522cf43d9dd5fc5a8954bfaa4",
+    ".env.staging": "2c5036f05231607c23b626875913b84249fab433fe50385883457239eae6cfde",
+    ".env.docker": "4a885f752e60287f3b66fb4c4893d4d0341cd9b348b7faac59fa7c4cd9d49ccc"
+  },
+  "loading": {
+    "text": "正在加载系统资源，请耐心等待",
+    "background": "#7171C6",
+    "spinner_px": 150
+  },
+  "proxy": {
+    "prefix": "/dev-api",
+    "target": "http://127.0.0.1:19099",
+    "rewrite": "strip prefix"
+  },
+  "modes": {
+    "development": {
+      "VITE_APP_TITLE": "vfadmin管理系统",
+      "VITE_APP_ENV": "development",
+      "VITE_APP_BASE_API": "/dev-api"
+    },
+    "production": {
+      "VITE_APP_TITLE": "vfadmin管理系统",
+      "VITE_APP_ENV": "production",
+      "VITE_APP_BASE_API": "/prod-api",
+      "VITE_BUILD_COMPRESS": "gzip"
+    },
+    "staging": {
+      "VITE_APP_TITLE": "vfadmin管理系统",
+      "VITE_APP_ENV": "staging",
+      "VITE_APP_BASE_API": "/stage-api",
+      "VITE_BUILD_COMPRESS": "gzip"
+    },
+    "docker": {
+      "VITE_APP_TITLE": "vfadmin管理系统",
+      "VITE_APP_ENV": "docker",
+      "VITE_APP_BASE_API": "/docker-api",
+      "VITE_BUILD_COMPRESS": "gzip"
+    }
+  }
+}

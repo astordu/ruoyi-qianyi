@@ -1,0 +1,80 @@
+[
+  {
+    "command": [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.178,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-1.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build:prod",
+      "--",
+      "--outDir",
+      "../migration/state/evidence/G000/builds/production",
+      "--emptyOutDir"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.267,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-2.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build:stage",
+      "--",
+      "--outDir",
+      "../migration/state/evidence/G000/builds/staging",
+      "--emptyOutDir"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.268,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-3.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "build:docker",
+      "--",
+      "--outDir",
+      "../migration/state/evidence/G000/builds/docker",
+      "--emptyOutDir"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.274,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-4.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:foundation"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 0,
+    "seconds": 0.348,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-5.log"
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "test:foundation:browser"
+    ],
+    "cwd": "/Users/dulei/Documents/projects/ruoyi-qianyi/react-front",
+    "exit_code": 1,
+    "seconds": 0.395,
+    "log": "/Users/dulei/Documents/projects/ruoyi-qianyi/migration/state/evidence/G000/attempt-1-command-6.log"
+  }
+]

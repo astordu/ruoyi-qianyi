@@ -1,0 +1,17 @@
+{
+  "round": "G000",
+  "status": "passed",
+  "source_files": 339,
+  "structure_items": 8756,
+  "group_content_items_passed": 31,
+  "groups_passed": 1,
+  "groups_total": 773,
+  "fully_accounted_source_files_with_all_owned_groups_passed": 4,
+  "partial_source_files": 5,
+  "excluded_source_files": 1,
+  "integration_passed": 0,
+  "integration_total": 31,
+  "next_round_started": false,
+  "source_unchanged": true,
+  "report": "migration/state/groups/G000/validation.md"
+}

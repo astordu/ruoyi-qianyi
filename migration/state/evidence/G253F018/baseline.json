@@ -1,0 +1,219 @@
+{
+  "conditions": {
+    "node": "v22.23.2",
+    "hostTimezone": "Asia/Shanghai",
+    "intlPolyfilled": false
+  },
+  "cases": [
+    {
+      "input": "Asia/Shanghai",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "Asia/Shanghai",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "  Asia/Shanghai  ",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "Asia/Shanghai",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "UTC",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "UTC",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "America/New_York",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "America/New_York",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "Europe/Paris",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "Europe/Paris",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "Asia/Kolkata",
+      "ok": true,
+      "isIntlDateTimeFormat": true,
+      "resolved": {
+        "locale": "en",
+        "calendar": "gregory",
+        "numberingSystem": "latn",
+        "timeZone": "Asia/Calcutta",
+        "hourCycle": "h23",
+        "hour12": false,
+        "year": "numeric",
+        "month": "2-digit",
+        "day": "2-digit",
+        "hour": "2-digit",
+        "minute": "2-digit",
+        "second": "2-digit"
+      }
+    },
+    {
+      "input": "",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: "
+      }
+    },
+    {
+      "input": "   ",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区:    "
+      }
+    },
+    {
+      "input": null,
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: null"
+      }
+    },
+    {
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: undefined"
+      }
+    },
+    {
+      "input": 123,
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: 123"
+      }
+    },
+    {
+      "input": {},
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: [object Object]"
+      }
+    },
+    {
+      "input": "+08:00",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: +08:00"
+      }
+    },
+    {
+      "input": "-05:00",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: -05:00"
+      }
+    },
+    {
+      "input": "Invalid/Zone",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区: Invalid/Zone"
+      }
+    },
+    {
+      "input": "  Bad/Zone  ",
+      "ok": false,
+      "error": {
+        "name": "Error",
+        "message": "无效的 IANA 时区:   Bad/Zone  "
+      }
+    }
+  ],
+  "cache": {
+    "sameInstance": {
+      "repeatedSameReference": true,
+      "trimmedSameReference": true,
+      "hasTrimmedKey": true
+    },
+    "failureNotCached": {
+      "sizeBefore": 6,
+      "sizeAfter": 6,
+      "hasFailedKey": false
+    }
+  },
+  "runtimeImport": {
+    "moduleLoaded": true,
+    "businessTimezone": "Asia/Shanghai",
+    "deviceTimezone": "Asia/Shanghai"
+  }
+}
