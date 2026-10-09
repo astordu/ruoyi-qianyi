@@ -107,14 +107,77 @@ class MigrationLoop:
         self.call_index = 0
 
     def checked(self):
-        result = self.m.load_checked(self.state)
-        if Path(result[0]['project_root']).resolve() != self.root:
-            raise LoopStop('状态中的 project_root 与当前项目不一致。')
-        if any(self.state.is_relative_to(self.root / source) for source in result[0]['source_roots']):
+        inventory = self.m.read(self.state / 'inventory.json')
+        if Path(inventory['project_root']).resolve() != self.root:
+            raise LoopStop(f'状态仍指向旧项目 {inventory["project_root"]}；当前项目为 {self.root}。')
+        self.validate_layout(inventory)
+        return self.m.load_checked(self.state)
+
+    def validate_layout(self, inventory):
+        if any(self.state.is_relative_to(self.root / source) for source in inventory['source_roots']):
             raise LoopStop('状态及循环日志不能写入 Vue 源目录。')
-        if self.control.is_relative_to(self.root / result[0]['target_root']):
+        if self.control.is_relative_to(self.root / inventory['target_root']):
             raise LoopStop('循环日志不能写入 React 目标目录。')
-        return result
+
+    def relocation(self, dry_run=False):
+        """Reanchor a moved checkout only after an exact source-snapshot match.
+
+        Hashes of group scopes, contracts, targets and evidence use relative
+        paths and survive a move. Inventory digest includes the absolute root,
+        so synchronize only that digest in the plan and saved round metadata.
+        A journal makes interruption between atomic file writes recoverable.
+        """
+        journal_path = self.state / 'root-relocation.pending.json'
+        if journal_path.exists():
+            journal = self.m.read(journal_path)
+            if journal['new_root'] != str(self.root):
+                raise LoopStop('上次路径校准尚未完成，且目标位置再次变化；需核对 root-relocation.pending.json。')
+        else:
+            inv = self.m.read(self.state / 'inventory.json')
+            if Path(inv['project_root']).resolve() == self.root:
+                return None
+            plan = self.m.read(self.state / 'plan.json')
+            if plan['inventory_digest'] != inv['digest']:
+                raise LoopStop('计划与清单快照不一致，不能只校准路径。')
+            new_inv = dict(inv, project_root=str(self.root))
+            config = {k:new_inv[k] for k in ('project_root','source_roots','target_root','exclude_dirs')}
+            new_inv['digest'] = self.m.digest({'config':config, 'files':inv['files']})
+            updates = {'inventory.json':{'old':inv, 'new':new_inv},
+                       'plan.json':{'old':plan, 'new':dict(plan, inventory_digest=new_inv['digest'])}}
+            for name in ('round.json', 'suspended-round.json'):
+                path = self.state / name
+                if path.exists():
+                    task = self.m.read(path)
+                    if task.get('inventory_digest') == inv['digest']:
+                        updates[name] = {'old':task, 'new':dict(task, inventory_digest=new_inv['digest'])}
+            journal = {'old_root':inv['project_root'], 'new_root':str(self.root), 'at':utc(),
+                       'history':'root-relocation-'+uuid.uuid4().hex+'.json', 'updates':updates}
+        new_inv = journal['updates']['inventory.json']['new']
+        self.validate_layout(new_inv)
+        try:
+            live, _ = self.m.scan(new_inv)
+        except ValueError as error:
+            raise LoopStop(f'当前项目 {self.root} 的源码无法核对：{error}；旧清单位置：{journal["old_root"]}。') from error
+        expected = new_inv['files']
+        changed = sorted(p for p in set(live) | set(expected) if live.get(p) != expected.get(p))
+        if changed:
+            raise LoopStop('项目位置变化且源快照也有变化，停止路径校准，需重新盘点：'+', '.join(changed[:20]))
+        allowed = {'inventory.json','plan.json','round.json','suspended-round.json'}
+        for name, update in journal['updates'].items():
+            if name not in allowed or self.m.read(self.state / name) not in (update['old'], update['new']):
+                raise LoopStop('路径校准期间状态文件被其他操作修改：'+name)
+        summary = {'old_root':journal['old_root'], 'new_root':journal['new_root'],
+                   'source_files_matched':len(live), 'progress_preserved':True}
+        if dry_run:
+            return summary
+        if not journal_path.exists():
+            self.m.write(journal_path, journal)
+        self.m.write(self.state / 'history' / journal['history'], journal)
+        for name, update in journal['updates'].items():
+            self.m.write(self.state / name, update['new'])
+        journal_path.unlink()
+        print(f'已校准项目路径：{summary["old_root"]} → {summary["new_root"]}；{len(live)} 个源文件快照一致，迁移进度保留。', flush=True)
+        return summary
 
     def event(self, kind, **fields):
         row = {'at': utc(), 'event': kind, **fields}
@@ -283,13 +346,20 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
         return {'status':'complete', 'report':str(report)}
 
     def run(self):
-        self.checked()
         if self.args.dry_run:
+            relocated = self.relocation(dry_run=True)
+            if relocated:
+                print(json.dumps({'dry_run':True, 'status':'root_relocation_required',
+                                  'relocation':relocated, 'note':'正式运行会校准路径；本次未写状态或调用 agent。'},
+                                 ensure_ascii=False, indent=2))
+                return 0
+            self.checked()
             selection = self.m.select(self.state, False)
             print(json.dumps({'dry_run': True, 'next': selection,
                               'check':self.m.check_state(self.state)}, ensure_ascii=False, indent=2))
             return 0
         with project_lock(self.root):
+            self.relocation()
             self.checked()
             for skill in SKILLS.values():
                 if not (self.root / '.agents/skills' / skill / 'SKILL.md').is_file():

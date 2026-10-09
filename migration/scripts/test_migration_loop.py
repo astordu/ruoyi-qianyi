@@ -58,7 +58,7 @@ class MigrationLoopTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='migration loop ')
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         state_script = self.root / loop.STATE_SCRIPT
         state_script.parent.mkdir(parents=True)
         shutil.copyfile(loop.ROOT / loop.STATE_SCRIPT, state_script)
@@ -101,6 +101,18 @@ class MigrationLoopTests(unittest.TestCase):
         self.put('migration/state/failure-report.md','I1 expected old, actual broken, reproduce fixture')
         self.put('migration/state/failure.txt','fixture assertion failed')
         self.m.record(argparse.Namespace(group='G1',integration=None,result='failed',report='migration/state/failure-report.md',evidence=['migration/state/failure.txt'],note='fix fixture I1'),self.state)
+
+    def mark_as_moved(self):
+        inv=self.m.read(self.state/'inventory.json');plan=self.m.read(self.state/'plan.json')
+        inv['project_root']=str(self.root/'missing-old-checkout')
+        config={k:inv[k] for k in ('project_root','source_roots','target_root','exclude_dirs')}
+        inv['digest']=self.m.digest({'config':config,'files':inv['files']})
+        plan['inventory_digest']=inv['digest']
+        self.m.write(self.state/'inventory.json',inv);self.m.write(self.state/'plan.json',plan)
+        task=self.state/'round.json'
+        if task.exists():
+            data=self.m.read(task);data['inventory_digest']=inv['digest'];self.m.write(task,data)
+        return inv['digest']
 
     def test_normal_groups_integration_final_and_second_run_no_calls(self):
         self.assertEqual(self.run_loop(),0)
@@ -214,6 +226,52 @@ class MigrationLoopTests(unittest.TestCase):
         result=subprocess.run(['bash',str(entry),'codex','1'],cwd=self.root.parent,capture_output=True,text=True,timeout=10)
         self.assertEqual(result.returncode,4,result.stderr)
         self.assertEqual([c['stage'] for c in self.calls()],['next','implement','validate'])
+
+    def test_moved_project_auto_reanchors_and_preserves_passed_verification(self):
+        self.args.max_iterations=1;self.run_loop()
+        old_validation=self.m.read(self.state/'plan.json')['groups'][0]['validation']
+        old_digest=self.mark_as_moved();controller=loop.MigrationLoop(self.args,self.root)
+        with loop.project_lock(self.root),redirect_stdout(io.StringIO()):controller.relocation()
+        plan=self.m.read(self.state/'plan.json');inv=self.m.read(self.state/'inventory.json')
+        self.assertEqual(inv['project_root'],str(self.root));self.assertNotEqual(inv['digest'],old_digest)
+        self.assertEqual(plan['inventory_digest'],inv['digest'])
+        self.assertEqual(plan['groups'][0]['validation'],old_validation)
+        self.assertEqual(self.m.check_state(self.state)['groups_passed'],1)
+        self.assertTrue(list((self.state/'history').glob('root-relocation-*.json')))
+
+    def test_moved_failed_task_resumes_same_group_and_updates_round_digest(self):
+        self.fail_current();self.mark_as_moved();self.args.max_iterations=1
+        self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
+        self.assertEqual(self.m.read(self.state/'round.json')['inventory_digest'],self.m.read(self.state/'inventory.json')['digest'])
+        self.assertTrue((self.state/'failure-report.md').is_file())
+
+    def test_moved_project_dry_run_does_not_rewrite_state(self):
+        self.mark_as_moved();self.args.dry_run=True
+        before={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(self.run_loop(),0)
+        after={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(before,after);self.assertEqual(self.calls(),[])
+
+    def test_moved_changed_source_is_not_accepted_as_a_relocation(self):
+        self.mark_as_moved();self.put('vue/1.js','changed source')
+        before=(self.state/'inventory.json').read_bytes()
+        with self.assertRaisesRegex(loop.LoopStop,'源快照也有变化'):self.run_loop()
+        self.assertEqual((self.state/'inventory.json').read_bytes(),before)
+        self.assertEqual(self.calls(),[])
+
+    def test_interrupted_relocation_finishes_on_restart(self):
+        self.fail_current();self.mark_as_moved()
+        controller=loop.MigrationLoop(self.args,self.root);original_write=controller.m.write
+        def interrupt(path,data):
+            if path==self.state/'plan.json':raise OSError('simulated interruption after inventory update')
+            original_write(path,data)
+        with patch.object(controller.m,'write',side_effect=interrupt),redirect_stdout(io.StringIO()):
+            with self.assertRaisesRegex(OSError,'simulated interruption'):controller.relocation()
+        self.assertTrue((self.state/'root-relocation.pending.json').exists())
+        self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
+        self.assertFalse((self.state/'root-relocation.pending.json').exists())
+        self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
 
 
 if __name__=='__main__':unittest.main()
