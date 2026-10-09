@@ -2,7 +2,11 @@
 
 四个 skills 一起使用，共用 `migration-plan/scripts/migration_state.py`，只依赖 Python 3 标准库。命令路径相对项目根；状态路径可通过 `--state` 修改。迁移过程不能只复制其中一个 skill 而丢掉共享脚本和参考。
 
-本项目状态默认 `migration/state/`，不放被 Git 忽略的 `.qoder/`。这次安装仅创建技能，不初始化真实迁移状态；运行规划后才生成以下文件。
+本项目状态默认 `migration/state/`，不放被 Git 忽略的 `.qoder/`。运行规划后生成以下文件。
+
+`inventory.project_root` 相对于状态目录保存（默认 `../..`），读取时以状态目录解析，不依赖当前 shell 目录。源/目标、合同、任务、报告和证据路径相对于项目根保存；落盘数据与命令示例不填写本机绝对路径。复制整个项目到其他机器后路径仍有效。
+
+旧状态仍保存绝对根路径，或源锁文件被安装工具更新时，从当前项目根运行 `migration_state.py portable --root . --state migration/state`，再执行本阶段命令。外层 `migration-loop.sh` 启动时自动执行此步骤。转换保留任务、失败报告和通过记录；纯路径转换不使通过记录失效。
 
 ```text
 migration/state/
@@ -24,6 +28,9 @@ migration/state/
 ```sh
 # 不读取 .gitignore；--source 可重复。显式排除的是目录名，不排除单个文件。
 python3 .agents/skills/migration-plan/scripts/migration_state.py inventory --root . --source ruoyi-fastapi-frontend --target react-front --state migration/state
+
+# 兼容旧绝对根路径；刷新符合已有排除处置的 npm 锁文件。加 --dry-run 只预览。
+python3 .agents/skills/migration-plan/scripts/migration_state.py portable --root . --state migration/state
 
 # 规划后的结构/覆盖/快照检查；不证明业务等价。
 python3 .agents/skills/migration-plan/scripts/migration_state.py check --state migration/state
@@ -109,6 +116,10 @@ python3 .agents/skills/migration-plan/scripts/migration_state.py check --state m
 ## 修改、失效与续跑
 
 源变化后重跑相同参数的 inventory，旧计划不会被覆盖；逐项对照新增/删除/变化内容，更新 `files/items/groups/合同` 和 `inventory_digest`。删除的源项去向保留在 history/审阅报告，不能静默缩小功能。
+
+`portable` 的自动快照刷新仅适用于已审阅且全部内容已登记为 `exclude` 的 `package-lock.json`：同目录 `package.json` 快照未变，锁文件仍是有效 npm JSON，现代锁文件的根依赖声明与 manifest 一致。锁文件继续计入清单，哈希和复核依据更新，旧元数据归档；`runtime_revision` 变化使所有旧本组通过记录失效，随后按依赖复验。锁文件新增/删除、需迁移的锁文件、manifest 或业务源码变化仍要求重新盘点，不通过忽略文件消除差异。该操作不安装依赖、不修改源/目标文件。
+
+路径/锁文件更新同时同步 `plan/round/suspended-round` 的清单 digest；写入中断通过 pending journal 在下次恢复。`portable --dry-run` 和循环 `--dry-run` 不写状态、不启动 agent。
 
 源、目标、合同、依赖验证或证据变化会使通过记录失效。`next` 优先选可重新验证的最前依赖，返回 `mode: revalidate`；必要时暂存原 active_group，依赖验证完成后恢复。重新验证一轮仍只处理一个组，先查是否真有缺陷，需要时修复再重新 record。单纯共享文件变化也必须记录复验，而非假定其他模块不受影响。
 

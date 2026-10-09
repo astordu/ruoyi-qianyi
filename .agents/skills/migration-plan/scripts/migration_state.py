@@ -5,12 +5,14 @@ Python standard library only. This validates bookkeeping, not semantic equivalen
 All source access is read-only; writes are limited to the explicit state directory.
 """
 import argparse
+import copy
 import hashlib
 import json
 import os
 from pathlib import Path
 import re
 import sys
+import uuid
 from datetime import datetime, timezone
 
 DEFAULT_EXCLUDES = [".git", "node_modules", "dist", "coverage", ".vite"]
@@ -63,8 +65,19 @@ def relative_file(root, value):
     return resolved
 
 
-def scan(config):
-    root = Path(config["project_root"])
+def inventory_root(config, state):
+    # New inventories anchor the root to the state directory, never the CWD.
+    # Absolute values are only supported while upgrading legacy metadata.
+    return (state / config["project_root"]).resolve()
+
+
+def inventory_digest(config):
+    fields = {k: config[k] for k in ("project_root", "source_roots", "target_root", "exclude_dirs")}
+    return digest({"config": fields, "files": config["files"]})
+
+
+def scan(config, root):
+    root = root.resolve()
     files, excluded = {}, []
     excluded_names = set(config["exclude_dirs"])
 
@@ -110,6 +123,7 @@ def scan(config):
 
 def inventory(args, state):
     root = Path(args.root).resolve()
+    state = state.resolve()
     require(root.is_dir(), "Project root does not exist")
     sources = sorted(set(str(relative_file(root, s).relative_to(root)) for s in args.source))
     target = relative_file(root, args.target)
@@ -121,15 +135,16 @@ def inventory(args, state):
     excludes = args.exclude_dirs.split(",") if args.exclude_dirs else []
     require(all(x and "/" not in x and x not in {".", ".."} for x in excludes),
             "--exclude-dirs expects comma-separated directory basenames")
-    config = {"project_root": str(root), "source_roots": sources,
+    config = {"project_root": Path(os.path.relpath(root, state)).as_posix(), "source_roots": sources,
               "target_root": target.relative_to(root).as_posix(), "exclude_dirs": sorted(set(excludes))}
-    files, excluded = scan(config)
+    files, excluded = scan(config, root)
     result = {"schema_version": 1, **config, "created_at": now(), "files": files,
               "excluded": excluded, "digest": digest({"config": config, "files": files})}
     old_path = state / "inventory.json"
     if old_path.exists():
         old = read(old_path)
-        require(all(old.get(k) == config[k] for k in config),
+        comparable = dict(old, project_root=Path(os.path.relpath(root, state)).as_posix())
+        require(all(comparable.get(k) == config[k] for k in config),
                 "Inventory configuration changed; use a new state directory for a new scope")
         write(state / "history" / ("inventory-" + old["digest"] + ".json"), old)
     write(old_path, result)
@@ -139,7 +154,118 @@ def inventory(args, state):
                         for p, f in files.items()}, "items": [], "groups": [],
               "integration_checks": [], "active_group": None, "active_feature": None})
     return {"status": "inventory_created", "files": len(files), "digest": result["digest"],
-            "excluded": excluded, "state": str(state), "plan_preserved": True}
+            "excluded": excluded, "state": Path(os.path.relpath(state, root)).as_posix(), "plan_preserved": True}
+
+
+def refreshable_lock(root, path, old, live, plan):
+    """Only refresh already excluded, whole-file npm locks with unchanged manifests.
+
+    A lock refresh never certifies runtime equivalence: portable() changes the
+    environment revision so every earlier passed group must be revalidated.
+    """
+    if (Path(path).name != "package-lock.json" or path not in old or path not in live
+            or old[path]["kind"] != "file" or live[path]["kind"] != "file"):
+        return False
+    manifest = str(Path(path).with_name("package.json"))
+    if manifest not in old or old[manifest] != live.get(manifest):
+        return False
+    owned = [i for i in plan.get("items", []) if i.get("source") == path]
+    review = plan.get("files", {}).get(path, {})
+    if (not owned or any(i.get("disposition") != "exclude" or i.get("group") or not i.get("reason") for i in owned)
+            or review.get("reviewed") is not True or review.get("sha256") != old[path]["sha256"]
+            or not isinstance(review.get("review_evidence"), str) or not review["review_evidence"].strip()):
+        return False
+    lock = read(relative_file(root, path))
+    package = read(relative_file(root, manifest))
+    if not isinstance(lock, dict) or not isinstance(package, dict):
+        return False
+    version = lock.get("lockfileVersion")
+    if type(version) is not int or version not in {1, 2, 3}:
+        return False
+    if version == 1:
+        return isinstance(lock.get("dependencies"), dict)
+    packages = lock.get("packages")
+    if not isinstance(packages, dict) or not isinstance(packages.get(""), dict):
+        return False
+    return all(packages[""].get(k, {}) == package.get(k, {})
+               for k in ("dependencies", "devDependencies", "optionalDependencies", "peerDependencies"))
+
+
+def portable(state, root, dry_run=False):
+    """Upgrade legacy roots and reconcile excluded npm locks with an atomic journal.
+
+    Does not write source/target files, remove inventory entries, reset progress
+    or fabricate a successful validation. Existing evidence is retained.
+    """
+    root, state = root.resolve(), state.resolve()
+    root_ref = Path(os.path.relpath(root, state)).as_posix()
+    journal_path = state / "root-relocation.pending.json"
+    legacy, legacy_actual = None, {}
+    if journal_path.exists():
+        journal = read(journal_path)
+        if Path(journal["new_root"]).is_absolute():
+            # An interrupted run of the previous absolute-root implementation.
+            # Use its intended snapshots, but verify actual old/new values first.
+            legacy = journal
+            for name, update in legacy["updates"].items():
+                actual = read(state / name)
+                require(name in {"inventory.json", "plan.json", "round.json", "suspended-round.json"}
+                        and actual in (update["old"], update["new"]),
+                        "State changed during legacy portability update: " + name)
+                legacy_actual[name] = actual
+        else:
+            require(journal["new_root"] == root_ref, "Unfinished portability update has a different state layout")
+    if not journal_path.exists() or legacy:
+        inv = legacy["updates"]["inventory.json"]["new"] if legacy else read(state / "inventory.json")
+        plan = legacy["updates"]["plan.json"]["new"] if legacy else read(state / "plan.json")
+        require(plan.get("inventory_digest") == inv["digest"], "Plan must be reconciled with the inventory digest")
+        require(inventory_digest(inv) == inv["digest"], "Inventory digest does not match its contents")
+        new_inv, new_plan = copy.deepcopy(inv), copy.deepcopy(plan)
+        new_inv["project_root"] = root_ref
+        live, _ = scan(new_inv, root)
+        changed = sorted(p for p in set(live) | set(inv["files"]) if live.get(p) != inv["files"].get(p))
+        rejected = [p for p in changed if not refreshable_lock(root, p, inv["files"], live, plan)]
+        require(not rejected, "Source snapshot changed; 源快照变化，需重新盘点：" + ", ".join(rejected[:20]))
+        if changed:
+            new_inv["files"] = live
+            new_inv["runtime_revision"] = digest({p: f for p, f in live.items() if Path(p).name == "package-lock.json"})
+            for p in changed:
+                new_plan["files"][p]["sha256"] = live[p]["sha256"]
+                new_plan["files"][p]["review_evidence"] += (
+                    "; 自动复核：有效 npm 锁文件、package.json 快照未变、保留既有整文件排除处置；旧运行验证须复验。")
+        new_inv["digest"] = inventory_digest(new_inv)
+        if new_inv == inv:
+            return None
+        new_plan["inventory_digest"] = new_inv["digest"]
+        updates = {"inventory.json": {"old": legacy_actual.get("inventory.json", inv), "new": new_inv},
+                   "plan.json": {"old": legacy_actual.get("plan.json", plan), "new": new_plan}}
+        for name in ("round.json", "suspended-round.json"):
+            if (state / name).exists():
+                actual = legacy_actual[name] if name in legacy_actual else read(state / name)
+                task = legacy["updates"][name]["new"] if legacy and name in legacy["updates"] else actual
+                if task.get("inventory_digest") == inv["digest"]:
+                    updates[name] = {"old": actual, "new": dict(task, inventory_digest=new_inv["digest"])}
+        journal = {"new_root": root_ref, "at": now(), "changed_locks": changed,
+                   "history": "portability-" + uuid.uuid4().hex + ".json", "updates": updates}
+    new_inv = journal["updates"]["inventory.json"]["new"]
+    require(inventory_root(new_inv, state) == root, "Portable inventory points outside the current project")
+    live, _ = scan(new_inv, root)
+    require(live == new_inv["files"], "Source changed during portability update; retry after reviewing the source")
+    allowed = {"inventory.json", "plan.json", "round.json", "suspended-round.json"}
+    for name, update in journal["updates"].items():
+        require(name in allowed and read(state / name) in (update["old"], update["new"]),
+                "State changed during portability update: " + name)
+    summary = {"project_root": root_ref, "source_files": len(live), "refreshed_excluded_locks": journal["changed_locks"],
+               "progress_preserved": True, "runtime_revalidation_required": bool(journal["changed_locks"])}
+    if dry_run:
+        return summary
+    if not journal_path.exists() or legacy:
+        write(journal_path, journal)
+    write(state / "history" / journal["history"], journal)
+    for name, update in journal["updates"].items():
+        write(state / name, update["new"])
+    journal_path.unlink()
+    return summary
 
 
 def keyed(rows, kind):
@@ -169,8 +295,8 @@ def topology(groups):
 def load_checked(state):
     inv, plan = read(state / "inventory.json"), read(state / "plan.json")
     require(inv.get("schema_version") == plan.get("schema_version") == 1, "Unsupported schema version")
-    root = Path(inv["project_root"])
-    live, _ = scan(inv)
+    root = inventory_root(inv, state)
+    live, _ = scan(inv, root)
     old = inv["files"]
     changed = sorted(p for p in set(live) | set(old) if live.get(p) != old.get(p))
     require(not changed, "Source snapshot changed; rerun inventory and review: " + ", ".join(changed[:20]))
@@ -256,9 +382,12 @@ def group_snapshot(root, inv, groups, items, gid):
         target = relative_file(root, p)
         require(target.is_file(), "Missing target file: " + p)
         hashes[p] = file_hash(target)
-    return digest({"source": {i["source"]: inv["files"][i["source"]]["sha256"] for i in own},
+    snapshot = {"source": {i["source"]: inv["files"][i["source"]]["sha256"] for i in own},
                    "items": own, "targets": hashes, "contract": file_hash(relative_file(root, group["contract"])),
-                   "depends_on": {d: groups[d].get("validation") for d in group["depends_on"]}})
+                   "depends_on": {d: groups[d].get("validation") for d in group["depends_on"]}}
+    if inv.get("runtime_revision"):
+        snapshot["source_environment"] = inv["runtime_revision"]
+    return digest(snapshot)
 
 
 def evidence_valid(root, validation):
@@ -468,6 +597,9 @@ def main():
     p.add_argument("--source", action="append", required=True)
     p.add_argument("--target", required=True)
     p.add_argument("--exclude-dirs", default=",".join(DEFAULT_EXCLUDES))
+    p = commands.add_parser("portable")
+    p.add_argument("--root", default=".")
+    p.add_argument("--dry-run", action="store_true")
     for name in ("check", "next", "record"):
         commands.add_parser(name)
     for p in commands.choices.values():
@@ -487,6 +619,8 @@ def main():
     try:
         if args.command == "inventory":
             result = inventory(args, state)
+        elif args.command == "portable":
+            result = portable(state, Path(args.root), args.dry_run) or {"status": "already_portable"}
         elif args.command == "check":
             result = check_state(state, args.final)
         elif args.command == "next":

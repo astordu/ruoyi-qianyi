@@ -231,13 +231,13 @@ class MigrationLoopTests(unittest.TestCase):
         self.args.max_iterations=1;self.run_loop()
         old_validation=self.m.read(self.state/'plan.json')['groups'][0]['validation']
         old_digest=self.mark_as_moved();controller=loop.MigrationLoop(self.args,self.root)
-        with loop.project_lock(self.root),redirect_stdout(io.StringIO()):controller.relocation()
+        with loop.project_lock(self.root),redirect_stdout(io.StringIO()):controller.prepare_state()
         plan=self.m.read(self.state/'plan.json');inv=self.m.read(self.state/'inventory.json')
-        self.assertEqual(inv['project_root'],str(self.root));self.assertNotEqual(inv['digest'],old_digest)
+        self.assertEqual(inv['project_root'],'../..');self.assertNotEqual(inv['digest'],old_digest)
         self.assertEqual(plan['inventory_digest'],inv['digest'])
         self.assertEqual(plan['groups'][0]['validation'],old_validation)
         self.assertEqual(self.m.check_state(self.state)['groups_passed'],1)
-        self.assertTrue(list((self.state/'history').glob('root-relocation-*.json')))
+        self.assertTrue(list((self.state/'history').glob('portability-*.json')))
 
     def test_moved_failed_task_resumes_same_group_and_updates_round_digest(self):
         self.fail_current();self.mark_as_moved();self.args.max_iterations=1
@@ -256,7 +256,7 @@ class MigrationLoopTests(unittest.TestCase):
     def test_moved_changed_source_is_not_accepted_as_a_relocation(self):
         self.mark_as_moved();self.put('vue/1.js','changed source')
         before=(self.state/'inventory.json').read_bytes()
-        with self.assertRaisesRegex(loop.LoopStop,'源快照也有变化'):self.run_loop()
+        with self.assertRaisesRegex(ValueError,'源快照变化'):self.run_loop()
         self.assertEqual((self.state/'inventory.json').read_bytes(),before)
         self.assertEqual(self.calls(),[])
 
@@ -267,11 +267,105 @@ class MigrationLoopTests(unittest.TestCase):
             if path==self.state/'plan.json':raise OSError('simulated interruption after inventory update')
             original_write(path,data)
         with patch.object(controller.m,'write',side_effect=interrupt),redirect_stdout(io.StringIO()):
-            with self.assertRaisesRegex(OSError,'simulated interruption'):controller.relocation()
+            with self.assertRaisesRegex(OSError,'simulated interruption'):controller.prepare_state()
         self.assertTrue((self.state/'root-relocation.pending.json').exists())
         self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
         self.assertFalse((self.state/'root-relocation.pending.json').exists())
         self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
+
+    def test_legacy_absolute_relocation_journal_recovers_to_relative_root(self):
+        self.fail_current();self.mark_as_moved()
+        inv=self.m.read(self.state/'inventory.json');plan=self.m.read(self.state/'plan.json');task=self.m.read(self.state/'round.json')
+        new_inv=dict(inv,project_root=str(self.root));new_inv['digest']=self.m.inventory_digest(new_inv)
+        updates={'inventory.json':{'old':inv,'new':new_inv},'plan.json':{'old':plan,'new':dict(plan,inventory_digest=new_inv['digest'])},
+                 'round.json':{'old':task,'new':dict(task,inventory_digest=new_inv['digest'])}}
+        self.m.write(self.state/'root-relocation.pending.json',{'new_root':str(self.root),'updates':updates})
+        self.m.write(self.state/'inventory.json',new_inv)
+        self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
+        self.assertEqual(self.m.read(self.state/'inventory.json')['project_root'],'../..')
+        self.assertFalse((self.state/'root-relocation.pending.json').exists())
+        self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
+
+    def add_excluded_lock(self):
+        package={'name':'fixture','dependencies':{'vue':'^3.0.0'}}
+        self.put('vue/package.json',json.dumps(package))
+        self.put('vue/package-lock.json',json.dumps({'lockfileVersion':3,'packages':{'':package}}))
+        self.m.inventory(argparse.Namespace(root=str(self.root),source=['vue'],target='react',exclude_dirs='node_modules'),self.state)
+        inv=self.m.read(self.state/'inventory.json');plan=self.m.read(self.state/'plan.json')
+        for index,name in enumerate(('package.json','package-lock.json'),3):
+            path='vue/'+name
+            plan['files'][path]={'sha256':inv['files'][path]['sha256'],'reviewed':True,'review_evidence':'full-file: replaced Vue dependency graph'}
+            plan['items'].append(dict(id='I'+str(index),source=path,locator='whole file',basis='Vue dependency configuration',disposition='exclude',group=None,targets=[],reason='React dependency graph is regenerated'))
+        plan['inventory_digest']=inv['digest'];self.m.write(self.state/'plan.json',plan)
+
+    def change_lock(self):
+        lock=self.m.read(self.root/'vue/package-lock.json')
+        lock['packages']['node_modules/vue']={'version':'3.5.0'}
+        self.put('vue/package-lock.json',json.dumps(lock))
+
+    def test_excluded_lock_refresh_revalidates_previous_passes(self):
+        self.add_excluded_lock();self.args.max_iterations=1;self.run_loop();count=len(self.calls())
+        old_validation=self.m.read(self.state/'plan.json')['groups'][0]['validation']
+        self.change_lock();controller=loop.MigrationLoop(self.args,self.root)
+        summary=controller.prepare_state()
+        self.assertEqual(summary['refreshed_excluded_locks'],['vue/package-lock.json'])
+        self.assertTrue(summary['runtime_revalidation_required'])
+        self.assertEqual(self.m.read(self.state/'plan.json')['groups'][0]['validation'],old_validation)
+        self.assertEqual(self.m.check_state(self.state)['invalidated_groups'],['G1'])
+        self.assertIn('vue/package-lock.json',self.m.read(self.state/'inventory.json')['files'])
+        self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()[count:]],['next','validate'])
+        self.assertEqual(self.m.check_state(self.state)['groups_passed'],1)
+
+    def test_legacy_root_and_excluded_lock_refresh_together(self):
+        self.add_excluded_lock();self.fail_current();self.mark_as_moved();self.change_lock()
+        self.args.max_iterations=1;self.assertEqual(self.run_loop(),4)
+        self.assertEqual([c['stage'] for c in self.calls()],['implement','validate'])
+        self.assertEqual(self.m.read(self.state/'inventory.json')['project_root'],'../..')
+        self.assertTrue((self.state/'failure-report.md').exists())
+
+    def test_lock_refresh_dry_run_is_read_only(self):
+        self.add_excluded_lock();self.mark_as_moved();self.change_lock();self.args.dry_run=True
+        before={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(self.run_loop(),0)
+        after={str(p.relative_to(self.root)):p.read_bytes() for p in self.root.rglob('*') if p.is_file()}
+        self.assertEqual(before,after);self.assertEqual(self.calls(),[])
+
+    def test_migrated_lock_or_changed_manifest_is_not_auto_refreshed(self):
+        self.add_excluded_lock();self.change_lock()
+        plan=self.m.read(self.state/'plan.json');plan['items'][-1].update(disposition='migrate',group='G1')
+        self.m.write(self.state/'plan.json',plan)
+        with self.assertRaisesRegex(ValueError,'源快照变化'):self.run_loop()
+        plan['items'][-1].update(disposition='exclude',group=None);self.m.write(self.state/'plan.json',plan)
+        self.put('vue/package.json','{"dependencies":{"vue":"^4.0.0"}}')
+        with self.assertRaisesRegex(ValueError,'源快照变化'):self.run_loop()
+        self.assertEqual(self.calls(),[])
+
+    def test_invalid_or_deleted_lock_is_not_auto_refreshed(self):
+        self.add_excluded_lock();self.put('vue/package-lock.json','{invalid')
+        with self.assertRaises(ValueError):self.run_loop()
+        (self.root/'vue/package-lock.json').unlink()
+        with self.assertRaisesRegex(ValueError,'源快照变化'):self.run_loop()
+        self.assertEqual(self.calls(),[])
+
+    def test_copied_project_runs_without_old_machine_and_keeps_passed_records(self):
+        self.args.max_iterations=1;self.run_loop()
+        copied=tempfile.TemporaryDirectory(prefix='second machine ');self.addCleanup(copied.cleanup)
+        new_root=Path(copied.name).resolve()/'checkout';shutil.copytree(self.root,new_root)
+        inv_before=(new_root/'migration/state/inventory.json').read_bytes()
+        shutil.rmtree(self.root)
+        os.environ['PATH']=str(new_root/'bin')+os.pathsep+os.environ['PATH']
+        controller=loop.MigrationLoop(self.args,new_root)
+        with redirect_stdout(io.StringIO()):self.assertEqual(controller.run(),4)
+        new_state=new_root/'migration/state'
+        self.assertEqual((new_state/'inventory.json').read_bytes(),inv_before)
+        self.assertEqual(controller.m.check_state(new_state)['groups_passed'],2)
+        self.assertEqual(controller.m.read(new_state/'inventory.json')['project_root'],'../..')
+        prompts=list((new_state/'loop/runs').glob('*/*.prompt.txt'))
+        for prompt in prompts:self.assertNotIn(str(new_root),prompt.read_text())
+        for events in (new_state/'loop/runs').glob('*/events.jsonl'):
+            self.assertNotIn(str(new_root),events.read_text())
+
 
 
 if __name__=='__main__':unittest.main()

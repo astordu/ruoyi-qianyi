@@ -10,7 +10,7 @@ description: 为 Vue 到 React 的完整项目迁移生成固定文件清单、�
 ## 固定清单
 
 1. 查明项目根目录、Vue 源目录、React 目标目录和技术栈。本项目默认候选为 `ruoyi-fastapi-frontend/` → `react-front/`，必须核实符合本次需求。后端仅作契约依据；源码引用其他本地目录时加入源根目录，不把历史报告或目标代码算成待转译前端。
-2. 从项目根运行 `python3 .agents/skills/migration-plan/scripts/migration_state.py inventory --root . --source ruoyi-fastapi-frontend --target react-front --state migration/state`，替换已查明路径；额外源根重复传 `--source`。脚本不使用 Git 忽略规则，包含隐藏文件；输出数量、内容哈希和排除记录。复核默认排除目录确属依赖/产物，必要时用 `--exclude-dirs` 替换。
+2. 从项目根运行 `python3 .agents/skills/migration-plan/scripts/migration_state.py inventory --root . --source ruoyi-fastapi-frontend --target react-front --state migration/state`，替换已查明路径；额外源根重复传 `--source`。根目录相对状态目录保存，其余路径相对项目根，不填写本机绝对路径。脚本不使用 Git 忽略规则，包含隐藏文件；输出数量、内容哈希和排除记录。复核默认排除目录确属依赖/产物，必要时用 `--exclude-dirs` 替换。
 3. 清单不能由模型手写、删行或只列 import 可达文件。未调用文件、测试、配置、样式、资源也登记处理。目录符号链接不被悄悄遍历：核实目标，显式把需迁移的目标目录加入源根；外部依赖写明依据。报告不复制密码、Token 或环境变量值。
 
 ## 内容与分组

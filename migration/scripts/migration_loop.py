@@ -108,8 +108,8 @@ class MigrationLoop:
 
     def checked(self):
         inventory = self.m.read(self.state / 'inventory.json')
-        if Path(inventory['project_root']).resolve() != self.root:
-            raise LoopStop(f'状态仍指向旧项目 {inventory["project_root"]}；当前项目为 {self.root}。')
+        if self.m.inventory_root(inventory, self.state) != self.root:
+            raise LoopStop('状态根目录与当前项目不一致，需转换为相对路径。')
         self.validate_layout(inventory)
         return self.m.load_checked(self.state)
 
@@ -119,65 +119,19 @@ class MigrationLoop:
         if self.control.is_relative_to(self.root / inventory['target_root']):
             raise LoopStop('循环日志不能写入 React 目标目录。')
 
-    def relocation(self, dry_run=False):
-        """Reanchor a moved checkout only after an exact source-snapshot match.
-
-        Hashes of group scopes, contracts, targets and evidence use relative
-        paths and survive a move. Inventory digest includes the absolute root,
-        so synchronize only that digest in the plan and saved round metadata.
-        A journal makes interruption between atomic file writes recoverable.
-        """
-        journal_path = self.state / 'root-relocation.pending.json'
-        if journal_path.exists():
-            journal = self.m.read(journal_path)
-            if journal['new_root'] != str(self.root):
-                raise LoopStop('上次路径校准尚未完成，且目标位置再次变化；需核对 root-relocation.pending.json。')
-        else:
-            inv = self.m.read(self.state / 'inventory.json')
-            if Path(inv['project_root']).resolve() == self.root:
-                return None
-            plan = self.m.read(self.state / 'plan.json')
-            if plan['inventory_digest'] != inv['digest']:
-                raise LoopStop('计划与清单快照不一致，不能只校准路径。')
-            new_inv = dict(inv, project_root=str(self.root))
-            config = {k:new_inv[k] for k in ('project_root','source_roots','target_root','exclude_dirs')}
-            new_inv['digest'] = self.m.digest({'config':config, 'files':inv['files']})
-            updates = {'inventory.json':{'old':inv, 'new':new_inv},
-                       'plan.json':{'old':plan, 'new':dict(plan, inventory_digest=new_inv['digest'])}}
-            for name in ('round.json', 'suspended-round.json'):
-                path = self.state / name
-                if path.exists():
-                    task = self.m.read(path)
-                    if task.get('inventory_digest') == inv['digest']:
-                        updates[name] = {'old':task, 'new':dict(task, inventory_digest=new_inv['digest'])}
-            journal = {'old_root':inv['project_root'], 'new_root':str(self.root), 'at':utc(),
-                       'history':'root-relocation-'+uuid.uuid4().hex+'.json', 'updates':updates}
-        new_inv = journal['updates']['inventory.json']['new']
-        self.validate_layout(new_inv)
-        try:
-            live, _ = self.m.scan(new_inv)
-        except ValueError as error:
-            raise LoopStop(f'当前项目 {self.root} 的源码无法核对：{error}；旧清单位置：{journal["old_root"]}。') from error
-        expected = new_inv['files']
-        changed = sorted(p for p in set(live) | set(expected) if live.get(p) != expected.get(p))
-        if changed:
-            raise LoopStop('项目位置变化且源快照也有变化，停止路径校准，需重新盘点：'+', '.join(changed[:20]))
-        allowed = {'inventory.json','plan.json','round.json','suspended-round.json'}
-        for name, update in journal['updates'].items():
-            if name not in allowed or self.m.read(self.state / name) not in (update['old'], update['new']):
-                raise LoopStop('路径校准期间状态文件被其他操作修改：'+name)
-        summary = {'old_root':journal['old_root'], 'new_root':journal['new_root'],
-                   'source_files_matched':len(live), 'progress_preserved':True}
-        if dry_run:
-            return summary
-        if not journal_path.exists():
-            self.m.write(journal_path, journal)
-        self.m.write(self.state / 'history' / journal['history'], journal)
-        for name, update in journal['updates'].items():
-            self.m.write(self.state / name, update['new'])
-        journal_path.unlink()
-        print(f'已校准项目路径：{summary["old_root"]} → {summary["new_root"]}；{len(live)} 个源文件快照一致，迁移进度保留。', flush=True)
+    def prepare_state(self, dry_run=False):
+        inventory = self.m.read(self.state / 'inventory.json')
+        self.validate_layout(inventory)
+        summary = self.m.portable(self.state, self.root, dry_run)
+        if summary and not dry_run:
+            print('已更新可搬移状态：根目录相对状态目录保存；迁移进度保留。', flush=True)
+            if summary['refreshed_excluded_locks']:
+                print('已登记排除锁文件变化，旧运行验证将复验：'+
+                      ', '.join(summary['refreshed_excluded_locks']), flush=True)
         return summary
+
+    def project_path(self, path):
+        return path.relative_to(self.root).as_posix()
 
     def event(self, kind, **fields):
         row = {'at': utc(), 'event': kind, **fields}
@@ -190,7 +144,7 @@ class MigrationLoop:
         skill = SKILLS[stage]
         attempt = prefix.name
         prompt = f'''使用 ${skill}。先完整读取 .agents/skills/{skill}/SKILL.md，再按其说明执行。
-项目根目录：{self.root}
+工作目录即项目根目录：.；所有落盘路径使用相对路径，不写本机绝对路径。
 本次状态目录：{self.state.relative_to(self.root)}（所有命令显式传 --state，不使用其他状态目录）。
 本次调用标识：{self.run_dir.name}/{attempt}
 当前阶段：{detail}
@@ -201,9 +155,9 @@ class MigrationLoop:
 Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；不自动 commit、push、部署或创建聊天/定时任务。
 最终文字仅为说明；执行器会以真实落盘状态、报告和证据判定结果。'''
         prefix.with_suffix('.prompt.txt').write_text(prompt, encoding='utf-8')
-        command = cli_command(self.args.adapter, prompt, prefix.with_suffix('.last-message.txt'), self.args.model)
-        self.event('agent_start', stage=stage, detail=detail, log=str(prefix.with_suffix('.log')))
-        print(f'  [{stage}] {detail}\n  日志：{prefix.with_suffix(".log")}', flush=True)
+        command = cli_command(self.args.adapter, prompt, Path(self.project_path(prefix.with_suffix('.last-message.txt'))), self.args.model)
+        self.event('agent_start', stage=stage, detail=detail, log=self.project_path(prefix.with_suffix('.log')))
+        print(f'  [{stage}] {detail}\n  日志：{self.project_path(prefix.with_suffix(".log"))}', flush=True)
         start = time.monotonic()
         with prefix.with_suffix('.log').open('w') as log:
             process = subprocess.Popen(command, cwd=self.root, stdout=log, stderr=subprocess.STDOUT,
@@ -343,14 +297,14 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
             if current != stamp:
                 raise LoopStop('收尾期间验证范围发生变化，请重新核对。')
             self.m.write(receipt, {'snapshot':stamp, 'report_sha256':self.m.file_hash(report), 'at':utc()})
-        return {'status':'complete', 'report':str(report)}
+        return {'status':'complete', 'report':self.project_path(report)}
 
     def run(self):
         if self.args.dry_run:
-            relocated = self.relocation(dry_run=True)
+            relocated = self.prepare_state(dry_run=True)
             if relocated:
-                print(json.dumps({'dry_run':True, 'status':'root_relocation_required',
-                                  'relocation':relocated, 'note':'正式运行会校准路径；本次未写状态或调用 agent。'},
+                print(json.dumps({'dry_run':True, 'status':'state_update_required',
+                                  'update':relocated, 'note':'正式运行会更新相对路径/排除锁文件快照；本次未写状态或调用 agent。'},
                                  ensure_ascii=False, indent=2))
                 return 0
             self.checked()
@@ -359,7 +313,7 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                               'check':self.m.check_state(self.state)}, ensure_ascii=False, indent=2))
             return 0
         with project_lock(self.root):
-            self.relocation()
+            self.prepare_state()
             self.checked()
             for skill in SKILLS.values():
                 if not (self.root / '.agents/skills' / skill / 'SKILL.md').is_file():
@@ -368,7 +322,7 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                 raise LoopStop('未安装 CLI：'+self.args.adapter)
             self.run_dir = self.control / 'runs' / (datetime.now().strftime('%Y%m%d-%H%M%S')+'-'+uuid.uuid4().hex[:8])
             self.run_dir.mkdir(parents=True)
-            print('循环日志：'+str(self.run_dir), flush=True)
+            print('循环日志：'+self.project_path(self.run_dir), flush=True)
             self.event('run_start', adapter=self.args.adapter, max_iterations=self.args.max_iterations,
                        max_retries=self.args.max_retries, timeout=self.args.timeout)
             try:

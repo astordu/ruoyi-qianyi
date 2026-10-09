@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "inventory_digest": "b4256433a58a115267b363b2ddb63433eb79384c6826fdc2c901ed72e05b6bea",
+  "inventory_digest": "aa6d95beb22b39360d2d8e0cdb5b59ad77bafd4f2d0f2998cd4549d8aa6fe318",
   "files": {
     "ruoyi-fastapi-frontend/.env.development": {
       "sha256": "2316819f2b242a841b26080bc46216bfac9881aa2c7bfd1b56ff33c1f9cd51fb",

@@ -77,6 +77,23 @@ class MigrationStateTests(unittest.TestCase):
         self.put("react/" + n + ".tsx", "translated behavior: " + key)
         self.record(key)
 
+    def test_inventory_root_is_relative_and_resolves_without_cwd(self):
+        inv=m.read(self.state/'inventory.json')
+        self.assertEqual(inv['project_root'],'../..')
+        self.assertNotIn(str(self.root), (self.state/'inventory.json').read_text())
+        self.assertEqual(m.inventory_root(inv,self.state),self.root.resolve())
+        result=subprocess.run([sys.executable,str(Path(m.__file__).resolve()),'check','--state',str(self.state)],cwd=self.root.parent,capture_output=True,text=True)
+        self.assertEqual(result.returncode,0,result.stdout)
+
+    def test_custom_nested_state_uses_its_own_relative_anchor(self):
+        custom=self.root/'tracking/deep/state'
+        m.inventory(self.args,custom)
+        inv=m.read(custom/'inventory.json')
+        self.assertEqual(inv['project_root'],'../../..')
+        self.assertEqual(m.inventory_root(inv,custom),self.root.resolve())
+        plan=m.read(self.state/'plan.json');plan['inventory_digest']=inv['digest'];m.write(custom/'plan.json',plan)
+        self.assertEqual(m.check_state(custom)['files'],3)
+
     def test_hidden_and_gitignored_files_are_listed(self):
         self.put("vue/.gitignore", "secret.js\n")
         self.put("vue/secret.js", "still source")
