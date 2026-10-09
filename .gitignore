@@ -143,14 +143,3 @@ cython_debug/
 
 # VSCode
 .vscode/
-
-# AI Editor
-/migration/.migration-loop.lock
-.agent/
-.claude/
-.codebuddy/
-.codex/
-.cursor/
-.opencode/
-.qoder/
-.trae/
