@@ -1,0 +1,935 @@
+{
+  "files": 339,
+  "items": 748,
+  "groups": 55,
+  "phase_counts": {
+    "基础": 6,
+    "公共": 14,
+    "入口": 8,
+    "业务": 27
+  },
+  "dispositions": {
+    "migrate": 643,
+    "reuse": 104,
+    "exclude": 1
+  },
+  "integration_checks": 10,
+  "minimum_logical_rounds": 56,
+  "single_item_groups": [
+    "G011"
+  ],
+  "multi_group_files": {
+    "ruoyi-fastapi-frontend/src/api/monitor/job.js": [
+      "G014",
+      "G044"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/config.js": [
+      "G005",
+      "G039"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/dict/data.js": [
+      "G007",
+      "G038"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/menu.js": [
+      "G010",
+      "G036"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/notice.js": [
+      "G022",
+      "G040"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/role.js": [
+      "G033",
+      "G034"
+    ],
+    "ruoyi-fastapi-frontend/src/api/system/user.js": [
+      "G030",
+      "G031",
+      "G032"
+    ],
+    "ruoyi-fastapi-frontend/src/api/tool/gen.js": [
+      "G052",
+      "G053"
+    ]
+  },
+  "page_component_groups": [
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/components/AiMessage.vue",
+      "main_groups": [
+        "G055"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/chat/index.vue",
+      "main_groups": [
+        "G055"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/plugins/ai/views/model/index.vue",
+      "main_groups": [
+        "G054"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/App.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Breadcrumb/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/BusinessDateTimePicker/index.vue",
+      "main_groups": [
+        "G003"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/BusinessFileUpload/index.vue",
+      "main_groups": [
+        "G019"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/day.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/hour.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/index.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/min.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/month.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/result.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/second.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/week.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Crontab/year.vue",
+      "main_groups": [
+        "G014"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/DictTag/index.vue",
+      "main_groups": [
+        "G007"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Editor/index.vue",
+      "main_groups": [
+        "G015"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ExcelImportDialog/index.vue",
+      "main_groups": [
+        "G017"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/FileUpload/index.vue",
+      "main_groups": [
+        "G018"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Hamburger/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/HeaderSearch/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/IconSelect/index.vue",
+      "main_groups": [
+        "G008"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ImagePreview/index.vue",
+      "main_groups": [
+        "G020"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ImageUpload/index.vue",
+      "main_groups": [
+        "G020"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/JsonEditor/index.vue",
+      "main_groups": [
+        "G016"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Pagination/index.vue",
+      "main_groups": [
+        "G012"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/ParentView/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RightToolbar/index.vue",
+      "main_groups": [
+        "G012"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RuoYi/Doc/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/RuoYi/Git/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/Screenfull/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/SizeSelect/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/SvgIcon/index.vue",
+      "main_groups": [
+        "G008"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/TreePanel/index.vue",
+      "main_groups": [
+        "G013"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/components/iFrame/index.vue",
+      "main_groups": [
+        "G029"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/AppMain.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Copyright/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/DetailView.vue",
+      "main_groups": [
+        "G022"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/HeaderNotice/index.vue",
+      "main_groups": [
+        "G022"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/IframeToggle/index.vue",
+      "main_groups": [
+        "G029"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/InnerLink/index.vue",
+      "main_groups": [
+        "G029"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Navbar.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Settings/index.vue",
+      "main_groups": [
+        "G009"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Link.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/Logo.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/SidebarItem.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/Sidebar/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/ScrollPane.vue",
+      "main_groups": [
+        "G021"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TagsView/index.vue",
+      "main_groups": [
+        "G021"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopBar/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/components/TopNav/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/layout/index.vue",
+      "main_groups": [
+        "G023"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/dashboard/editable-link-group.vue",
+      "main_groups": [
+        "G027"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/dashboard/index.vue",
+      "main_groups": [
+        "G027"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/error/401.vue",
+      "main_groups": [
+        "G028"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/error/404.vue",
+      "main_groups": [
+        "G028"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/lock.vue",
+      "main_groups": [
+        "G026"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/login.vue",
+      "main_groups": [
+        "G024"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/cache/index.vue",
+      "main_groups": [
+        "G043"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/cache/list.vue",
+      "main_groups": [
+        "G043"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/druid/index.vue",
+      "main_groups": [
+        "G029"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/detail.vue",
+      "main_groups": [
+        "G044"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/index.vue",
+      "main_groups": [
+        "G044"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/log.vue",
+      "main_groups": [
+        "G045"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/job/runtime.vue",
+      "main_groups": [
+        "G044"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/logininfor/index.vue",
+      "main_groups": [
+        "G046"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/online/index.vue",
+      "main_groups": [
+        "G047"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/detail.vue",
+      "main_groups": [
+        "G048"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/operlog/index.vue",
+      "main_groups": [
+        "G048"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/server/index.vue",
+      "main_groups": [
+        "G049"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/monitor/transportCrypto/index.vue",
+      "main_groups": [
+        "G050"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/redirect/index.vue",
+      "main_groups": [
+        "G021"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/register.vue",
+      "main_groups": [
+        "G025"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/config/index.vue",
+      "main_groups": [
+        "G039"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dept/index.vue",
+      "main_groups": [
+        "G035"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/data.vue",
+      "main_groups": [
+        "G038"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/detail.vue",
+      "main_groups": [
+        "G038"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/dict/index.vue",
+      "main_groups": [
+        "G038"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAclDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileAuditDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileDetailDialog.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReconcileDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileReferenceDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionPolicyDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileRetentionReminderDrawer.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileSearchForm.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileStatistics.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTable.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/components/FileTransferDialog.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/file/index.vue",
+      "main_groups": [
+        "G041"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/menu/index.vue",
+      "main_groups": [
+        "G036"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/ReadUsers.vue",
+      "main_groups": [
+        "G040"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/notice/index.vue",
+      "main_groups": [
+        "G040"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginConfigDialog.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDependencyDialog.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDetailDialog.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginDiagnosticDialog.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/components/PluginPlanDialog.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/plugin/index.vue",
+      "main_groups": [
+        "G042"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/post/index.vue",
+      "main_groups": [
+        "G037"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/authUser.vue",
+      "main_groups": [
+        "G034"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/index.vue",
+      "main_groups": [
+        "G033"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/role/selectUser.vue",
+      "main_groups": [
+        "G034"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/authRole.vue",
+      "main_groups": [
+        "G031"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/index.vue",
+      "main_groups": [
+        "G030"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/index.vue",
+      "main_groups": [
+        "G032"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/resetPwd.vue",
+      "main_groups": [
+        "G032"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/timezoneSettings.vue",
+      "main_groups": [
+        "G032"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/userAvatar.vue",
+      "main_groups": [
+        "G032"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/profile/userInfo.vue",
+      "main_groups": [
+        "G032"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/system/user/view.vue",
+      "main_groups": [
+        "G030"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/CodeTypeDialog.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/DraggableItem.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/IconsDialog.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/RightPanel.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/TreeNodeDialog.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/build/index.vue",
+      "main_groups": [
+        "G051"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/basicInfoForm.vue",
+      "main_groups": [
+        "G053"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/createTable.vue",
+      "main_groups": [
+        "G052"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/editTable.vue",
+      "main_groups": [
+        "G053"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/genInfoForm.vue",
+      "main_groups": [
+        "G053"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/importTable.vue",
+      "main_groups": [
+        "G052"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/gen/index.vue",
+      "main_groups": [
+        "G052"
+      ],
+      "count": 1
+    },
+    {
+      "source": "ruoyi-fastapi-frontend/src/views/tool/swagger/index.vue",
+      "main_groups": [
+        "G029"
+      ],
+      "count": 1
+    }
+  ],
+  "maximum_main_groups_per_sfc": 1,
+  "all_pending": true
+}

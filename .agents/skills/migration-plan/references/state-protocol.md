@@ -32,6 +32,9 @@ python3 .agents/skills/migration-plan/scripts/migration_state.py inventory --roo
 # 兼容旧绝对根路径；刷新符合已有排除处置的 npm 锁文件。加 --dry-run 只预览。
 python3 .agents/skills/migration-plan/scripts/migration_state.py portable --root . --state migration/state
 
+# 换机器后的源快照诊断：逐文件说明能否自动刷新及拒绝原因；只读、不启动 agent。
+python3 .agents/skills/migration-plan/scripts/migration_state.py diagnose --root . --state migration/state
+
 # 规划后的结构/覆盖/快照检查；不证明业务等价。
 python3 .agents/skills/migration-plan/scripts/migration_state.py check --state migration/state
 
@@ -82,6 +85,9 @@ python3 .agents/skills/migration-plan/scripts/migration_state.py check --state m
     {
       "id": "G001",
       "title": "查询参数编码",
+      "outcome": "调用方可编码完整查询参数，空值、数组与特殊字符行为与原版一致",
+      "scope": "编码入口、协作函数与编码规则测试；HTTP 发送归请求适配组",
+      "split_reason": "",
       "feature": "shared",
       "entry_priority": 2,
       "depends_on": [],
@@ -106,6 +112,8 @@ python3 .agents/skills/migration-plan/scripts/migration_state.py check --state m
 - `files` 必须与 inventory 完全一致，每文件审阅有依据，哈希对应当前原版；每文件至少一项。脚本能发现漏登记文件，不能判断函数/模板分支是否真的读全。
 - `items.id` 稳定唯一；`source` 为项目相对路径；`locator/basis` 非空。`migrate/reuse` 必须关联组，验证通过前各项 `targets` 非空且文件存在于目标目录，`target_locator` 明确对应函数、组件或完整资源；`reuse` 指实际落到目标工程的兼容复用，不用源路径假装目标。`exclude` 无 group，需 `reason`，仍占清单位置并接受内容审核。
 - 多个组可以分别迁同一文件的不同内容；源哈希按整个文件冻结。`groups.targets` 放没有单独源项的工程产物，以及由本组修改的公共文件；不能遗漏这些文件来逃避回归。
+- 内容项是覆盖/定位记录，`groups` 才是选组、实施、验证的执行单位；一组可拥有多文件和多个函数。新计划按 [migration-plan 的分组边界](../SKILL.md#分组边界) 聚合，不从逐项清单机械生成组。
+- 新计划的每组填写非空 `outcome` 和 `scope`；同一能力拆多组时填写 `split_reason` 并在合同具体说明。通常一个页面/组件一个主要交付组，复杂情况 2–5 组；超过 5 组及所有单内容项组在规划交付前做合并复核。当前结构检查脚本不判断这些语义字段及业务粒度，不能以 `plan_valid` 代替分组复核。
 - `status` 为 `pending/implementing/implemented/failed/blocked/passed`。agent 可登记前几个执行状态；`passed` 只用 record 命令生成验证记录。脚本仅冻结已执行证据，不能替 agent 判断报告真假。
 - `groups.depends_on` 是组编号，不是文件路径；依赖未知或循环时不能随便删边。`entry_priority` 越小越优先，实际调度还考虑当前功能、下游数量、内容数量、编号。
 - `integration_checks` 非空且涵盖全部组，指明页面接入/跨页及最终运行检查。纯工具不需虚构页面点击，可在相关调用链或最终装配检查中说明其验证适用范围。
@@ -128,3 +136,5 @@ python3 .agents/skills/migration-plan/scripts/migration_state.py check --state m
 ## 自动化边界
 
 规划、选组、实施、验证四个技能可由已授权执行器按顺序调用。一个执行轮次只处理一个选定组，写完状态交接；下一轮重新读取清单，不凭长对话记忆。用户仅请求安装技能时，不自动开始业务迁移。此脚本没有 agent 调用、定时、提交或部署能力。
+
+外层循环默认每次 CLI 调用最多 2400 秒（40 分钟）。超时会终止本次进程组，保留任务、目标文件与证据，在同一任务/阶段启动新的会话续做；`loop/timeout-counts.json` 保存上次日志和次数，默认额外重试 3 次，跨重启保留，可用 `--max-timeout-retries` 调整。已经落盘的合法阶段结果会正常推进：`implemented` 进入验证，已记账结果按证据检查，不为超时伪造或覆盖验证记录。重试耗尽才以 124 退出；Ctrl-C/SIGTERM 属于用户中断，保留状态并退出，不自动续跑。

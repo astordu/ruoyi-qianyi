@@ -157,38 +157,90 @@ def inventory(args, state):
             "excluded": excluded, "state": Path(os.path.relpath(state, root)).as_posix(), "plan_preserved": True}
 
 
-def refreshable_lock(root, path, old, live, plan):
+def lock_refresh_rejection(root, path, old, live, plan):
     """Only refresh already excluded, whole-file npm locks with unchanged manifests.
 
     A lock refresh never certifies runtime equivalence: portable() changes the
     environment revision so every earlier passed group must be revalidated.
     """
-    if (Path(path).name != "package-lock.json" or path not in old or path not in live
-            or old[path]["kind"] != "file" or live[path]["kind"] != "file"):
-        return False
+    if Path(path).name != "package-lock.json":
+        return "业务源码/配置变化，不属于可自动刷新的排除锁文件"
+    if path not in old:
+        return "新增锁文件，尚未盘点和登记内容处置"
+    if path not in live:
+        return "锁文件已删除，不能作为安装工具更新处理"
+    if old[path]["kind"] != "file" or live[path]["kind"] != "file":
+        return "锁文件类型改变或为符号链接"
     manifest = str(Path(path).with_name("package.json"))
-    if manifest not in old or old[manifest] != live.get(manifest):
-        return False
+    if manifest not in old:
+        return "同目录 package.json 不在原清单中"
+    if manifest not in live:
+        return "同目录 package.json 已删除"
+    if old[manifest] != live[manifest]:
+        return "同目录 package.json 快照也有变化，需核对依赖/脚本内容"
     owned = [i for i in plan.get("items", []) if i.get("source") == path]
     review = plan.get("files", {}).get(path, {})
-    if (not owned or any(i.get("disposition") != "exclude" or i.get("group") or not i.get("reason") for i in owned)
-            or review.get("reviewed") is not True or review.get("sha256") != old[path]["sha256"]
-            or not isinstance(review.get("review_evidence"), str) or not review["review_evidence"].strip()):
-        return False
-    lock = read(relative_file(root, path))
-    package = read(relative_file(root, manifest))
+    if not owned:
+        return "plan.json 没有该锁文件的内容项"
+    invalid = [i.get("id", "?") for i in owned
+               if i.get("disposition") != "exclude" or i.get("group") or not i.get("reason")]
+    if invalid:
+        return "内容项未全部登记为有依据的整文件排除：" + ", ".join(invalid)
+    if review.get("reviewed") is not True:
+        return "plan.json 的锁文件审阅尚未完成"
+    if review.get("sha256") != old[path]["sha256"]:
+        return "plan.json 审阅哈希与 inventory.json 不一致"
+    if not isinstance(review.get("review_evidence"), str) or not review["review_evidence"].strip():
+        return "plan.json 缺少锁文件审阅依据"
+    try:
+        lock = read(relative_file(root, path))
+        package = read(relative_file(root, manifest))
+    except (ValueError, OSError):
+        return "锁文件或 package.json 无法读取为有效 JSON"
     if not isinstance(lock, dict) or not isinstance(package, dict):
-        return False
+        return "锁文件或 package.json 顶层不是 JSON 对象"
     version = lock.get("lockfileVersion")
     if type(version) is not int or version not in {1, 2, 3}:
-        return False
+        return "lockfileVersion 缺失或不支持（需为 1、2、3）"
     if version == 1:
-        return isinstance(lock.get("dependencies"), dict)
+        return None if isinstance(lock.get("dependencies"), dict) else "v1 锁文件缺少 dependencies 对象"
     packages = lock.get("packages")
     if not isinstance(packages, dict) or not isinstance(packages.get(""), dict):
-        return False
-    return all(packages[""].get(k, {}) == package.get(k, {})
-               for k in ("dependencies", "devDependencies", "optionalDependencies", "peerDependencies"))
+        return "v2/v3 锁文件缺少 packages 对象或根包 packages[\"\"]"
+    differences = []
+    for key in ("dependencies", "devDependencies", "optionalDependencies", "peerDependencies"):
+        locked, declared = packages[""].get(key, {}), package.get(key, {})
+        if locked != declared:
+            if isinstance(locked, dict) and isinstance(declared, dict):
+                names = sorted(n for n in set(locked) | set(declared) if locked.get(n) != declared.get(n))
+                differences.append(key + "[" + ", ".join(names[:10]) + "]")
+            else:
+                differences.append(key + "（声明不是对象）")
+    return "锁文件根依赖声明与 package.json 不一致：" + "; ".join(differences) if differences else None
+
+
+def refreshable_lock(root, path, old, live, plan):
+    return lock_refresh_rejection(root, path, old, live, plan) is None
+
+
+def source_diagnosis(inv, plan, root):
+    live, _ = scan(inv, root)
+    changes = []
+    for path in sorted(set(live) | set(inv["files"])):
+        if live.get(path) == inv["files"].get(path):
+            continue
+        reason = lock_refresh_rejection(root, path, inv["files"], live, plan)
+        changes.append({"path": path, "action": "review_source" if reason else "refresh_excluded_lock",
+                        "reason": reason or "已排除的 npm 锁文件更新；manifest 未变，旧运行验证将复验"})
+    return live, changes
+
+
+def diagnose(state, root):
+    inv, plan = read(state / "inventory.json"), read(state / "plan.json")
+    _, changes = source_diagnosis(inv, plan, root.resolve())
+    return {"diagnostics_version": 1, "status": "needs_review" if any(c["action"] == "review_source" for c in changes)
+            else "refresh_available" if changes else "source_unchanged", "changes": changes,
+            "state_written": False, "agent_started": False}
 
 
 def portable(state, root, dry_run=False):
@@ -222,10 +274,11 @@ def portable(state, root, dry_run=False):
         require(inventory_digest(inv) == inv["digest"], "Inventory digest does not match its contents")
         new_inv, new_plan = copy.deepcopy(inv), copy.deepcopy(plan)
         new_inv["project_root"] = root_ref
-        live, _ = scan(new_inv, root)
-        changed = sorted(p for p in set(live) | set(inv["files"]) if live.get(p) != inv["files"].get(p))
-        rejected = [p for p in changed if not refreshable_lock(root, p, inv["files"], live, plan)]
-        require(not rejected, "Source snapshot changed; 源快照变化，需重新盘点：" + ", ".join(rejected[:20]))
+        live, changes = source_diagnosis(new_inv, plan, root)
+        changed = [c["path"] for c in changes]
+        rejected = [c for c in changes if c["action"] == "review_source"]
+        require(not rejected, "Source snapshot changed; 源快照变化，需重新盘点：\n" +
+                "\n".join(c["path"] + "：" + c["reason"] for c in rejected[:20]))
         if changed:
             new_inv["files"] = live
             new_inv["runtime_revision"] = digest({p: f for p, f in live.items() if Path(p).name == "package-lock.json"})
@@ -600,6 +653,8 @@ def main():
     p = commands.add_parser("portable")
     p.add_argument("--root", default=".")
     p.add_argument("--dry-run", action="store_true")
+    p = commands.add_parser("diagnose")
+    p.add_argument("--root", default=".")
     for name in ("check", "next", "record"):
         commands.add_parser(name)
     for p in commands.choices.values():
@@ -621,6 +676,8 @@ def main():
             result = inventory(args, state)
         elif args.command == "portable":
             result = portable(state, Path(args.root), args.dry_run) or {"status": "already_portable"}
+        elif args.command == "diagnose":
+            result = diagnose(state, Path(args.root))
         elif args.command == "check":
             result = check_state(state, args.final)
         elif args.command == "next":

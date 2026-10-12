@@ -1,0 +1,16 @@
+{
+  "command": "python3 .agents/skills/migration-plan/scripts/migration_state.py check --state migration/state",
+  "exit_code": 0,
+  "result": {
+    "status": "plan_valid",
+    "files": 339,
+    "items": 748,
+    "groups": 55,
+    "groups_passed": 0,
+    "invalidated_groups": [],
+    "integration_passed": 0,
+    "integration_total": 10,
+    "semantic_equivalence_proven_by_script": false
+  },
+  "meaning": "登记、快照和依赖检查；未验证业务等价"
+}
