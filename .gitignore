@@ -143,3 +143,7 @@ cython_debug/
 
 # VSCode
 .vscode/
+
+# Local migration executor lock and per-run transcripts/counters.
+/migration/.migration-loop.lock
+/migration/state/loop/
