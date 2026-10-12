@@ -46,6 +46,8 @@ elif stage=='implement':
      path=root/target;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('translated '+gid)
   g['status']='implemented'
  m.write(state/'plan.json',p)
+ if behavior=='edit-dependency' and gid=='G2':
+  (root/'react/1.ts').write_text('shared dependency changed by G2')
 elif '收尾模式' in prompt:
  (state/'final-report.md').write_text('All fixtures verified; fake CLI, no real business proof.')
 else:
@@ -232,6 +234,33 @@ class MigrationLoopTests(unittest.TestCase):
         self.put('react/1.ts','changed translated G1')
         self.assertEqual(self.run_loop(),4)
         self.assertEqual([c['stage'] for c in self.calls()[count:]],['next','validate'])
+
+    def test_shared_edit_revalidates_dependency_then_resumes_implemented_group(self):
+        os.environ['FAKE_BEHAVIOR']='edit-dependency'
+        self.assertEqual(self.run_loop(),0)
+        calls=self.calls()
+        self.assertEqual([c['stage'] for c in calls],
+                         ['next','implement','validate','next','implement','next','validate','next','validate','validate','validate'])
+        self.assertEqual(sum(c['stage']=='implement' and '当前组 G2' in c['prompt'] for c in calls),1)
+        self.assertEqual(self.m.check_state(self.state)['status'],'complete')
+        self.assertIsNone(self.m.read(self.state/'plan.json').get('resume_after_validation'))
+
+    def test_timeout_checkpoint_uses_dispatched_group_not_new_dependency_candidate(self):
+        self.args.max_iterations=1;self.run_loop()
+        self.m.select(self.state,True)
+        plan=self.m.read(self.state/'plan.json');plan['groups'][1]['status']='implemented'
+        self.m.write(self.state/'plan.json',plan)
+        self.put('react/2.ts','translated G2')
+        self.put('react/1.ts','shared dependency changed by G2')
+        runner=loop.MigrationLoop(self.args,self.root)
+        self.assertEqual(self.m.select(self.state,False)['group'],'G1')
+        key,done=runner.stage_checkpoint('validate',group='G2')
+        self.assertEqual(key,'validate:G2')
+        self.assertFalse(done())
+        self.put('migration/state/G2-block-report.md','checks saved; dependency requires revalidation')
+        self.m.record(argparse.Namespace(group='G2',integration=None,result='blocked',
+                      report='migration/state/G2-block-report.md',evidence=[],note='dependency invalid'),self.state)
+        self.assertTrue(done())
 
     def test_each_adapter_works_and_model_is_not_silently_selected(self):
         for adapter in ('claude','qodercli'):

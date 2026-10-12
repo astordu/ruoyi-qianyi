@@ -123,8 +123,8 @@ class MigrationLoop:
         with (self.run_dir / 'events.jsonl').open('a') as stream:
             stream.write(json.dumps(row, ensure_ascii=False) + '\n')
 
-    def agent(self, stage, detail):
-        key, done = self.stage_checkpoint(stage)
+    def agent(self, stage, detail, *, group=None, integration=None, final=False):
+        key, done = self.stage_checkpoint(stage, group=group, integration=integration, final=final)
         while True:
             path = self.control / 'timeout-counts.json'
             counts = self.m.read(path) if path.exists() else {}
@@ -158,11 +158,15 @@ class MigrationLoop:
             counts.pop(key, None)
             self.m.write(path, counts)
 
-    def stage_checkpoint(self, stage):
-        selection = self.m.select(self.state, False)
+    def stage_checkpoint(self, stage, *, group=None, integration=None, final=False):
+        # Bind retries to the actual dispatched task. A shared-file edit can
+        # make select() prefer an invalidated dependency while we still own
+        # this group; scheduling again here would check the wrong result.
         plan = self.m.read(self.state / 'plan.json')
-        gid = selection.get('group')
+        gid = group
         if stage == 'next':
+            if not gid:
+                raise LoopStop('选组阶段缺少明确组编号。')
             def done():
                 try:
                     current, _, _ = self.assert_round(gid)
@@ -171,24 +175,27 @@ class MigrationLoop:
                     return False
             return 'next:' + gid, done
         if stage == 'implement':
+            if not gid:
+                raise LoopStop('实施阶段缺少明确组编号。')
             def done():
                 current, group, _ = self.assert_round(gid)
                 return current['active_group'] == gid and group['status'] == 'implemented'
             return 'implement:' + gid, done
-        if selection['status'] == 'selected':
+        if gid:
             previous = next(g for g in plan['groups'] if g['id'] == gid).get('validation')
             section, key = 'groups', gid
-        elif selection['status'] == 'groups_complete':
-            available = [c for c in plan['integration_checks'] if c['id'] in selection['remaining_integration'] and c['status'] != 'blocked']
-            row = min(available, key=lambda c: c['id'])
+        elif integration:
+            row = next(c for c in plan['integration_checks'] if c['id'] == integration)
             section, key, previous = 'integration_checks', row['id'], row.get('validation')
-        else:
+        elif final:
             report = self.state / 'final-report.md'
             previous = (report.stat().st_mtime_ns, self.m.file_hash(report)) if report.is_file() else None
             def done():
                 self.m.check_state(self.state, final=True)
                 return report.is_file() and report.stat().st_size > 0 and (report.stat().st_mtime_ns, self.m.file_hash(report)) != previous
             return 'validate:final', done
+        else:
+            raise LoopStop('验证阶段缺少明确组/集成编号或收尾模式。')
         def done():
             current = self.m.read(self.state / 'plan.json')
             row = next(r for r in current[section] if r['id'] == key)
@@ -289,12 +296,23 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                     if not self.m.evidence_valid(self.root, group.get('validation')):
                         raise LoopStop('上次失败报告/证据缺失或已改变，无法可靠修复。')
                     self.consume_repair('group:'+gid)
-                self.agent('implement', f'只实施或修复当前组 {gid}；读取其最新失败报告，完成后记录 implemented。')
+                self.agent('implement', f'只实施或修复当前组 {gid}；读取其最新失败报告，完成后记录 implemented。', group=gid)
                 plan, group, _ = self.assert_round(gid)
                 if plan['active_group'] != gid or group['status'] != 'implemented':
                     raise LoopStop('implementation 未将当前组落盘为 implemented。')
+            # Editing a shared package/config legitimately invalidates a
+            # passed dependency. Let next --claim suspend this round and
+            # revalidate the dependency, then resume here without redoing
+            # implementation or recording an artificial blocked result.
+            inv, _, root, groups, items, _, order = self.checked()
+            passed, _ = self.m.effective_groups(root, inv, groups, items, order)
+            waiting = sorted(set(group['depends_on']) - passed)
+            if waiting:
+                self.event('group_waiting_dependencies', group=gid, dependencies=waiting)
+                print(f'  {gid} 已保留当前阶段，先复验依赖：{", ".join(waiting)}。', flush=True)
+                return
             previous = group.get('validation')
-            self.agent('validate', f'本组模式：仅验证组 {gid}，执行实际检查并 record passed/failed/blocked。')
+            self.agent('validate', f'本组模式：仅验证组 {gid}，执行实际检查并 record passed/failed/blocked。', group=gid)
             plan, group, _ = self.assert_round(gid)
             self.verification(group, previous)
             result = self.m.check_state(self.state)
@@ -322,7 +340,7 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
         if check['status'] == 'failed':
             self.consume_repair('integration:'+cid)
         previous = check.get('validation')
-        self.agent('validate', f'集成模式：本次只执行 {cid}，合同 {check["contract"]}。使用 record --integration {cid} 记账；不要执行 implementation 或修改业务代码。发现代码缺陷时保存报告并标 blocked，供重新规划修复任务。')
+        self.agent('validate', f'集成模式：本次只执行 {cid}，合同 {check["contract"]}。使用 record --integration {cid} 记账；不要执行 implementation 或修改业务代码。发现代码缺陷时保存报告并标 blocked，供重新规划修复任务。', integration=cid)
         *_, checks, order = self.checked()
         check = checks[cid]
         self.verification(check, previous)
@@ -347,7 +365,7 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                  and old.get('report_sha256') == self.m.file_hash(report))
         if not valid:
             before_report = (report.stat().st_mtime_ns, self.m.file_hash(report)) if report.is_file() else None
-            self.agent('validate', '收尾模式：全部组与集成已有效通过。执行 check --final 并写本状态目录的 final-report.md，记录真实覆盖/检查/限制，不重新选组或实施代码。')
+            self.agent('validate', '收尾模式：全部组与集成已有效通过。执行 check --final 并写本状态目录的 final-report.md，记录真实覆盖/检查/限制，不重新选组或实施代码。', final=True)
             self.m.check_state(self.state, final=True)
             if not report.is_file() or not report.stat().st_size:
                 raise LoopStop('缺少最终报告。')
@@ -397,6 +415,9 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                     if status == 'complete':
                         result = self.finalize(); break
                     if status == 'blocked':
+                        for gid, row in selection.get('remaining', {}).items():
+                            if row['status'] == 'blocked':
+                                print(f'  阻塞组 {gid}：{row.get("note") or "见该组验证报告"}', flush=True)
                         raise LoopStop('没有可执行组，阻塞详情已保存到本轮日志。', 3)
                     if status == 'groups_complete':
                         self.integration_round(selection['remaining_integration'])
@@ -406,7 +427,7 @@ Vue 源码和后端只读；不修改循环脚本/skills/状态检查脚本；�
                         # Reuse an active task on resume/repair; invoke the next
                         # skill only for a new selection or stale verification.
                         if plan['active_group'] != gid or selection['mode'] == 'revalidate':
-                            self.agent('next', f'仅选组并落盘；当前调度候选 {gid}，调用 next --claim。选组后结束。')
+                            self.agent('next', f'仅选组并落盘；当前调度候选 {gid}，调用 next --claim。选组后结束。', group=gid)
                         plan, _, _ = self.assert_round(gid)
                         if plan['active_group'] != gid:
                             raise LoopStop('选组 CLI 未写入预期 active_group。')
